@@ -70,3 +70,21 @@ Decision-rule uses (R-01..R-13) are logged here too.
 - Context: The taint test (P2.4) must run the real decision path now, but the reference+SMT checker is Phase 4.
 - Choice: `gate/verdict.py::decide` is the stable entrypoint. Phase 2 runs the boundary and returns ABSTAIN for un-typeable plans and a provisional `TYPED_OK` marker for well-typed plans (never PASS without a proof). The verdict depends ONLY on the quarantined plan, so the taint-test invariant is inherited unchanged when Phase 4 replaces the TYPED_OK branch with the checker.
 - Reason: lets P2.4 assert the no-text-channel property on the real entrypoint while being honest that no PASS is issued before a proof exists.
+
+## D-013 — Invariant plain-English vs formal review (P3.4)
+Reviewed each invariant: the plain_english statement matches the formal spec and the rendered LTLf. Limits calibrated from the dataset (see gate/registry/invariants.yaml rationale/source and the P1.3 profiling: plate 3851 erhe_v <=1.77 V, plate 2750 overloads up to 12.8 V; ~1-2 sputter units/element over an 8-measure campaign; all element pairs co-occur ~31% so I4 uses the never-co-occurring Ce/Mn pair as a benign stand-in).
+- I1 bound: "predicted potential <= 2.5 V" == G((action==measure_cp)->(predicted_erhe_v<=2.5)). Match.
+- I2 accumulate per element sum <= 5.0 == G(sum(sputter_target_consumed per element)<=5.0). Match.
+- I3 reach banned: anneal over substrate limit == G !(anneal_temp_over_limit). Match. I3b furnace sum<=240.
+- I4 forbid_combo: no Ce+Mn in one composition == G !(has(Ce)&has(Mn)). Match. Benign stand-in (never co-occur in real data).
+- I5 precedence: durability_test requires prior screening QC == (!durability_test W sample_qc_passed). Match.
+- I6 instrument_minutes sum<=480; I6b acid_volume_ml sum<=200. Match.
+- I7 shared per-requester instrument minutes over window[64] sum<=600. Match (lab-as-a-service).
+- I8 reach banned: action outside campaign-class capability == G !(action_outside_campaign_capability). BLOCK if class known, ABSTAIN if unknown. Match.
+- ALLOW reach banned (external_partner scope): composition uses non-allowlisted element == G !(partner_element_not_allowed). Match.
+All benign; model the STRUCTURE of real controls (Section 5.2). No hazardous content.
+
+## D-014 — I1 predicted-potential surrogate is part of the gate's abstract model (R-11)
+- Context: I1's `predicted_erhe_v` needs a definition for the checker to evaluate it (P3.4/P4.1), distinct from the oracle's ACTUAL potential (P6.3) so model-reality divergence is measurable (HYP-2).
+- Choice: `sim_ext/surrogate.py` fits a simple, documented, deterministic per-element linear model of composition -> mean steady-state potential on the DEV-seed composition split, caches coefficients, and exposes `predict_erhe_v(comp_vec)`. The checker uses this surrogate; the oracle uses the real trace. The surrogate is legitimately the gate's abstract state model, not a fake simulator.
+- Reason: unblocks I1 testing honestly; makes divergence a genuine, measured surface rather than zero-by-construction. Fit only on dev data (never held-out).
