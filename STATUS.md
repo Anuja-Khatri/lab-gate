@@ -3,10 +3,13 @@
 Workspace (`$WS`): `/Users/anujakhatri3/lila-gate` (native; `/work/BUILD-SPEC.md` absent).
 
 ## Current position
-- Phase: 5 (Attach point and packaging as a plugin) — starting
-- Current task: P5.1 (gate/hook/oersim_hook.py)
-- Last completed task: Phase 4 COMPLETE. P4.1 reference.py; P4.2 smt.py (Z3, k-induction); P4.3 verdict.decide (reference+SMT, disagree->ABSTAIN); P4.4 certificates.py; P4.5 equivalence.py (FULL 12k = 1.0, LTLf 1.0); P4.6 oracle.py replay (458/458=1.0); P4.7 latency (p50 2.92/p95 20.38 ms). All P4 ticked. make ci green, 52 tests.
-- Next task: P5.1 oersim_hook.py (attach at decision step; PASS/BLOCK/ABSTAIN routing + abstain_queue.jsonl) -> P5.2 dispatch_hook.py -> P5.3 receipts.py -> P5.4 gate-disabled byte-identity test -> P5.5 helao-async-pr draft (no push) + docs/UPSTREAM_PR.md
+- Phase: 6 (Baselines and oracle) — starting. NOTE: LLM arms need real keys in $WS/.env (currently placeholders). Apply R-13 (model pin) / R-03 / R-08 at Phase 6 start.
+- Current task: P6.1 (eval/llm.py wrapper) + re-check .env keys
+- Last completed task: Phase 5 COMPLETE. P5.1 oersim_hook.py; P5.2 dispatch_hook.py; P5.3 receipts.py; P5.4 gate-disabled byte-identity; P5.5 helao-async-pr branch (no push) + docs/UPSTREAM_PR.md. helao-async verified untouched. All P5 ticked. make ci green, 59 tests.
+- Next task: P6.1 eval/llm.py (cached/metered/budget, reads $WS/.env) -> P6.2 llm_gate.py (OpenAI) -> P6.3 oracle out_of_spec (oracle.py exists; add out_of_spec.yaml) -> P6.4 -> P6.5 classifier.py (xgboost+tfidf) -> P6.6 splits frozen
+
+## KEY BLOCKER for Phase 6: $WS/.env keys are still "replace-me"
+- If keys remain placeholders: build eval/llm.py + prompts + classifier (non-LLM parts) fully; the classifier arm (P6.5, oracle-labeled, no API) can complete. The LLM gate (P6.2) and adaptive attacker (P7.4) REQUIRE keys -> if absent, apply R-08 (no spend) / R-03 and DEFER those arms, disclosed in LIMITATIONS.md + OWNER_TODO.md. Never fabricate LLM-arm results.
 
 ## Checker design notes (for resume)
 - reference.evaluate(parsed, registry): single-plan PASS/BLOCK/ABSTAIN over abstract trace. evaluate_merged(plans): I7 shared-window across requesters.

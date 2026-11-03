@@ -30,9 +30,10 @@ Mark `[FAILED, disclosed]` if R-09 applies (recorded in DECISIONS.md and LIMITAT
 - [x] P4 d: p95 latency recorded. (results/checker_perf.json; p50 2.92 ms, p95 20.38 ms)
 
 ## Phase 5 — Attach point and packaging
-- [ ] P5 a: Gate runs inside the OERSIM loop with zero changes to helao-async.
-- [ ] P5 b: Gate-disabled byte-identity test passes.
-- [ ] P5 c: Every verdict produces a receipt.
+- [x] P5 a: Gate runs inside the OERSIM loop with zero changes to helao-async. (gate/hook/oersim_hook.py; dispatch_hook.py; helao-async clean)
+- [x] P5 b: Gate-disabled byte-identity test passes. (test_hook.py::test_gate_disabled_byte_identical_to_stock)
+- [x] P5 c: Every verdict produces a receipt. (gate/receipts.py; test_hook.py)
+- [x] P5.5 upstream draft: helao-async-pr branch typed-action-params (2 files, no-op default, NOT pushed); docs/UPSTREAM_PR.md.
 
 ## Phase 6 — Baselines and oracle
 - [ ] P6 a: Every LLM call cached and metered; cache hit on rerun.
