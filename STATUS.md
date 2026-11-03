@@ -3,10 +3,10 @@
 Workspace (`$WS`): `/Users/anujakhatri3/lila-gate` (native; `/work/BUILD-SPEC.md` absent).
 
 ## Current position
-- Phase: 2 (Typed boundary) — starting
-- Current task: P2.1 (per-action pydantic schemas)
-- Last completed task: Phase 1 COMPLETE. P1.1 layout+licensing; P1.2 uv venv (D-008); P1.3 R-05 in-process OERSIM (D-009, sim_ext/oersim.py); P1.4 sim_ext/accounting.py (R-06); P1.5 Makefile. `make sim` byte-identical, `make ci` green, 7 tests pass. All 3 P1 acceptance items ticked.
-- Next task: P2.1 schemas.py -> P2.2 units.py -> P2.3 quarantine.py -> P2.4 taint test + static no-reference -> P2.5 hypothesis property tests
+- Phase: 3 (Policy registry and invariant language) — starting
+- Current task: P3.1 (registry schema + LTLf renderer)
+- Last completed task: Phase 2 COMPLETE. P2.1 gate/boundary/schemas.py (13 action schemas, extra=forbid, bounds, provenance, parse_plan); P2.2 units.py (pint, fail-closed); P2.3 quarantine.py; P2.4 taint test (1000 plans) + static no-reference; P2.5 hypothesis props. gate/verdict.py decision entrypoint (D-012). All 4 P2 acceptance items ticked. make ci green, 15 tests.
+- Next task: P3.1 registry/schema.py + registry/ltlf.py -> P3.2 invariants.yaml (I1-I8 + allowlist) -> P3.3 lock.py -> P3.4 per-invariant pos/neg tests
 
 ## Environment quick-ref
 - venv: `lab-gate/.venv` (Python 3.12). Run via Makefile (sets PYTHONPATH=$WS/helao-async:$WS/lab-gate).

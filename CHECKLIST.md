@@ -14,10 +14,10 @@ Mark `[FAILED, disclosed]` if R-09 applies (recorded in DECISIONS.md and LIMITAT
 - [x] P1 c: `make ci` exists and runs (lint, tests, secret scan). (ci green)
 
 ## Phase 2 — Typed boundary
-- [ ] P2 a: 100% of OERSIM action types have schemas.
-- [ ] P2 b: Taint test passes on 1,000 plans.
-- [ ] P2 c: Static no-reference check passes.
-- [ ] P2 d: Unknown-key and unit-mismatch rejection tests pass.
+- [x] P2 a: 100% of OERSIM action types have schemas. (test_all_oersim_action_types_have_schemas; 10 native + 3 stand-ins)
+- [x] P2 b: Taint test passes on 1,000 plans. (test_no_text_channel.py)
+- [x] P2 c: Static no-reference check passes. (test_static_no_reference_to_free_text_fields)
+- [x] P2 d: Unknown-key and unit-mismatch rejection tests pass. (test_schema_properties.py)
 
 ## Phase 3 — Policy registry and invariant language
 - [ ] P3 a: Registry validates against schema; hash stable across runs.
