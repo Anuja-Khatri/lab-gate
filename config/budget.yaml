@@ -5,8 +5,10 @@
 total_usd_default: 500        # overridden by $WS/.env LLM_BUDGET_USD
 hard_cap_usd: 500             # never spend beyond this
 per_role_usd:
-  llm_gate: 150               # OpenAI gate baseline (P6.2)
-  llm_gate_parity: 150        # OpenAI information-parity gate arm (D-023)
-  adaptive_attacker: 300      # Anthropic attacker (P7.4)
+  llm_gate: 150               # OpenAI/Anthropic gate baseline (P6.2)
+  llm_gate_parity: 150        # information-parity gate arm (D-023)
+  llm_gate_gemini: 100        # Gemini gate arm (D-026)
+  llm_gate_gemini_parity: 100 # Gemini information-parity arm (D-026)
+  adaptive_attacker: 300      # LLM attacker (P7.4; Anthropic / Gemini)
   variance_reruns: 50         # LLM-gate run-to-run variance (P8.3)
 warn_fraction: 0.8            # log a warning at 80% of a cap

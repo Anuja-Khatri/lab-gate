@@ -27,7 +27,13 @@ the parity arm additionally gets the predicted potential the typed gate's I1 use
 | false-block, benign | 0.00 (n=13627) | 0.07 (n=13627) | 0.00 (n=294) | 0.00 (n=294) |
 | false-block, surprise | 0.00 (n=990) | 0.002 (n=990) | 0.00 (n=297) | 0.00 (n=297) |
 | abstain, benign | 0.00 (n=13627) | 0.00 (n=13627) | 0.90 (n=294) | 0.92 (n=294) |
-| run-to-run variance | 0.00 (n=120) | 0.00 (n=120) | 0.30 (n=60) | (not run) |
+| decided coverage, benign | 1.00 | 1.00 | 0.10 | 0.08 |
+| run-to-run variance | 0.00 (n=120) | 0.00 (n=120) | blocked | blocked |
+
+The decided-coverage row (1 - abstain) qualifies the false-block row: the opus LLM
+gate's 0.00 false-block sits on a gate that decides only 0.10 of benign plans. Opus
+run-to-run variance is blocked (not measured); the real earlier OpenAI gpt-5.1 variance
+was 0.30 (`variance.llm_gpt51`).
 
 The opus LLM gate's failure mode is massive over-ABSTENTION (0.90 of benign); the
 earlier OpenAI gpt-5.1 arm over-BLOCKED (0.64) with adaptive attack 0.46 and variance
@@ -56,6 +62,15 @@ as observed.
 - R-08: paid LLM arms metered under per-role caps; see FINAL_REPORT Section 6 for exact n.
 - R-02: media gif/webm renderers (agg, Playwright) not installable; the asciinema cast
   is produced, gif/webm deferred to the owner (OWNER_TODO).
+- Round 3 (owner independent review; D-026/D-027): no earlier Gemini instruction was
+  ever received (logged). Added Gemini to eval/llm.py (cached/metered/capped) + live
+  model verification to restore a cross-vendor attacker and a second LLM-gate vendor;
+  the provided Gemini key is INVALID (live 400), so all Gemini arms are "blocked, not
+  measured" (R-08, never fabricated), integration ready for a valid key. Registry
+  hygiene: removed the opus-variance backfill (now "blocked, not measured"); kept the
+  real gpt-5.1 variance separately; added decided-coverage row (item 5); same-vendor
+  marking (item 6); within-vendor parity only (item 4). All three vendors are currently
+  unavailable, so the cross-vendor LLM-attacker-vs-LLM-gate comparison stays unmeasured.
 - Round 2 (owner independent review; D-023/D-024/D-025): re-ran the deterministic
   adaptive attacker at the FULL original spec (200x10x2, n=240); added an
   information-parity LLM arm (D-023); added the surprise-subset LLM number; added the

@@ -58,6 +58,19 @@ after we look at the real numbers together.
   reduced grid in FINAL_REPORT Section 6), set keys and run `make eval`; the meter
   enforces the cap. Everything else reproduces offline with `make demo`.
 
+## Round-3 blockers (all three LLM vendors currently unavailable)
+- [ ] OpenAI: account out of credits (HTTP 429). Add credits to rerun the gpt-5.1 arm.
+- [ ] Anthropic: monthly usage limit reached; regains 2026-12-01. The opus run-to-run
+  variance and the full Anthropic attacker are "blocked, not measured" until then.
+- [ ] Gemini: the `LABGATE_GEMINI_API_KEY` in `$WS/.env` is INVALID (live 400 "API key
+  not valid"; it is 24 chars, a real AI Studio key is ~39 chars starting "AIza"). The
+  Gemini integration (cached/metered/capped, with live model verification) is in
+  `eval/llm.py` and ready. Put a valid key in `$WS/.env` and run `make eval`; it will
+  verify + pin the Gemini model (R-13), run the Gemini adaptive attacker (cross-vendor
+  separation) and the Gemini plain+parity gate arms, and the blocked Gemini metrics in
+  the registry will fill in. No earlier Gemini instruction was ever received by the
+  build (see DECISIONS D-026) — this round added it from scratch at your request.
+
 ## Reproduce (no action needed, for reference)
 - `make ci` green (lint, tests, taint, static no-reference, secret scan, numbers lock).
 - `make demo` reproduces the headline numbers from cache without keys.

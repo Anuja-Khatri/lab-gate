@@ -54,6 +54,20 @@ not mean.
    classifier, oracle, programmatic adaptive attacker) ran at full scale and need no
    API. Every LLM-arm number is reported with its exact n.
 
+   Round-3 update (D-026): a Gemini arm was added to restore cross-vendor attacker
+   separation and a second LLM-gate vendor, but the provided Gemini key is invalid
+   (live 400 "API key not valid"), so all Gemini arms are "blocked, not measured".
+   With OpenAI (no credits) and Anthropic (monthly usage limit) also blocked, no LLM
+   vendor is currently usable, so the cross-vendor LLM-attacker-vs-LLM-gate comparison
+   is unmeasured. Same-vendor note (item 6): no completed metric has the gate and the
+   attacker as the same-vendor LLM; the opus gate's adaptive number came from the
+   deterministic programmatic attacker, and the only Anthropic LLM attacker that ran
+   targeted the (non-LLM) typed gate. The information-parity effect is reported only
+   within a single vendor (Anthropic opus plain vs parity); the Gemini within-vendor
+   parity pair is blocked. The opus run-to-run variance is "blocked, not measured" and
+   is not backfilled (item 7); the real OpenAI gpt-5.1 variance (0.30) is kept
+   separately.
+
 9. The gradient-boosting classifier uses scikit-learn HistGradientBoosting rather
    than xgboost (D-021; xgboost's wheel could not load its OpenMP runtime on the
    build machine). A GPU fine-tuned transformer text classifier was not run (no GPU).

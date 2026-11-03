@@ -23,4 +23,16 @@ adaptive_attacker:   # P7.4 — different vendor from the gate
   vendor: anthropic
   model_id: claude-opus-5-5  # most capable Anthropic model listed; verified present
 
+# Round-3 (D-026): Gemini added to eval/llm.py (cached/metered/capped) to restore a
+# cross-vendor attacker. The provided LABGATE_GEMINI_API_KEY is INVALID (live check:
+# 400 "API key not valid"), so the model could NOT be verified or pinned and all
+# Gemini arms are "blocked, not measured". Candidate (to verify with a valid key):
+gemini_gate:
+  vendor: gemini
+  model_id: gemini-3-pro     # candidate; UNVERIFIED (invalid key); gemini-2.5-pro fallback
+  status: "invalid key; unverified; arms blocked (R-08)"
+gemini_attacker:
+  vendor: gemini
+  model_id: gemini-3-pro     # candidate; UNVERIFIED
+
 temperature: 0       # fixed where the API allows (recorded per call otherwise)

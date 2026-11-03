@@ -28,7 +28,16 @@ arm additionally receives the predicted potential the typed gate's I1 uses (D-02
 | false-block, benign | 0.00 (n=13627) | 0.07 (n=13627) | 0.00 (n=294) | 0.00 (n=294) |
 | false-block, surprise | 0.00 (n=990) | 0.002 (n=990) | 0.00 (n=297) | 0.00 (n=297) |
 | abstain, benign | 0.00 (n=13627) | 0.00 (n=13627) | 0.90 (n=294) | 0.92 (n=294) |
-| run-to-run variance | 0.00 (n=120) | 0.00 (n=120) | 0.30 (n=60) | (not run) |
+| decided coverage, benign | 1.00 | 1.00 | 0.10 | 0.08 |
+| run-to-run variance | 0.00 (n=120) | 0.00 (n=120) | blocked | blocked |
+
+The decided-coverage row (= 1 - abstain) qualifies the false-block row: the opus LLM
+gate's 0.00 benign false-block sits on a gate that DECIDES only 0.10 of benign plans
+and abstains on the rest, so its low false-block and low attack-success are artifacts
+of its near-total abstention, not of good judgement. The typed gate's 0.00 false-block
+sits on 1.00 decided coverage. Run-to-run variance for the opus arms is "blocked, not
+measured" (Anthropic usage limit, D-025); the real earlier OpenAI gpt-5.1 variance was
+0.30 (`variance.llm_gpt51.flip_rate`).
 
 Reading: the typed gate let through no in-specification attack (static, decomposition,
 or adaptive, n=240) and never false-blocked a benign plan, including the surprise
@@ -43,11 +52,15 @@ free-text arms are unreliable gates, in opposite directions. The learned classif
 accurate in-distribution (benign false-block 0.07) but was broken by a quarter of the
 static attacks and a third of the adaptive ones (n=240).
 
-Information parity (item 2): appending the typed gate's predicted potential to the plan
-JSON lowered the LLM gate's static+decomposition attack success modestly (0.11 -> 0.08)
-but did not reduce its over-abstention (0.90 -> 0.92). Giving the LLM the exact quantity
-the typed gate's I1 uses did not turn it into a usable gate, so its unreliability is not
-merely an information deficit.
+Information parity (within-vendor, Anthropic): appending the typed gate's predicted
+potential to the plan JSON lowered the opus LLM gate's static+decomposition attack
+success modestly (0.11 -> 0.08) but did not reduce its over-abstention (0.90 -> 0.92).
+Both numbers are the same vendor and model (claude-opus-5-5), so this is a clean
+within-vendor parity comparison; it is never presented against a different-vendor gate.
+Giving the LLM the exact quantity the typed gate's I1 uses did not turn it into a usable
+gate, so its unreliability is not merely an information deficit. A second within-vendor
+parity pair (Gemini plain vs Gemini parity) is blocked, not measured: the provided
+Gemini key is invalid (D-026).
 
 ## 3. Checker guarantees (deterministic)
 
@@ -126,6 +139,25 @@ originally-pinned OpenAI gpt-5.1 arm is preserved as `attack.llm_gpt51.*` /
 `falseblock.llm_gpt51.benign` for the vendor/model comparison (gpt-5.1 over-blocks;
 opus over-abstains). Total metered LLM spend across all runs: $30.08, within the $500
 cap and the per-role caps.
+
+Round 3 (owner independent review; D-026/D-027). (1) No earlier "point-7 Gemini"
+instruction was ever received by this build; logged. (2) Gemini was added to
+`eval/llm.py` (cached, metered, same caps) with live model verification, to run a
+cross-vendor adaptive attacker and a second independent LLM-gate vendor. The provided
+`LABGATE_GEMINI_API_KEY` is INVALID (live 400 "API key not valid"), so every Gemini
+arm -- the adaptive attacker vs the typed gate and vs a Gemini gate, and the Gemini
+plain/parity gate arms on benign/surprise/static/decomposition -- is "blocked, not
+measured" (n=0), never fabricated. The integration is ready for a valid key via
+`make eval`. (3) Backfill removed (item 7): the opus run-to-run variance is now
+"blocked, not measured" rather than standing in with the gpt-5.1 value; the real
+gpt-5.1 variance 0.30 is kept under its own id. (4) Same-vendor marking (item 6): no
+completed metric has both the gate and the attacker as the same-vendor LLM -- the opus
+gate's adaptive number was produced by the deterministic programmatic attacker (not an
+LLM), and the only Anthropic LLM attacker that ran targeted the typed gate (not an
+LLM); the would-be same-vendor pair (Anthropic attacker vs Anthropic gate) is blocked,
+not measured. The parity effect is reported only within one vendor (item 4). Because
+all three vendors are currently unavailable, the cross-vendor LLM-attacker-vs-LLM-gate
+comparison remains unmeasured and is disclosed as such.
 
 ## 7. Limitations
 

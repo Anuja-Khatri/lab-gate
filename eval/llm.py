@@ -43,8 +43,14 @@ PRICING = {
     "gpt-5": {"in": 1.25, "out": 10.0},
     "claude-opus-5-5": {"in": 5.0, "out": 25.0},
     "claude-sonnet-5-5": {"in": 3.0, "out": 15.0},
+    "gemini-2.5-pro": {"in": 1.25, "out": 10.0},
+    "gemini-3-pro": {"in": 2.0, "out": 12.0},
     "stub-model": {"in": 0.0, "out": 0.0},
 }
+
+# Gemini thinking budget (matches the owner's consilience-verification convention):
+# 0 disables extended thinking so output tokens are typed labels, not reasoning.
+GEMINI_THINKING_BUDGET = 0
 
 
 class LLMKeysMissing(RuntimeError):
@@ -70,7 +76,8 @@ def _load_env() -> dict:
 def _key_for(provider: str) -> Optional[str]:
     env = _load_env()
     name = {"openai": "LABGATE_OPENAI_API_KEY",
-            "anthropic": "LABGATE_ANTHROPIC_API_KEY"}.get(provider)
+            "anthropic": "LABGATE_ANTHROPIC_API_KEY",
+            "gemini": "LABGATE_GEMINI_API_KEY"}.get(provider)
     val = env.get(name, "")
     if not val or val == "replace-me":
         return None
@@ -83,7 +90,35 @@ def provider_of(model: str) -> str:
         return "openai"
     if m.startswith("claude"):
         return "anthropic"
+    if m.startswith("gemini"):
+        return "gemini"
     return "stub" if m.startswith("stub") else "unknown"
+
+
+def verify_models() -> dict:
+    """R-13: list models live from each vendor whose key is present. Returns
+    {vendor: [model ids] or 'error: ...'}. Used to pin the most capable model."""
+    out: dict = {}
+    if _key_for("openai"):
+        try:
+            import openai
+            out["openai"] = sorted(m.id for m in openai.OpenAI(api_key=_key_for("openai")).models.list().data)
+        except Exception as e:
+            out["openai"] = f"error: {str(e)[:80]}"
+    if _key_for("anthropic"):
+        try:
+            import anthropic
+            out["anthropic"] = [m.id for m in anthropic.Anthropic(api_key=_key_for("anthropic")).models.list().data]
+        except Exception as e:
+            out["anthropic"] = f"error: {str(e)[:80]}"
+    if _key_for("gemini"):
+        try:
+            from google import genai
+            ms = genai.Client(api_key=_key_for("gemini")).models.list()
+            out["gemini"] = [m.name.replace("models/", "") for m in ms]
+        except Exception as e:
+            out["gemini"] = f"error: {str(e)[:80]}"
+    return out
 
 
 def strip_json_fences(text: str) -> str:
@@ -218,4 +253,18 @@ def _provider_call(provider: str, key: str, req: dict) -> dict:  # pragma: no co
         return {"text": r.choices[0].message.content or "",
                 "usage": {"input_tokens": r.usage.prompt_tokens,
                           "output_tokens": r.usage.completion_tokens}}
+    if provider == "gemini":
+        from google import genai
+        from google.genai import types
+        client = genai.Client(api_key=key)
+        user = "\n\n".join(m["content"] for m in req["messages"])
+        cfg = types.GenerateContentConfig(
+            system_instruction=req["system"], temperature=req["temperature"],
+            max_output_tokens=max(req["max_tokens"], 2048),
+            thinking_config=types.ThinkingConfig(thinking_budget=GEMINI_THINKING_BUDGET))
+        resp = client.models.generate_content(model=req["model"], contents=user, config=cfg)
+        um = getattr(resp, "usage_metadata", None)
+        return {"text": resp.text or "",
+                "usage": {"input_tokens": getattr(um, "prompt_token_count", 0) or 0,
+                          "output_tokens": getattr(um, "candidates_token_count", 0) or 0}}
     raise LLMKeysMissing(f"unknown provider {provider}")

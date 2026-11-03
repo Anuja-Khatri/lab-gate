@@ -54,6 +54,12 @@ def render_table(metrics) -> str:
         if isinstance(v, list):
             val = f"[curve, {len(v)} points]"
             ci = ""
+        elif isinstance(v, dict):
+            val = "; ".join(f"{k}={vv}" for k, vv in v.items())
+            ci = ""
+        elif v is None:
+            val = "blocked (not measured)"
+            ci = ""
         else:
             val = f"{v}"
             ci = (f"[{m['ci_lo']}, {m['ci_hi']}]"
