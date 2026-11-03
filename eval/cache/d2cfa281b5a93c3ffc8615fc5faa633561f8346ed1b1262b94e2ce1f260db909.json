@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.002688,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "devgem",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": \"I5\",\n  \"rationale\": \"The plan includes a durability_test, but does not provide information on whether the sample has passed a prior screening QC.\"\n}\n```",
+  "usage": {
+    "input_tokens": 990,
+    "output_tokens": 59
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.007694,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Cannot determine predicted steady-state potentials for I1, element mapping for I4, or instrument time for I6.\"}\n```",
+  "usage": {
+    "input_tokens": 3553,
+    "output_tokens": 49
+  }
+}

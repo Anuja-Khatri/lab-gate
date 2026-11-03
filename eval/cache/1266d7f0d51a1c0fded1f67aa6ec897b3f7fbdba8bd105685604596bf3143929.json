@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0036899999999999997,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r0",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": \"I4\",\n  \"rationale\": \"The plan does not provide the element mapping for the composition vectors, so it is impossible to check for the presence of Ce and Mn. Additionally, instrument time is not provided to check I6.\"\n}\n```",
+  "usage": {
+    "input_tokens": 1401,
+    "output_tokens": 74
+  }
+}

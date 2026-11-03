@@ -45,12 +45,13 @@ PRICING = {
     "claude-sonnet-5-5": {"in": 3.0, "out": 15.0},
     "gemini-2.5-pro": {"in": 1.25, "out": 10.0},
     "gemini-3-pro": {"in": 2.0, "out": 12.0},
+    "gemini-3.1-pro-preview": {"in": 2.0, "out": 12.0},  # thinking bills at output rate
     "stub-model": {"in": 0.0, "out": 0.0},
 }
 
-# Gemini thinking budget (matches the owner's consilience-verification convention):
-# 0 disables extended thinking so output tokens are typed labels, not reasoning.
-GEMINI_THINKING_BUDGET = 0
+# Gemini thinking budget: -1 = dynamic/auto (the pro reasoning models require a
+# positive budget and reject 0; dynamic lets the model think as needed).
+GEMINI_THINKING_BUDGET = -1
 
 
 class LLMKeysMissing(RuntimeError):
@@ -199,7 +200,7 @@ def call(role: str, model: str, system: str, messages: list[dict], *,
             raise LLMKeysMissing(
                 f"no cached response for this request and {provider} key is a "
                 f"placeholder; set $WS/.env (see OWNER_TODO.md). No fabrication.")
-        resp = _provider_call(provider, key, req)   # real network path
+        resp = _call_with_retries(provider, key, req)   # real network path, retried
 
     in_tok = resp.get("usage", {}).get("input_tokens", 0)
     out_tok = resp.get("usage", {}).get("output_tokens", 0)
@@ -217,6 +218,28 @@ def call(role: str, model: str, system: str, messages: list[dict], *,
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     cache_path.write_text(json.dumps(rec, indent=2, sort_keys=True) + "\n")
     return rec
+
+
+def _call_with_retries(provider: str, key: str, req: dict, attempts: int = 5) -> dict:
+    """Retry _provider_call with exponential backoff on transient 429/5xx. A hard
+    quota/credit exhaustion typically persists, so this surfaces the final error
+    rather than masking it; callers (held-out drivers) catch and mark 'blocked'."""
+    import time as _t
+    delay = 2.0
+    last = None
+    for i in range(attempts):
+        try:
+            return _provider_call(provider, key, req)
+        except Exception as e:  # noqa: BLE001
+            msg = str(e)
+            transient = any(s in msg for s in ("429", "RESOURCE_EXHAUSTED", "overloaded",
+                                               "500", "502", "503", "rate limit", "Rate limit"))
+            last = e
+            if not transient or i == attempts - 1:
+                raise
+            _t.sleep(delay)
+            delay *= 2
+    raise last  # pragma: no cover
 
 
 def _provider_call(provider: str, key: str, req: dict) -> dict:  # pragma: no cover

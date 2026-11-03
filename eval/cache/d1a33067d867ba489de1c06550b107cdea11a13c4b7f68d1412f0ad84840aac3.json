@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.003,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r0",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": \"I4\",\n  \"rationale\": \"The plan provides a composition vector but no element mapping, so it is impossible to determine if the composition contains both Ce and Mn.\"\n}\n```",
+  "usage": {
+    "input_tokens": 1134,
+    "output_tokens": 61
+  }
+}

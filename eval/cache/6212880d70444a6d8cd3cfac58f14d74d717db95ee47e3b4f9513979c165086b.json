@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.002616,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "devgem",
+  "text": "{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": \"I3\",\n  \"rationale\": \"The maximum temperature for the silicon substrate is not provided, so it cannot be determined if the anneal temperature of 713 exceeds it.\"\n}",
+  "usage": {
+    "input_tokens": 954,
+    "output_tokens": 59
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.003412,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r0",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": null,\n  \"rationale\": \"The plan does not provide element mappings for the composition vectors to check rule I4, nor does it provide instrument time or acid volume to check rules I6, I6b, and I7.\"\n}\n```",
+  "usage": {
+    "input_tokens": 1268,
+    "output_tokens": 73
+  }
+}

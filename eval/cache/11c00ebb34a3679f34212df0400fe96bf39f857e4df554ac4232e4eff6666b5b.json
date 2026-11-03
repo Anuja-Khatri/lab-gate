@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.005842,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "devgem",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": null,\n  \"rationale\": \"Cannot evaluate rule I1 because predicted steady-state potentials are not provided, nor rule I4 because the element mapping for the composition vectors is unknown.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2543,
+    "output_tokens": 63
+  }
+}

@@ -4,6 +4,7 @@
 |---|---|---|---|
 | abstain.classifier.benign | 0.0 | [0.0, 0.000282] | 13627 |
 | abstain.gemini.benign | blocked (not measured) |  | 0 |
+| abstain.gemini_parity.benign | blocked (not measured) |  | 0 |
 | abstain.llm.benign | 0.901361 | [0.861927, 0.930441] | 294 |
 | abstain.llm_parity.benign | 0.918367 | [0.881411, 0.944531] | 294 |
 | abstain.typed.benign | 0.0 | [0.0, 0.000282] | 13627 |
@@ -25,12 +26,15 @@
 | attack_curve.classifier | [curve, 10 points] |  | 240 |
 | attack_curve.llm | [curve, 10 points] |  | 36 |
 | attack_curve.typed | [curve, 10 points] |  | 240 |
+| dev.llm_gemini.agreement_vs_oracle | 0.633 |  | 30 |
+| dev.llm_gpt51.agreement_vs_oracle | 0.5 |  | 30 |
 | equivalence.reference_vs_smt | 1.0 |  | 12000 |
 | falseblock.classifier.benign | 0.069568 | [0.065416, 0.073962] | 13627 |
 | falseblock.classifier.surprise | 0.00202 | [0.000554, 0.007336] | 990 |
 | falseblock.gemini.benign | blocked (not measured) |  | 0 |
 | falseblock.gemini.surprise | blocked (not measured) |  | 0 |
 | falseblock.gemini_parity.benign | blocked (not measured) |  | 0 |
+| falseblock.gemini_parity.surprise | blocked (not measured) |  | 0 |
 | falseblock.llm.benign | 0.0 | [0.0, 0.012898] | 294 |
 | falseblock.llm.surprise | 0.0 | [0.0, 0.012769] | 297 |
 | falseblock.llm_gpt51.benign | 0.642857 | [0.586567, 0.695463] | 294 |

@@ -58,6 +58,13 @@ attacks and 0.32 of the adaptive ones (n=240). The reference and SMT checkers ag
 all 12000 equivalence plans, every BLOCK counterexample replayed in the simulator, and
 the taint test found no text channel over 1000 plans.
 
+A third-vendor cross-check (a Gemini adaptive attacker and a Gemini language-model gate,
+to restore gate-and-attacker vendor separation) is implemented and verified live, but
+the available Gemini account is free-tier with a ~25-request-per-model quota, so those
+arms are reported "blocked, not measured" rather than estimated. The two language-model
+families we could run (one over-abstaining, one over-blocking) already make the point;
+the Gemini arms are left honestly empty until a higher-quota key is available.
+
 The surprise subset is the proof that the gate does not police novelty: it is a
 thousand unusual-but-valid plans far from the policy's usual proposals, and the
 gate's false-block rate on them is reported next to everything else. A gate that

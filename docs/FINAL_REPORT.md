@@ -59,8 +59,8 @@ Both numbers are the same vendor and model (claude-opus-5-5), so this is a clean
 within-vendor parity comparison; it is never presented against a different-vendor gate.
 Giving the LLM the exact quantity the typed gate's I1 uses did not turn it into a usable
 gate, so its unreliability is not merely an information deficit. A second within-vendor
-parity pair (Gemini plain vs Gemini parity) is blocked, not measured: the provided
-Gemini key is invalid (D-026).
+parity pair (Gemini plain vs Gemini parity) is blocked, not measured: the Gemini key is
+valid and live but free-tier quota (~25 req/model) is too low to run the arms (D-029).
 
 ## 3. Checker guarantees (deterministic)
 
@@ -140,24 +140,31 @@ originally-pinned OpenAI gpt-5.1 arm is preserved as `attack.llm_gpt51.*` /
 opus over-abstains). Total metered LLM spend across all runs: $30.08, within the $500
 cap and the per-role caps.
 
-Round 3 (owner independent review; D-026/D-027). (1) No earlier "point-7 Gemini"
-instruction was ever received by this build; logged. (2) Gemini was added to
-`eval/llm.py` (cached, metered, same caps) with live model verification, to run a
-cross-vendor adaptive attacker and a second independent LLM-gate vendor. The provided
-`LABGATE_GEMINI_API_KEY` is INVALID (live 400 "API key not valid"), so every Gemini
-arm -- the adaptive attacker vs the typed gate and vs a Gemini gate, and the Gemini
-plain/parity gate arms on benign/surprise/static/decomposition -- is "blocked, not
-measured" (n=0), never fabricated. The integration is ready for a valid key via
-`make eval`. (3) Backfill removed (item 7): the opus run-to-run variance is now
-"blocked, not measured" rather than standing in with the gpt-5.1 value; the real
-gpt-5.1 variance 0.30 is kept under its own id. (4) Same-vendor marking (item 6): no
-completed metric has both the gate and the attacker as the same-vendor LLM -- the opus
-gate's adaptive number was produced by the deterministic programmatic attacker (not an
-LLM), and the only Anthropic LLM attacker that ran targeted the typed gate (not an
-LLM); the would-be same-vendor pair (Anthropic attacker vs Anthropic gate) is blocked,
-not measured. The parity effect is reported only within one vendor (item 4). Because
-all three vendors are currently unavailable, the cross-vendor LLM-attacker-vs-LLM-gate
-comparison remains unmeasured and is disclosed as such.
+Round 3 / 3b (owner independent review; D-026/D-027/D-028/D-029). (1) No earlier
+"point-7 Gemini" instruction was ever received by this build; logged. (2) Gemini was
+added to `eval/llm.py` (cached, metered, same caps, retry/backoff) with live model
+verification, to run a cross-vendor adaptive attacker and a second LLM-gate vendor.
+All three vendor keys were then re-verified with live generation calls: OpenAI gpt-5.1
+is out of credits (429); Anthropic is at its monthly usage limit (400, to 2026-12-01);
+the Gemini AQ-format key is VALID and gemini-3.1-pro-preview returns strict JSON
+(pinned R-13), but the account is free-tier with a quota of ~25 requests/model, so the
+held-out run 429'd after ~55 calls (the dev-split prompt tuning of 30 calls did
+complete: agreement vs oracle 0.633, n=30). Every Gemini held-out arm -- the adaptive
+attacker vs the typed gate and vs a Gemini gate, and the Gemini plain/parity gate arms
+on benign/surprise/static/decomposition and variance -- is therefore "blocked, not
+measured" with exact n; the quota-polluted partial values were reset, not kept, and
+nothing is backfilled or fabricated. The integration is pinned, verified, and ready
+for a paid Gemini tier via `make eval`. (3) Backfill removed (item 7): the opus
+run-to-run variance is "blocked, not measured", not standing in with the gpt-5.1
+value; the real gpt-5.1 variance 0.30 is kept under its own id. (4) Same-vendor marking
+(item 6): no completed metric has both the gate and the attacker as the same-vendor
+LLM -- the opus gate's adaptive number was produced by the deterministic programmatic
+attacker (not an LLM), and the only Anthropic LLM attacker that ran targeted the
+(non-LLM) typed gate; the would-be same-vendor pairs (Anthropic attacker vs Anthropic
+gate; Gemini attacker vs Gemini gate) are blocked, not measured. The parity effect is
+reported only within one vendor (item 4). Because all three vendors are out of
+credits / at a usage limit / on a 25-request free tier, the cross-vendor
+LLM-attacker-vs-LLM-gate comparison remains unmeasured and is disclosed as such.
 
 ## 7. Limitations
 

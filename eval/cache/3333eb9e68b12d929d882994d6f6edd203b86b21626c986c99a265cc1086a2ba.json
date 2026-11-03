@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0075840000000000005,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r0",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": null,\n  \"rationale\": \"The plan does not provide predicted steady-state potentials for measure_cp actions, element mappings for comp_vec to check for Ce and Mn, or instrument times, making it impossible to evaluate rules I1, I4, and I6.\"\n}\n```",
+  "usage": {
+    "input_tokens": 3300,
+    "output_tokens": 82
+  }
+}

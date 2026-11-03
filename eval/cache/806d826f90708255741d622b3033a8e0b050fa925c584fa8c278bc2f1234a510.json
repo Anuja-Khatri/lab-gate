@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.004152,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r0",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": \"I6\",\n  \"rationale\": \"The plan does not provide instrument time or durations for the actions, making it impossible to determine if the total instrument time exceeds the 480-minute limit.\"\n}\n```",
+  "usage": {
+    "input_tokens": 1668,
+    "output_tokens": 68
+  }
+}

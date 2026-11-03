@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0027660000000000002,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "devgem",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": null,\n  \"rationale\": \"Cannot determine if the composition complies with the external-partner allowlist or rule I4 because the mapping of comp_vec indices to elements is not provided.\"\n}\n```",
+  "usage": {
+    "input_tokens": 999,
+    "output_tokens": 64
+  }
+}

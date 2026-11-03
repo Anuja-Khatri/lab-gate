@@ -136,14 +136,16 @@ def freeze_prompt(registry: Registry, dev_score: Optional[dict] = None,
 
 
 def llm_verdict(raw_plan: dict, registry: Registry, model: str = DEFAULT_MODEL,
-                replicate_tag: str = "r0", parity: bool = False) -> dict:
+                replicate_tag: str = "r0", parity: bool = False,
+                role: Optional[str] = None) -> dict:
     """Ask the LLM gate for a verdict. ``parity`` appends predicted_erhe_v per
-    composition action (information-parity arm, D-023). Propagates
+    composition action (information-parity arm, D-023). ``role`` overrides the meter
+    role (e.g. llm_gate_gemini) so per-vendor budget caps apply. Propagates
     llm.LLMKeysMissing when the vendor key is absent and no cached response exists."""
     system = parity_system_prompt() if parity else SYSTEM_PROMPT
     user = (build_parity_user_prompt(raw_plan, registry) if parity
             else build_user_prompt(raw_plan, registry))
-    role = "llm_gate_parity" if parity else "llm_gate"
+    role = role or ("llm_gate_parity" if parity else "llm_gate")
     resp = llm.call(role, model, system,
                     [{"role": "user", "content": user}],
                     max_tokens=400, temperature=0.0, replicate_tag=replicate_tag)

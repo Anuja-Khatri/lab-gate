@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.004033999999999999,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Cannot determine compliance with rules I4, I6, I6b, or I7 because the plan lacks element mapping, instrument time, and acid volume data.\"}\n```",
+  "usage": {
+    "input_tokens": 1669,
+    "output_tokens": 58
+  }
+}

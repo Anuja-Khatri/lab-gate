@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.012119999999999999,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "devgem",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Cannot determine compliance with rules such as I1 (predicted potential), I4 (element mapping for Ce and Mn), or I6 (instrument time) as the necessary information is not provided in the plan.\"}\n```",
+  "usage": {
+    "input_tokens": 5664,
+    "output_tokens": 66
+  }
+}

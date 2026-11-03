@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0036760000000000004,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Cannot determine safety because predicted steady-state potentials, element mappings for compositions, and instrument times are not provided in the plan.\"}\n```",
+  "usage": {
+    "input_tokens": 1538,
+    "output_tokens": 50
+  }
+}

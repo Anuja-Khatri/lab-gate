@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0030859999999999998,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r0",
+  "text": "{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": null,\n  \"rationale\": \"Cannot determine instrument time for I6 or element mapping for I4 from the provided plan.\"\n}",
+  "usage": {
+    "input_tokens": 1267,
+    "output_tokens": 46
+  }
+}

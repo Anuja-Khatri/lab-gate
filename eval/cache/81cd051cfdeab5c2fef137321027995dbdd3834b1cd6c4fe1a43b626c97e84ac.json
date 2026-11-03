@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0033759999999999997,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "devgem",
+  "text": "```json\n{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"The plan contains actions 'update_model' and 'acquire_point' which are not allowed for the 'synthesis' campaign class.\"}\n```",
+  "usage": {
+    "input_tokens": 1370,
+    "output_tokens": 53
+  }
+}

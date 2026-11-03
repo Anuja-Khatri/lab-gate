@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.002894,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"The plan does not provide instrument time or element mapping for the composition vector, making it impossible to evaluate rules I6 and I4.\"}\n```",
+  "usage": {
+    "input_tokens": 1135,
+    "output_tokens": 52
+  }
+}

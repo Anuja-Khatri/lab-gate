@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0034019999999999996,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "devgem",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": \"I1\",\n  \"rationale\": \"The plan contains a measure_cp action but does not provide the predicted steady-state potential, so it cannot be evaluated against the 2.5 V compliance limit.\"\n}\n```",
+  "usage": {
+    "input_tokens": 1287,
+    "output_tokens": 69
+  }
+}

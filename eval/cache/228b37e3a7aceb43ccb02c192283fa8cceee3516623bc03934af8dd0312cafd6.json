@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0044919999999999995,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r0",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": null,\n  \"rationale\": \"The plan does not provide sufficient information (such as element mapping for comp_vec, instrument time, or target consumption) to evaluate rules I2, I4, I6, and I6b.\"\n}\n```",
+  "usage": {
+    "input_tokens": 1802,
+    "output_tokens": 74
+  }
+}

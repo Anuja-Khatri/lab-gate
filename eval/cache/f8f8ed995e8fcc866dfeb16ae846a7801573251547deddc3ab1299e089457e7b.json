@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.003252,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r0",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": null,\n  \"rationale\": \"Cannot determine compliance with rules I4 (element mapping for comp_vec is missing) and I6 (instrument time is not provided).\"\n}\n```",
+  "usage": {
+    "input_tokens": 1266,
+    "output_tokens": 60
+  }
+}

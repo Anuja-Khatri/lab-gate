@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.004802,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "devgem",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": null,\n  \"rationale\": \"The plan does not provide predicted steady-state potentials for I1, element mapping for I4, or instrument times for I6.\"\n}\n```",
+  "usage": {
+    "input_tokens": 2041,
+    "output_tokens": 60
+  }
+}

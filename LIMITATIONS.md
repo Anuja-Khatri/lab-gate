@@ -54,12 +54,16 @@ not mean.
    classifier, oracle, programmatic adaptive attacker) ran at full scale and need no
    API. Every LLM-arm number is reported with its exact n.
 
-   Round-3 update (D-026): a Gemini arm was added to restore cross-vendor attacker
-   separation and a second LLM-gate vendor, but the provided Gemini key is invalid
-   (live 400 "API key not valid"), so all Gemini arms are "blocked, not measured".
-   With OpenAI (no credits) and Anthropic (monthly usage limit) also blocked, no LLM
-   vendor is currently usable, so the cross-vendor LLM-attacker-vs-LLM-gate comparison
-   is unmeasured. Same-vendor note (item 6): no completed metric has the gate and the
+   Round-3/3b update (D-026/D-028/D-029): a Gemini arm was added to restore
+   cross-vendor attacker separation and a second LLM-gate vendor. All three keys were
+   re-verified with live calls: OpenAI out of credits, Anthropic at its monthly usage
+   limit, Gemini valid and live (gemini-3.1-pro-preview, pinned) but free-tier quota
+   (~25 req/model) -- the held-out run 429'd after ~55 calls, so all Gemini held-out
+   arms are "blocked, not measured" (the 30-call dev-split tuning completed; quota-
+   polluted partial values were reset, not kept). No LLM vendor currently has enough
+   quota/credits to run full held-out arms, so the cross-vendor
+   LLM-attacker-vs-LLM-gate comparison is unmeasured. Same-vendor note (item 6): no
+   completed metric has the gate and the
    attacker as the same-vendor LLM; the opus gate's adaptive number came from the
    deterministic programmatic attacker, and the only Anthropic LLM attacker that ran
    targeted the (non-LLM) typed gate. The information-parity effect is reported only

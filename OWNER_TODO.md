@@ -62,14 +62,15 @@ after we look at the real numbers together.
 - [ ] OpenAI: account out of credits (HTTP 429). Add credits to rerun the gpt-5.1 arm.
 - [ ] Anthropic: monthly usage limit reached; regains 2026-12-01. The opus run-to-run
   variance and the full Anthropic attacker are "blocked, not measured" until then.
-- [ ] Gemini: the `LABGATE_GEMINI_API_KEY` in `$WS/.env` is INVALID (live 400 "API key
-  not valid"; it is 24 chars, a real AI Studio key is ~39 chars starting "AIza"). The
-  Gemini integration (cached/metered/capped, with live model verification) is in
-  `eval/llm.py` and ready. Put a valid key in `$WS/.env` and run `make eval`; it will
-  verify + pin the Gemini model (R-13), run the Gemini adaptive attacker (cross-vendor
-  separation) and the Gemini plain+parity gate arms, and the blocked Gemini metrics in
-  the registry will fill in. No earlier Gemini instruction was ever received by the
-  build (see DECISIONS D-026) — this round added it from scratch at your request.
+- [ ] Gemini: the current `LABGATE_GEMINI_API_KEY` (AQ-format) is VALID and live
+  (`gemini-3.1-pro-preview` pinned, verified 2026-11-03), but the account is FREE-TIER
+  with a quota of ~25 requests/model, so the held-out arms 429'd after ~55 calls and
+  are "blocked, not measured" (the 30-call dev-split prompt tuning did complete). To
+  fill the Gemini adaptive attacker (cross-vendor) and the Gemini plain+parity gate
+  arms, enable a PAID Gemini tier (higher quota) and run
+  `make eval` (`python -m eval.heldout_gemini`); the integration has retry/backoff and
+  the blocked Gemini metrics will fill in. No earlier Gemini instruction was ever
+  received by the build (DECISIONS D-026) — it was added from scratch at your request.
 
 ## Reproduce (no action needed, for reference)
 - `make ci` green (lint, tests, taint, static no-reference, secret scan, numbers lock).

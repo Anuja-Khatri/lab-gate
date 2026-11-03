@@ -63,7 +63,10 @@ the held-out evaluation:
   plans and lets through adaptive attacks with nonzero run-to-run variance; giving the
   LLM the same predicted potential the typed gate uses did not fix this;
 - the learned classifier is accurate in-distribution and degrades under adaptive
-  attack.
+  attack;
+- a third-vendor cross-check (Gemini attacker + Gemini gate) is implemented and
+  verified live but its arms are "blocked, not measured" on the available free-tier
+  quota, reported honestly empty rather than estimated.
 
 Exact rates with n and 95% CIs are in the registry; this prose states direction only.
 The reference and SMT checkers agree on every plan in the equivalence suite, every

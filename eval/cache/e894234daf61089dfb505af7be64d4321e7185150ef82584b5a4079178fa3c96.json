@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.003464,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Cannot evaluate rule I4 because the element mapping for comp_vec is not provided, and cannot evaluate rule I6 because instrument time is not provided.\"}\n```",
+  "usage": {
+    "input_tokens": 1402,
+    "output_tokens": 55
+  }
+}

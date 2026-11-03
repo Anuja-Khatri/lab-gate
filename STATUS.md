@@ -62,15 +62,18 @@ as observed.
 - R-08: paid LLM arms metered under per-role caps; see FINAL_REPORT Section 6 for exact n.
 - R-02: media gif/webm renderers (agg, Playwright) not installable; the asciinema cast
   is produced, gif/webm deferred to the owner (OWNER_TODO).
-- Round 3 (owner independent review; D-026/D-027): no earlier Gemini instruction was
-  ever received (logged). Added Gemini to eval/llm.py (cached/metered/capped) + live
-  model verification to restore a cross-vendor attacker and a second LLM-gate vendor;
-  the provided Gemini key is INVALID (live 400), so all Gemini arms are "blocked, not
-  measured" (R-08, never fabricated), integration ready for a valid key. Registry
-  hygiene: removed the opus-variance backfill (now "blocked, not measured"); kept the
-  real gpt-5.1 variance separately; added decided-coverage row (item 5); same-vendor
-  marking (item 6); within-vendor parity only (item 4). All three vendors are currently
-  unavailable, so the cross-vendor LLM-attacker-vs-LLM-gate comparison stays unmeasured.
+- Round 3/3b (owner independent review; D-026..D-029): no earlier Gemini instruction
+  was ever received (logged). Added Gemini to eval/llm.py (cached/metered/capped +
+  retry/backoff) with live model verification. Re-verified all three keys with live
+  calls: OpenAI out of credits (429), Anthropic monthly usage limit (400, to
+  2026-12-01), Gemini valid+live (gemini-3.1-pro-preview pinned, R-13) but free-tier
+  quota ~25 req/model -> held-out 429'd after ~55 calls. The 30-call Gemini dev-split
+  tuning completed (agreement 0.633); all Gemini HELD-OUT arms are "blocked, not
+  measured" (quota-polluted partials reset, not kept; R-08, no fabrication), ready for
+  a paid tier. Registry hygiene: removed the opus-variance backfill; kept the real
+  gpt-5.1 variance separately; decided-coverage row (item 5); same-vendor marking
+  (item 6); within-vendor parity only (item 4). No vendor currently has enough
+  quota/credits for full LLM arms, so cross-vendor attacker-vs-gate stays unmeasured.
 - Round 2 (owner independent review; D-023/D-024/D-025): re-ran the deterministic
   adaptive attacker at the FULL original spec (200x10x2, n=240); added an
   information-parity LLM arm (D-023); added the surprise-subset LLM number; added the
@@ -89,7 +92,12 @@ as observed.
 - `.env` contents never printed, logged, or committed.
 
 ## Last completed task
-Owner review round 2 (D-023/D-024/D-025): full-size deterministic adaptive, parity LLM
-arm, surprise LLM numbers, abstain breakdown, per-cell-n tables; registry re-locked,
-docs/site regenerated, `make ci` green, `make demo` reproduces. See CHECKLIST.md (all
-items ticked) and DECISIONS.md (D-001..D-025). BUILD COMPLETE stands.
+Owner review round 3b (D-026..D-029): verified all three vendor keys live (only
+Gemini usable; OpenAI/Anthropic blocked); added Gemini to eval/llm.py (pinned
+gemini-3.1-pro-preview, retry/backoff); dev-tuned+froze the Gemini prompt; Gemini
+held-out arms blocked by free-tier quota -> reset to "blocked, not measured" (R-08,
+quota-polluted partials removed, nothing backfilled/fabricated). Items 4-7 done:
+within-vendor parity, decided-coverage row, same-vendor marking, no backfill. Registry
+re-locked (50 metrics), table/FINAL_REPORT/POST/README/site/STATUS regenerated,
+LIMITATIONS + deviations updated, `make ci` green, `make demo` reproduces. See
+CHECKLIST.md and DECISIONS.md (D-001..D-029). BUILD COMPLETE stands.

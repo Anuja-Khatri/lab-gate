@@ -29,10 +29,10 @@ adaptive_attacker:   # P7.4 — different vendor from the gate
 # Gemini arms are "blocked, not measured". Candidate (to verify with a valid key):
 gemini_gate:
   vendor: gemini
-  model_id: gemini-3-pro     # candidate; UNVERIFIED (invalid key); gemini-2.5-pro fallback
-  status: "invalid key; unverified; arms blocked (R-08)"
+  model_id: gemini-3.1-pro-preview   # pinned R-13, verified live 2026-11-03 (AQ key)
+  status: "live; thinking_budget=-1 (dynamic)"
 gemini_attacker:
   vendor: gemini
-  model_id: gemini-3-pro     # candidate; UNVERIFIED
+  model_id: gemini-3.1-pro-preview   # pinned; verified live
 
 temperature: 0       # fixed where the API allows (recorded per call otherwise)

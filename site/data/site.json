@@ -1,7 +1,7 @@
 {
   "numbers_lock": {
-    "registry_sha256": "7d428f8d5ed5db783d3962c17bc8098ced88d6845fca5b21a4f29d9e3757a1a0",
-    "n_metrics": 46,
+    "registry_sha256": "39badbd05d743d39fc13d1db82e1b9f810149a725e8e8e3ada6e436f7a047bb1",
+    "n_metrics": 50,
     "note": "SPEC numbers lock: docs/site render from this snapshot; a new snapshot requires regenerating every doc that cited the first."
   },
   "scoreboard": [

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.007942,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "devgem",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": null,\n  \"rationale\": \"Cannot determine safety because the plan lacks information such as predicted steady-state potentials for measure_cp, element mappings for comp_vec to check for Ce and Mn, and instrument time.\"\n}\n```",
+  "usage": {
+    "input_tokens": 3551,
+    "output_tokens": 70
+  }
+}

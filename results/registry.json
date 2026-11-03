@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "numbers_lock": {
-    "registry_sha256": "7d428f8d5ed5db783d3962c17bc8098ced88d6845fca5b21a4f29d9e3757a1a0",
-    "n_metrics": 46,
+    "registry_sha256": "39badbd05d743d39fc13d1db82e1b9f810149a725e8e8e3ada6e436f7a047bb1",
+    "n_metrics": 50,
     "note": "SPEC numbers lock: docs/site render from this snapshot; a new snapshot requires regenerating every doc that cited the first."
   },
   "metrics": [
@@ -25,7 +25,18 @@
       "n": 0,
       "task": "P8",
       "caveats": [
-        "Gemini plain LLM gate, benign abstain — blocked, not measured: LABGATE_GEMINI_API_KEY is invalid (live 400 'API key not valid'), D-026; integration in eval/llm.py is ready for a valid key"
+        "Gemini plain gate benign abstain (extension) — blocked, not measured: Gemini free-tier quota exceeded (limit 25 generate-requests/model; ~55 held-out calls succeeded before HTTP 429), D-029. Integration pinned/verified (gemini-3.1-pro-preview) and ready for a paid tier."
+      ]
+    },
+    {
+      "metric_id": "abstain.gemini_parity.benign",
+      "value": null,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 0,
+      "task": "P8",
+      "caveats": [
+        "Gemini PARITY gate benign abstain (extension) — blocked, not measured: Gemini free-tier quota exceeded (limit 25 generate-requests/model; ~55 held-out calls succeeded before HTTP 429), D-029. Integration pinned/verified (gemini-3.1-pro-preview) and ready for a paid tier."
       ]
     },
     {
@@ -111,7 +122,7 @@
       "n": 0,
       "task": "P8",
       "caveats": [
-        "Gemini plain LLM gate, static+decomposition+xreq (extension, not preregistered) — blocked, not measured: LABGATE_GEMINI_API_KEY is invalid (live 400 'API key not valid'), D-026; integration in eval/llm.py is ready for a valid key"
+        "Gemini plain gate, static+decomp+xreq (extension) — blocked, not measured: Gemini free-tier quota exceeded (limit 25 generate-requests/model; ~55 held-out calls succeeded before HTTP 429), D-029. Integration pinned/verified (gemini-3.1-pro-preview) and ready for a paid tier."
       ]
     },
     {
@@ -122,7 +133,7 @@
       "n": 0,
       "task": "P8",
       "caveats": [
-        "Gemini adaptive attacker vs Gemini gate (SAME-VENDOR: attacker and gate both Gemini) — blocked, not measured: LABGATE_GEMINI_API_KEY is invalid (live 400 'API key not valid'), D-026; integration in eval/llm.py is ready for a valid key"
+        "Gemini adaptive attacker vs Gemini gate (SAME-VENDOR; extension) — blocked, not measured: Gemini free-tier quota exceeded (limit 25 generate-requests/model; ~55 held-out calls succeeded before HTTP 429), D-029. Integration pinned/verified (gemini-3.1-pro-preview) and ready for a paid tier."
       ]
     },
     {
@@ -133,7 +144,7 @@
       "n": 0,
       "task": "P8",
       "caveats": [
-        "Gemini adaptive attacker vs typed gate (extension, not preregistered; restores cross-vendor separation) — blocked, not measured: LABGATE_GEMINI_API_KEY is invalid (live 400 'API key not valid'), D-026; integration in eval/llm.py is ready for a valid key"
+        "Gemini adaptive attacker vs typed gate (cross-vendor; extension) — blocked, not measured: Gemini free-tier quota exceeded (limit 25 generate-requests/model; ~55 held-out calls succeeded before HTTP 429), D-029. Integration pinned/verified (gemini-3.1-pro-preview) and ready for a paid tier."
       ]
     },
     {
@@ -144,7 +155,7 @@
       "n": 0,
       "task": "P8",
       "caveats": [
-        "Gemini PARITY LLM gate (same-vendor parity pair with gemini plain), static+decomp+xreq — blocked, not measured: LABGATE_GEMINI_API_KEY is invalid (live 400 'API key not valid'), D-026; integration in eval/llm.py is ready for a valid key"
+        "Gemini PARITY gate, static+decomp+xreq (within-vendor parity, extension) — blocked, not measured: Gemini free-tier quota exceeded (limit 25 generate-requests/model; ~55 held-out calls succeeded before HTTP 429), D-029. Integration pinned/verified (gemini-3.1-pro-preview) and ready for a paid tier."
       ]
     },
     {
@@ -486,6 +497,28 @@
       ]
     },
     {
+      "metric_id": "dev.llm_gemini.agreement_vs_oracle",
+      "value": 0.633,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 30,
+      "task": "P6",
+      "caveats": [
+        "DEV-SPLIT ONLY (not held-out): Gemini gemini-3.1-pro-preview gate agreement with the oracle on 30 dev plans (15 harmful); used for good-faith prompt freeze (D-028)"
+      ]
+    },
+    {
+      "metric_id": "dev.llm_gpt51.agreement_vs_oracle",
+      "value": 0.5,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 30,
+      "task": "P6",
+      "caveats": [
+        "DEV-SPLIT ONLY: OpenAI gpt-5.1 gate v2 prompt agreement with the oracle on 30 dev plans (D-022)"
+      ]
+    },
+    {
       "metric_id": "equivalence.reference_vs_smt",
       "value": 1.0,
       "ci_lo": null,
@@ -526,7 +559,7 @@
       "n": 0,
       "task": "P8",
       "caveats": [
-        "Gemini plain LLM gate, benign false-block — blocked, not measured: LABGATE_GEMINI_API_KEY is invalid (live 400 'API key not valid'), D-026; integration in eval/llm.py is ready for a valid key"
+        "Gemini plain gate benign false-block (extension) — blocked, not measured: Gemini free-tier quota exceeded (limit 25 generate-requests/model; ~55 held-out calls succeeded before HTTP 429), D-029. Integration pinned/verified (gemini-3.1-pro-preview) and ready for a paid tier."
       ]
     },
     {
@@ -537,7 +570,7 @@
       "n": 0,
       "task": "P8",
       "caveats": [
-        "Gemini plain LLM gate, surprise false-block — blocked, not measured: LABGATE_GEMINI_API_KEY is invalid (live 400 'API key not valid'), D-026; integration in eval/llm.py is ready for a valid key"
+        "Gemini plain gate surprise false-block (extension) — blocked, not measured: Gemini free-tier quota exceeded (limit 25 generate-requests/model; ~55 held-out calls succeeded before HTTP 429), D-029. Integration pinned/verified (gemini-3.1-pro-preview) and ready for a paid tier."
       ]
     },
     {
@@ -548,7 +581,18 @@
       "n": 0,
       "task": "P8",
       "caveats": [
-        "Gemini PARITY LLM gate, benign false-block — blocked, not measured: LABGATE_GEMINI_API_KEY is invalid (live 400 'API key not valid'), D-026; integration in eval/llm.py is ready for a valid key"
+        "Gemini PARITY gate benign false-block (extension) — blocked, not measured: Gemini free-tier quota exceeded (limit 25 generate-requests/model; ~55 held-out calls succeeded before HTTP 429), D-029. Integration pinned/verified (gemini-3.1-pro-preview) and ready for a paid tier."
+      ]
+    },
+    {
+      "metric_id": "falseblock.gemini_parity.surprise",
+      "value": null,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 0,
+      "task": "P8",
+      "caveats": [
+        "Gemini PARITY gate surprise false-block (extension) — blocked, not measured: Gemini free-tier quota exceeded (limit 25 generate-requests/model; ~55 held-out calls succeeded before HTTP 429), D-029. Integration pinned/verified (gemini-3.1-pro-preview) and ready for a paid tier."
       ]
     },
     {
@@ -713,7 +757,7 @@
       "n": 0,
       "task": "P8",
       "caveats": [
-        "Gemini LLM-gate run-to-run variance — blocked, not measured: LABGATE_GEMINI_API_KEY is invalid (live 400 'API key not valid'), D-026; integration in eval/llm.py is ready for a valid key"
+        "Gemini gate run-to-run variance (extension) — blocked, not measured: Gemini free-tier quota exceeded (limit 25 generate-requests/model; ~55 held-out calls succeeded before HTTP 429), D-029. Integration pinned/verified (gemini-3.1-pro-preview) and ready for a paid tier."
       ]
     },
     {

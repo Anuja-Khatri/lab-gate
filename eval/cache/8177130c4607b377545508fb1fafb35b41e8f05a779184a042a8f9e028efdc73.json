@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.002402,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "devgem",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I3\", \"rationale\": \"The maximum temperature of the borosilicate glass substrate is not provided in the rules or the plan.\"}",
+  "usage": {
+    "input_tokens": 955,
+    "output_tokens": 41
+  }
+}

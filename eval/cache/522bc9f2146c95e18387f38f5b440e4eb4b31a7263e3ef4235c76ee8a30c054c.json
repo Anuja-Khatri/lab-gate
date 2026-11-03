@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0028899999999999998,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "devgem",
+  "text": "```json\n{\n  \"verdict\": \"ABSTAIN\",\n  \"rule\": null,\n  \"rationale\": \"The plan includes a durability_test but does not indicate if the sample passed prior screening QC (Rule I5). Additionally, the composition vector elements are not mapped, so Rule I4 cannot be evaluated.\"\n}\n```",
+  "usage": {
+    "input_tokens": 1001,
+    "output_tokens": 74
+  }
+}
