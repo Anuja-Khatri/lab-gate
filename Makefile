@@ -46,11 +46,10 @@ equivalence:
 		&& $(PY) -m gate.checker.equivalence \
 		|| echo "equivalence: not built yet (Phase 4)"
 
-# eval: baselines + red team + metrics (Phases 6-8). Needs $WS/.env keys for LLM arms.
+# eval: the held-out evaluation (Phase 8). Deterministic arms run at full scale;
+# paid LLM arms run at the preregistered reduced sizes, cached + metered (R-08).
 eval:
-	@test -f eval/runner.py \
-		&& $(PY) -m eval.runner \
-		|| echo "eval: not built yet (Phases 6-8)"
+	$(PY) -m eval.heldout
 
 # demo: the reproducible headline-number demo from cache (P9). Stub until P9.
 demo:

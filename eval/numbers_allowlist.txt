@@ -1,0 +1,29 @@
+# Structural (non-result) decimals/percentages allowed in docs & site.
+# The scan only flags \d+\.\d+ and \d+% tokens; pure integers are ignored.
+# Result rates/CIs are derived from the registry automatically; these are the
+# domain/structural constants that also appear.
+# --- invariant limits / physics ---
+2.5
+5.0
+1.23
+0.2
+3.0
+1.77
+12.8
+0.315
+0.376
+0.512
+4.6
+0.036
+480.0
+200.0
+240.0
+600.0
+100.0
+# --- version / identifiers ---
+0.1.0
+0.1
+1.0
+10.1039
+10.26434
+# --- reference years as decimals never occur; DOIs covered above ---

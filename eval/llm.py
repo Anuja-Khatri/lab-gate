@@ -23,8 +23,11 @@ from __future__ import annotations
 
 import hashlib
 import json
+import threading
 from pathlib import Path
 from typing import Callable, Optional
+
+_METER_LOCK = threading.Lock()
 
 REPO = Path(__file__).resolve().parent.parent
 WS = REPO.parent
@@ -166,10 +169,12 @@ def call(role: str, model: str, system: str, messages: list[dict], *,
     in_tok = resp.get("usage", {}).get("input_tokens", 0)
     out_tok = resp.get("usage", {}).get("output_tokens", 0)
     cost = _cost(model, in_tok, out_tok)
-    meter["total_usd"] = round(meter["total_usd"] + cost, 6)
-    meter["by_role"][role] = round(meter["by_role"].get(role, 0.0) + cost, 6)
-    meter["calls"] += 1
-    _save_meter(meter)
+    with _METER_LOCK:                         # atomic read-modify-write under concurrency
+        meter = _load_meter()
+        meter["total_usd"] = round(meter["total_usd"] + cost, 6)
+        meter["by_role"][role] = round(meter["by_role"].get(role, 0.0) + cost, 6)
+        meter["calls"] += 1
+        _save_meter(meter)
 
     rec = {"text": resp["text"], "provider": provider, "model": model,
            "cache_source": "live", "usage": {"input_tokens": in_tok, "output_tokens": out_tok},
