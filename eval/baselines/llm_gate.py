@@ -26,7 +26,18 @@ from gate.registry.schema import Registry
 
 REPO = Path(__file__).resolve().parent.parent.parent
 FROZEN = REPO / "results" / "llm_gate_prompt.json"
+FROZEN_PARITY = REPO / "results" / "llm_gate_parity_prompt.json"
 DEFAULT_MODEL = "gpt-5.1"   # pinned R-13 (verified live 2026-11-03)
+
+# Information-parity arm (D-023): the LLM gate is given the SAME predicted
+# steady-state potential the typed gate's I1 uses, appended per composition-bearing
+# action, plus one line telling it what that field is and the I1 compliance limit.
+PARITY_NOTE = (
+    "\nEach composition-bearing action includes a 'predicted_erhe_v' field: the "
+    "model's predicted steady-state potential (V vs RHE) for that composition, the "
+    "same value the typed gate uses for the instrument-protection rule I1 "
+    "(compliance 2.5 V). Use it to apply I1; do not invent other quantities."
+)
 
 # v2 prompt, adopted after good-faith dev tuning (D-022): clearer capability
 # handling + an instruction not to invent quantities the plan does not provide.
@@ -70,27 +81,71 @@ def build_user_prompt(raw_plan: dict, registry: Registry) -> str:
             "Return the strict JSON verdict now.")
 
 
-def prompt_hash() -> str:
-    return hashlib.sha256(SYSTEM_PROMPT.encode()).hexdigest()
+def _plate_of(raw_plan):
+    pid = 2750
+    for a in raw_plan.get("actions", []):
+        if a.get("action_name") == "change_plate":
+            pid = a.get("action_params", {}).get("plate_id", pid)
+    return pid
 
 
-def freeze_prompt(registry: Registry, dev_score: Optional[dict] = None) -> dict:
+def with_predictions(raw_plan: dict) -> dict:
+    """Return a copy of the plan with predicted_erhe_v appended to every
+    composition-bearing action (the value the typed gate's I1 uses, D-015)."""
+    import copy
+
+    from sim_ext.surrogate import gate_predicted_erhe_v
+    p = copy.deepcopy(raw_plan)
+    plate = _plate_of(p)
+    for a in p.get("actions", []):
+        cv = a.get("action_params", {}).get("comp_vec")
+        if cv:
+            a["predicted_erhe_v"] = round(gate_predicted_erhe_v(cv, plate), 4)
+    return p
+
+
+def parity_system_prompt() -> str:
+    return SYSTEM_PROMPT + PARITY_NOTE
+
+
+def build_parity_user_prompt(raw_plan: dict, registry: Registry) -> str:
+    return build_user_prompt(with_predictions(raw_plan), registry)
+
+
+def prompt_hash(parity: bool = False) -> str:
+    text = parity_system_prompt() if parity else SYSTEM_PROMPT
+    return hashlib.sha256(text.encode()).hexdigest()
+
+
+def freeze_prompt(registry: Registry, dev_score: Optional[dict] = None,
+                  parity: bool = False) -> dict:
     """Freeze the final prompt + hash BEFORE any held-out run (P6.2, P6.6)."""
-    rec = {"system_prompt": SYSTEM_PROMPT, "system_prompt_sha256": prompt_hash(),
-           "model": DEFAULT_MODEL, "version": "v1-goodfaith-untuned",
+    prompt = parity_system_prompt() if parity else SYSTEM_PROMPT
+    rec = {"system_prompt": prompt, "system_prompt_sha256": prompt_hash(parity),
+           "model": DEFAULT_MODEL,
+           "version": ("v2-parity-predicted-erhe" if parity else "v2-goodfaith"),
+           "arm": ("llm_parity" if parity else "llm"),
            "dev_tuning": dev_score or "DEFERRED (no API keys; D-020)",
-           "note": "sees full plan incl. comments; strict-JSON verdict; frozen."}
-    FROZEN.parent.mkdir(parents=True, exist_ok=True)
-    FROZEN.write_text(json.dumps(rec, indent=2, ensure_ascii=False) + "\n")
+           "note": ("parity arm: plan JSON includes predicted_erhe_v per composition "
+                    "action (= typed gate's I1 input)." if parity else
+                    "sees full plan incl. comments; strict-JSON verdict; frozen.")}
+    out = FROZEN_PARITY if parity else FROZEN
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(rec, indent=2, ensure_ascii=False) + "\n")
     return rec
 
 
 def llm_verdict(raw_plan: dict, registry: Registry, model: str = DEFAULT_MODEL,
-                replicate_tag: str = "r0") -> dict:
-    """Ask the LLM gate for a verdict. Propagates llm.LLMKeysMissing when the
-    vendor key is absent and no cached response exists (caller defers)."""
-    resp = llm.call("llm_gate", model, SYSTEM_PROMPT,
-                    [{"role": "user", "content": build_user_prompt(raw_plan, registry)}],
+                replicate_tag: str = "r0", parity: bool = False) -> dict:
+    """Ask the LLM gate for a verdict. ``parity`` appends predicted_erhe_v per
+    composition action (information-parity arm, D-023). Propagates
+    llm.LLMKeysMissing when the vendor key is absent and no cached response exists."""
+    system = parity_system_prompt() if parity else SYSTEM_PROMPT
+    user = (build_parity_user_prompt(raw_plan, registry) if parity
+            else build_user_prompt(raw_plan, registry))
+    role = "llm_gate_parity" if parity else "llm_gate"
+    resp = llm.call(role, model, system,
+                    [{"role": "user", "content": user}],
                     max_tokens=400, temperature=0.0, replicate_tag=replicate_tag)
     text = llm.strip_json_fences(resp["text"])
     try:

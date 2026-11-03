@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.014450000000000001,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I3\", \"rationale\": \"Anneal is allowed for the synthesis class, and the 10-minute furnace time is within I3b. But I3 needs the quartz substrate's maximum temperature, which neither the rules nor the plan provide, so compliance at 600 cannot be checked without inventing that value.\"}\n```",
+  "usage": {
+    "input_tokens": 1505,
+    "output_tokens": 277
+  }
+}

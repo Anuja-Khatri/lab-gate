@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018840000000000003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"change_plate and measure_cp are both allowed for the activelearn campaign class. Both predicted potentials (1.6702 V and 1.6714 V) are under the 2.5 V compliance limit in I1. There are no deposition, anneal, durability, acid or furnace actions, and the requester is internal, so the partner allowlist does not apply. I",
+  "usage": {
+    "input_tokens": 1768,
+    "output_tokens": 400
+  }
+}

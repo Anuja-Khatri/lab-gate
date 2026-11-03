@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018755,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class activelearn allows change_plate and measure_cp. The requester is an internal_agent, so the partner allowlist does not apply. The plan includes no anne",
+  "usage": {
+    "input_tokens": 1751,
+    "output_tokens": 400
+  }
+}

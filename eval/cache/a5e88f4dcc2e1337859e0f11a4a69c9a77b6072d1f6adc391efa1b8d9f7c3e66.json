@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02166,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Internal agent in activelearn class. change_plate and measure_cp are both allowed for activelearn (I8). All predicted potentials (max 1.7192 V) are below the 2.5 V compliance (I1). There are no deposit, anneal, durability or acid actions, so I2, I3, I3b, I5 and I6b",
+  "usage": {
+    "input_tokens": 2332,
+    "output_tokens": 400
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.021655,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both change_plate and measure_cp are allowed actions for activelearn (I8). Every predicted_erhe_v (1.589-1.619 V) is below the 2.5 V compliance limit (I1). The plan has no deposition, anneal, durability, acid-volume or instrument-time quantities to check, and ALLOW does not apply to an intern",
+  "usage": {
+    "input_tokens": 2331,
+    "output_tokens": 400
+  }
+}

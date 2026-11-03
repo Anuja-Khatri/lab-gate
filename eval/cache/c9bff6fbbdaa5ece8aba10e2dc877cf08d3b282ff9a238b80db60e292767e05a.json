@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.020950000000000003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions (change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model) are listed for the activelearn class (I8). Both measure_cp predicted potentials (1.5675 V and",
+  "usage": {
+    "input_tokens": 2190,
+    "output_tokens": 400
+  }
+}

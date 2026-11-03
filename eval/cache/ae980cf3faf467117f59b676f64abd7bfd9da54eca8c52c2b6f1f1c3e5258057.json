@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01856,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All seven actions are permitted for the activelearn class (I8). There is no anneal, deposition or durability test, and the allowlist does not apply to an internal_agent requester. The plan gives no element labels for comp_vec and no predicted potential or instrument time, so nothing shows a Ce/Mn, compliance or time violation.\"}",
+  "usage": {
+    "input_tokens": 1777,
+    "output_tokens": 387
+  }
+}

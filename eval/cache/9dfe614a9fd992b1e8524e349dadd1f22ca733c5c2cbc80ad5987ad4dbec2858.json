@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01486,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"ALLOW\", \"rationale\": \"deposit_composition is allowed for the synthesis class. Because the requester is external_partner, the element allowlist applies. The comp_vec is unlabeled: no element order is given, so the element at index 1 (100%) cannot be identified. Whether it is on the allowlist (Fe, Mn, Ni, Ta, Cu, Co) therefore cannot be determined, and the sputter consumption units are also unspecified.\"}\n```",
+  "usage": {
+    "input_tokens": 1447,
+    "output_tokens": 305
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.020945,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"change_plate and measure_cp are both allowed for campaign_class activelearn (I8). All predicted_erhe_v values (1.639 to 1.718 V) are below the 2.5 V compliance limit (I1). There are no deposition, anneal, durability, acid or furnace actions, so I2",
+  "usage": {
+    "input_tokens": 2189,
+    "output_tokens": 400
+  }
+}

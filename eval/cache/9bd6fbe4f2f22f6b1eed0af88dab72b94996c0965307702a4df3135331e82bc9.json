@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.013510000000000001,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"The plan's campaign_class is 'synthesis', and update_model is not in the synthesis capability set (change_plate, get_loaded_plate, deposit_composition, anneal, measure_cp, get_progress). anneal and get_loaded_plate are allowed. The quartz maximum temperature for I3 is not given, but the I8 violation alone blocks the plan.\"}",
+  "usage": {
+    "input_tokens": 1497,
+    "output_tokens": 241
+  }
+}

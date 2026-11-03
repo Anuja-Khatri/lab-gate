@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.017875,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Synthesis allows deposit_composition (I8 ok). Each deposit is a single element, so I4 cannot apply. Predicted potentials of 1.63 and 1.71 V are below 2.5 V (I1). Each element gets one thickness-1 deposit, well under the 5.0 target-unit limit (I2). The requester is internal, so the partner allowlist does not apply. The plan has no anneal, durability test, acid use or timing data, so no other rule is triggered.\"}",
+  "usage": {
+    "input_tokens": 1705,
+    "output_tokens": 374
+  }
+}

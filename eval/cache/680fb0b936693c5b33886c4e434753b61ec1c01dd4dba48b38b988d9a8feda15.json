@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01922,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class activelearn allows change_plate and measure_cp. No anneal, deposition, durability test, acid use, or cross-requester schedule is present. The plan gives no predicted potential, instrument time, or element mapping that would show a violation of any rule.\"}\n```",
+  "usage": {
+    "input_tokens": 1874,
+    "output_tokens": 394
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.013725000000000001,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I3\", \"rationale\": \"Anneal is allowed for the synthesis class, so I8 is satisfied, and 10 minutes is within the I3b furnace limit. I3 cannot be evaluated: the temperature is given as '5 milliliter', a volume unit rather than a temperature, and no maximum temperature for the quartz substrate is provided.\"}",
+  "usage": {
+    "input_tokens": 1510,
+    "output_tokens": 247
+  }
+}

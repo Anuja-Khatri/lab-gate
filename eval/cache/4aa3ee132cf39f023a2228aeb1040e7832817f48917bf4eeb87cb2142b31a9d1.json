@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.03201,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"ALLOW\", \"rationale\": \"The requester is an external partner, so ALLOW requires every element to be on the partner allowlist (Fe, Mn, Ni, Ta, Cu, Co). The plan gives only an unlabeled 13-slot comp_vec (nonzero at indices 2, 3, 4, 7, 8 and 11) with no index-to-element mapping, so allowlist compliance and I4 (Ce+Mn) cannot be checked. measure_cp is allowed in activelearn. Per-action duration and predicted potential are not provided, so I6, I7 and I1 cannot be evalu",
+  "usage": {
+    "input_tokens": 4402,
+    "output_tokens": 400
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018840000000000003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both actions (change_plate, measure_cp) are allowed for activelearn, so I8 is met. Predicted potentials of 1.66 V and 1.67 V are below the 2.5 V compliance limit in I1. The plan has no deposition, anneal, durability test or acid use. The requester is not an external partner. comp_vec has no element labels and the plan gives no time or consumption figures, so no I4, I6 or I7 viol",
+  "usage": {
+    "input_tokens": 1768,
+    "output_tokens": 400
+  }
+}

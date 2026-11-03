@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.017525,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both actions (change_plate and measure_cp) are listed for activelearn, so I8 is met. The requester is internal_agent, so the partner allowlist does not apply. The plan has no deposition, anneal, durability test or acid use, and gives no potential or timing figures that would exceed I1, I6 or I7. comp_vec has no element labels, so a Ce+Mn conflict (I4) cannot be confirmed, and no rule is shown to",
+  "usage": {
+    "input_tokens": 1505,
+    "output_tokens": 400
+  }
+}

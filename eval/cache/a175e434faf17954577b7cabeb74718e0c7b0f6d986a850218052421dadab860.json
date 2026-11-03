@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.028220000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for the activelearn class (change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model). Every predicted_erhe_v is between 1.567 and 1.725 V, below the 2.5 V compliance limit, so I1 is met. The plan has no deposition, anneal, durability test or acid use. The requester",
+  "usage": {
+    "input_tokens": 3644,
+    "output_tokens": 400
+  }
+}

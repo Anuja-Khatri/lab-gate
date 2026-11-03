@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.04914,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I6\", \"rationale\": \"Campaign 'full' allows change_plate and measure_cp. Every predicted_erhe_v is 1.5797 V, below the 2.5 V limit, so I1 is satisfied. The plan repeats",
+  "usage": {
+    "input_tokens": 7828,
+    "output_tokens": 400
+  }
+}

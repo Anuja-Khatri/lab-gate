@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01951,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Internal requester in the activelearn class; change_plate and measure_cp are both allowed for activelearn. The plan includes no deposition, anneal, durability test or acid use. It gives no predicted potentials or instrument times, so I1, I6 and I7 cannot be shown violated and no values are invented. comp_vec has no element labels, so I4 cannot be shown violated either. No written rule is shown to be violated.\"}",
+  "usage": {
+    "input_tokens": 1997,
+    "output_tokens": 381
+  }
+}

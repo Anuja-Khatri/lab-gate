@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.017525,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both actions (change_plate, measure_cp) are listed for activelearn, so I8 is satisfied. The requester is internal_agent, so the partner allowlist does not apply. No deposit, anneal, durability test, acid use, predicted potential or instrument time is given, so no other rule can be shown to be violated. The comp_vec has no element labels, so I4 (Ce with Mn) cannot be checked directly, but no Ce/Mn co-pres",
+  "usage": {
+    "input_tokens": 1505,
+    "output_tokens": 400
+  }
+}

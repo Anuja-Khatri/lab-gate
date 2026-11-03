@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.025825,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"ALLOW\", \"rationale\": \"The requester is external_partner, so the ALLOW rule applies. Each comp_vec has 6 nonzero entries (indices 2, 3, 4, 7, 8, 11), but the plan does not say which element each index stands for. Without that mapping, partner allowlist compliance (and I4 Ce/Mn co-presence) cannot be checked. All 15 actions are measure_cp, which activelearn allows (I8 ok). Per-action durations and predicted potentials are not given, so I6 and I1 cannot be checked either.\"}",
+  "usage": {
+    "input_tokens": 3175,
+    "output_tokens": 398
+  }
+}

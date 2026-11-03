@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019985000000000003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both action types used, change_plate and measure_cp, are in the activelearn capability set, so I8 is satisfied. The requester is internal_agent, so the partner allowlist does not apply. The plan has no deposition, anneal, durability test or acid use, so",
+  "usage": {
+    "input_tokens": 1997,
+    "output_tokens": 400
+  }
+}

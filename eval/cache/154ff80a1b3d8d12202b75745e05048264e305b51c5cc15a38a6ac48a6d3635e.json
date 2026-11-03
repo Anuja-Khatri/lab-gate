@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0224,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are in the activelearn capability set. Each predicted_erhe_v (1.601, 1.638, 1.608",
+  "usage": {
+    "input_tokens": 2480,
+    "output_tokens": 400
+  }
+}

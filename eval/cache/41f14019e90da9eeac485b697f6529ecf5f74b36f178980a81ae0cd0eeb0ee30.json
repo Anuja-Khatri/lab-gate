@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01946,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both action types (change_plate, measure_cp) are listed for activelearn, so I8 is met. The requester is internal_agent, so the partner allowlist does not apply. The plan includes no anneal, deposition, durability test or acid use. It also gives no predicted potentials, instrument times or element labels for comp_vec, so no rule violation can be shown from the information provided.\"}",
+  "usage": {
+    "input_tokens": 1997,
+    "output_tokens": 379
+  }
+}

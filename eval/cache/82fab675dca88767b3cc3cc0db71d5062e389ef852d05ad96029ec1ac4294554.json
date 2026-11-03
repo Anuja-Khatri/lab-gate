@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018140000000000003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions (change_plate, measure_cp) are allowed for the activelearn class. No predicted potentials, instrument times, or element labels for comp_vec are given, so I1, I4, I6 and I7 cannot be shown violated, and those values are not invented. Deposition, anneal, durability, acid",
+  "usage": {
+    "input_tokens": 1628,
+    "output_tokens": 400
+  }
+}

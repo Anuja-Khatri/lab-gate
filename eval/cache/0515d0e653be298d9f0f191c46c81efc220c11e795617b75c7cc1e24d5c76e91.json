@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02211,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\":",
+  "usage": {
+    "input_tokens": 2422,
+    "output_tokens": 400
+  }
+}

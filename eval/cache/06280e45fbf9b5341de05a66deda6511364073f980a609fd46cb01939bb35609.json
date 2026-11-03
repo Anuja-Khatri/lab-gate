@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019985000000000003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"The requester is internal_agent, so the partner allowlist does not apply. Campaign class activelearn permits change_plate and measure_cp. The plan has no deposition, anneal, durability test, acid use or cross-requester schedule, so I2, I3, I3b, I5, I6b and I",
+  "usage": {
+    "input_tokens": 1997,
+    "output_tokens": 400
+  }
+}

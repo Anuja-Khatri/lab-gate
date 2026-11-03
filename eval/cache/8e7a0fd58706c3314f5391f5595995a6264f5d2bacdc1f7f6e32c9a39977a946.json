@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.022405,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action is in the activelearn capability set (I8), and all predicted potentials (1.63-1.68 V) are below the 2.5 V compliance limit (I1). The plan has no deposition, anneal, durability or acid actions, so I2, I3, I3b, I5 and I",
+  "usage": {
+    "input_tokens": 2481,
+    "output_tokens": 400
+  }
+}

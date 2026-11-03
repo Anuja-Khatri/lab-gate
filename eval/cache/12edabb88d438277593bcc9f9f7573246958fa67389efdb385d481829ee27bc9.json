@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018140000000000003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class activelearn allows both change_plate and measure_cp, so I8 is satisfied. The plan gives no element labels for comp_vec, so I4 (Ce with Mn) cannot be shown to be violated. It also gives no predicted potentials, instrument times",
+  "usage": {
+    "input_tokens": 1628,
+    "output_tokens": 400
+  }
+}

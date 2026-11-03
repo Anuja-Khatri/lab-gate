@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.017815,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"The plan uses only change_plate and measure_cp, both allowed for activelearn. The requester is internal, so the partner allowlist does not apply. No anneal, deposition, durability test, acid volume or time totals are given that would exceed a limit. No rule is evidently violated.\"}",
+  "usage": {
+    "input_tokens": 1628,
+    "output_tokens": 387
+  }
+}

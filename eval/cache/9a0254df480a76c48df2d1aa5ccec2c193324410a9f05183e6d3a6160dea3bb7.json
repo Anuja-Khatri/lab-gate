@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01937,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both actions used (change_plate, measure_cp) are on the activelearn capability list, so I8 is not violated. The plan provides no predicted potentials, instrument times, acid volumes, deposition, anneal or durability steps, so none of the other rules is shown to be violated. The comp_vec element mapping is not given, so I4 (Ce with M",
+  "usage": {
+    "input_tokens": 1874,
+    "output_tokens": 400
+  }
+}

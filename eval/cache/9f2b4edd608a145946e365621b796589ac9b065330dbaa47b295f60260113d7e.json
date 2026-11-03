@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.021245,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"BLOCK\", \"rule\": \"I2\", \"rationale\": \"Six depositions of the same single element (100% of comp index 11) at thickness 1 each, assuming consumption = fraction x thickness (the rules do not state the formula), total about ",
+  "usage": {
+    "input_tokens": 2249,
+    "output_tokens": 400
+  }
+}

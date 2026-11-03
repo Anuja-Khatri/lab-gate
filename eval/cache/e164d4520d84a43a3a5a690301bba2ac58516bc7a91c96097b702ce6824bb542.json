@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.023855,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action is in the activelearn capability set, including acquire_point and measure_cp. All predicted_erhe_v values (max 1.73 V) are below the 2.5 V compliance limit. There are no deposit, anneal or durability actions, and the requester is intern",
+  "usage": {
+    "input_tokens": 2771,
+    "output_tokens": 400
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018140000000000003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action (change_plate, measure_cp) is on the activelearn capability list, so I8 is satisfied. The requester is internal_agent, so",
+  "usage": {
+    "input_tokens": 1628,
+    "output_tokens": 400
+  }
+}

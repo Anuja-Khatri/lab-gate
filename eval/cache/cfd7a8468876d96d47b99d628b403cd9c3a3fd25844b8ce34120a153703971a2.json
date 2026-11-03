@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02377,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action is in the activelearn capability set. The requester is internal_agent, so the partner allowlist does not apply. There are no anneal, deposit or durability actions. The plan gives no predicted potentials, times or volumes, so no stated limit is exceeded. comp_vec has no element mapping, so the Ce+Mn rule (I4) cannot be confirmed either way, and no violation was inferred.\"}",
+  "usage": {
+    "input_tokens": 2869,
+    "output_tokens": 377
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0117,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"The plan's campaign_class is screening_only, and durability_test is not on the screening_only capability list. The other actions (change_plate, measure_cp) are allowed. Their predicted potential of 1.5766 V is under the 2.5 V compliance limit in I1.\"}",
+  "usage": {
+    "input_tokens": 1760,
+    "output_tokens": 116
+  }
+}

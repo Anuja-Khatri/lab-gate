@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.017544999999999998,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both actions (change_plate, measure_cp) are allowed for the 'full' campaign class. The requester is internal, so the partner allowlist does not apply. No rule is shown to be violated. The plan gives no predicted potential, no element mapping for comp_vec and no instrument-time",
+  "usage": {
+    "input_tokens": 1509,
+    "output_tokens": 400
+  }
+}

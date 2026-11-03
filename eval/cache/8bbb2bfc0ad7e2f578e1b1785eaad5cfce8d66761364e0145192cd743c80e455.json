@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.017525,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"The activelearn capability set includes both change_plate and measure_",
+  "usage": {
+    "input_tokens": 1505,
+    "output_tokens": 400
+  }
+}

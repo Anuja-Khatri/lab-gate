@@ -51,7 +51,7 @@ def build() -> str:
         m = metrics.get(mid)
         return m["value"] if m else None
 
-    gates = ["typed", "classifier", "llm"]
+    gates = ["typed", "classifier", "llm", "llm_parity"]
     scoreboard = []
     for g in gates:
         row = {"gate": g,
@@ -65,8 +65,10 @@ def build() -> str:
     curves = {g: val(f"attack_curve.{g}") for g in gates if val(f"attack_curve.{g}")}
     receipts = _sample_receipts()
 
+    abstain_bd = metrics.get("abstain_breakdown.typed", {})
     data = {"numbers_lock": reg.get("numbers_lock"), "scoreboard": scoreboard,
             "curves": curves, "receipts": receipts,
+            "abstain_breakdown": abstain_bd,
             "checker": {k: val(k) for k in
                         ("equivalence.reference_vs_smt", "replay.counterexample_validity",
                          "latency.p50_ms", "latency.p95_ms", "taint.sentinel_channel",
@@ -141,6 +143,14 @@ def _html(data) -> str:
             html.escape(str(r.get("decision"))), html.escape(str(r.get("reason", ""))[:60]),
             html.escape(str(r.get("detail", "") or "")), html.escape(str(r.get("plan_hash", ""))[:12])))
     chart = _svg_curve(data["curves"]) if data["curves"] else "<p>No curve data.</p>"
+    bd = data.get("abstain_breakdown") or {}
+    bd_val = bd.get("value") if isinstance(bd, dict) and "value" in bd else bd
+    if isinstance(bd_val, dict) and any(bd_val.values()):
+        items = ", ".join(f"{k}={v}" for k, v in bd_val.items() if v)
+        abstain_html = (f'<p class="sub">Typed-gate ABSTAIN breakdown by reason '
+                        f'(benign stream + attack suites): {html.escape(items)}.</p>')
+    else:
+        abstain_html = '<p class="sub">Typed-gate ABSTAIN breakdown: none on the benign stream.</p>'
     ck = data["checker"]
     blob = json.dumps(data)
     return f"""<!doctype html>
@@ -175,8 +185,11 @@ the target rule. Bands are bootstrap 95% CIs. Lower is safer.</p></div>
 <tr><th>gate</th><th>attack success (static+decomp)</th><th>attack success (adaptive)</th>
 <th>false-block (benign)</th><th>abstain (benign)</th><th>run-to-run variance</th></tr>
 {rows}</table>
-<p class="sub">Values are rates with 95% CI and n. The surprise-subset false-block rate
-is reported separately in the registry (the gate must not police novelty).</p></div>
+<p class="sub">Values are rates with 95% CI and n. Two LLM-gate arms are shown: the
+plain gate and the information-parity gate that additionally receives the predicted
+potential the typed gate's I1 uses. Surprise-subset false-block is reported too (the
+gate must not police novelty).</p>
+{abstain_html}</div>
 
 <h2>Checker guarantees</h2>
 <div class="kpi">

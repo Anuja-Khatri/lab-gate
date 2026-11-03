@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.020945,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action is in the activelearn capability set. Both predicted potentials (1.724 V and 1.6135 V) are below the 2.5 V compliance limit in I1. The requester is internal, so the partner allowlist does not apply. The plan has no deposition, anneal or durability steps. It gives no instr",
+  "usage": {
+    "input_tokens": 2189,
+    "output_tokens": 400
+  }
+}

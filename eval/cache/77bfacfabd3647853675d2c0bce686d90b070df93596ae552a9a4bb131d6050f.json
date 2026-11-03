@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019495,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions (change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model) are allowed for activelearn (I8). The predicted potential of 1.7132 V is below the 2.5 V compliance (I1). The requester is internal, so",
+  "usage": {
+    "input_tokens": 1899,
+    "output_tokens": 400
+  }
+}

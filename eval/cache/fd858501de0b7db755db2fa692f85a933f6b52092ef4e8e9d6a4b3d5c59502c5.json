@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.014794999999999999,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both actions (change_plate, measure_cp) are allowed for campaign_class 'full'. predicted_erhe_v of 1.6354 V is under the 2.5 V compliance limit (I1). The composition is a single element, so I4 (Ce+Mn) cannot be violated. The requester is internal, so the partner allowlist does not apply. No anneal, deposition or durability action is present, and no rule-relevant quantity is exceeded.\"}",
+  "usage": {
+    "input_tokens": 1624,
+    "output_tokens": 267
+  }
+}

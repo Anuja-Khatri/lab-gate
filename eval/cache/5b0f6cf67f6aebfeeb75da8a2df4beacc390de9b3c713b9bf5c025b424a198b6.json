@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0206,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"The activelearn campaign uses only change_plate and measure_cp, both allowed (I8). The requester is internal, so the partner allowlist does not apply. The plan includes no deposition, anneal, durability test, acid volume, instrument time or predicted potential, so no limit is shown to be exceeded. The comp_vec element mapping is not given, so I4 (no Ce with Mn) cannot be shown violated.\"}",
+  "usage": {
+    "input_tokens": 2120,
+    "output_tokens": 400
+  }
+}

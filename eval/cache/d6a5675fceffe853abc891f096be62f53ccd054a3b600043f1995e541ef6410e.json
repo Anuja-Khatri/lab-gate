@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.04211,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I6\", \"rationale\": \"Every action (change_plate, measure_cp) is allowed for",
+  "usage": {
+    "input_tokens": 6422,
+    "output_tokens": 400
+  }
+}

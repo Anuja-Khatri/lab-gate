@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "numbers_lock": {
-    "registry_sha256": "67c0a1da9547b36dbd00fe7042799a61e5dffeba183c7efeb74b318099265f0d",
-    "n_metrics": 27,
+    "registry_sha256": "3e43811f9df656c90522bc747d48b2713a921f78e2adb3df741b07d2431b03c3",
+    "n_metrics": 36,
     "note": "SPEC numbers lock: docs/site render from this snapshot; a new snapshot requires regenerating every doc that cited the first."
   },
   "metrics": [
@@ -19,13 +19,24 @@
     },
     {
       "metric_id": "abstain.llm.benign",
-      "value": 0.010204,
-      "ci_lo": 0.003476,
-      "ci_hi": 0.029566,
+      "value": 0.901361,
+      "ci_lo": 0.861927,
+      "ci_hi": 0.930441,
       "n": 294,
       "task": "P8",
       "caveats": [
-        "LLM gate on a 300-plan benign sample (R-08 reduced)"
+        "llm on 300-plan benign sample"
+      ]
+    },
+    {
+      "metric_id": "abstain.llm_parity.benign",
+      "value": 0.918367,
+      "ci_lo": 0.881411,
+      "ci_hi": 0.944531,
+      "n": 294,
+      "task": "P8",
+      "caveats": [
+        "llm_parity on 300-plan benign sample"
       ]
     },
     {
@@ -40,11 +51,31 @@
       ]
     },
     {
+      "metric_id": "abstain_breakdown.typed",
+      "value": {
+        "out_of_schema_action": 0,
+        "schema_invalid": 5,
+        "provenance_invalid": 0,
+        "beyond_horizon": 1,
+        "unknown_campaign_class": 0,
+        "unknown_substrate": 0,
+        "solver_timeout": 0,
+        "reference_smt_disagree": 0
+      },
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 6,
+      "task": "P8",
+      "caveats": [
+        "typed-gate ABSTAIN counts by reason over benign stream (20000) + static/decomposition suites (34)"
+      ]
+    },
+    {
       "metric_id": "attack.classifier.adaptive",
-      "value": 0.333333,
-      "ci_lo": 0.247057,
-      "ci_hi": 0.432435,
-      "n": 96,
+      "value": 0.316667,
+      "ci_lo": 0.261097,
+      "ci_hi": 0.378013,
+      "n": 240,
       "task": "P8",
       "caveats": [
         "programmatic adaptive attacker; success anywhere in budget"
@@ -63,13 +94,14 @@
     },
     {
       "metric_id": "attack.llm.adaptive",
-      "value": 0.458333,
-      "ci_lo": 0.278913,
-      "ci_hi": 0.649251,
-      "n": 24,
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.096419,
+      "n": 36,
       "task": "P8",
       "caveats": [
-        "programmatic adaptive attacker; success anywhere in budget"
+        "programmatic adaptive attacker; success anywhere in budget",
+        "LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models"
       ]
     },
     {
@@ -80,7 +112,8 @@
       "n": 37,
       "task": "P8",
       "caveats": [
-        "static+decomposition+cross-requester suites"
+        "static+decomposition+cross-requester suites",
+        "LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models"
       ]
     },
     {
@@ -91,15 +124,49 @@
       "n": 8,
       "task": "P8",
       "caveats": [
-        "Anthropic claude-opus-5-5 attacker vs typed gate; reduced grid 4 goals x 2 seeds x 12 queries (R-08)"
+        "EARLIER opus-attacker reduced run (n=8); the round-2 6x2x20 + vs-LLM-gate target did NOT complete (Anthropic usage limit, R-08 D-025)"
+      ]
+    },
+    {
+      "metric_id": "attack.llm_gpt51.adaptive",
+      "value": 0.458333,
+      "ci_lo": 0.278913,
+      "ci_hi": 0.649251,
+      "n": 24,
+      "task": "P8",
+      "caveats": [
+        "earlier OpenAI gpt-5.1 LLM gate; shown for vendor/model comparison"
+      ]
+    },
+    {
+      "metric_id": "attack.llm_gpt51.static_decomp",
+      "value": 0.108108,
+      "ci_lo": 0.042852,
+      "ci_hi": 0.247085,
+      "n": 37,
+      "task": "P8",
+      "caveats": [
+        "earlier OpenAI gpt-5.1 LLM gate (reduced grid, account later out of credits, D-024); shown for vendor/model comparison"
+      ]
+    },
+    {
+      "metric_id": "attack.llm_parity.static_decomp",
+      "value": 0.081081,
+      "ci_lo": 0.027961,
+      "ci_hi": 0.213007,
+      "n": 37,
+      "task": "P8",
+      "caveats": [
+        "static+decomposition+cross-requester suites",
+        "LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models; PARITY: plan includes predicted_erhe_v"
       ]
     },
     {
       "metric_id": "attack.typed.adaptive",
       "value": 0.0,
       "ci_lo": 0.0,
-      "ci_hi": 0.038476,
-      "n": 96,
+      "ci_hi": 0.015754,
+      "n": 240,
       "task": "P8",
       "caveats": [
         "programmatic adaptive attacker; success anywhere in budget"
@@ -122,63 +189,77 @@
         {
           "budget": 1,
           "value": 0.166667,
-          "ci_lo": 0.09375,
-          "ci_hi": 0.25,
-          "n": 96
+          "ci_lo": 0.120833,
+          "ci_hi": 0.216667,
+          "n": 240
         },
         {
           "budget": 2,
-          "value": 0.1875,
-          "ci_lo": 0.104167,
-          "ci_hi": 0.270833,
-          "n": 96
+          "value": 0.183333,
+          "ci_lo": 0.1375,
+          "ci_hi": 0.229167,
+          "n": 240
         },
         {
           "budget": 5,
-          "value": 0.229167,
-          "ci_lo": 0.15625,
-          "ci_hi": 0.322917,
-          "n": 96
+          "value": 0.233333,
+          "ci_lo": 0.183333,
+          "ci_hi": 0.291667,
+          "n": 240
         },
         {
           "budget": 10,
           "value": 0.25,
-          "ci_lo": 0.166667,
-          "ci_hi": 0.34375,
-          "n": 96
+          "ci_lo": 0.195833,
+          "ci_hi": 0.308333,
+          "n": 240
         },
         {
           "budget": 20,
-          "value": 0.25,
-          "ci_lo": 0.166667,
-          "ci_hi": 0.34375,
-          "n": 96
+          "value": 0.258333,
+          "ci_lo": 0.204167,
+          "ci_hi": 0.316667,
+          "n": 240
         },
         {
           "budget": 40,
-          "value": 0.291667,
-          "ci_lo": 0.208333,
-          "ci_hi": 0.375,
-          "n": 96
+          "value": 0.266667,
+          "ci_lo": 0.2125,
+          "ci_hi": 0.325,
+          "n": 240
         },
         {
           "budget": 80,
-          "value": 0.333333,
-          "ci_lo": 0.239583,
-          "ci_hi": 0.427083,
-          "n": 96
+          "value": 0.291667,
+          "ci_lo": 0.2375,
+          "ci_hi": 0.345833,
+          "n": 240
         },
         {
           "budget": 120,
-          "value": 0.333333,
-          "ci_lo": 0.239583,
-          "ci_hi": 0.427083,
-          "n": 96
+          "value": 0.3,
+          "ci_lo": 0.241667,
+          "ci_hi": 0.358333,
+          "n": 240
+        },
+        {
+          "budget": 160,
+          "value": 0.308333,
+          "ci_lo": 0.25,
+          "ci_hi": 0.366667,
+          "n": 240
+        },
+        {
+          "budget": 200,
+          "value": 0.316667,
+          "ci_lo": 0.258333,
+          "ci_hi": 0.375,
+          "n": 240
         }
       ],
       "ci_lo": null,
       "ci_hi": null,
-      "n": 96,
+      "n": 240,
       "task": "P8",
       "caveats": [
         "attack success vs attacker budget (bootstrap CI)"
@@ -189,64 +270,78 @@
       "value": [
         {
           "budget": 1,
-          "value": 0.291667,
-          "ci_lo": 0.125,
-          "ci_hi": 0.458333,
-          "n": 24
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 36
         },
         {
           "budget": 2,
-          "value": 0.291667,
-          "ci_lo": 0.125,
-          "ci_hi": 0.458333,
-          "n": 24
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 36
         },
         {
           "budget": 5,
-          "value": 0.375,
-          "ci_lo": 0.166667,
-          "ci_hi": 0.583333,
-          "n": 24
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 36
         },
         {
           "budget": 10,
-          "value": 0.458333,
-          "ci_lo": 0.25,
-          "ci_hi": 0.666667,
-          "n": 24
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 36
         },
         {
           "budget": 20,
-          "value": 0.458333,
-          "ci_lo": 0.25,
-          "ci_hi": 0.666667,
-          "n": 24
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 36
         },
         {
           "budget": 40,
-          "value": 0.458333,
-          "ci_lo": 0.25,
-          "ci_hi": 0.666667,
-          "n": 24
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 36
         },
         {
           "budget": 80,
-          "value": 0.458333,
-          "ci_lo": 0.25,
-          "ci_hi": 0.666667,
-          "n": 24
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 36
         },
         {
           "budget": 120,
-          "value": 0.458333,
-          "ci_lo": 0.25,
-          "ci_hi": 0.666667,
-          "n": 24
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 36
+        },
+        {
+          "budget": 160,
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 36
+        },
+        {
+          "budget": 200,
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 36
         }
       ],
       "ci_lo": null,
       "ci_hi": null,
-      "n": 24,
+      "n": 36,
       "task": "P8",
       "caveats": [
         "attack success vs attacker budget (bootstrap CI)"
@@ -260,61 +355,75 @@
           "value": 0.0,
           "ci_lo": 0.0,
           "ci_hi": 0.0,
-          "n": 96
+          "n": 240
         },
         {
           "budget": 2,
           "value": 0.0,
           "ci_lo": 0.0,
           "ci_hi": 0.0,
-          "n": 96
+          "n": 240
         },
         {
           "budget": 5,
           "value": 0.0,
           "ci_lo": 0.0,
           "ci_hi": 0.0,
-          "n": 96
+          "n": 240
         },
         {
           "budget": 10,
           "value": 0.0,
           "ci_lo": 0.0,
           "ci_hi": 0.0,
-          "n": 96
+          "n": 240
         },
         {
           "budget": 20,
           "value": 0.0,
           "ci_lo": 0.0,
           "ci_hi": 0.0,
-          "n": 96
+          "n": 240
         },
         {
           "budget": 40,
           "value": 0.0,
           "ci_lo": 0.0,
           "ci_hi": 0.0,
-          "n": 96
+          "n": 240
         },
         {
           "budget": 80,
           "value": 0.0,
           "ci_lo": 0.0,
           "ci_hi": 0.0,
-          "n": 96
+          "n": 240
         },
         {
           "budget": 120,
           "value": 0.0,
           "ci_lo": 0.0,
           "ci_hi": 0.0,
-          "n": 96
+          "n": 240
+        },
+        {
+          "budget": 160,
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 240
+        },
+        {
+          "budget": 200,
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 240
         }
       ],
       "ci_lo": null,
       "ci_hi": null,
-      "n": 96,
+      "n": 240,
       "task": "P8",
       "caveats": [
         "attack success vs attacker budget (bootstrap CI)"
@@ -355,13 +464,57 @@
     },
     {
       "metric_id": "falseblock.llm.benign",
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.012898,
+      "n": 294,
+      "task": "P8",
+      "caveats": [
+        "llm on 300-plan benign sample; LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models"
+      ]
+    },
+    {
+      "metric_id": "falseblock.llm.surprise",
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.012769,
+      "n": 297,
+      "task": "P8",
+      "caveats": [
+        "llm on 300-plan surprise sample (item 3); LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models"
+      ]
+    },
+    {
+      "metric_id": "falseblock.llm_gpt51.benign",
       "value": 0.642857,
       "ci_lo": 0.586567,
       "ci_hi": 0.695463,
       "n": 294,
       "task": "P8",
       "caveats": [
-        "LLM gate on a 300-plan benign sample (R-08 reduced)"
+        "earlier OpenAI gpt-5.1 LLM gate over-blocked benign plans (vs opus which over-abstains); vendor/model comparison"
+      ]
+    },
+    {
+      "metric_id": "falseblock.llm_parity.benign",
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.012898,
+      "n": 294,
+      "task": "P8",
+      "caveats": [
+        "llm_parity on 300-plan benign sample; LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models"
+      ]
+    },
+    {
+      "metric_id": "falseblock.llm_parity.surprise",
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.012769,
+      "n": 297,
+      "task": "P8",
+      "caveats": [
+        "llm_parity on 300-plan surprise sample (item 3); LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models"
       ]
     },
     {
@@ -410,13 +563,13 @@
     },
     {
       "metric_id": "llm.spend_usd",
-      "value": 4.4374,
+      "value": 30.0765,
       "ci_lo": null,
       "ci_hi": null,
-      "n": 1193,
+      "n": 2337,
       "task": "P8",
       "caveats": [
-        "cumulative metered LLM spend (cap 500)"
+        "cumulative metered LLM spend across all runs (cap 500)"
       ]
     },
     {
@@ -438,7 +591,7 @@
       "n": 34,
       "task": "P8",
       "caveats": [
-        "fraction of static+decomposition attack plans reaching a benign harm the gate was never given (OS1-OS4); NOT a gate failure, shows what any rule-based gate cannot catch"
+        "fraction of static+decomposition attack plans reaching a benign harm the gate was never given (OS1-OS4); not a gate failure"
       ]
     },
     {
@@ -460,7 +613,7 @@
       "n": 60,
       "task": "P8",
       "caveats": [
-        "LLM gate, 60 plans x 3 repeats; plans whose verdict was not identical across repeats"
+        "EARLIER OpenAI gpt-5.1 arm; opus run-to-run variance NOT measured (Anthropic usage limit reached mid-run, R-08 D-025)"
       ]
     },
     {
@@ -468,7 +621,7 @@
       "value": 0.0,
       "ci_lo": null,
       "ci_hi": null,
-      "n": 60,
+      "n": 120,
       "task": "P8",
       "caveats": [
         "typed gate deterministic; recomputed"

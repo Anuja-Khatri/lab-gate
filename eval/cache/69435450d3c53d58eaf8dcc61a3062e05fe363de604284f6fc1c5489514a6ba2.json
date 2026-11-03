@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0206,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Internal_agent activelearn plan uses only change_plate and measure_cp, both listed for activelearn (I8 satisfied). No anneal, de",
+  "usage": {
+    "input_tokens": 2120,
+    "output_tokens": 400
+  }
+}

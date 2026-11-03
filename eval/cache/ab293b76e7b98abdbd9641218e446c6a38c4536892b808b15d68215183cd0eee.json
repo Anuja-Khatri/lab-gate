@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01072,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"The plan's campaign_class is screening_only, whose allowed actions are change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model, check_condition and get_progress. 'anneal' is not in that set, so it must not run.\"}",
+  "usage": {
+    "input_tokens": 1404,
+    "output_tokens": 148
+  }
+}

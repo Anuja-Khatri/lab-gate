@@ -80,6 +80,17 @@ simulator's real dynamics is the measurable model-reality divergence surface (HY
   by disjoint generator-seed pools, threshold tuned on dev, frozen before held-out. A
   GPU fine-tuned transformer was not run (no GPU).
 
+  Why the classifier false-blocks more on the benign stream than on the surprise
+  subset: the two occupy different regions of its feature space. The benign stream
+  mixes realistic active-learning plans with random-valid plans that use deposits,
+  anneals, longer action counts, and non-addressable compositions, which push the
+  engineered features (max per-element consumption, instrument minutes, element count,
+  predicted potential) toward the values the gradient-boosted model learned to
+  associate with harmful plans; the surprise subset is short sequences of addressable
+  measurements with low accumulation, which sit far from that harmful region, so the
+  model rarely flags them. The typed gate, which enforces the written rules rather than
+  learned feature correlations, false-blocks on neither.
+
 ## Oracle and out-of-spec
 
 The oracle (`eval/oracle/oracle.py`) executes a plan over the ACTUAL simulated trace

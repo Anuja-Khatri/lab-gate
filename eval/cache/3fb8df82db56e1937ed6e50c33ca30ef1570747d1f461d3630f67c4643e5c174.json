@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.017705,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both actions, change_plate and measure_cp, are allowed for campaign_class 'full'. The requester is an internal_agent, so the partner allowlist does not apply. The plan gives no predicted potential, instrument time, acid volume, sputter, anneal or durability quant",
+  "usage": {
+    "input_tokens": 1541,
+    "output_tokens": 400
+  }
+}

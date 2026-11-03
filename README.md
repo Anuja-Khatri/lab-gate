@@ -58,8 +58,10 @@ the held-out evaluation:
   never false-blocks a benign plan, including the surprise subset; its failures are
   confined to out-of-spec harm and attacks beyond its horizon, where it abstains;
 - the LLM gate, given a frontier model, the full rules, and the full plan including
-  comments, both misses attacks it cannot quantify (for example instrument overload
-  it cannot predict) and over-blocks benign plans, with nonzero run-to-run variance;
+  comments, is an unreliable gate in both model families tested, in opposite
+  directions: one abstains on almost every benign plan, the other over-blocks benign
+  plans and lets through adaptive attacks with nonzero run-to-run variance; giving the
+  LLM the same predicted potential the typed gate uses did not fix this;
 - the learned classifier is accurate in-distribution and degrades under adaptive
   attack.
 

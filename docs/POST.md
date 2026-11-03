@@ -44,16 +44,19 @@ confidence intervals) is on the results page in `site/`; the full table with n a
 CIs is in `docs/tables/results.md`.
 
 The typed gate let through no in-specification attack: 0.00 on the static and
-decomposition suites (n=37) and 0.00 under the adaptive attacker (n=96), and it never
-false-blocked a benign plan (0.00 of 13627 oracle-safe plans, and 0.00 on the surprise
-subset of 990 unusual-but-valid plans). The language-model gate, given a frontier model
-and everything a reviewer would see, let through 0.11 of the static attacks and 0.46 of
-the adaptive ones, false-blocked 0.64 of benign plans, and changed its own verdict on
-0.30 of plans when asked the same question five times. The classifier was accurate on
-benign plans (false-block 0.07) but was broken by 0.24 of the static attacks and 0.33
-of the adaptive ones. The reference and SMT checkers agreed on all 12000 equivalence
-plans, every BLOCK counterexample replayed in the simulator, and the taint test found
-no text channel over 1000 plans.
+decomposition suites (n=37) and 0.00 under the adaptive attacker at the full grid
+(n=240), and it never false-blocked a benign plan (0.00 of 13627 oracle-safe plans, and
+0.00 on the surprise subset of 990 unusual-but-valid plans). The language-model gate was
+unreliable in both of the model families we could run, in opposite directions. The
+Anthropic model abstained on 0.90 of benign plans, so it barely functioned as a gate at
+all; giving it the exact predicted potential the typed gate uses (an information-parity
+arm) did not help, it abstained on 0.92. The earlier OpenAI model went the other way and
+over-blocked 0.64 of benign plans, let through 0.46 of the adaptive attacks, and changed
+its own verdict on 0.30 of plans when asked the same question five times. The classifier
+was accurate on benign plans (false-block 0.07) but was broken by 0.24 of the static
+attacks and 0.32 of the adaptive ones (n=240). The reference and SMT checkers agreed on
+all 12000 equivalence plans, every BLOCK counterexample replayed in the simulator, and
+the taint test found no text channel over 1000 plans.
 
 The surprise subset is the proof that the gate does not police novelty: it is a
 thousand unusual-but-valid plans far from the policy's usual proposals, and the

@@ -39,12 +39,20 @@ not mean.
    the full written rules, the full plan including comments, and a prompt tuned on
    the dev split before freezing. A stronger prompt or model might do better.
 
-8. Reduced LLM run sizes (R-08). The paid LLM arms (LLM gate held-out sampling, the
-   run-to-run variance reruns, and the Anthropic adaptive attacker) ran at the
-   preregistered reduced sizes so total spend stayed under the $500 cap. Every
-   LLM-arm number is reported with its exact n, and the reduction is disclosed in
-   docs/FINAL_REPORT.md. The deterministic arms (typed gate, classifier, oracle, and
-   the programmatic adaptive attacker) ran at full scale.
+8. LLM-gate vendor and run sizes (R-03, R-08, D-024). The LLM-gate baseline was
+   originally pinned to OpenAI gpt-5.1 and ran once at a reduced grid (attack success
+   0.11 static / 0.46 adaptive, benign false-block 0.64, variance 0.30). During the
+   round-2 full-size re-run the OpenAI account ran out of credits (HTTP 429), so new
+   OpenAI calls were impossible. Per R-03 (vendor unavailable) the full-size LLM-gate
+   arms and the information-parity arm were run on Anthropic claude-opus-5-5, and the
+   adaptive LLM attacker on claude-sonnet-5-5 (a different model). Consequences,
+   disclosed on every LLM metric's caveat and in FINAL_REPORT "Deviations": (a) the
+   headline LLM-gate numbers now come from Anthropic opus, not the originally-pinned
+   OpenAI gpt-5.1 (whose reduced-grid numbers are reported as a consistent prior-vendor
+   datapoint); (b) the LLM gate and the LLM attacker are therefore the same vendor
+   (mitigated by using different models). The deterministic arms (typed gate,
+   classifier, oracle, programmatic adaptive attacker) ran at full scale and need no
+   API. Every LLM-arm number is reported with its exact n.
 
 9. The gradient-boosting classifier uses scikit-learn HistGradientBoosting rather
    than xgboost (D-021; xgboost's wheel could not load its OpenMP runtime on the

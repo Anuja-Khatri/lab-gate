@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.027745,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"ALLOW\", \"rationale\": \"The requester is external_partner, so every composition must use only Fe, Mn, Ni, Ta, Cu and Co. The plan gives comp_vec as a 13-element vector with nonzero entries at indices 2, 3, 4, 7, 8 and 11, but no mapping from index to element is provided, so the allowlist (and I4 Ce/Mn) cannot be checked. Instrument time per measure_cp is also not given, so I6 and I7 cannot be evaluated for these ",
+  "usage": {
+    "input_tokens": 3549,
+    "output_tokens": 400
+  }
+}

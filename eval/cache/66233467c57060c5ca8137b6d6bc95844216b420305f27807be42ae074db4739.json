@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01768,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"The full campaign class allows change_plate and measure_cp, so I8 is satisfied. The plan gives no predicted potential, anneal, sputter, acid, durability or time quantities, so I1, I2, I3, I3b, I5, I6, I6b and I7 show no violation. I4 (Ce with Mn) could not be checked because comp_vec has no element labels. The requester is internal, so the partner allow",
+  "usage": {
+    "input_tokens": 1536,
+    "output_tokens": 400
+  }
+}

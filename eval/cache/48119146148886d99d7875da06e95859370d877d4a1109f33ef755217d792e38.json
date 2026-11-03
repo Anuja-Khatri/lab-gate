@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018135,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both actions (change_plate, measure_cp) are allowed for activelearn. Predicted potential 1.6036 V is below the 2.5 V I1 compliance limit. Requester is internal, so the partner allowlist does not apply. No anneal, deposition or durability test is present, and no time or volume quantities are given that could exceed the limits. The plan does not name the el",
+  "usage": {
+    "input_tokens": 1627,
+    "output_tokens": 400
+  }
+}

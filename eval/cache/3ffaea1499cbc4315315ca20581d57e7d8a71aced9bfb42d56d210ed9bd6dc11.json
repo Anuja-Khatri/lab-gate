@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01937,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Under the activelearn class, change_plate and measure_cp are both allowed actions (I8 satisfied). The requester is internal, so the partner allowlist does not apply. The plan has no deposition, anneal",
+  "usage": {
+    "input_tokens": 1874,
+    "output_tokens": 400
+  }
+}
