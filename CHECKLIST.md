@@ -36,10 +36,10 @@ Mark `[FAILED, disclosed]` if R-09 applies (recorded in DECISIONS.md and LIMITAT
 - [x] P5.5 upstream draft: helao-async-pr branch typed-action-params (2 files, no-op default, NOT pushed); docs/UPSTREAM_PR.md.
 
 ## Phase 6 — Baselines and oracle
-- [ ] P6 a: Every LLM call cached and metered; cache hit on rerun.
-- [ ] P6 b: LLM gate prompt frozen with hash before held-out runs.
-- [ ] P6 c: Oracle evaluates actual simulator traces.
-- [ ] P6 d: Classifier trained, dev-tuned, frozen before held-out runs.
+- [x] P6 a: Every LLM call cached and metered; cache hit on rerun. (eval/llm.py; test_llm_wrapper_cache_and_meter)
+- [x] P6 b: LLM gate prompt frozen with hash before held-out runs. (results/llm_gate_prompt.json; sha256 bf687cbb...) NOTE: LLM gate EXECUTION deferred (R-08/R-03, no keys; D-020) — dev-tuning deferred, disclosed.
+- [x] P6 c: Oracle evaluates actual simulator traces. (eval/oracle/oracle.py; + out_of_spec.yaml P6.4)
+- [x] P6 d: Classifier trained, dev-tuned, frozen before held-out runs. (results/classifier.json n=20000, gb test acc 0.9367; HistGradientBoosting per R-04/D-021)
 
 ## Phase 7 — Red team
 - [ ] P7 a: All three gates face the identical static and decomposition suites.

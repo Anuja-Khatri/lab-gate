@@ -3,13 +3,12 @@
 Workspace (`$WS`): `/Users/anujakhatri3/lila-gate` (native; `/work/BUILD-SPEC.md` absent).
 
 ## Current position
-- Phase: 6 (Baselines and oracle) — starting. NOTE: LLM arms need real keys in $WS/.env (currently placeholders). Apply R-13 (model pin) / R-03 / R-08 at Phase 6 start.
-- Current task: P6.1 (eval/llm.py wrapper) + re-check .env keys
-- Last completed task: Phase 5 COMPLETE. P5.1 oersim_hook.py; P5.2 dispatch_hook.py; P5.3 receipts.py; P5.4 gate-disabled byte-identity; P5.5 helao-async-pr branch (no push) + docs/UPSTREAM_PR.md. helao-async verified untouched. All P5 ticked. make ci green, 59 tests.
-- Next task: P6.1 eval/llm.py (cached/metered/budget, reads $WS/.env) -> P6.2 llm_gate.py (OpenAI) -> P6.3 oracle out_of_spec (oracle.py exists; add out_of_spec.yaml) -> P6.4 -> P6.5 classifier.py (xgboost+tfidf) -> P6.6 splits frozen
+- Phase: 7 (Red team) — starting
+- Current task: P7.1 (streams/benign.py full stream — basic version exists, expand to 5000+5000+surprise) then P7.2 static, P7.3 decomposition, P7.4 adaptive (programmatic; LLM attacker deferred)
+- Last completed task: Phase 6 COMPLETE. P6.1 eval/llm.py (cache/meter/budget, offline-tested); P6.2 llm_gate.py (frozen prompt, DEFERRED execution D-020); P6.3 oracle.py + P6.4 out_of_spec.yaml; P6.5 classifier.py (20k, HistGB+TFIDF, R-04/D-021); P6.6 splits (disjoint seed pools). All P6 ticked. make ci green, 65 tests.
+- Next task: P7.1 benign stream (realistic+random+surprise, label false-block/abstain) -> P7.2 static.py (smuggling/unit/comment/bound/capability) -> P7.3 decomposition.py (+P7.3b cross-requester) -> P7.4 adaptive.py (programmatic search attacker vs typed gate + classifier; LLM attacker DEFERRED D-020) -> P7.5 replayable logs
 
-## KEY BLOCKER for Phase 6: $WS/.env keys are still "replace-me"
-- If keys remain placeholders: build eval/llm.py + prompts + classifier (non-LLM parts) fully; the classifier arm (P6.5, oracle-labeled, no API) can complete. The LLM gate (P6.2) and adaptive attacker (P7.4) REQUIRE keys -> if absent, apply R-08 (no spend) / R-03 and DEFER those arms, disclosed in LIMITATIONS.md + OWNER_TODO.md. Never fabricate LLM-arm results.
+## D-020 reminder (LLM arms): both $WS/.env keys empty/placeholder; LLM gate (P6.2) + LLM attacker (P7.4) DEFERRED, code+prompt frozen, disclosed in OWNER_TODO/LIMITATIONS. Classifier + typed gate carry real numbers. Never fabricate.
 
 ## Checker design notes (for resume)
 - reference.evaluate(parsed, registry): single-plan PASS/BLOCK/ABSTAIN over abstract trace. evaluate_merged(plans): I7 shared-window across requesters.

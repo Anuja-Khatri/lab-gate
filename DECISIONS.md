@@ -115,3 +115,15 @@ All benign; model the STRUCTURE of real controls (Section 5.2). No hazardous con
 - Context: Smallest change letting a downstream register per-action schemas, in a 5-year repo with no outside contributor.
 - Choice: 2-file branch typed-action-params in $WS/helao-async-pr (separate clone): a new registry module + one no-op-by-default call in ActionPlanMaker.add. Verified: stock plan-makers build identical plans; a registered validator fires. Committed locally, NOT pushed. docs/UPSTREAM_PR.md recommends opening a short issue before any PR and makes no company-endorsement claim.
 - Reason: minimal, reversible, honest; nothing in lab-gate depends on a merge (R-12 defers publishing to the owner).
+
+## D-020 — Phase 6 start: both vendor keys still placeholders -> R-08 + R-03 + R-13
+- Context: At Phase 6 start (re-checked 2026-11-03) `$WS/.env` still has `replace-me` for both `LABGATE_ANTHROPIC_API_KEY` and `LABGATE_OPENAI_API_KEY`. Owner unavailable during build (spec Section 0). LLM_BUDGET_USD=500.
+- R-08 (budget/no-spend): make NO LLM API calls. R-03 (vendor keys missing): continue all non-LLM work; never fabricate results for a missing arm. R-13 (model IDs): cannot verify against live APIs, so config/models.yaml stays pinned:false with candidate IDs recorded and verification deferred to the owner.
+- What COMPLETES now (no API): eval/llm.py wrapper (cache/meter/budget), offline-tested with a stub; the oracle (eval/oracle/oracle.py) + out_of_spec probes (P6.4); the trained classifier arm (P6.5, labels from the oracle, scikit-learn/xgboost, no API); the static + decomposition red-team suites (P7.2/P7.3) against the typed gate AND the classifier; a PROGRAMMATIC (non-LLM) adaptive search attacker against those two gates (documented substitute so the adaptive dimension is still measured).
+- What is DEFERRED (requires keys), disclosed in LIMITATIONS.md + OWNER_TODO.md, never fabricated: the LLM gate baseline (P6.2, OpenAI) and the LLM adaptive attacker (P7.4, Anthropic). Code and frozen prompts are written and committed; they execute only once the owner sets keys and runs `make eval`.
+- Reason: honest, maximal progress under the decision rules; the headline comparison still carries real numbers for the typed gate and the classifier, with the LLM arms clearly marked deferred.
+
+## D-021 — R-04 for the gradient-boosting classifier arm: sklearn HistGradientBoosting instead of xgboost
+- Context: P6.5 names xgboost for the gradient-boosting arm. On this machine xgboost's wheel installs but fails to load (`libomp.dylib` missing; would need a Homebrew system install outside the workspace).
+- Choice (R-04-adjacent / R-11): use scikit-learn's `HistGradientBoostingClassifier` (same gradient-boosted-trees family, pure-sklearn, no OpenMP runtime dependency). The text arm stays TF-IDF + logistic regression as specified. A GPU fine-tuned transformer is not available (no GPU) and is recorded as not run.
+- Reason: keeps the gradient-boosting arm real and reproducible without a system-level install; documented as a substitution. Noted in LIMITATIONS.md and METHODS.md.

@@ -7,15 +7,20 @@
 #   claude-opus-5-5, claude-sonnet-5-5, claude-haiku-5-5
 # OpenAI: to be listed from the API at Phase 6 start.
 
-pinned: false        # set true once verified against the live APIs at Phase 6
+# R-13 determination at Phase 6 start (2026-11-03, D-020): both vendor keys are
+# placeholders and the owner is unavailable, so live model listing/verification is
+# NOT possible. Candidate IDs recorded below; pinned:false until the owner sets keys
+# and runs `make eval`, which verifies IDs against the live APIs and flips pinned.
+pinned: false
 pinned_date: null
+verification: "DEFERRED (no API keys; R-13/R-08/R-03; see OWNER_TODO.md)"
 
 llm_gate:            # P6.2 — the human-reviewer-equivalent gate
   vendor: openai
-  model_id: null     # choose most capable reasoning model; pin here + hash prompt
+  model_id: gpt-5.5          # candidate, to verify; prompt frozen in results/llm_gate_prompt.json
 
 adaptive_attacker:   # P7.4 — different vendor from the gate
   vendor: anthropic
-  model_id: null
+  model_id: claude-opus-5-5  # candidate (R-13 list); verify before use
 
 temperature: 0       # fixed where the API allows (recorded per call otherwise)
