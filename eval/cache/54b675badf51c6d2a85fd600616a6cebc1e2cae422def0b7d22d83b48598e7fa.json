@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0022975,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules requiring numerical limits (I1, I2, I3, I3b, I5, I6, I6b, I7) cannot be evaluated because necessary quantities (potentials, times, volumes, consumptions, QC status, scheduling window usage) are not provided; allowed actions match campaign_class=full and no composition rule (I4, ALLOW) is violated.\"}",
+  "usage": {
+    "input_tokens": 966,
+    "output_tokens": 109
+  }
+}

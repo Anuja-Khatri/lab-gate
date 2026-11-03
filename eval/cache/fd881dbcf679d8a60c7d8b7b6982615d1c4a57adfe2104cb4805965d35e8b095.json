@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00185,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class=full, no compositions contain both Ce and Mn, and no provided information indicates violations of potential, time, furnace, sputter, durability, or acid limits.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 67
+  }
+}

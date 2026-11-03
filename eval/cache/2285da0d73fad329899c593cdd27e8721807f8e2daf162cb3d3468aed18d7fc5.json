@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00290125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I6\", \"rationale\": \"Total instrument time exceeds 480 minutes per campaign: one measure_cp plus nine 60-minute durability_test actions sum to more than 480 minutes.\"}",
+  "usage": {
+    "input_tokens": 1857,
+    "output_tokens": 58
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00214,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class synthesis permits anneal; no composition, temperature limit, or furnace occupancy limit is violated or specified beyond allowed rules, and cumulative furnace time (300 min) is not constrained by any given rule except per-anneal substrate max temperature, which is unspecified.\"}",
+  "usage": {
+    "input_tokens": 1072,
+    "output_tokens": 80
+  }
+}

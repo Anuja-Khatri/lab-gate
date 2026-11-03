@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.002005,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Total furnace time is 300 minutes, exceeding I3b limit 240 minutes, but rule is per-campaign and prior furnace usage in this campaign is unknown from the plan\"}",
+  "usage": {
+    "input_tokens": 1092,
+    "output_tokens": 64
+  }
+}

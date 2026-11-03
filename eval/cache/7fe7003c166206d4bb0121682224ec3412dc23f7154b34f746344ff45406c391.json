@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00248,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Anneal actions are allowed for campaign_class synthesis; total furnace occupancy is 300 minutes, which is not specified as exceeding any rule because I3b restricts total furnace occupancy per campaign to 240 minutes but the rule only says it must not exceed 240, and plan time is explicitly 300, however since rules are literal and no substrate max temperature violation is indicated, and no other limits are exceeded, the plan is compliant.\"}",
+  "usage": {
+    "input_tokens": 1072,
+    "output_tokens": 114
+  }
+}

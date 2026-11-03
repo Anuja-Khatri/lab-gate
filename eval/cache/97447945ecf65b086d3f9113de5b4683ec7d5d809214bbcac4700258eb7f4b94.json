@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00212,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No voltages, times, or furnace details are provided, so compliance with limits in I1, I3, I3b, I5, I6, and I7 cannot be determined from the plan alone; allowed actions match campaign_class and no Ce\u2013Mn conflict is evident, but overall safety cannot be confirmed.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 94
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0020174999999999998,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Durability tests are allowed for campaign_class=full, but the rules require that long-term durability tests only run on samples that have passed screening QC (I5). The plan provides no information about prior screening measurements or QC status, so compliance with I5 cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 942,
+    "output_tokens": 84
+  }
+}

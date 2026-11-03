@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.002085,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Plan does not specify potentials, sputter usage, anneal temperatures/times, furnace occupancy, durability tests, QC status, instrument time, or acid volume, so compliance with the written rules cannot be determined. All used actions are allowed for campaign_class=full and requester is not external_partner.\"}",
+  "usage": {
+    "input_tokens": 964,
+    "output_tokens": 88
+  }
+}

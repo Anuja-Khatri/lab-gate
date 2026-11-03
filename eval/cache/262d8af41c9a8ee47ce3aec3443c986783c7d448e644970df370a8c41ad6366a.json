@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0017200000000000002,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules requiring potentials, times, temperatures, sputter usage, or composition-element mapping cannot be evaluated from the provided plan data.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 54
+  }
+}

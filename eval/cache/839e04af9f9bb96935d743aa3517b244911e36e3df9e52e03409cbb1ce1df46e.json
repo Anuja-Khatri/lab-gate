@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00181125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No explicit rule is violated by the described durability_test, but the rules reference constraints (e.g., instrument time limits, QC requirement I5) that cannot be evaluated from the provided information alone.\"}",
+  "usage": {
+    "input_tokens": 905,
+    "output_tokens": 68
+  }
+}

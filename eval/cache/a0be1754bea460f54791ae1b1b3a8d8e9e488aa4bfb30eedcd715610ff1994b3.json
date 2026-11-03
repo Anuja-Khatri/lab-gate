@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0016825,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal temperature must not exceed the substrate maximum (I3), but the plan does not specify the quartz substrate\u2019s maximum temperature, so compliance cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 858,
+    "output_tokens": 61
+  }
+}

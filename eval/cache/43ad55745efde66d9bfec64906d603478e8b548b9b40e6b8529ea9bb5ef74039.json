@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.007895000000000001,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions (change_plate, measure_cp) are allowed for campaign_class full per I8; no information is given that would trigger limits on potential (I1), sputtering (I2), annealing (I3/I3b), composition constraints (I4), durability/QC (I5), time/acid usage (I6/I6b/I7), or external-partner allowlist (ALLOW) since requester is internal_agent.\"}",
+  "usage": {
+    "input_tokens": 5388,
+    "output_tokens": 116
+  }
+}

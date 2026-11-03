@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00286,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"Campaign class full does not list durability_test as an allowed action, so all durability_test actions violate the campaign capabilities rule.\"}",
+  "usage": {
+    "input_tokens": 1864,
+    "output_tokens": 53
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00181,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class 'full' allows change_plate and measure_cp; no composition, time, volume, temperature, or element-combination constraints in the rules are violated by the provided actions.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 63
+  }
+}

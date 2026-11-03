@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.003345,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class=activelearn (I8). No anneals, sputtering, durability tests, or acid use are present, so I2, I3, I3b, I5, I6b do not apply. No information indicates potentiostat compliance violations, total time overages, or cross-requester limits, so I1, I6, I7 cannot be found violated. Compositions do not specify element identities, so I4 and ALLOW(external_partner) cannot be found violated; requester is not external_partner anyway.\"}",
+  "usage": {
+    "input_tokens": 1548,
+    "output_tokens": 141
+  }
+}

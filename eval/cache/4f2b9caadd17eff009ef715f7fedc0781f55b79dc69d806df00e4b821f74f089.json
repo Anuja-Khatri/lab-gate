@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0017512500000000002,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Plan does not specify predicted steady-state potential for the measurement, so compliance with I1 cannot be determined from the given information.\"}",
+  "usage": {
+    "input_tokens": 969,
+    "output_tokens": 54
+  }
+}

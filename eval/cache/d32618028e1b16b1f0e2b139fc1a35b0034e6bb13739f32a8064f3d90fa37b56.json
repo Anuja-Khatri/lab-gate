@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0030624999999999997,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I5\", \"rationale\": \"Multiple durability_test actions are scheduled on a sample that has only one prior measure_cp screening action in this plan, so only one sample can be confirmed to have passed screening QC; subsequent durability tests may run on samples without demonstrated prior successful screening measurements.\"}",
+  "usage": {
+    "input_tokens": 1826,
+    "output_tokens": 78
+  }
+}

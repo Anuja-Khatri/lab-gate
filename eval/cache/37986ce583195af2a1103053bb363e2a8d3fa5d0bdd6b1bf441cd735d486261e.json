@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00233625,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal actions are allowed for campaign_class synthesis (I8 satisfied) and total furnace time is 300 minutes, exceeding the I3b campaign limit of 240 minutes, but the rule is stated without per-campaign or per-requester scope detail; unable to conclusively attribute all 300 minutes to this campaign alone from given information.\"}",
+  "usage": {
+    "input_tokens": 1093,
+    "output_tokens": 97
+  }
+}

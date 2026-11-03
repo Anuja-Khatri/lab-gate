@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0019900000000000004,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules referencing potential, instrument time, furnace use, sputtering, composition constraints, durability tests, or acids cannot be evaluated because the plan omits the needed quantities and details; no explicit rule violation is inferable from the given information.\"}",
+  "usage": {
+    "input_tokens": 984,
+    "output_tokens": 76
+  }
+}

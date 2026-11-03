@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00179125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"The plan uses durability_test, which is not in the allowed action set for the full campaign_class.\"}",
+  "usage": {
+    "input_tokens": 1041,
+    "output_tokens": 49
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00203,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"The plan does not specify measurement potentials, sputter use, anneal temperatures/times, durability tests, or total instrument time/acid volume, so compliance with rules I1\u2013I7 cannot be determined from the given information. Campaign class and actions are consistent with I8.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 85
+  }
+}

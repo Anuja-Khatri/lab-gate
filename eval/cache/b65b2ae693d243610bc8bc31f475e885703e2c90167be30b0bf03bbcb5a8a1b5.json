@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0038325,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class=activelearn; no anneals, durability tests, or sputtering are used, so I2, I3, I3b, I5 do not apply. No composition simultaneously contains Ce and Mn, so I4 is satisfied. No information is given about potentials, instrument time, or acid volume, so I1, I6, I6b, and I7 cannot be found violated. Requester is internal_agent, so external-partner allowlist does not apply. Plan complies with all specified rules.\"}",
+  "usage": {
+    "input_tokens": 1962,
+    "output_tokens": 138
+  }
+}

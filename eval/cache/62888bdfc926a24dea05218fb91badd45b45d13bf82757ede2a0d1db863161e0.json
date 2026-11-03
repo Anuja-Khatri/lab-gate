@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0016875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal temperature limit (substrate max temperature) is required by I3 but not provided in the plan or rules, so compliance cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 878,
+    "output_tokens": 59
+  }
+}

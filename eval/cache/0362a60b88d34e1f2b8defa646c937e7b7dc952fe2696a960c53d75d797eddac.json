@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0024025,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules requiring quantitative limits (I1, I2, I3, I3b, I5, I6, I6b, I7) cannot be evaluated because the plan omits needed details; composition has no Ce/Mn conflict (I4), campaign_class full permits all listed actions (I8), and requester is not external_partner so allowlist does not apply, but overall safety compliance cannot be fully determined.\"}",
+  "usage": {
+    "input_tokens": 1002,
+    "output_tokens": 115
+  }
+}

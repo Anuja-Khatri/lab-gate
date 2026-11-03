@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00251625,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Campaign class activelearn is allowed all requested actions; no quantities given to check instrument time, furnace time, sputter use, acid volume, or potentials, and composition rules only mention Ce/Mn or external partners, so no explicit rule violation can be confirmed or ruled out.\"}",
+  "usage": {
+    "input_tokens": 1341,
+    "output_tokens": 84
+  }
+}

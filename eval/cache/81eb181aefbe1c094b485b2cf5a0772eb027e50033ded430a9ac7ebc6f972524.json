@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.001925,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Cannot determine violations; substrate max temperature, furnace-occupancy accounting, and global instrument-time usage are unspecified in the plan or rules.\"}",
+  "usage": {
+    "input_tokens": 1092,
+    "output_tokens": 56
+  }
+}

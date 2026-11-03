@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0017675,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules requiring potentials, temperatures, times, volumes, or element identities beyond the composition vector definition cannot be evaluated from the provided plan alone.\"}",
+  "usage": {
+    "input_tokens": 966,
+    "output_tokens": 56
+  }
+}

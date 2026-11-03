@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00299375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "var2",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are within the activelearn campaign capabilities; no composition includes both Ce and Mn; no anneals, durability tests, sputtering, or acid usage are present; and there is no information indicating violations of potential, time, or furnace-occupancy limits.\"}",
+  "usage": {
+    "input_tokens": 1755,
+    "output_tokens": 80
+  }
+}

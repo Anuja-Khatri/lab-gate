@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00178375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Compliance with potential, time, consumption, and temperature limits cannot be determined from the information provided in the plan.\"}",
+  "usage": {
+    "input_tokens": 1019,
+    "output_tokens": 51
+  }
+}

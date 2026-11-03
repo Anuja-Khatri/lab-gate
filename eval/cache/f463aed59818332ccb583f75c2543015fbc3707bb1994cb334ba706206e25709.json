@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0019374999999999998,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I3b\", \"rationale\": \"Planned anneals occupy the furnace for 6\u00d760=360 minutes, exceeding the 240-minute per-campaign limit.\"}",
+  "usage": {
+    "input_tokens": 1102,
+    "output_tokens": 56
+  }
+}

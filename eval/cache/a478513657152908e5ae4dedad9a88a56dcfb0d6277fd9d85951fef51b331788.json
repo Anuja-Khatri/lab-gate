@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00205125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Cannot determine violation: furnace occupancy (I3b) and max substrate temperature (I3) limits are unspecified in the rules/plan, and no instrument-time accounting details are provided for I6/I7.\"}",
+  "usage": {
+    "input_tokens": 1073,
+    "output_tokens": 71
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.001665,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal duration is given, but substrate maximum temperature is not specified, so compliance with rule I3 cannot be determined from the plan and rules provided.\"}",
+  "usage": {
+    "input_tokens": 860,
+    "output_tokens": 59
+  }
+}

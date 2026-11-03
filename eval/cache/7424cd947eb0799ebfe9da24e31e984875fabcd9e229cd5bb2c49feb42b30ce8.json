@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0019725,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Plan uses only allowed actions for campaign_class=full and composition does not violate Ce/Mn rule, but available information is insufficient to determine potentiostat compliance (I1), total instrument time (I6, I7), or other quantity-based limits.\"}",
+  "usage": {
+    "input_tokens": 946,
+    "output_tokens": 79
+  }
+}

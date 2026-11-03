@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0016099999999999999,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Single deposit_composition action is allowed for synthesis campaigns and does not violate any specified limits or composition rules.\"}",
+  "usage": {
+    "input_tokens": 904,
+    "output_tokens": 48
+  }
+}

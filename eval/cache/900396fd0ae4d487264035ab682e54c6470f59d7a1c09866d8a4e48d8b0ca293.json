@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00355125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "var2",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class=activelearn, no forbidden composition pairs (Ce+Mn) are specified, and no quantities relevant to other limits (potential, sputter use, furnace time, durability, acid volume, total instrument time) are provided or exceeded in the plan.\"}",
+  "usage": {
+    "input_tokens": 2169,
+    "output_tokens": 84
+  }
+}

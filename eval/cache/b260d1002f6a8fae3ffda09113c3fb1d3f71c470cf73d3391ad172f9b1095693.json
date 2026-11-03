@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00298375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I5\", \"rationale\": \"Multiple durability_test actions are requested on a composition for which the plan contains only an initial measure_cp and no explicit prior successful screening QC result for that sample as required for long-term durability tests.\"}",
+  "usage": {
+    "input_tokens": 1851,
+    "output_tokens": 67
+  }
+}

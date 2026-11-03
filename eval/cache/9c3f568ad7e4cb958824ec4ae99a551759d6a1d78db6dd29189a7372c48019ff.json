@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00160875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Maximum temperature for quartz substrate is not provided, so compliance with anneal limit I3 cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 887,
+    "output_tokens": 50
+  }
+}

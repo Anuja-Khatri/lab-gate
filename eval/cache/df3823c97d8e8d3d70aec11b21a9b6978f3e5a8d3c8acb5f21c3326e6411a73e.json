@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0018762499999999999,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I3b\", \"rationale\": \"Total anneal/furnace time is 300 minutes, exceeding the 240-minute campaign limit.\"}",
+  "usage": {
+    "input_tokens": 1101,
+    "output_tokens": 50
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00199,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Plan uses only allowed actions for campaign_class=full and does not specify potentials, sputtering, annealing, durability tests, or acids. Composition elements are unspecified so Ce/Mn rule cannot be evaluated; no rule violation can be positively identified from given data.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 81
+  }
+}

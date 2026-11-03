@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0019475,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules requiring numerical limits (e.g., potential, time, volume, temperature, target use) cannot be evaluated because the plan omits those quantities; element identities in comp_vec are unspecified so composition rules cannot be checked either.\"}",
+  "usage": {
+    "input_tokens": 966,
+    "output_tokens": 74
+  }
+}

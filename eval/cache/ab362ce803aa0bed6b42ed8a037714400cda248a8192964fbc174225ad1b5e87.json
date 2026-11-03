@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0019299999999999999,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No rule violation is inferable from the given information, but required quantities such as predicted steady-state potential, instrument time, furnace use, and target consumption are not provided, so compliance with several rules cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 968,
+    "output_tokens": 72
+  }
+}

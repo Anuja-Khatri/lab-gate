@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0020875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules involving potentials, time, acid volume, sputter use, anneal temperature, durability tests, and screening QC cannot be evaluated because the plan does not specify those quantities; listed actions are allowed for campaign_class=full and no composition constraint is triggered by the provided comp_vec alone.\"}",
+  "usage": {
+    "input_tokens": 982,
+    "output_tokens": 86
+  }
+}

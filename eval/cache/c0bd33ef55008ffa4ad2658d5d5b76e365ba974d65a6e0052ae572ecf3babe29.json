@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00438875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are within activelearn capabilities; no durability tests, anneals, or sputtering, so I2, I3, I3b, I5 do not apply. No potentials, instrument time, or acid volumes are specified, so I1, I6, I6b, I7 cannot be judged violated. Compositions contain no Ce or Mn together, and requester is not external_partner so the allowlist does not apply.\"}",
+  "usage": {
+    "input_tokens": 2583,
+    "output_tokens": 116
+  }
+}

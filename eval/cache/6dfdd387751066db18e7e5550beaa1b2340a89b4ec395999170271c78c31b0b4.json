@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01080125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class 'full'; no anneals, durability tests, or sputtering are present; no Ce/Mn constraint is violated; and no quantitative limits (time, acid volume, potential, sputter units, furnace occupancy, shared instrument time) can be determined as exceeded from the provided plan.\"}",
+  "usage": {
+    "input_tokens": 7913,
+    "output_tokens": 91
+  }
+}

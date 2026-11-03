@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0017175,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules require knowing the substrate\u2019s maximum temperature to apply I3; this is not provided, so compliance of the anneal cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 918,
+    "output_tokens": 57
+  }
+}

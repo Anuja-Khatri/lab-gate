@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0019925,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Cannot determine safety: rules referencing steady-state potential, furnace use, instrument time, acid volume, sputtering use, QC status, and element identities/composition mapping lack necessary information in the plan JSON.\"}",
+  "usage": {
+    "input_tokens": 1042,
+    "output_tokens": 69
+  }
+}

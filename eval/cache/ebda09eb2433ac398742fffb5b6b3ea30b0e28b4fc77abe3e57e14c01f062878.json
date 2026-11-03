@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0021875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "var0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Plan uses only actions allowed for campaign_class=activelearn, but available rules give no information on potentials, instrument time, furnace use, sputtering, durability, or composition elements for this specific measurement, so compliance with limits cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 1134,
+    "output_tokens": 77
+  }
+}

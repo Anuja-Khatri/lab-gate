@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0018700000000000001,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal action is allowed for synthesis class, but the rules require checking that anneal temperature does not exceed the loaded substrate\u2019s maximum temperature; the plan does not provide the substrate\u2019s maximum temperature, so compliance with I3 cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 880,
+    "output_tokens": 77
+  }
+}

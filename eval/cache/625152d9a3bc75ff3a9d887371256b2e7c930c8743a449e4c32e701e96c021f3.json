@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00185,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No rule violation is evident from the provided information, but required parameters (e.g., predicted steady-state potential vs RHE) are missing, so compliance with rule I1 cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 67
+  }
+}

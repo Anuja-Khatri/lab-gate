@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0022275000000000003,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Durability_test is permitted for campaign_class=full, but rules requiring quantitative limits (I1, I2, I3, I3b, I5, I6, I6b, I7) cannot be evaluated because necessary details (potentials, temperatures, prior QC status, instrument times, acid volumes, cross-requester usage) are not provided in the plan.\"}",
+  "usage": {
+    "input_tokens": 934,
+    "output_tokens": 106
+  }
+}

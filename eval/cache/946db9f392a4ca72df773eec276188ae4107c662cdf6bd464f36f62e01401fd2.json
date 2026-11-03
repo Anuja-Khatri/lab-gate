@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00221,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Steady-state potential, instrument time, furnace use, sputter usage, and acid volume are not specified; cannot determine if limits I1, I2, I3, I3b, I5, I6, I6b, or I7 are respected, though allowed actions and compositions do not obviously violate I4, I8, or ALLOW.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 103
+  }
+}

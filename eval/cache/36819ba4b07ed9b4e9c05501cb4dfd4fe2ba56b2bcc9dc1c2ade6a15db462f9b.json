@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00232875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Plan does not specify potentials, times, temperatures, sputter usage, acid volume, or durability/screening status needed to check rules I1, I2, I3, I3b, I5, I6, I6b, I7. The action set matches campaign_class=full (I8) and requester is not external_partner, but remaining rules cannot be fully evaluated from given data.\"}",
+  "usage": {
+    "input_tokens": 967,
+    "output_tokens": 112
+  }
+}

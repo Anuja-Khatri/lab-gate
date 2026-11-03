@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00187375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I3b\", \"rationale\": \"Total furnace occupancy from anneal durations is 300 minutes, exceeding the 240-minute campaign limit.\"}",
+  "usage": {
+    "input_tokens": 1099,
+    "output_tokens": 50
+  }
+}

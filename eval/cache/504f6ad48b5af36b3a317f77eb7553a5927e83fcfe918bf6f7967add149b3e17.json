@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0033025000000000003,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class=activelearn; no durability_test, anneal, or synthesis actions; no info on potentials, instrument time, furnace use, sputtering, acid, or QC to trigger other rules; requester is internal so external-partner allowlist does not apply.\"}",
+  "usage": {
+    "input_tokens": 1962,
+    "output_tokens": 85
+  }
+}

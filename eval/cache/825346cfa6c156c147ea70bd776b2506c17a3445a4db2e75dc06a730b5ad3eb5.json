@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0017825000000000002,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal action is allowed for synthesis campaigns, but rule I3 requires comparing anneal temperature to the loaded substrate\u2019s maximum temperature, which is not provided in the plan or rules, so compliance cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 858,
+    "output_tokens": 71
+  }
+}

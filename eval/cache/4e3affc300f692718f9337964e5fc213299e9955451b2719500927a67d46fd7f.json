@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0016962499999999998,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Substrate maximum temperature is not provided, so compliance with rule I3 (anneal must not exceed loaded substrate\u2019s maximum temperature) cannot be determined from the plan.\"}",
+  "usage": {
+    "input_tokens": 861,
+    "output_tokens": 62
+  }
+}

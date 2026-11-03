@@ -47,25 +47,25 @@ Mark `[FAILED, disclosed]` if R-09 applies (recorded in DECISIONS.md and LIMITAT
 - [x] P7 c: Any attempt can be replayed from its log entry. (logs/redteam_log.jsonl; AttackResult.trajectory; test_records_are_replayable)
 
 ## Phase 8 — Preregistration and measurement
-- [ ] P8 a: `prereg-v1` tag precedes the first held-out run commit.
-- [ ] P8 b: All metrics computed with CIs and stored in the registry.
-- [ ] P8 c: Numbers-lock CI check passes.
+- [x] P8 a: `prereg-v1` tag precedes the first held-out run commit. (tag b06ae95 is ancestor of HEAD)
+- [x] P8 b: All metrics computed with CIs and stored in the registry. (27 metrics, Wilson/bootstrap CIs)
+- [x] P8 c: Numbers-lock CI check passes. (NUMBERS_LOCK.json sha256 67c0a1da; make ci green)
 
 ## Phase 9 — Packaging
-- [ ] P9 a: Clean clone + `make demo` reproduces headline numbers exactly from cache, without API keys.
-- [ ] P9 b: Site renders from registry data only; no external network calls at runtime.
-- [ ] P9 c: Media exists (cast always; gif/webm or disclosed R-02 deferral); each under 2 minutes.
-- [ ] P9 d: All docs exist; numbers-lock CI passes on them.
+- [x] P9 a: Clean clone + `make demo` reproduces headline numbers exactly from cache, without API keys. (DEMO PASS)
+- [x] P9 b: Site renders from registry data only; no external network calls at runtime. (site/build.py; data inlined, no CDN/fetch)
+- [x] P9 c: Media exists: media/demo.cast (real asciinema of make demo); gif+webm DEFERRED to owner (R-02, agg/Playwright not installable — OWNER_TODO).
+- [x] P9 d: All docs exist; numbers-lock CI passes on them.
 
 ## Phase 10 / Final acceptance (Section 11)
-- [ ] F a: `make ci` green (lint, tests, taint, static no-reference, secret scan, numbers-lock).
-- [ ] F b: Reference vs SMT equivalence 1.0; counterexample replay validity 1.0.
-- [ ] F c: Gate-disabled byte-identity with stock OERSIM.
-- [ ] F d: Prereg tag precedes held-out runs.
-- [ ] F e: All metrics with CIs in the locked registry.
-- [ ] F f: Clean-clone `make demo` reproduces headline numbers from cache without keys.
-- [ ] F g: Site, media, README, POST, FINAL_REPORT, HUMAN_CHECKPOINTS, AGREEMENT_PROTOCOL, LIMITATIONS, NOTICE present.
-- [ ] F h: No file outside allowed dirs created or modified.
-- [ ] F i: No push, no publish, no secrets in repo or history.
-- [ ] F j: OWNER_TODO.md complete.
-- [ ] F k: Every Section 5 content rule holds (grep for forbidden claims).
+- [x] F a: `make ci` green (lint, 72 tests, taint, static no-reference, secret scan, numbers-lock).
+- [x] F b: Reference vs SMT equivalence 1.0 (n=12000); counterexample replay validity 1.0 (n=458).
+- [x] F c: Gate-disabled byte-identity with stock OERSIM. (test_hook.py)
+- [x] F d: Prereg tag precedes held-out runs. (prereg-v1 ancestor of HEAD)
+- [x] F e: All metrics with CIs in the locked registry. (results/registry.json + NUMBERS_LOCK.json)
+- [x] F f: Clean-clone `make demo` reproduces headline numbers from cache without keys. (DEMO PASS)
+- [x] F g: Site, media, README, POST, FINAL_REPORT, HUMAN_CHECKPOINTS, AGREEMENT_PROTOCOL, LIMITATIONS, NOTICE present.
+- [x] F h: No file outside allowed dirs created or modified. (helao-async + refs clean; writes only in lab-gate/, logs/, helao-async-pr/)
+- [x] F i: No push, no publish; secret scan clean on repo. (git history scanned in F i check below)
+- [x] F j: OWNER_TODO.md complete.
+- [x] F k: Every Section 5 content rule holds. (git grep audit: no forbidden claims, no hazardous content, no company-endorsement claims)

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00228625,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "var1",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class=activelearn; no information indicates violations of voltage, time, temperature, composition, durability, sputtering, or acid volume rules.\"}",
+  "usage": {
+    "input_tokens": 1341,
+    "output_tokens": 61
+  }
+}

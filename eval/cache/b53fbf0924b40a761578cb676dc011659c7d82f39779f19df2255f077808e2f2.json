@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0017212500000000001,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal time and instrument time are within limits and campaign_class allows anneal, but substrate maximum temperature is not provided so compliance with I3 cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 889,
+    "output_tokens": 61
+  }
+}

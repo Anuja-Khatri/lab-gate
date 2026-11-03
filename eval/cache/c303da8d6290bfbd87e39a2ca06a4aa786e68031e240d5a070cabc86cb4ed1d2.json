@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.001655,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal temperature limit (I3) depends on the substrate maximum temperature, which is not provided in the rules, so compliance cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 860,
+    "output_tokens": 58
+  }
+}

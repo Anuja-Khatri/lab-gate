@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0045787499999999995,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "var1",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are permitted for campaign_class=activelearn; no anneals, durability tests, sputtering, or furnace use occur, so I2, I3, I3b, I5, I6b are not triggered. No information is given about potentials, instrument time, or shared scheduling, so I1, I6, and I7 cannot be found violated. Compositions do not include Ce or Mn together, and requester is internal so the external-partner allowlist does not apply. Thus no listed rule is violated.\"}",
+  "usage": {
+    "input_tokens": 2583,
+    "output_tokens": 135
+  }
+}

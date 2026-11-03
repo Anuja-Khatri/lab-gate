@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0024875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class full allows change_plate and measure_cp (I8). No info indicates potentials above 2.5 V vs RHE (I1), no sputtering, anneal, durability, or acid use (I2, I3, I3b, I5, I6b), and no time data to show instrument-time violations (I6, I7). Composition does not include Ce or Mn together (I4), and requester is not external_partner so allowlist does not apply.\"}",
+  "usage": {
+    "input_tokens": 966,
+    "output_tokens": 128
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00199,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Cannot determine furnace-occupancy minutes per anneal or substrate max temperature; total time and temperature limits relative to rules I3 and I3b are unknowable from given data.\"}",
+  "usage": {
+    "input_tokens": 1072,
+    "output_tokens": 65
+  }
+}

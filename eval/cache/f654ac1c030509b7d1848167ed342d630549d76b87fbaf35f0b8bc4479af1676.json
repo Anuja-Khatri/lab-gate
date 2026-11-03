@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0022375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "var2",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No rule violations are explicit in the plan, but required quantities (e.g., measurement potentials, instrument time, furnace use, acid volume, sputter consumption, composition element identities vs Ce/Mn) are not specified, so compliance with several rules cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 1134,
+    "output_tokens": 82
+  }
+}

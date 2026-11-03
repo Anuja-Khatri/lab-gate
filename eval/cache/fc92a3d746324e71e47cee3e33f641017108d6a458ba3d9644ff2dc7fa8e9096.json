@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0020375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "var1",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Cannot determine from the plan whether measurement potentials, instrument time, acid volume, or other quantitative limits are violated; no explicit rule violation is evident from listed actions alone.\"}",
+  "usage": {
+    "input_tokens": 1134,
+    "output_tokens": 62
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.001635,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I5\", \"rationale\": \"Durability test is requested without any prior screening QC measurement on the same sample in this plan.\"}",
+  "usage": {
+    "input_tokens": 924,
+    "output_tokens": 48
+  }
+}

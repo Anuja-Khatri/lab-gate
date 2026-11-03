@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0017525000000000002,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"Campaign class 'synthesis' is not allowed to use action 'update_model' per campaign capabilities.\"}",
+  "usage": {
+    "input_tokens": 1010,
+    "output_tokens": 49
+  }
+}

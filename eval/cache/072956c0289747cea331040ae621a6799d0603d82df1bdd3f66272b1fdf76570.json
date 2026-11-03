@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00169125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal is allowed for synthesis campaigns, but the rules do not specify the maximum temperature for quartz substrates, so compliance with I3 cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 881,
+    "output_tokens": 59
+  }
+}

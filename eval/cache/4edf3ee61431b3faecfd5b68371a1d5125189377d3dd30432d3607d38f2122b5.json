@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0025075,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules requiring numeric limits (I1, I2, I3, I3b, I5, I6, I6b, I7) cannot be evaluated because the plan provides no relevant quantities (potentials, times, volumes, target usage, furnace conditions, or QC status). The allowed actions match the campaign_class (full), and composition rule I4 and external-partner allowlist do not apply or are not violated, but overall safety cannot be fully determined from given data.\"}",
+  "usage": {
+    "input_tokens": 982,
+    "output_tokens": 128
+  }
+}

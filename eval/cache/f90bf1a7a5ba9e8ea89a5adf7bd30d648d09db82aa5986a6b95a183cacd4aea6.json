@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.001725,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal is an allowed action for campaign_class synthesis (I8 OK), but max allowable temperature for the specified substrate is not provided, so compliance with I3 cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 860,
+    "output_tokens": 65
+  }
+}

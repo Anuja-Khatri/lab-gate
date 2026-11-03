@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0021,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are permitted for campaign_class=full, no disallowed elements or Ce/Mn combination in the composition, and no quantitative limits (time, potential, acid volume, sputter use, furnace use, QC status) are specified or violated in the plan as written.\"}",
+  "usage": {
+    "input_tokens": 1024,
+    "output_tokens": 82
+  }
+}

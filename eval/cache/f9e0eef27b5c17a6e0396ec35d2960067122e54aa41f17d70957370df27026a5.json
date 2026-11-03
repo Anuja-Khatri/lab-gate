@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00172,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Durability tests require prior screening QC per I5, but the plan does not state whether this sample has passed screening; insufficient information to determine compliance.\"}",
+  "usage": {
+    "input_tokens": 904,
+    "output_tokens": 59
+  }
+}

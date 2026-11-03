@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0037912500000000003,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class=activelearn per I8; no anneals, sputtering, durability tests, or acid use are present, so I2\u2013I7 and I6b do not apply. No information on potentials is given, so I1 cannot be evaluated and is not violated. External-partner rules do not apply since requester.cls=internal_agent. No rule violations detected.\"}",
+  "usage": {
+    "input_tokens": 2169,
+    "output_tokens": 108
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0023462500000000002,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules that could be implicated (I1 potential limit, I2 sputter use, I3/I3b anneal, I5 durability, I6/I7 time, I6b acid volume) require quantities not provided in the plan; all listed actions are allowed for campaign_class=full and composition does not violate I4 or external-partner allowlist (not applicable). Safety cannot be determined from given data.\"}",
+  "usage": {
+    "input_tokens": 973,
+    "output_tokens": 113
+  }
+}

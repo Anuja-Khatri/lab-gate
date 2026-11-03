@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0021975,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules requiring potentials, times, temperatures, acid volumes, or material identities (I1\u2013I7, ALLOW) cannot be evaluated because the plan does not specify these quantities; all used actions are permitted for campaign_class=full under I8, and no sputter usage or Ce/Mn co-presence is described for I2/I4.\"}",
+  "usage": {
+    "input_tokens": 966,
+    "output_tokens": 99
+  }
+}

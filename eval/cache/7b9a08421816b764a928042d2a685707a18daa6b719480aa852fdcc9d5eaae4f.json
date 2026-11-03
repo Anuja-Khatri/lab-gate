@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0021175,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Durability test action is allowed for campaign_class=full, and no composition rule is violated by the given comp_vec, but the plan omits measurement details needed to check potential (I1), instrument time (I6, I7), or other quantitative limits; safety cannot be fully determined from provided information.\"}",
+  "usage": {
+    "input_tokens": 966,
+    "output_tokens": 91
+  }
+}

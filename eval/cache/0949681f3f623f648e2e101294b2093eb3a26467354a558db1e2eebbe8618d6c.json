@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00273625,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules mention a sputter-target consumption limit (I2) in target-units per campaign, but the plan only provides thickness and composition vectors with no mapping to element identities or target-units, so compliance cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 1597,
+    "output_tokens": 74
+  }
+}

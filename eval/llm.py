@@ -187,12 +187,18 @@ def call(role: str, model: str, system: str, messages: list[dict], *,
 def _provider_call(provider: str, key: str, req: dict) -> dict:  # pragma: no cover
     """Real SDK call. Only reached when a key is present (never in this build)."""
     if provider == "anthropic":
+        import re as _re
+
         import anthropic
         client = anthropic.Anthropic(api_key=key)
-        msg = client.messages.create(
-            model=req["model"], system=req["system"], messages=req["messages"],
-            max_tokens=req["max_tokens"], temperature=req["temperature"])
-        return {"text": msg.content[0].text,
+        kwargs = dict(model=req["model"], system=req["system"],
+                      messages=req["messages"], max_tokens=req["max_tokens"])
+        # Claude-5 reasoning models reject a custom temperature; older ones accept it.
+        if not _re.match(r"claude-(opus|sonnet|haiku|fable)-5", req["model"].lower()):
+            kwargs["temperature"] = req["temperature"]
+        msg = client.messages.create(**kwargs)
+        text = "".join(b.text for b in msg.content if getattr(b, "type", "") == "text")
+        return {"text": text,
                 "usage": {"input_tokens": msg.usage.input_tokens,
                           "output_tokens": msg.usage.output_tokens}}
     if provider == "openai":

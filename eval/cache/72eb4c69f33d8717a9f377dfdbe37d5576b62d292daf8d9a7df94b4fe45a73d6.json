@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00209,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules involving potentials, instrument time, sputter usage, furnace use, and durability/QC cannot be evaluated because the plan lacks the required quantitative details; composition does not include both Ce and Mn and uses only allowed actions for campaign_class=full, but steady-state potential vs RHE is unknown for I1.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 91
+  }
+}

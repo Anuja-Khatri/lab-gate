@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00216,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Steady-state potential, instrument time, sputter usage, furnace use, acid volume, and durability/QC status are not specified; cannot determine if rules I1, I2, I3, I3b, I5, I6, I6b, or I7 are satisfied, though allowed actions and composition constraints appear compliant.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 98
+  }
+}

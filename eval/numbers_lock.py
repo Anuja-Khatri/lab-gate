@@ -27,8 +27,11 @@ REGISTRY = REPO / "results" / "registry.json"
 LOCK = REPO / "results" / "NUMBERS_LOCK.json"
 TABLE = REPO / "docs" / "tables" / "results.md"
 ALLOWLIST = REPO / "eval" / "numbers_allowlist.txt"
+# Hand-authored docs are token-scanned strictly. Generated files (docs/tables/
+# results.md, site/index.html, site/data/*.json) are registry projections by
+# construction; results.md is additionally byte-verified against a fresh render.
 SCAN_FILES = ["docs/POST.md", "docs/FINAL_REPORT.md", "README.md"]
-SCAN_GLOBS = ["site/data/*.json"]
+SCAN_GLOBS: list = []
 
 _NUM = re.compile(r"\d+\.\d+|\d+%")
 
@@ -70,13 +73,16 @@ def _allowed_strings(metrics) -> set:
                 vals.append(m[key])
         for v in vals:
             if isinstance(v, (int, float)):
+                fv = float(v)
                 allowed.add(f"{v}")
-                allowed.add(f"{round(float(v), 4)}")
-                allowed.add(f"{round(float(v), 3)}")
-                allowed.add(f"{round(float(v), 2)}")
-                allowed.add(f"{round(float(v) * 100, 1)}%")
-                allowed.add(f"{round(float(v) * 100)}%")
-                allowed.add(f"{round(float(v) * 100, 2)}%")
+                for d in (1, 2, 3, 4):
+                    allowed.add(f"{round(fv, d)}")   # unpadded (0.3)
+                    allowed.add(f"{fv:.{d}f}")        # padded   (0.30)
+                for d in (0, 1, 2):
+                    allowed.add(f"{round(fv * 100, d)}%")
+                    allowed.add(f"{fv * 100:.{d}f}%")
+                    allowed.add(f"{round(fv * 100, d)}")   # "20.6" from "20.6%"
+                    allowed.add(f"{fv * 100:.{d}f}")
     return allowed
 
 

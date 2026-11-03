@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0045875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are within activelearn campaign capabilities; no anneals, durability tests, sputtering, or acid use are specified, so related limits do not apply. No rule about composition elements is violated since I4 concerns only Ce/Mn co-presence and Ce is not mentioned. Potentials, instrument time, and shared-schedule time are not specified and thus cannot be judged noncompliant from the given plan.\"}",
+  "usage": {
+    "input_tokens": 2790,
+    "output_tokens": 110
+  }
+}

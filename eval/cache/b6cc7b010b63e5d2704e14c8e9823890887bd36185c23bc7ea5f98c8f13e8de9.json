@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00401375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions (change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model) are allowed for campaign_class=activelearn under I8. No anneals, durability tests, sputtering, or furnace use are present, so I2, I3, I3b, I5, I6b do not apply. No information on potentials, instrument time, or shared scheduling is given, so I1, I6, I7 cannot be evaluated and thus cannot be judged violated. The requester is internal_agent, so the external-partner allowlist does not apply. No composition rule (I4) is triggered because no Ce/Mn constraint is specified in the compositions. Therefore, no listed rule is violated based on the provided information.\"}",
+  "usage": {
+    "input_tokens": 1755,
+    "output_tokens": 182
+  }
+}

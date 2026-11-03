@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00315375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "var0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions (change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model) are allowed for campaign_class=activelearn under rule I8; no anneals, sputtering, durability tests, or acid use are present, and no Ce/Mn compositions are specified. No rule is violated based on provided information.\"}",
+  "usage": {
+    "input_tokens": 1755,
+    "output_tokens": 96
+  }
+}

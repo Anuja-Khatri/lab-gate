@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0018625,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Plan uses only allowed actions for campaign_class=full and does not specify potentials, times, or materials in a way that can be checked against limits; cannot determine any rule violation from given data.\"}",
+  "usage": {
+    "input_tokens": 946,
+    "output_tokens": 68
+  }
+}

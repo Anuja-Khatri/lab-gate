@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00212,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Cannot determine violations of I3 (substrate max temperature), I3b (furnace occupancy), or I6 (instrument time) because required limits/durations per action are not specified; no other rules are implicated by the given plan.\"}",
+  "usage": {
+    "input_tokens": 1072,
+    "output_tokens": 78
+  }
+}

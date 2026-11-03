@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.002195,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Plan lacks required measurement potential, sputter usage, anneal temperatures, furnace time, total instrument time, and acid volume data needed to check rules I1\u2013I3b, I5\u2013I7; composition has no Ce or Mn together and campaign_class full permits listed actions per I8, but remaining rules cannot be evaluated from given information.\"}",
+  "usage": {
+    "input_tokens": 964,
+    "output_tokens": 99
+  }
+}

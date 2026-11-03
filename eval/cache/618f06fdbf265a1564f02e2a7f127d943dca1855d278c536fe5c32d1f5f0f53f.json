@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0040212500000000005,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "var2",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class=activelearn; no durability_test, anneal, or synthesis actions are present, so I2\u2013I5 and ALLOW(external_partner) are not triggered. No timing, temperature, potential, sputter, or acid-usage quantities are specified that would violate I1, I3, I3b, I6, I6b, or I7. No compositions specify Ce or Mn explicitly, so I4 cannot be found violated. Plan complies with listed rules.\"}",
+  "usage": {
+    "input_tokens": 2169,
+    "output_tokens": 131
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00395,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions (change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model) are within activelearn campaign capabilities, no disallowed compositions or durability/anneal/sputter actions are present, and no quantitative limits (time, volume, temperature, sputter usage, or potential) are specified or exceeded in the plan.\"}",
+  "usage": {
+    "input_tokens": 2376,
+    "output_tokens": 98
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00194125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Cannot determine violation; furnace occupancy time may count toward I6 total instrument time, but anneal durations are not explicitly defined as instrument time in the rules.\"}",
+  "usage": {
+    "input_tokens": 1073,
+    "output_tokens": 60
+  }
+}

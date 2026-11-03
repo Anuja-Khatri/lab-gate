@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00181,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules depending on potential, time, or furnace use cannot be evaluated because the plan omits these quantities; composition is specified but no rule is violated based on available data.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 63
+  }
+}

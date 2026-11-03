@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0017025,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\":\"ABSTAIN\",\"rule\":null,\"rationale\":\"Rule I3 requires knowing the loaded substrate\u2019s maximum temperature; this value is not provided, so it is not possible to determine if the 700\u00b0C anneal exceeds it.\"}",
+  "usage": {
+    "input_tokens": 882,
+    "output_tokens": 60
+  }
+}

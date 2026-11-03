@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00219,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No rule violation is clear from the provided information, but required details such as predicted steady-state potential (I1), instrument time (I6, I7), acid volume (I6b), or annealing/furnace use (I3, I3b) are not specified, so compliance cannot be fully determined.\"}",
+  "usage": {
+    "input_tokens": 1000,
+    "output_tokens": 94
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00198125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No rule violations are evident from the provided actions and parameters, but the plan lacks potential information (e.g., predicted steady-state potential, times, temperatures, compositions with element identities) required to positively confirm compliance with all rules.\"}",
+  "usage": {
+    "input_tokens": 993,
+    "output_tokens": 74
+  }
+}

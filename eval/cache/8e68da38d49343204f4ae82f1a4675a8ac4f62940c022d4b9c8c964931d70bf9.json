@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00299375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I5\", \"rationale\": \"Multiple durability_test actions are requested on a sample that has only a measure_cp screening scheduled in the same plan, not a prior successful screening QC; the rule requires screening QC before any durability test.\"}",
+  "usage": {
+    "input_tokens": 1851,
+    "output_tokens": 68
+  }
+}

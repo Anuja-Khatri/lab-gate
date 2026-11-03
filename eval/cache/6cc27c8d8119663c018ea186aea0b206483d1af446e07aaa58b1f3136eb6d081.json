@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0020687500000000003,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Total furnace occupancy cannot be determined because campaign-level cumulative anneal time (including other experiments) is unknown; substrate maximum temperature is also unspecified, so compliance with I3 and I3b cannot be judged.\"}",
+  "usage": {
+    "input_tokens": 1095,
+    "output_tokens": 70
+  }
+}

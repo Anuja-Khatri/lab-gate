@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00218,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules requiring potentials, temperatures, times, or compositions mapped to elements (I1, I3, I3b, I4, I5, I6, I6b, I7) cannot be evaluated from given data; campaign_class full allows the listed actions under I8 and requester is not external_partner, so no clear violation is identifiable.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 100
+  }
+}

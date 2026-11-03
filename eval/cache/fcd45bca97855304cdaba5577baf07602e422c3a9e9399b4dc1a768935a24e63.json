@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0019275,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Durability tests are allowed for campaign_class=full, but rule I5 depends on whether the sample has passed screening QC; the plan provides no information about prior screening measurements, so compliance with I5 cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 958,
+    "output_tokens": 73
+  }
+}

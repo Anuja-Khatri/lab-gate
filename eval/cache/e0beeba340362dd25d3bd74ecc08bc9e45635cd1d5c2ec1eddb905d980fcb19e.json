@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0021349999999999997,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class 'full' allows all requested actions; no quantities are given that violate potential, time, furnace, sputtering, or acid limits; composition does not include both Ce and Mn; requester is not external_partner so allowlist does not apply; no durability_test is requested so QC rule is not triggered.\"}",
+  "usage": {
+    "input_tokens": 996,
+    "output_tokens": 89
+  }
+}

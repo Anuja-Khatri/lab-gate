@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0021000000000000003,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No potentials, times, or temperatures are specified, so compliance with I1, I3, I3b, I5, I6, I6b, and I7 cannot be determined from the plan; allowed actions match the full campaign capabilities and no Ce/Mn or external-partner rules are triggered.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 92
+  }
+}

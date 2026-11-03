@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0021650000000000003,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules referencing potentials, sputter usage, anneal conditions, furnace and instrument time, durability tests, acid volume, and Ce/Mn content cannot be evaluated from the provided information; allowed actions match campaign_class=full, and requester is not external_partner, so no explicit rule violation is detectable from the plan alone.\"}",
+  "usage": {
+    "input_tokens": 996,
+    "output_tokens": 92
+  }
+}

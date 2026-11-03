@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0019975,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules concerning potential, time, volume, temperature, sputter usage, and composition constraints cannot be evaluated because required details (element identities, potentials, durations, volumes, temperatures, target usage, QC status, and shared scheduling info) are not provided.\"}",
+  "usage": {
+    "input_tokens": 966,
+    "output_tokens": 79
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0021349999999999997,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Plan uses only allowed actions for campaign_class=full and provides no information on potentials, times, or furnace details needed to evaluate rules I1, I2, I3, I3b, I5, I6, I6b, I7; composition does not mention elements so I4 cannot be checked.\"}",
+  "usage": {
+    "input_tokens": 964,
+    "output_tokens": 93
+  }
+}

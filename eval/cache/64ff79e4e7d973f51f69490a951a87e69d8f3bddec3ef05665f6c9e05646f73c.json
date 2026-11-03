@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0018775,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules that require potentials, time, temperature, or material identities cannot be evaluated from the provided fields; composition elements and steady-state potential are not specified in a way that maps to the constraints.\"}",
+  "usage": {
+    "input_tokens": 966,
+    "output_tokens": 67
+  }
+}

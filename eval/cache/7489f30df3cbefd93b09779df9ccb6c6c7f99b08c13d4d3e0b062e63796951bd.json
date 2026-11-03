@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0020075,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules requiring potentials, furnace time, sputter usage, instrument time, acid volume, durability tests, or element identities vs disallowed pairs/allowlists cannot be evaluated from the provided plan; no clear violation is inferable, but compliance also cannot be confirmed.\"}",
+  "usage": {
+    "input_tokens": 958,
+    "output_tokens": 81
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.002265,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Furnace occupancy (I3b) depends on minutes, but it is unclear whether the durations of separate anneal actions should be summed as total occupancy or treated independently; substrate max temperature for I3 is also unspecified, so neither pass nor violation can be confirmed from the given rules and data.\"}",
+  "usage": {
+    "input_tokens": 1100,
+    "output_tokens": 89
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0021137499999999997,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class=full; no info on potentials, sputtering, annealing, furnace time, durability, or acid use is present to trigger other rules; composition vector does not specify elements so Ce\u2013Mn restriction and external-partner allowlist do not apply.\"}",
+  "usage": {
+    "input_tokens": 1019,
+    "output_tokens": 84
+  }
+}

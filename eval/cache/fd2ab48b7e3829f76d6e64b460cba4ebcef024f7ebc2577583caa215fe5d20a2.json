@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0018275000000000001,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Plan lacks details (potential, time, temperatures, durations, etc.) needed to determine compliance with quantitative rules; no rule violation can be confirmed from given information alone.\"}",
+  "usage": {
+    "input_tokens": 966,
+    "output_tokens": 62
+  }
+}

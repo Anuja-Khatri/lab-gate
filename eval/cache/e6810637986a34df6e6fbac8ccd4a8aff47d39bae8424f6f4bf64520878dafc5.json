@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0036699999999999997,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "var0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are within activelearn capabilities, no forbidden element combinations are present, and no quantitative limits (time, temperature, sputtering, acid volume, or potential) are specified or violated by the plan as written.\"}",
+  "usage": {
+    "input_tokens": 2376,
+    "output_tokens": 70
+  }
+}

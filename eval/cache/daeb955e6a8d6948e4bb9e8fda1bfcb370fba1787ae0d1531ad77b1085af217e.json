@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00332,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'full' allows durability_test actions only via the full campaign capabilities list; however, the listed capabilities do not include durability_test for any class other than via the CAMPAIGN CAPABILITIES text, and LABGATE.durability_test is not among the allowed actions for class full as explicitly enumerated in the capabilities list provided.\"}",
+  "usage": {
+    "input_tokens": 1864,
+    "output_tokens": 99
+  }
+}

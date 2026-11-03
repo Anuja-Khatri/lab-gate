@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0032024999999999996,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I5\", \"rationale\": \"Multiple long-term durability_test actions are requested, but the plan includes only one prior screening measurement (measure_cp) for the sample; rule I5 requires that a long-term durability test must not run on a sample that has not passed screening QC, and pass/fail status of that single screening measurement is not provided.\"}",
+  "usage": {
+    "input_tokens": 1826,
+    "output_tokens": 92
+  }
+}

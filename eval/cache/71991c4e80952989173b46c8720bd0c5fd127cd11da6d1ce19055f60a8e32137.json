@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00197,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Plan uses only allowed actions for campaign_class=full and no explicit rule violations are inferable, but required quantities (e.g., predicted steady-state potential, instrument time) are not provided, so compliance with I1 and I6 cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 79
+  }
+}

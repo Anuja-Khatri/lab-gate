@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00368125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "var0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class=activelearn and requester.cls=internal_agent; no temperatures, times, sputtering, durability tests, or acid use are specified, so rules I1\u2013I7 do not trigger. External-partner allowlist does not apply. No Ce/Mn co-occurrence is specified, so I4 not triggered.\"}",
+  "usage": {
+    "input_tokens": 2169,
+    "output_tokens": 97
+  }
+}

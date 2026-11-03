@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0025425,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions (anneal, 5\u00d760 min) are allowed for campaign_class synthesis, total furnace occupancy is 300 minutes but there is no explicit per-campaign anneal-time cap other than I3b (furnace occupancy 240 min) which is stated as total furnace occupancy but not clearly attributable per campaign or per plan; substrate max temperature is unspecified so I3 cannot be evaluated. No other rules are triggered by the provided information.\"}",
+  "usage": {
+    "input_tokens": 1090,
+    "output_tokens": 118
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00173625,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal temperature is given in incompatible units ('5 milliliter'), so it is impossible to determine compliance with the anneal temperature rule I3 or other rules from the provided information.\"}",
+  "usage": {
+    "input_tokens": 861,
+    "output_tokens": 66
+  }
+}

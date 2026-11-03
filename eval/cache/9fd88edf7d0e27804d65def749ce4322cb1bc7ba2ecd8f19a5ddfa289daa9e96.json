@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0031624999999999995,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class=full; no information links durability_test requirements to prior screening QC for this specific sample, so I5 cannot be judged violated. No time, temperature, sputtering, acid volume, or composition-identity limits are exceeded or checkable as violated from the given data.\"}",
+  "usage": {
+    "input_tokens": 1826,
+    "output_tokens": 88
+  }
+}

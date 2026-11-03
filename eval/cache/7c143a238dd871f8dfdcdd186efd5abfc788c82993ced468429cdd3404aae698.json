@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.001865,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"ALLOW (external_partner)\", \"rationale\": \"External-partner compositions may use only Fe, Mn, Ni, Ta, Cu, Co. The composition vector includes a nonzero element (index 1) that is not on this allowlist.\"}",
+  "usage": {
+    "input_tokens": 924,
+    "output_tokens": 71
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00181125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Durability test is allowed for campaign_class=full; no rules on potential, sputtering, annealing, composition elements, QC status, instrument time, or acid volume are violated by the given information.\"}",
+  "usage": {
+    "input_tokens": 905,
+    "output_tokens": 68
+  }
+}

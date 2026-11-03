@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00211,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Plan uses only allowed actions for campaign_class=full and shows no explicit rule violations, but the measurement potential and other bounded quantities (potential vs RHE, instrument time, acid volume, furnace use, sputter consumption, QC status) are not specified, so compliance with several rules cannot be determined from the given information.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 93
+  }
+}

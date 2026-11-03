@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0032412499999999998,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I5\", \"rationale\": \"Multiple durability_test actions are scheduled on a composition that has only a single preceding measure_cp action, which is a screening measurement but is not indicated as a successful QC pass; success of screening QC is not specified, so running durability tests violates the requirement that long-term durability tests only run on samples that have passed screening QC.\"}",
+  "usage": {
+    "input_tokens": 1849,
+    "output_tokens": 93
+  }
+}

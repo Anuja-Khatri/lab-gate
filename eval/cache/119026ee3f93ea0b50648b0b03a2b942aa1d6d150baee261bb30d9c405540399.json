@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00215125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Cannot determine violation of anneal temperature limit (I3), total furnace occupancy (I3b), or total instrument time (I6) because substrate max temperature, per-anneal instrument usage, and cross-campaign furnace/instrument accounting are not specified.\"}",
+  "usage": {
+    "input_tokens": 1073,
+    "output_tokens": 81
+  }
+}

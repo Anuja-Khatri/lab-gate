@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0018900000000000002,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules referencing potentials, instrument time, furnace use, sputter use, or durability status cannot be evaluated from the provided plan; no explicit rule violation is identifiable, but safety cannot be fully determined from available data.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 71
+  }
+}

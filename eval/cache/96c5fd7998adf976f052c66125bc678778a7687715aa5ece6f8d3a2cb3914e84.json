@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0030225,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I5\", \"rationale\": \"Multiple durability_test actions are requested on a composition that has only a single prior measure_cp action; the rules require a long-term durability test to run only on a sample that has passed screening QC, which is not established here.\"}",
+  "usage": {
+    "input_tokens": 1826,
+    "output_tokens": 74
+  }
+}

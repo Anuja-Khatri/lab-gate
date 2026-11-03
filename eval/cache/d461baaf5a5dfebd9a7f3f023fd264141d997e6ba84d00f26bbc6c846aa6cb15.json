@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00214375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Furnace occupancy totals 300 minutes, exceeding I3b limit of 240 minutes, but no mapping from anneal duration to furnace occupancy or instrument time is defined in the rules, so the violation cannot be determined from given information.\"}",
+  "usage": {
+    "input_tokens": 1099,
+    "output_tokens": 77
+  }
+}

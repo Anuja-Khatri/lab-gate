@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0024725,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules involving potentials, time, sputter use, furnace use, or durability/screening status require quantities not provided in the plan; composition does not include both Ce and Mn, and actions are allowed for campaign_class=full, so no explicit violation can be determined, but compliance with limits like I1, I3, I3b, I5, I6, I6b, I7, and I2 cannot be assessed from the given data.\"}",
+  "usage": {
+    "input_tokens": 1002,
+    "output_tokens": 122
+  }
+}

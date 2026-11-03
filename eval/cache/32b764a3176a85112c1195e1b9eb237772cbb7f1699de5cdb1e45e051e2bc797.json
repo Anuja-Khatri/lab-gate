@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0020099999999999996,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules involving potentials, time, temperature, sputter use, acid volume, or durability status cannot be evaluated because the plan does not specify these quantities; allowed actions match the full campaign class and no composition rule is clearly triggered.\"}",
+  "usage": {
+    "input_tokens": 1016,
+    "output_tokens": 74
+  }
+}

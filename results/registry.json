@@ -1,0 +1,478 @@
+{
+  "schema_version": "1.0",
+  "numbers_lock": {
+    "registry_sha256": "67c0a1da9547b36dbd00fe7042799a61e5dffeba183c7efeb74b318099265f0d",
+    "n_metrics": 27,
+    "note": "SPEC numbers lock: docs/site render from this snapshot; a new snapshot requires regenerating every doc that cited the first."
+  },
+  "metrics": [
+    {
+      "metric_id": "abstain.classifier.benign",
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.000282,
+      "n": 13627,
+      "task": "P8",
+      "caveats": [
+        "benign stream oracle-safe plans; classifier"
+      ]
+    },
+    {
+      "metric_id": "abstain.llm.benign",
+      "value": 0.010204,
+      "ci_lo": 0.003476,
+      "ci_hi": 0.029566,
+      "n": 294,
+      "task": "P8",
+      "caveats": [
+        "LLM gate on a 300-plan benign sample (R-08 reduced)"
+      ]
+    },
+    {
+      "metric_id": "abstain.typed.benign",
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.000282,
+      "n": 13627,
+      "task": "P8",
+      "caveats": [
+        "benign stream oracle-safe plans; typed"
+      ]
+    },
+    {
+      "metric_id": "attack.classifier.adaptive",
+      "value": 0.333333,
+      "ci_lo": 0.247057,
+      "ci_hi": 0.432435,
+      "n": 96,
+      "task": "P8",
+      "caveats": [
+        "programmatic adaptive attacker; success anywhere in budget"
+      ]
+    },
+    {
+      "metric_id": "attack.classifier.static_decomp",
+      "value": 0.243243,
+      "ci_lo": 0.133614,
+      "ci_hi": 0.401173,
+      "n": 37,
+      "task": "P8",
+      "caveats": [
+        "static+decomposition+cross-requester suites"
+      ]
+    },
+    {
+      "metric_id": "attack.llm.adaptive",
+      "value": 0.458333,
+      "ci_lo": 0.278913,
+      "ci_hi": 0.649251,
+      "n": 24,
+      "task": "P8",
+      "caveats": [
+        "programmatic adaptive attacker; success anywhere in budget"
+      ]
+    },
+    {
+      "metric_id": "attack.llm.static_decomp",
+      "value": 0.108108,
+      "ci_lo": 0.042852,
+      "ci_hi": 0.247085,
+      "n": 37,
+      "task": "P8",
+      "caveats": [
+        "static+decomposition+cross-requester suites"
+      ]
+    },
+    {
+      "metric_id": "attack.llm_attacker_vs_typed",
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.324408,
+      "n": 8,
+      "task": "P8",
+      "caveats": [
+        "Anthropic claude-opus-5-5 attacker vs typed gate; reduced grid 4 goals x 2 seeds x 12 queries (R-08)"
+      ]
+    },
+    {
+      "metric_id": "attack.typed.adaptive",
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.038476,
+      "n": 96,
+      "task": "P8",
+      "caveats": [
+        "programmatic adaptive attacker; success anywhere in budget"
+      ]
+    },
+    {
+      "metric_id": "attack.typed.static_decomp",
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.094058,
+      "n": 37,
+      "task": "P8",
+      "caveats": [
+        "static+decomposition+cross-requester suites"
+      ]
+    },
+    {
+      "metric_id": "attack_curve.classifier",
+      "value": [
+        {
+          "budget": 1,
+          "value": 0.166667,
+          "ci_lo": 0.09375,
+          "ci_hi": 0.25,
+          "n": 96
+        },
+        {
+          "budget": 2,
+          "value": 0.1875,
+          "ci_lo": 0.104167,
+          "ci_hi": 0.270833,
+          "n": 96
+        },
+        {
+          "budget": 5,
+          "value": 0.229167,
+          "ci_lo": 0.15625,
+          "ci_hi": 0.322917,
+          "n": 96
+        },
+        {
+          "budget": 10,
+          "value": 0.25,
+          "ci_lo": 0.166667,
+          "ci_hi": 0.34375,
+          "n": 96
+        },
+        {
+          "budget": 20,
+          "value": 0.25,
+          "ci_lo": 0.166667,
+          "ci_hi": 0.34375,
+          "n": 96
+        },
+        {
+          "budget": 40,
+          "value": 0.291667,
+          "ci_lo": 0.208333,
+          "ci_hi": 0.375,
+          "n": 96
+        },
+        {
+          "budget": 80,
+          "value": 0.333333,
+          "ci_lo": 0.239583,
+          "ci_hi": 0.427083,
+          "n": 96
+        },
+        {
+          "budget": 120,
+          "value": 0.333333,
+          "ci_lo": 0.239583,
+          "ci_hi": 0.427083,
+          "n": 96
+        }
+      ],
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 96,
+      "task": "P8",
+      "caveats": [
+        "attack success vs attacker budget (bootstrap CI)"
+      ]
+    },
+    {
+      "metric_id": "attack_curve.llm",
+      "value": [
+        {
+          "budget": 1,
+          "value": 0.291667,
+          "ci_lo": 0.125,
+          "ci_hi": 0.458333,
+          "n": 24
+        },
+        {
+          "budget": 2,
+          "value": 0.291667,
+          "ci_lo": 0.125,
+          "ci_hi": 0.458333,
+          "n": 24
+        },
+        {
+          "budget": 5,
+          "value": 0.375,
+          "ci_lo": 0.166667,
+          "ci_hi": 0.583333,
+          "n": 24
+        },
+        {
+          "budget": 10,
+          "value": 0.458333,
+          "ci_lo": 0.25,
+          "ci_hi": 0.666667,
+          "n": 24
+        },
+        {
+          "budget": 20,
+          "value": 0.458333,
+          "ci_lo": 0.25,
+          "ci_hi": 0.666667,
+          "n": 24
+        },
+        {
+          "budget": 40,
+          "value": 0.458333,
+          "ci_lo": 0.25,
+          "ci_hi": 0.666667,
+          "n": 24
+        },
+        {
+          "budget": 80,
+          "value": 0.458333,
+          "ci_lo": 0.25,
+          "ci_hi": 0.666667,
+          "n": 24
+        },
+        {
+          "budget": 120,
+          "value": 0.458333,
+          "ci_lo": 0.25,
+          "ci_hi": 0.666667,
+          "n": 24
+        }
+      ],
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 24,
+      "task": "P8",
+      "caveats": [
+        "attack success vs attacker budget (bootstrap CI)"
+      ]
+    },
+    {
+      "metric_id": "attack_curve.typed",
+      "value": [
+        {
+          "budget": 1,
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 96
+        },
+        {
+          "budget": 2,
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 96
+        },
+        {
+          "budget": 5,
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 96
+        },
+        {
+          "budget": 10,
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 96
+        },
+        {
+          "budget": 20,
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 96
+        },
+        {
+          "budget": 40,
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 96
+        },
+        {
+          "budget": 80,
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 96
+        },
+        {
+          "budget": 120,
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "n": 96
+        }
+      ],
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 96,
+      "task": "P8",
+      "caveats": [
+        "attack success vs attacker budget (bootstrap CI)"
+      ]
+    },
+    {
+      "metric_id": "equivalence.reference_vs_smt",
+      "value": 1.0,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 12000,
+      "task": "P4",
+      "caveats": [
+        "reference vs SMT exact-match, full 10k+2k suite"
+      ]
+    },
+    {
+      "metric_id": "falseblock.classifier.benign",
+      "value": 0.069568,
+      "ci_lo": 0.065416,
+      "ci_hi": 0.073962,
+      "n": 13627,
+      "task": "P8",
+      "caveats": [
+        "benign stream oracle-safe plans; classifier"
+      ]
+    },
+    {
+      "metric_id": "falseblock.classifier.surprise",
+      "value": 0.00202,
+      "ci_lo": 0.000554,
+      "ci_hi": 0.007336,
+      "n": 990,
+      "task": "P8",
+      "caveats": [
+        "SURPRISE subset (uniform valid space); classifier"
+      ]
+    },
+    {
+      "metric_id": "falseblock.llm.benign",
+      "value": 0.642857,
+      "ci_lo": 0.586567,
+      "ci_hi": 0.695463,
+      "n": 294,
+      "task": "P8",
+      "caveats": [
+        "LLM gate on a 300-plan benign sample (R-08 reduced)"
+      ]
+    },
+    {
+      "metric_id": "falseblock.typed.benign",
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.000282,
+      "n": 13627,
+      "task": "P8",
+      "caveats": [
+        "benign stream oracle-safe plans; typed"
+      ]
+    },
+    {
+      "metric_id": "falseblock.typed.surprise",
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.003865,
+      "n": 990,
+      "task": "P8",
+      "caveats": [
+        "SURPRISE subset (uniform valid space); typed"
+      ]
+    },
+    {
+      "metric_id": "latency.p50_ms",
+      "value": 2.917,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 1000,
+      "task": "P4",
+      "caveats": [
+        "full decide path"
+      ]
+    },
+    {
+      "metric_id": "latency.p95_ms",
+      "value": 20.378,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 1000,
+      "task": "P4",
+      "caveats": [
+        "full decide path"
+      ]
+    },
+    {
+      "metric_id": "llm.spend_usd",
+      "value": 4.4374,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 1193,
+      "task": "P8",
+      "caveats": [
+        "cumulative metered LLM spend (cap 500)"
+      ]
+    },
+    {
+      "metric_id": "replay.counterexample_validity",
+      "value": 1.0,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 458,
+      "task": "P4",
+      "caveats": [
+        "BLOCK counterexamples observed by oracle"
+      ]
+    },
+    {
+      "metric_id": "spec_coverage.out_of_spec_reached",
+      "value": 0.205882,
+      "ci_lo": 0.103495,
+      "ci_hi": 0.367984,
+      "n": 34,
+      "task": "P8",
+      "caveats": [
+        "fraction of static+decomposition attack plans reaching a benign harm the gate was never given (OS1-OS4); NOT a gate failure, shows what any rule-based gate cannot catch"
+      ]
+    },
+    {
+      "metric_id": "taint.sentinel_channel",
+      "value": 0,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 1000,
+      "task": "P2",
+      "caveats": [
+        "0 = no text channel; taint test on 1000 plans"
+      ]
+    },
+    {
+      "metric_id": "variance.llm.flip_rate",
+      "value": 0.3,
+      "ci_lo": 0.198982,
+      "ci_hi": 0.425087,
+      "n": 60,
+      "task": "P8",
+      "caveats": [
+        "LLM gate, 60 plans x 3 repeats; plans whose verdict was not identical across repeats"
+      ]
+    },
+    {
+      "metric_id": "variance.typed.flip_rate",
+      "value": 0.0,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 60,
+      "task": "P8",
+      "caveats": [
+        "typed gate deterministic; recomputed"
+      ]
+    }
+  ]
+}

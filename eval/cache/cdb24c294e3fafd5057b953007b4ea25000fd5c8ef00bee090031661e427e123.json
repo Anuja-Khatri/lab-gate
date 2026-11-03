@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0017850000000000001,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal action is allowed for synthesis campaigns (I8 ok), but rule I3 requires knowing the loaded substrate\u2019s maximum temperature, which is not provided; cannot determine if 700 \u00b0C violates I3.\"}",
+  "usage": {
+    "input_tokens": 860,
+    "output_tokens": 71
+  }
+}

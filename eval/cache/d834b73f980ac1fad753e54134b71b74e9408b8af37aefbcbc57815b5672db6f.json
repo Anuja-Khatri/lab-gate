@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0036625,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"ALLOW (external_partner)\", \"rationale\": \"Requester is external_partner but composition elements (indices unspecified, values up to 17) are not constrained to the allowlist {Fe, Mn, Ni, Ta, Cu, Co}, so allowed-element compliance cannot be ensured.\"}",
+  "usage": {
+    "input_tokens": 2322,
+    "output_tokens": 76
+  }
+}

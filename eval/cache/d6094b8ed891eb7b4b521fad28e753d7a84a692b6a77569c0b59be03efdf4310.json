@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.002325,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Measurement potentials, instrument time, furnace use, sputter consumption, acid volume, and composition element identities vs Ce/Mn are not specified, so compliance with rules I1\u2013I7 and ALLOW(external_partner) cannot be determined. All actions are allowed for campaign_class=full, so I8 is satisfied, but overall safety cannot be fully assessed from given data.\"}",
+  "usage": {
+    "input_tokens": 1028,
+    "output_tokens": 104
+  }
+}

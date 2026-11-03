@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00227,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Total furnace occupancy is 300 minutes, which would violate I3b if the 240-minute limit is per requester/campaign, but the rule\u2019s scope (per requester vs global) is not specified, and no substrate maximum temperature is given for I3, so noncompliance cannot be determined from the given information.\"}",
+  "usage": {
+    "input_tokens": 1072,
+    "output_tokens": 93
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0023150000000000002,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal is allowed for synthesis campaigns (I8 satisfied) and total furnace time is 300 minutes, exceeding I3b\u2019s 240-minute limit, but I3b is in minutes per campaign and we cannot be sure whether other furnaces or separate accounting apply; substrate max temperature is unspecified so I3 cannot be evaluated.\"}",
+  "usage": {
+    "input_tokens": 1092,
+    "output_tokens": 95
+  }
+}

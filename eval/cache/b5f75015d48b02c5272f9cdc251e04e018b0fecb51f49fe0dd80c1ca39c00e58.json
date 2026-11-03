@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0021,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No voltages, times, temperatures, or acid volumes are specified, so compliance with limits I1, I3, I3b, I5, I6, I6b, and I7 cannot be determined; composition vector elements are unlabeled, so rule I4 cannot be evaluated.\"}",
+  "usage": {
+    "input_tokens": 968,
+    "output_tokens": 89
+  }
+}

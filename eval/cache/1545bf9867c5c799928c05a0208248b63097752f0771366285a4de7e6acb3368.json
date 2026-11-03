@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0020825,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No rule violation is evident from the given information, but required quantities such as predicted potential, instrument time, or furnace use are not specified, so compliance with I1, I3, I3b, I5, I6, I6b, and I7 cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 970,
+    "output_tokens": 87
+  }
+}

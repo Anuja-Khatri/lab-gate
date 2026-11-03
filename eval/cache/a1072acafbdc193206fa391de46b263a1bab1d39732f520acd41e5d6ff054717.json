@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0021375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Campaign class activelearn does not list initialize_plate as an allowed action, but the rules state measure_cp and acquire_point are allowed in activelearn without clarifying initialize_plate; cannot definitively determine violation of I8.\"}",
+  "usage": {
+    "input_tokens": 1134,
+    "output_tokens": 72
+  }
+}

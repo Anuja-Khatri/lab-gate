@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00217125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules reference potentials, times, and volumes that are not specified in the plan; composition does not violate I4 and all actions are allowed for the full campaign class, but lack of quantitative details prevents checking limits like I1, I3b, I6, and I6b.\"}",
+  "usage": {
+    "input_tokens": 1049,
+    "output_tokens": 86
+  }
+}

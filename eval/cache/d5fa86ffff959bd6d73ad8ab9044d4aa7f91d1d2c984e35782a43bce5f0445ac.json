@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0017725,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"ALLOW (external_partner)\", \"rationale\": \"Composition uses an element not on the external-partner allowlist (non-Fe/Mn/Ni/Ta/Cu/Co element with 100% fraction).\"}",
+  "usage": {
+    "input_tokens": 906,
+    "output_tokens": 64
+  }
+}

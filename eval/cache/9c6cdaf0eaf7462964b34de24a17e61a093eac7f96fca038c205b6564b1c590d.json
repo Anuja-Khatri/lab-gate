@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0019700000000000004,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No rule violation can be determined: the plan uses only allowed actions for campaign_class=full, and no information is provided about potentials, furnace use, instrument time, acid volume, or composition elements relevant to the listed rules.\"}",
+  "usage": {
+    "input_tokens": 984,
+    "output_tokens": 74
+  }
+}

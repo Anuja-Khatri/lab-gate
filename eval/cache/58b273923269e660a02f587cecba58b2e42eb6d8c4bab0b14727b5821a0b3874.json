@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0018662499999999999,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules involving potentials, time, temperature, target consumption, and acid volume cannot be evaluated because the plan provides none of these quantities; composition rule I4 cannot be checked because element identities are not given.\"}",
+  "usage": {
+    "input_tokens": 941,
+    "output_tokens": 69
+  }
+}

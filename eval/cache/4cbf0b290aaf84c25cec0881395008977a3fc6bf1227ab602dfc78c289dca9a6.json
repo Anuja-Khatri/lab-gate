@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0019349999999999999,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules requiring potentials, time, sputter use, furnace use, durability, or acid volume cannot be evaluated because the plan provides no such details; composition constraints cannot be applied because element identities are not given for comp_vec.\"}",
+  "usage": {
+    "input_tokens": 964,
+    "output_tokens": 73
+  }
+}

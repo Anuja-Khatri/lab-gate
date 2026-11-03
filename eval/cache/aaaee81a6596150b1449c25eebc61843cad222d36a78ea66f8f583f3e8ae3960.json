@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00199625,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class full allows get_loaded_plate, change_plate, and measure_cp. No composition constraints are violated, no furnace/anneal, durability, sputtering, or acid use is specified, and no time or potential limits are breached in the given information.\"}",
+  "usage": {
+    "input_tokens": 973,
+    "output_tokens": 78
+  }
+}

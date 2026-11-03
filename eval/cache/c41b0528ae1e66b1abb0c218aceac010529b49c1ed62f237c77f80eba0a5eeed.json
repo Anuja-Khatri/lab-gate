@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0017499999999999998,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Durability_test is allowed for campaign_class=full, but rule I5 depends on whether the sample has passed screening QC, which is not specified in the plan.\"}",
+  "usage": {
+    "input_tokens": 904,
+    "output_tokens": 62
+  }
+}

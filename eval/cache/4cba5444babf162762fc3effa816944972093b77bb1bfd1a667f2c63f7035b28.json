@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00316125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules referencing sputter-target consumption (I2) require a mapping from comp_vec indices to elements and per-deposit consumption per thickness, which are not provided, so compliance cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 1993,
+    "output_tokens": 67
+  }
+}

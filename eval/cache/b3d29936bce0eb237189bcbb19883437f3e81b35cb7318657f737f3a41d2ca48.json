@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0018874999999999999,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No rule violation can be established from the given information; required quantities such as potentials, times, temperatures, sputter usage, and acid volume are not specified.\"}",
+  "usage": {
+    "input_tokens": 1022,
+    "output_tokens": 61
+  }
+}

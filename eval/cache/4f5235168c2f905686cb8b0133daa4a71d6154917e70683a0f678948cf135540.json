@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0023225,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Plan uses only allowed actions for campaign_class=full and provides no information on potentials, sputtering, annealing, furnace time, durability, QC status, instrument time, or acid volume, so compliance with several rules (I1, I2, I3, I3b, I5, I6, I6b, I7) cannot be determined from the given data.\"}",
+  "usage": {
+    "input_tokens": 1002,
+    "output_tokens": 107
+  }
+}

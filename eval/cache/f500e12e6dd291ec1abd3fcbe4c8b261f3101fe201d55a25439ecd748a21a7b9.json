@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00455875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "var2",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are within the activelearn campaign capabilities; no anneals, durability tests, or sputtering are requested, so I2, I3, I3b, I5 do not apply. No composition constraints (I4, ALLOW) are violated, requester is internal so external-partner allowlist does not apply. No information is provided about potentials, instrument time, acid volume, or shared scheduling, so I1, I6, I6b, I7 cannot be judged violated from the plan as given.\"}",
+  "usage": {
+    "input_tokens": 2583,
+    "output_tokens": 133
+  }
+}

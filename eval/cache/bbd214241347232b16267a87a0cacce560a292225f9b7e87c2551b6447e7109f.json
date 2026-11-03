@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.001705,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rule I3 requires checking anneal temperature against the substrate\u2019s maximum temperature, but the substrate maximum is not provided in the rules or plan, so compliance cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 860,
+    "output_tokens": 63
+  }
+}

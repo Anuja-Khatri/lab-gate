@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0018,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules I5 and I6\u2013I7 depend on prior measurements and total instrument time, which are not specified; no other rule is clearly violated or confirmable from the given plan alone.\"}",
+  "usage": {
+    "input_tokens": 904,
+    "output_tokens": 67
+  }
+}

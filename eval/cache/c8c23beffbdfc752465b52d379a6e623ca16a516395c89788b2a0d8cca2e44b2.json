@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00304375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I5\", \"rationale\": \"Durability tests are scheduled on a sample that has not been shown to pass prior screening QC; only one measure_cp is present and no prior successful screening result is indicated for the sample used in the durability_test actions.\"}",
+  "usage": {
+    "input_tokens": 1859,
+    "output_tokens": 72
+  }
+}

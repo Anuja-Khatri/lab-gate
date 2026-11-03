@@ -49,9 +49,9 @@ BUDGET_CURVE = [1, 2, 5, 10, 20, 40, 80, 120]
 HELDOUT_SEED = 101
 
 
-def _llm_gate_decision(raw_plan):
+def _llm_gate_decision(raw_plan, replicate_tag="r0"):
     try:
-        return llm_gate_mod.llm_verdict(raw_plan, _REG)["verdict"]
+        return llm_gate_mod.llm_verdict(raw_plan, _REG, replicate_tag=replicate_tag)["verdict"]
     except llm.LLMKeysMissing:
         return "DEFERRED"
 
@@ -224,7 +224,11 @@ def run(reg_out: Registry, fast: bool = False) -> dict:
     if llm_on:
         reps = []
         for rep in range(VARIANCE_REPS):
-            decs = _concurrent(lambda p: _llm_gate_decision(p), var_sample, workers=8)
+            # each repeat is a DISTINCT request (replicate tag) so it is a real new
+            # call, not a cache hit -- otherwise variance would be 0 by construction.
+            tag = f"var{rep}"
+            decs = _concurrent(lambda p, t=tag: _llm_gate_decision(p, replicate_tag=t),
+                               var_sample, workers=8)
             reps.append(decs)
         flips = sum(1 for i in range(len(var_sample))
                     if len({reps[r][i] for r in range(VARIANCE_REPS)}) > 1)

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00189375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules about sputter-target consumption per element (I2) require mapping composition vector indices to elements and target-units, which is not provided, so compliance cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 1003,
+    "output_tokens": 64
+  }
+}

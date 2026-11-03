@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0029562499999999997,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class=activelearn (I8). No anneals, durability tests, sputtering, or furnace use are present, so I2, I3, I3b, I5, I6, I6b, I7 do not apply. No external_partner requester, so allowlist does not apply. Compositions do not include both Ce and Mn (I4). No steady-state potential info is given for measure_cp, so I1 cannot be found violated.\"}",
+  "usage": {
+    "input_tokens": 1341,
+    "output_tokens": 128
+  }
+}

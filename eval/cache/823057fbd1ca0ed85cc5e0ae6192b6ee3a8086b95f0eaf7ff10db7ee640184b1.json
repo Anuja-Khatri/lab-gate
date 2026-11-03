@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00234,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal actions are allowed for campaign_class synthesis (I8 ok) and total furnace time is 300 minutes, exceeding the 240-minute limit of I3b, but no per-action furnace occupancy or explicit mapping from duration to furnace usage is defined, so total furnace occupancy cannot be determined from the given information.\"}",
+  "usage": {
+    "input_tokens": 1136,
+    "output_tokens": 92
+  }
+}

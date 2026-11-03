@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00184875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules require comparison of anneal temperature to the loaded substrate\u2019s maximum temperature (I3), but the plan does not specify that maximum or any per-substrate limits; furnace occupancy total is also not fully known for the campaign.\"}",
+  "usage": {
+    "input_tokens": 887,
+    "output_tokens": 74
+  }
+}

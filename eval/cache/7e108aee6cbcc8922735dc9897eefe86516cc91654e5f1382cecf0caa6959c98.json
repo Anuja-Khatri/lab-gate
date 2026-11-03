@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00194,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules involving potentials, time, sputter use, furnace use, compositions with Ce/Mn, durability, and acid volume cannot be evaluated from the provided information; no explicit rule violation can be determined, but compliance also cannot be confirmed.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 76
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0036012500000000003,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "var0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are within activelearn campaign capabilities; no anneals, durability tests, sputtering, acid use, or potentials are specified. Composition vectors do not mention elements explicitly, so no Ce/Mn conflict or external-partner restrictions apply. No campaign-level time or usage limits are exceeded based on available information.\"}",
+  "usage": {
+    "input_tokens": 2169,
+    "output_tokens": 89
+  }
+}

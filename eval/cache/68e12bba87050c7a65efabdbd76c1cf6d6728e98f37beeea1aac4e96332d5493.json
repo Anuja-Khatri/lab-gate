@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00161375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"The plan uses action update_model, which is not in the allowed action set for campaign_class synthesis.\"}",
+  "usage": {
+    "input_tokens": 899,
+    "output_tokens": 49
+  }
+}

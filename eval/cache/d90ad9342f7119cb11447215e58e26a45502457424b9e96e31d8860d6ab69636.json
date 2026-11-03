@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0037024999999999996,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Element identities and measurement potentials, instrument time, and acid volume are not specified, so compliance with rules I1, I4, I6, I6b, I7, and the external-partner allowlist cannot be determined from the given plan.\"}",
+  "usage": {
+    "input_tokens": 2322,
+    "output_tokens": 80
+  }
+}

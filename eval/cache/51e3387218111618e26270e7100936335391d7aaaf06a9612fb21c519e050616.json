@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00223,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules requiring potentials, temperatures, times, or volumes (I1, I3, I3b, I5, I6, I6b, I7) cannot be evaluated from the provided parameters; composition vector elements are unlabeled so I2 and I4 cannot be checked. Campaign class and actions comply with I8; external-partner allowlist does not apply.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 105
+  }
+}

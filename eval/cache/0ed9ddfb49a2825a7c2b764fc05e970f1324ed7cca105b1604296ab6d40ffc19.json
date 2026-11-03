@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0019000000000000002,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No rule violation is evident, but required quantities like predicted steady-state potential, instrument time usage, furnace usage, and sputter-target consumption are not provided, so compliance with limits cannot be fully determined from the plan.\"}",
+  "usage": {
+    "input_tokens": 944,
+    "output_tokens": 72
+  }
+}

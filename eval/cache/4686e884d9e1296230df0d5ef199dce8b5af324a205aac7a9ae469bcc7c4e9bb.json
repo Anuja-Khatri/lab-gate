@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00207625,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Total anneal time is 300 minutes but the rules do not specify the quartz substrate maximum temperature or how to compute total furnace occupancy, so potential violations of I3 and I3b cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 1101,
+    "output_tokens": 70
+  }
+}

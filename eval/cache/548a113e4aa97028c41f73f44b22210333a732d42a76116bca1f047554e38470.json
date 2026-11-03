@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.001665,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"The plan uses action 'anneal' but the campaign_class 'screening_only' does not include anneal in its allowed capabilities.\"}",
+  "usage": {
+    "input_tokens": 884,
+    "output_tokens": 56
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0022675,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"No rule violation is explicit, but the plan omits required details (e.g., potentials, times, temperatures, acid volumes, sputter usage, durability or anneal settings), so compliance with limits like I1, I2, I3, I3b, I5, I6, I6b, and I7 cannot be determined from the given information.\"}",
+  "usage": {
+    "input_tokens": 982,
+    "output_tokens": 104
+  }
+}

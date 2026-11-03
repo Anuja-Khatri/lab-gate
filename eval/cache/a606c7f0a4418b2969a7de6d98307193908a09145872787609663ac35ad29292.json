@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0019875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"The plan includes a measure_cp action, but no potential or other information is provided to determine compliance with the 2.5 V vs RHE limit (I1), and the rules do not specify how to infer it from the given parameters.\"}",
+  "usage": {
+    "input_tokens": 966,
+    "output_tokens": 78
+  }
+}

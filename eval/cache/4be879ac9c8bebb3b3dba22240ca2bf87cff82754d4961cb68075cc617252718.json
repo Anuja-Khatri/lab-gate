@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00196,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Each anneal duration is given, but no mapping from duration to furnace occupancy minutes per anneal is provided, so total furnace occupancy for I3b cannot be determined\"}",
+  "usage": {
+    "input_tokens": 1072,
+    "output_tokens": 62
+  }
+}

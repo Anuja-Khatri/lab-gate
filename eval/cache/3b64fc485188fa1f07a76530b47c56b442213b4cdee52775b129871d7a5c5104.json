@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.001665,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Anneal action is allowed for synthesis class, but maximum temperature of the loaded quartz substrate is not provided, so compliance with I3 cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 860,
+    "output_tokens": 59
+  }
+}

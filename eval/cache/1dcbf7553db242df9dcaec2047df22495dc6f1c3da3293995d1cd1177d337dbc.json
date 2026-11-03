@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0021825,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules involving potentials, instrument time, or other quantitative limits (I1, I2, I3, I3b, I5, I6, I6b, I7) cannot be evaluated because the plan lacks necessary details; composition and actions do not clearly violate remaining rules (I4, I8, ALLOW).\"}",
+  "usage": {
+    "input_tokens": 978,
+    "output_tokens": 96
+  }
+}

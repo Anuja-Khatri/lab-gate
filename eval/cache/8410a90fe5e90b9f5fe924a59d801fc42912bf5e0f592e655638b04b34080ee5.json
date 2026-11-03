@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00237125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class synthesis allows anneal; total furnace time is 300 minutes which is within rule I3b limit of 240? Wait, that exceeds 240, but rule I3b states total furnace occupancy must not exceed 240 minutes per campaign. Measured total anneal duration is 5\u00d760=300 minutes, so this violates I3b.\"}",
+  "usage": {
+    "input_tokens": 1097,
+    "output_tokens": 100
+  }
+}
