@@ -74,5 +74,7 @@ as observed.
 - `.env` contents never printed, logged, or committed.
 
 ## Last completed task
-P10.4 — STATUS set to BUILD COMPLETE. See CHECKLIST.md (all items ticked) and
-DECISIONS.md (D-001..D-022).
+Owner review round 2 (D-023/D-024/D-025): full-size deterministic adaptive, parity LLM
+arm, surprise LLM numbers, abstain breakdown, per-cell-n tables; registry re-locked,
+docs/site regenerated, `make ci` green, `make demo` reproduces. See CHECKLIST.md (all
+items ticked) and DECISIONS.md (D-001..D-025). BUILD COMPLETE stands.
