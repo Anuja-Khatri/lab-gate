@@ -3,10 +3,16 @@
 Workspace (`$WS`): `/Users/anujakhatri3/lila-gate` (native; `/work/BUILD-SPEC.md` absent).
 
 ## Current position
-- Phase: 3 (Policy registry and invariant language) — starting
-- Current task: P3.1 (registry schema + LTLf renderer)
-- Last completed task: Phase 2 COMPLETE. P2.1 gate/boundary/schemas.py (13 action schemas, extra=forbid, bounds, provenance, parse_plan); P2.2 units.py (pint, fail-closed); P2.3 quarantine.py; P2.4 taint test (1000 plans) + static no-reference; P2.5 hypothesis props. gate/verdict.py decision entrypoint (D-012). All 4 P2 acceptance items ticked. make ci green, 15 tests.
-- Next task: P3.1 registry/schema.py + registry/ltlf.py -> P3.2 invariants.yaml (I1-I8 + allowlist) -> P3.3 lock.py -> P3.4 per-invariant pos/neg tests
+- Phase: 4 (Plan checker) — in progress; reference.py (P4.1) already built in Phase 3 to enable P3.4
+- Current task: P4.2 (SMT encoding in gate/checker/smt.py)
+- Last completed task: Phase 3 COMPLETE. P3.1 schema.py (4 kinds) + ltlf.py (Dwyer patterns); P3.2 invariants.yaml (I1-I8, I3b, I6b, ALLOW; dataset-calibrated; I7 fixed to joint-shared window=200); P3.3 lock.py (sha256). P3.4 per-invariant pos/neg tests via gate/checker/reference.py (P4.1 done early) + sim_ext/surrogate.py (D-014/D-015). All P3 acceptance ticked. make ci green, 44 tests.
+- Next task: P4.2 smt.py (Z3 bounded LTLf) -> P4.3 verdict wiring -> P4.4 certificates.py -> P4.5 equivalence.py (10k+2k suite) -> P4.6 counterexample replay -> P4.7 latency
+
+## Checker design notes (for resume)
+- reference.evaluate(parsed, registry): single-plan PASS/BLOCK/ABSTAIN over abstract trace. evaluate_merged(plans): I7 shared-window across requesters.
+- I1 uses sim_ext.surrogate.gate_predicted_erhe_v (measured-if-addressable else linear surrogate) — D-015; gives I1 teeth on 18 real overloads + replay validity.
+- Capability (I8) + ALLOW checked first; accumulate-with-window (I7) skipped in single-plan (merged only).
+- Budgets couple: per-measure = 10 instr-min, 5 ml acid, 1.0 consumption split by fraction; durability = 60 min. SMT must mirror accounting.apply_action exactly.
 
 ## Environment quick-ref
 - venv: `lab-gate/.venv` (Python 3.12). Run via Makefile (sets PYTHONPATH=$WS/helao-async:$WS/lab-gate).

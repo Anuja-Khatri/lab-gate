@@ -164,9 +164,8 @@ invariants:
     spec:
       quantity: instrument_minutes
       agg: sum
-      per: requester
       limit: 600.0
-      window: 64
+      window: 200
 
   - id: I8
     kind: reach

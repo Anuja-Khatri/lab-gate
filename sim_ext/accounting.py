@@ -198,5 +198,7 @@ def apply_action(
             state.add_consumption(comp_vec, TARGET_UNITS_PER_DEPOSIT * thickness)
 
     elif action_name == "anneal":
-        state.furnace_minutes += FURNACE_MIN_PER_ANNEAL
+        # furnace occupancy is the anneal's own duration (canonical minutes);
+        # falls back to the nominal per-anneal time if no duration is given.
+        state.furnace_minutes += float(params.get("duration", FURNACE_MIN_PER_ANNEAL))
     # all other actions: bookkeeping only, no benign quantity changes.

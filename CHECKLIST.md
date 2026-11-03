@@ -20,8 +20,8 @@ Mark `[FAILED, disclosed]` if R-09 applies (recorded in DECISIONS.md and LIMITAT
 - [x] P2 d: Unknown-key and unit-mismatch rejection tests pass. (test_schema_properties.py)
 
 ## Phase 3 — Policy registry and invariant language
-- [ ] P3 a: Registry validates against schema; hash stable across runs.
-- [ ] P3 b: All per-invariant positive and negative tests pass.
+- [x] P3 a: Registry validates against schema; hash stable across runs. (test_registry.py)
+- [x] P3 b: All per-invariant positive and negative tests pass. (test_invariants.py; >=2 pos + >=2 neg each incl. I7 merged; reference evaluator)
 
 ## Phase 4 — Plan checker
 - [ ] P4 a: Reference vs SMT verdict equivalence = 1.0 on the full suite.
