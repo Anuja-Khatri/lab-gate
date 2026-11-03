@@ -111,7 +111,90 @@ def boundary_decision(raw_plan: dict) -> tuple[ParsedPlan, Verdict]:
     )
 
 
-def decide(raw_plan: dict) -> Verdict:
-    """Top-level decision. Phase 2: boundary only. Phase 4 adds reference+SMT."""
-    _, verdict = boundary_decision(raw_plan)
-    return verdict
+_REGISTRY = None
+_REGISTRY_HASH = None
+_HORIZON_K = None
+
+
+def _load_config():
+    global _REGISTRY, _REGISTRY_HASH, _HORIZON_K
+    if _REGISTRY is None:
+        import yaml
+
+        from gate.registry.lock import DEFAULT_REGISTRY, load_registry, registry_hash
+        _REGISTRY = load_registry(DEFAULT_REGISTRY)
+        _REGISTRY_HASH = registry_hash(_REGISTRY)
+        cfg_path = DEFAULT_REGISTRY.parent.parent.parent / "config" / "experiment.yaml"
+        try:
+            cfg = yaml.safe_load(cfg_path.read_text())
+            _HORIZON_K = int(cfg["checker"]["horizon_k"])
+        except Exception:
+            _HORIZON_K = 64
+    return _REGISTRY, _REGISTRY_HASH, _HORIZON_K
+
+
+def decide(raw_plan: dict, horizon_k: Optional[int] = None) -> Verdict:
+    """Top-level decision (P4.3): typed boundary, then reference + SMT checkers.
+
+    - ABSTAIN if the boundary cannot type the plan, or either checker abstains
+      (unknown class/substrate, beyond horizon, solver timeout).
+    - BLOCK if a violation is found; the counterexample is the violating step
+      sequence and the certificate is the BLOCK trace.
+    - PASS only if the SMT proves no violation reachable within the horizon AND the
+      reference agrees. If reference and SMT disagree, ABSTAIN with reason
+      'reference_smt_disagree' (a bug; the equivalence suite P4.5 fails on it).
+    """
+    from gate.checker.certificates import block_certificate, pass_certificate
+    from gate.checker.reference import evaluate
+    from gate.checker.smt import encode_and_check
+
+    registry, reg_hash, cfg_k = _load_config()
+    k = horizon_k if horizon_k is not None else cfg_k
+
+    parsed, bverdict = boundary_decision(raw_plan)
+    ph = bverdict.plan_hash
+    bverdict.registry_hash = reg_hash
+    if not parsed.ok:
+        return bverdict  # ABSTAIN with boundary reason
+
+    ref = evaluate(parsed, registry, horizon_k=k)
+    smt = encode_and_check(parsed, registry, horizon_k=k)
+
+    # agreement on the decision and (for BLOCK) the invariant
+    same = (ref.decision == smt.decision and ref.invariant_id == smt.invariant_id)
+    if not same:
+        return Verdict(Decision.ABSTAIN, "reference_smt_disagree", ph, reg_hash,
+                       quarantined_text=parsed.quarantined_text,
+                       detail=f"ref={ref.decision}/{ref.invariant_id} "
+                              f"smt={smt.decision}/{smt.invariant_id}")
+
+    if ref.decision == "BLOCK":
+        cert = block_certificate(ph, reg_hash, k, smt.invariant_id,
+                                 smt.step_index, smt.counterexample)
+        return Verdict(Decision.BLOCK, ref.reason, ph, reg_hash,
+                       counterexample=smt.counterexample, certificate=cert,
+                       quarantined_text=parsed.quarantined_text,
+                       detail=smt.invariant_id)
+    if ref.decision == "ABSTAIN":
+        return Verdict(Decision.ABSTAIN, smt.reason or ref.reason, ph, reg_hash,
+                       quarantined_text=parsed.quarantined_text,
+                       detail=smt.invariant_id or ref.invariant_id)
+    # PASS
+    cert = pass_certificate(ph, reg_hash, k, smt)
+    return Verdict(Decision.PASS, "no violation reachable within horizon; "
+                   "reference and SMT agree", ph, reg_hash, certificate=cert,
+                   quarantined_text=parsed.quarantined_text)
+
+
+def decide_merged(raw_plans: list[dict], horizon_k: Optional[int] = None) -> Verdict:
+    """Shared-lab decision over several requesters' plans (I7, P7.3b)."""
+    from gate.checker.reference import evaluate_merged
+    registry, reg_hash, _ = _load_config()
+    parsed = [parse_plan(rp) for rp in raw_plans]
+    res = evaluate_merged(parsed, registry)
+    ph = plan_hash(parsed[0]) if parsed else ""
+    if res.decision == "BLOCK":
+        return Verdict(Decision.BLOCK, res.reason, ph, reg_hash,
+                       counterexample=res.counterexample, detail=res.invariant_id)
+    return Verdict(Decision.PASS if res.decision == "PASS" else Decision.ABSTAIN,
+                   res.reason, ph, reg_hash)

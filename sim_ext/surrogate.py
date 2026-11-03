@@ -112,6 +112,15 @@ def _actual_lookup(plate_id: int, comp_vec) -> Optional[float]:
     return mean_erhe_v(rec["CP3"])
 
 
+def actual_erhe_v(comp_vec, plate_id: Optional[int] = None) -> Optional[float]:
+    """The ACTUAL measured steady-state potential for a composition, or None if the
+    composition is novel (not addressable, hence unmeasurable). Used by the oracle
+    (ground truth) and by counterexample replay (P4.6)."""
+    if plate_id is None:
+        return None
+    return _actual_lookup(plate_id, comp_vec)
+
+
 def gate_predicted_erhe_v(comp_vec, plate_id: Optional[int] = None) -> float:
     """The gate's I1 prediction using its BEST available knowledge (D-015).
 

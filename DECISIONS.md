@@ -94,3 +94,14 @@ All benign; model the STRUCTURE of real controls (Section 5.2). No hazardous con
 - Choice: `sim_ext.surrogate.gate_predicted_erhe_v(comp_vec, plate_id)` returns the MEASURED steady-state potential when the composition is already characterised (addressable on the plate = the gate's prior-measurement history), else the linear surrogate. The reference checker uses this for I1's `predicted_erhe_v`.
 - Consequence: I1 BLOCKs the 18 known-overload compositions (real teeth) and every I1 BLOCK replays in the sim (P4.6 validity). The residual model-reality divergence for I1 is restricted to NOVEL compositions the surrogate under-predicts; being non-addressable, these cannot be measured by the oracle, so they cannot count as attack success (consistent with HYP-1). Broader HYP-2 divergence is carried by out-of-spec probes and beyond-horizon attacks, reported separately.
 - Reason: realistic (a lab predicts from measured data when it has it), gives I1 honest teeth, and preserves replay validity. Documented in METHODS.md.
+
+## D-016 — Operational horizon k = 64 (spec default 16; configurable)
+- Context: Spec P4.2 default k=16, "configurable". The campaign-budget accumulate invariants bite only beyond 16 actions (I6b acid ~40 measures, I6 time ~48). At k=16 the gate would ABSTAIN (beyond horizon) on every budget-bearing campaign.
+- Choice: set config/experiment.yaml checker.horizon_k = 64 (covers ~15 active-learn iterations and the budget thresholds). Plans longer than 64 -> ABSTAIN (beyond_horizon), reported in the abstain breakdown. Both reference and SMT apply the same horizon so they agree (P4.5). The P3.4 semantic tests run unbounded (horizon_k=None).
+- Reason: makes the campaign budgets enforceable within horizon while honoring the bounded-checker contract; k is explicitly configurable per spec. Z3 stays fast at k=64 (p95 ~20 ms).
+
+## D-017 — SMT shares accounting physics, implements invariant logic independently
+- Context: P4.5 wants reference vs SMT equivalence as a bug-check. Full independence vs DRY.
+- Choice: both checkers use sim_ext.accounting for the per-action deltas (the simple, separately-tested physics) but implement the invariant LOGIC independently — reference via Python comparisons, SMT via Z3 constraints decided by the solver. A third view (gate/checker/ltlf_eval.py) evaluates each invariant's exported LTLf formula over the trace and is also cross-checked.
+- Result (full suite 10k benign + 2k edge, horizon 64): reference vs SMT 12000/12000 = 1.0; LTLf-vs-kind-check 106345/106345 = 1.0; 0 divergences (docs/equivalence_divergences.md). Counterexample replay validity 458/458 = 1.0. Latency p50 2.92 ms, p95 20.38 ms (results/checker_perf.json). Per-invariant bounded/unbounded in results/invariant_status.json (all accumulate = bounded; k-induction correctly fails to prove a cumulative sum unbounded).
+- Reason: catches invariant-logic bugs (the risky part) while reusing tested physics; honest about what is shared.

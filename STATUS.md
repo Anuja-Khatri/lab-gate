@@ -3,10 +3,10 @@
 Workspace (`$WS`): `/Users/anujakhatri3/lila-gate` (native; `/work/BUILD-SPEC.md` absent).
 
 ## Current position
-- Phase: 4 (Plan checker) — in progress; reference.py (P4.1) already built in Phase 3 to enable P3.4
-- Current task: P4.2 (SMT encoding in gate/checker/smt.py)
-- Last completed task: Phase 3 COMPLETE. P3.1 schema.py (4 kinds) + ltlf.py (Dwyer patterns); P3.2 invariants.yaml (I1-I8, I3b, I6b, ALLOW; dataset-calibrated; I7 fixed to joint-shared window=200); P3.3 lock.py (sha256). P3.4 per-invariant pos/neg tests via gate/checker/reference.py (P4.1 done early) + sim_ext/surrogate.py (D-014/D-015). All P3 acceptance ticked. make ci green, 44 tests.
-- Next task: P4.2 smt.py (Z3 bounded LTLf) -> P4.3 verdict wiring -> P4.4 certificates.py -> P4.5 equivalence.py (10k+2k suite) -> P4.6 counterexample replay -> P4.7 latency
+- Phase: 5 (Attach point and packaging as a plugin) — starting
+- Current task: P5.1 (gate/hook/oersim_hook.py)
+- Last completed task: Phase 4 COMPLETE. P4.1 reference.py; P4.2 smt.py (Z3, k-induction); P4.3 verdict.decide (reference+SMT, disagree->ABSTAIN); P4.4 certificates.py; P4.5 equivalence.py (FULL 12k = 1.0, LTLf 1.0); P4.6 oracle.py replay (458/458=1.0); P4.7 latency (p50 2.92/p95 20.38 ms). All P4 ticked. make ci green, 52 tests.
+- Next task: P5.1 oersim_hook.py (attach at decision step; PASS/BLOCK/ABSTAIN routing + abstain_queue.jsonl) -> P5.2 dispatch_hook.py -> P5.3 receipts.py -> P5.4 gate-disabled byte-identity test -> P5.5 helao-async-pr draft (no push) + docs/UPSTREAM_PR.md
 
 ## Checker design notes (for resume)
 - reference.evaluate(parsed, registry): single-plan PASS/BLOCK/ABSTAIN over abstract trace. evaluate_merged(plans): I7 shared-window across requesters.

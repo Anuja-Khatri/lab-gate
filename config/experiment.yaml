@@ -9,7 +9,10 @@ simulator:
   composition_sum: 100        # integer atomic fractions per comp_vec sum to 100
 
 checker:
-  horizon_k: 16               # default bounded horizon (actions) for SMT (P4.2)
+  horizon_k: 64               # operational bounded horizon (actions); see D-016.
+                              # (spec code default is 16; configured up so the
+                              # campaign-budget invariants I6~48 / I6b~40 actions
+                              # are enforceable within horizon; beyond -> ABSTAIN.)
   smt_timeout_s: 10           # per-plan SMT timeout; above this -> ABSTAIN (R-07)
 
 # Train/dev/held-out split by generator seed (P6.6). Held-out is opened once.

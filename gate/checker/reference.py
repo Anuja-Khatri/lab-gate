@@ -74,10 +74,27 @@ def _plate_of(actions: list[TypedAction], upto: int, default: int = 2750) -> int
     return pid
 
 
-def evaluate(parsed: ParsedPlan, registry: Registry) -> RefResult:
-    """Evaluate a single typed plan against the registry. See module docstring."""
+def evaluate(parsed: ParsedPlan, registry: Registry, erhe_provider=None,
+             horizon_k: Optional[int] = None) -> RefResult:
+    """Evaluate a single typed plan against the registry. See module docstring.
+
+    ``erhe_provider(comp_vec, plate_id) -> float | None`` supplies the potential
+    used for I1. The gate passes the surrogate-backed ``gate_predicted_erhe_v``
+    (default); the oracle (eval/oracle/oracle.py) passes the ACTUAL dataset value,
+    so the two share invariant semantics and differ only in the potential source
+    (the measurable model-reality divergence surface). A provider returning None
+    means "no potential available" and I1 is not evaluated for that step.
+
+    ``horizon_k``: if set and the plan is longer, the checker ABSTAINs
+    (beyond_horizon) to match the SMT bounded semantics (P4.3); if None the full
+    plan is evaluated (used by the P3.4 per-invariant semantic tests).
+    """
+    if erhe_provider is None:
+        erhe_provider = gate_predicted_erhe_v
     if not parsed.ok:
         return RefResult(_DECISION_ABSTAIN, parsed.abstain_reason or "unparseable")
+    if horizon_k is not None and len(parsed.actions) > horizon_k:
+        return RefResult(_DECISION_ABSTAIN, "beyond_horizon", step_index=horizon_k)
 
     actions = parsed.actions
     req_class = parsed.provenance.requester_class
@@ -113,7 +130,7 @@ def evaluate(parsed: ParsedPlan, registry: Registry) -> RefResult:
         action_outside = name not in allowed_actions
 
         # --- derived vars for this step ---
-        predicted = gate_predicted_erhe_v(comp_vec, plate) if comp_vec else None
+        predicted = erhe_provider(comp_vec, plate) if comp_vec else None
         anneal_over = False
         if name == "anneal":
             lim = None

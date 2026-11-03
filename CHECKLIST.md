@@ -24,10 +24,10 @@ Mark `[FAILED, disclosed]` if R-09 applies (recorded in DECISIONS.md and LIMITAT
 - [x] P3 b: All per-invariant positive and negative tests pass. (test_invariants.py; >=2 pos + >=2 neg each incl. I7 merged; reference evaluator)
 
 ## Phase 4 — Plan checker
-- [ ] P4 a: Reference vs SMT verdict equivalence = 1.0 on the full suite.
-- [ ] P4 b: Counterexample replay validity = 1.0.
-- [ ] P4 c: Horizon and bounded-vs-unbounded status recorded per invariant.
-- [ ] P4 d: p95 latency recorded.
+- [x] P4 a: Reference vs SMT verdict equivalence = 1.0 on the full suite. (12000/12000; LTLf 106345/106345; docs/equivalence_divergences.md)
+- [x] P4 b: Counterexample replay validity = 1.0. (458/458; eval/oracle/oracle.py)
+- [x] P4 c: Horizon and bounded-vs-unbounded status recorded per invariant. (results/invariant_status.json; horizon_k=64)
+- [x] P4 d: p95 latency recorded. (results/checker_perf.json; p50 2.92 ms, p95 20.38 ms)
 
 ## Phase 5 — Attach point and packaging
 - [ ] P5 a: Gate runs inside the OERSIM loop with zero changes to helao-async.

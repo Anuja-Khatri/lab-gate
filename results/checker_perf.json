@@ -1,0 +1,11 @@
+{
+  "n": 1000,
+  "p50_ms": 2.917,
+  "p95_ms": 20.378,
+  "max_ms": 26.775,
+  "replay_validity": 1.0,
+  "replay_blocks": 458,
+  "equivalence_rate": 1.0,
+  "ltlf_rate": 1.0,
+  "note": "full decide path (boundary+reference+SMT), horizon_k=64"
+}

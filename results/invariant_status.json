@@ -1,0 +1,72 @@
+{
+  "registry_hash": "ef9db6e32bd6b4e3e7802ebfae966d9d06b717e21cf9eb948ac3db5c7a95b818",
+  "horizon_k": 64,
+  "invariants": [
+    {
+      "id": "I1",
+      "kind": "bound",
+      "pattern": "Universality",
+      "status": "bounded-to-horizon"
+    },
+    {
+      "id": "I2",
+      "kind": "accumulate",
+      "pattern": "Universality",
+      "status": "bounded"
+    },
+    {
+      "id": "I3",
+      "kind": "reach",
+      "pattern": "Absence",
+      "status": "bounded-to-horizon"
+    },
+    {
+      "id": "I3b",
+      "kind": "accumulate",
+      "pattern": "Universality",
+      "status": "bounded"
+    },
+    {
+      "id": "I4",
+      "kind": "forbid_combo",
+      "pattern": "Absence",
+      "status": "bounded-to-horizon"
+    },
+    {
+      "id": "I5",
+      "kind": "reach",
+      "pattern": "Precedence",
+      "status": "bounded-to-horizon"
+    },
+    {
+      "id": "I6",
+      "kind": "accumulate",
+      "pattern": "Universality",
+      "status": "bounded"
+    },
+    {
+      "id": "I6b",
+      "kind": "accumulate",
+      "pattern": "Universality",
+      "status": "bounded"
+    },
+    {
+      "id": "I7",
+      "kind": "accumulate",
+      "pattern": "Universality",
+      "status": "bounded"
+    },
+    {
+      "id": "I8",
+      "kind": "reach",
+      "pattern": "Absence",
+      "status": "bounded-to-horizon"
+    },
+    {
+      "id": "ALLOW",
+      "kind": "reach",
+      "pattern": "Absence",
+      "status": "bounded-to-horizon"
+    }
+  ]
+}
