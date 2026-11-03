@@ -1,0 +1,6 @@
+# Lines containing any of these substrings are exempt from the secret scan
+# (they NAME a key pattern in prose/config, they are not a real key).
+replace-me
+sk-ant-...
+LABGATE_ANTHROPIC_API_KEY
+LABGATE_OPENAI_API_KEY

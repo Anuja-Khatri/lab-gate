@@ -9,9 +9,9 @@ Mark `[FAILED, disclosed]` if R-09 applies (recorded in DECISIONS.md and LIMITAT
 - [x] P0 c: Native-vs-accounting state table complete.
 
 ## Phase 1 — Environment and repo skeleton
-- [ ] P1 a: `make sim` runs a full OERSIM closed loop twice with the same seed and produces byte-identical trace files.
-- [ ] P1 b: Accounting state readable at every step for every quantity the invariants need.
-- [ ] P1 c: `make ci` exists and runs (lint, tests, secret scan).
+- [x] P1 a: `make sim` runs a full OERSIM closed loop twice with the same seed and produces byte-identical trace files. (sha256 match; test_sim_deterministic.py)
+- [x] P1 b: Accounting state readable at every step for every quantity the invariants need. (per-step snapshot; test_sim_deterministic.py)
+- [x] P1 c: `make ci` exists and runs (lint, tests, secret scan). (ci green)
 
 ## Phase 2 — Typed boundary
 - [ ] P2 a: 100% of OERSIM action types have schemas.
