@@ -1,0 +1,38 @@
+# lab-gate deterministic core (Python 3.12 via uv; see DECISIONS D-002).
+# Install: uv venv --python 3.12 .venv && uv pip install -r requirements.txt
+# PYTHONPATH must include $WS/helao-async (pinned ba910c4) so the real OERSIM
+# action models and plan-makers import in-process (R-05).
+pydantic>=2
+pint
+pyyaml
+numpy
+pandas
+scikit-learn
+matplotlib
+pyzstd
+z3-solver
+python-dotenv
+# --- light helao-async import deps (to load its real action models/plan-makers) ---
+aiofiles
+requests
+aiohttp
+colorama
+colorlog
+ntplib
+aiodebug
+aioshutil
+pydasher
+uuid7
+ruamel.yaml
+orjson
+fastapi
+pydantic-settings
+# --- dev ---
+pytest
+hypothesis
+ruff
+# --- LLM arms (Phase 6-7; installed when keys are set) ---
+# anthropic
+# openai
+# --- classifier arm (Phase 6) ---
+# xgboost

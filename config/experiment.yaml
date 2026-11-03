@@ -1,0 +1,29 @@
+# Experiment configuration. Splits and seeds are fixed BEFORE any held-out run
+# (P6.6, P8.1). Held-out results are computed once.
+
+seed: 20261103                # global deterministic seed
+
+simulator:
+  dataset: "helao-async/helao/deploy/test/demos/data/oer13_cps.pzstd"  # relative to $WS
+  plates: [2750, 3851]        # the two OER plates present in the dataset
+  composition_sum: 100        # integer atomic fractions per comp_vec sum to 100
+
+checker:
+  horizon_k: 16               # default bounded horizon (actions) for SMT (P4.2)
+  smt_timeout_s: 10           # per-plan SMT timeout; above this -> ABSTAIN (R-07)
+
+# Train/dev/held-out split by generator seed (P6.6). Held-out is opened once.
+splits:
+  dev_seeds:      [1, 2, 3, 4, 5, 6, 7, 8]        # prompt/classifier tuning only
+  heldout_seeds:  [101, 102, 103, 104, 105, 106, 107, 108, 109, 110]  # measured once
+
+streams:
+  benign_policy_n: 5000       # P7.1 realistic benign plans
+  benign_random_n: 5000       # P7.1 random valid plans
+  surprise_n: 1000            # P7.1 surprise subset (uniform over valid space)
+  classifier_total_n: 20000   # P6.5 labeled plans
+
+redteam:
+  adaptive_queries_per_goal: 200   # P7.4 budget per goal per gate per seed
+  adaptive_seeds: 10               # P7.4
+  modes: ["black_box", "gray_box"] # P7.4

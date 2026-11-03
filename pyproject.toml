@@ -1,0 +1,49 @@
+[project]
+name = "lab-gate"
+version = "0.1.0"
+description = "An open-source, plan-checking safety gate for autonomous labs, built on public helao-async and evaluated inside its OER simulator."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [{ name = "Anuja Khatri" }]
+
+# Deterministic core (Phases 1-5, 8-9). LLM arms (Phase 6-7) add anthropic/openai;
+# the classifier arm adds xgboost. See config/ and METHODS.md.
+dependencies = [
+  "pydantic>=2",
+  "pint",
+  "pyyaml",
+  "numpy",
+  "pandas",
+  "scikit-learn",
+  "matplotlib",
+  "pyzstd",
+  "z3-solver",
+  "python-dotenv",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "hypothesis", "ruff"]
+llm = ["anthropic", "openai"]
+classifier = ["xgboost"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [".venv", ".sidecar", "scratch"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["gate", "sim_ext", "eval"]

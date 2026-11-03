@@ -1,0 +1,40 @@
+lab-gate
+Copyright (c) 2026 Anuja Khatri
+Licensed under the MIT License (see LICENSE).
+
+This project is the first outside project built on the public helao-async
+framework. It does not modify helao-async and makes no claim to be a part of,
+or endorsed by, that project or any company.
+
+-------------------------------------------------------------------------------
+Third-party attribution
+-------------------------------------------------------------------------------
+
+helao-async (https://github.com/High-Throughput-Experimentation/helao-async)
+Pinned at commit ba910c4 (inspected 2026-11-03). MIT License.
+lab-gate imports its public action/experiment/sequence models and drives its
+public OER simulator (OERSIM) in-process. helao-async is used read-only and is
+not redistributed in this repository. Its MIT copyright holders, as listed in
+helao-async/LICENSE.md:
+
+  Portions Copyright (c) 2019-2023 Dan Guevarra
+  Portions Copyright (c) 2020-2022 Matthias Richter
+  Portions Copyright (c) 2022-2023 Kevin Kan
+  Portions Copyright (c) 2022-2023 Yungchieh Lai
+  Portions Copyright (c) 2022-2023 Lan Zhou
+  Portions Copyright (c) 2019-2020 Helge Stein
+  Portions Copyright (c) 2020 Phillip Donnelly
+  Portions Copyright (c) 2019 John Gregoire
+  Portions Copyright (c) 2017 Santosh Suram
+
+OER CP dataset (oer13_cps) replayed by the OERSIM chronopotentiometry simulator
+originates from measurements associated with doi:10.1039/C8MH01641K. The dataset
+file lives inside helao-async and is not copied into this repository.
+
+-------------------------------------------------------------------------------
+Patterns reused (mechanism only, no domain content) from the owner's public
+repository consilience-verification
+(https://github.com/Anuja-Khatri/consilience-verification), MIT License,
+Copyright (c) 2026 Anuja Khatri: the taint-test, equivalence-harness,
+cached/metered LLM wrapper, results-registry, numbers-lock, and secret-scan
+patterns. No domain data or vocabulary from that repository is used here.

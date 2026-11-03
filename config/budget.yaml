@@ -1,0 +1,11 @@
+# LLM budget (R-08). Total is read from $WS/.env LLM_BUDGET_USD at runtime by
+# eval/llm.py; this file sets per-role soft caps and the hard ceiling. When the
+# cumulative meter (logs/cost_meter.json) would exceed a cap, eval/llm.py stops
+# issuing NEW calls, finishes deterministic work, and reports the exact n done.
+total_usd_default: 500        # overridden by $WS/.env LLM_BUDGET_USD
+hard_cap_usd: 500             # never spend beyond this
+per_role_usd:
+  llm_gate: 150               # OpenAI gate baseline (P6.2)
+  adaptive_attacker: 300      # Anthropic attacker (P7.4)
+  variance_reruns: 50         # LLM-gate run-to-run variance (P8.3)
+warn_fraction: 0.8            # log a warning at 80% of a cap

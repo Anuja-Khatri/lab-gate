@@ -1,0 +1,21 @@
+# Model IDs for the LLM arms. Pinned at Phase 6 start by R-13: list available
+# models from each vendor API, choose the most capable reasoning-grade model per
+# vendor, verify via the API (do not assume), and record the date here.
+#
+# PLACEHOLDER until Phase 6 (keys are not yet set; see $WS/.env and OWNER_TODO.md).
+# R-13 Anthropic candidate IDs as of Nov 2026 (to VERIFY, not assume):
+#   claude-opus-5-5, claude-sonnet-5-5, claude-haiku-5-5
+# OpenAI: to be listed from the API at Phase 6 start.
+
+pinned: false        # set true once verified against the live APIs at Phase 6
+pinned_date: null
+
+llm_gate:            # P6.2 — the human-reviewer-equivalent gate
+  vendor: openai
+  model_id: null     # choose most capable reasoning model; pin here + hash prompt
+
+adaptive_attacker:   # P7.4 — different vendor from the gate
+  vendor: anthropic
+  model_id: null
+
+temperature: 0       # fixed where the API allows (recorded per call otherwise)
