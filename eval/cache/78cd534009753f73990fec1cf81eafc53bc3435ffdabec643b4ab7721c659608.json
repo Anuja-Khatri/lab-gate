@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0076925,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v2",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Total instrument time and predicted potentials are not specified; rules I1, I6, and I7 cannot be evaluated from given data.\"}",
+  "usage": {
+    "input_tokens": 5706,
+    "output_tokens": 56
+  }
+}

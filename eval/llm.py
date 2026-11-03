@@ -33,9 +33,11 @@ METER = WS / "logs" / "cost_meter.json"
 BUDGET_YAML = REPO / "config" / "budget.yaml"
 ENV_FILE = WS / ".env"
 
-# USD per 1e6 tokens (input, output); meter only. Candidate models (R-13, to pin).
+# USD per 1e6 tokens (input, output); meter only (budget guardrail is the hard cap).
+# Pinned models (R-13, verified live 2026-11-03): gpt-5.1, claude-opus-5-5.
 PRICING = {
-    "gpt-5.5": {"in": 2.5, "out": 10.0},
+    "gpt-5.1": {"in": 1.25, "out": 10.0},
+    "gpt-5": {"in": 1.25, "out": 10.0},
     "claude-opus-5-5": {"in": 5.0, "out": 25.0},
     "claude-sonnet-5-5": {"in": 3.0, "out": 15.0},
     "stub-model": {"in": 0.0, "out": 0.0},
@@ -191,11 +193,18 @@ def _provider_call(provider: str, key: str, req: dict) -> dict:  # pragma: no co
     if provider == "openai":
         import openai
         client = openai.OpenAI(api_key=key)
-        r = client.chat.completions.create(
-            model=req["model"],
-            messages=[{"role": "system", "content": req["system"]}] + req["messages"],
-            max_tokens=req["max_tokens"], temperature=req["temperature"])
-        return {"text": r.choices[0].message.content,
+        kwargs = dict(model=req["model"],
+                      messages=[{"role": "system", "content": req["system"]}] + req["messages"])
+        m = req["model"].lower()
+        # gpt-5 / o-series reasoning models use max_completion_tokens and only the
+        # default temperature; older models use max_tokens + temperature.
+        if m.startswith("gpt-5") or m.startswith("o"):
+            kwargs["max_completion_tokens"] = max(req["max_tokens"], 2048)
+        else:
+            kwargs["max_tokens"] = req["max_tokens"]
+            kwargs["temperature"] = req["temperature"]
+        r = client.chat.completions.create(**kwargs)
+        return {"text": r.choices[0].message.content or "",
                 "usage": {"input_tokens": r.usage.prompt_tokens,
                           "output_tokens": r.usage.completion_tokens}}
     raise LLMKeysMissing(f"unknown provider {provider}")

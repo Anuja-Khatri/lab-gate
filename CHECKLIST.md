@@ -42,9 +42,9 @@ Mark `[FAILED, disclosed]` if R-09 applies (recorded in DECISIONS.md and LIMITAT
 - [x] P6 d: Classifier trained, dev-tuned, frozen before held-out runs. (results/classifier.json n=20000, gb test acc 0.9367; HistGradientBoosting per R-04/D-021)
 
 ## Phase 7 — Red team
-- [ ] P7 a: All three gates face the identical static and decomposition suites.
-- [ ] P7 b: Adaptive runs complete for all gates, goals, seeds, modes (or R-08 partial, reported with exact n).
-- [ ] P7 c: Any attempt can be replayed from its log entry.
+- [x] P7 a: All three gates face the identical static and decomposition suites. (eval/runner.py; typed+classifier in CI, LLM gate added for held-out make eval)
+- [x] P7 b: Adaptive runs complete for all gates, goals, seeds, modes (programmatic full grid; LLM attacker reduced grid with exact n reported per R-08/D-022). (eval/redteam/adaptive.py)
+- [x] P7 c: Any attempt can be replayed from its log entry. (logs/redteam_log.jsonl; AttackResult.trajectory; test_records_are_replayable)
 
 ## Phase 8 — Preregistration and measurement
 - [ ] P8 a: `prereg-v1` tag precedes the first held-out run commit.

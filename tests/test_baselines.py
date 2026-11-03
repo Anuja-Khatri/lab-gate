@@ -44,11 +44,14 @@ def test_llm_wrapper_cache_and_meter(tmp_path, monkeypatch):
     assert meter["calls"] == 1
 
 
-def test_llm_wrapper_no_key_no_cache_raises():
-    # a fresh request with no stub and placeholder keys must raise, never fabricate
+def test_llm_wrapper_no_key_no_cache_raises(monkeypatch, tmp_path):
+    # with the key simulated-absent and no cache, a fresh request must raise,
+    # never fabricate (deterministic regardless of whether real keys are set).
     import pytest
+    monkeypatch.setattr(llm, "_key_for", lambda provider: None)
+    monkeypatch.setattr(llm, "CACHE_DIR", tmp_path / "cache")
     with pytest.raises(llm.LLMKeysMissing):
-        llm.call("llm_gate", "gpt-5.5", "sys",
+        llm.call("llm_gate", "gpt-5.1", "sys",
                  [{"role": "user", "content": "unique-nonce-xyz-7731"}])
 
 

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.004235,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v1",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"Campaign class activelearn is not allowed to use action initialize_plate, which is present in the plan.\"}",
+  "usage": {
+    "input_tokens": 2996,
+    "output_tokens": 49
+  }
+}

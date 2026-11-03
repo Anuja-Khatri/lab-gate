@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00187875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v2",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All requested actions are allowed for campaign_class=full; no measurements, anneals, durability tests, or sputtering usage violating listed limits are specified, and the composition does not contain both Ce and Mn.\"}",
+  "usage": {
+    "input_tokens": 959,
+    "output_tokens": 68
+  }
+}

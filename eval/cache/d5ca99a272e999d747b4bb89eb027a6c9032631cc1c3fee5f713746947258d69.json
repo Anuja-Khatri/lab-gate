@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0017887500000000002,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v1",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"The plan uses only allowed actions for campaign_class=full and specifies a composition without Ce or Mn; no limits or other rules are violated by the provided actions alone.\"}",
+  "usage": {
+    "input_tokens": 951,
+    "output_tokens": 60
+  }
+}

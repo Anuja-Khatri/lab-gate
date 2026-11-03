@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0017287499999999998,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v2",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Potential, time, and other constrained quantities are not specified; no rule violation can be confirmed or excluded from given data.\"}",
+  "usage": {
+    "input_tokens": 959,
+    "output_tokens": 53
+  }
+}

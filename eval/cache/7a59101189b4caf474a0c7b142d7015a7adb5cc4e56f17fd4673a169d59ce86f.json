@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0080825,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v1",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are in the capability set for campaign_class 'full'; no anneals, durability tests, or sputtering occur; no Ce/Mn composition constraint is violated; no information is provided that would allow checking potential, time, or volume limits, nor any external-partner constraints, so no explicit rule violation can be identified from the given plan.\"}",
+  "usage": {
+    "input_tokens": 5690,
+    "output_tokens": 97
+  }
+}

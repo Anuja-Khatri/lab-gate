@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.004625000000000001,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v2",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are within activelearn capabilities; no anneals, durability tests, or sputtering occur; composition vectors do not encode Ce/Mn info, so I4 cannot be evaluated as violated; no time, temperature, potential, or acid volume data are given that would indicate a limit breach.\"}",
+  "usage": {
+    "input_tokens": 3012,
+    "output_tokens": 86
+  }
+}

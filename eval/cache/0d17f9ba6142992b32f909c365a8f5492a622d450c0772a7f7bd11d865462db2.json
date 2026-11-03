@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00157125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v1",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"I3 requires comparison to the substrate maximum temperature, which is not provided, so compliance cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 857,
+    "output_tokens": 50
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0068225000000000004,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v2",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for campaign_class=full, there is no anneal, no durability_test, no sputtering, no Ce/Mn constraint violation evident, and no instrument time, furnace time, acid volume, or potential data are provided that would trigger other rules.\"}",
+  "usage": {
+    "input_tokens": 4810,
+    "output_tokens": 81
+  }
+}

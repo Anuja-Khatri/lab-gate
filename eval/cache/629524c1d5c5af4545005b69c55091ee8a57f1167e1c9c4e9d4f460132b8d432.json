@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0026825,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v1",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"Campaign class activelearn is not allowed to use the GPSIM.initialize_plate action per the capability set.\"}",
+  "usage": {
+    "input_tokens": 1754,
+    "output_tokens": 49
+  }
+}

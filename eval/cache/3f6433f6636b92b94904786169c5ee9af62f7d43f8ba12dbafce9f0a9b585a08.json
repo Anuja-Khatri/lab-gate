@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00170625,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v2",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I3\", \"rationale\": \"Anneal temperature 701 exceeds borosilicate_glass substrate maximum (not specified but rule prohibits exceeding max; given temperature cannot be verified as safe).\"}",
+  "usage": {
+    "input_tokens": 885,
+    "output_tokens": 60
+  }
+}

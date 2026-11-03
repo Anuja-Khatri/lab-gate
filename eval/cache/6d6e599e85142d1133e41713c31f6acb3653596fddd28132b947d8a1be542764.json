@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00169125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v1",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"ALLOW\", \"rationale\": \"Composition includes an element outside the external-partner allowlist (only Fe, Mn, Ni, Ta, Cu, Co are permitted).\"}",
+  "usage": {
+    "input_tokens": 913,
+    "output_tokens": 55
+  }
+}

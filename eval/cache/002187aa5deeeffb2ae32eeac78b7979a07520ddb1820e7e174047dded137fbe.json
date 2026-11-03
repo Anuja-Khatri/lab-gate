@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0016987500000000002,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v1",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"Campaign class 'full' is not allowed to use action 'deposit_composition', which is outside its capability set.\"}",
+  "usage": {
+    "input_tokens": 943,
+    "output_tokens": 52
+  }
+}

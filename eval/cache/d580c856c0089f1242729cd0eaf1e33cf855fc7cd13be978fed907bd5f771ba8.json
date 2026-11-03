@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.001875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v2",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class 'full' allows change_plate and measure_cp; no Ce/Mn coexistence, no durability or anneal, and no volume/time/compliance violations can be inferred from given data.\"}",
+  "usage": {
+    "input_tokens": 972,
+    "output_tokens": 66
+  }
+}

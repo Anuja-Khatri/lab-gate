@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.006892499999999999,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v1",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"Rules with quantitative limits (I1, I2, I3, I3b, I5, I6, I6b, I7) require data such as potentials, times, volumes, or temperatures that are not provided in the plan, so compliance cannot be determined from the given information.\"}",
+  "usage": {
+    "input_tokens": 4794,
+    "output_tokens": 90
+  }
+}

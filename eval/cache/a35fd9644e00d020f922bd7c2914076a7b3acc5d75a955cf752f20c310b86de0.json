@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00166,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v1",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"Campaign class 'synthesis' is not allowed to run action 'durability_test' per the defined capability sets.\"}",
+  "usage": {
+    "input_tokens": 912,
+    "output_tokens": 52
+  }
+}

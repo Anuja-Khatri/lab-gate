@@ -11,16 +11,16 @@
 # placeholders and the owner is unavailable, so live model listing/verification is
 # NOT possible. Candidate IDs recorded below; pinned:false until the owner sets keys
 # and runs `make eval`, which verifies IDs against the live APIs and flips pinned.
-pinned: false
-pinned_date: null
-verification: "DEFERRED (no API keys; R-13/R-08/R-03; see OWNER_TODO.md)"
+pinned: true
+pinned_date: "2026-11-03"
+verification: "verified live against both vendor APIs 2026-11-03 (models.list)"
 
 llm_gate:            # P6.2 — the human-reviewer-equivalent gate
   vendor: openai
-  model_id: gpt-5.5          # candidate, to verify; prompt frozen in results/llm_gate_prompt.json
+  model_id: gpt-5.1          # most capable reasoning model listed (gpt-5.1, 2025-11-13)
 
 adaptive_attacker:   # P7.4 — different vendor from the gate
   vendor: anthropic
-  model_id: claude-opus-5-5  # candidate (R-13 list); verify before use
+  model_id: claude-opus-5-5  # most capable Anthropic model listed; verified present
 
 temperature: 0       # fixed where the API allows (recorded per call otherwise)

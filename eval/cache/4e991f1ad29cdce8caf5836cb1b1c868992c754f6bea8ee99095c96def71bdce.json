@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00206375,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v2",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class synthesis allows deposit_composition; only sputtering occurs, so no rules on potentials, anneals, furnace/instrument time, durability, or composition conflicts are violated, and sputter-target consumption limit is not exceeded by two unit-thickness deposits.\"}",
+  "usage": {
+    "input_tokens": 1027,
+    "output_tokens": 78
+  }
+}

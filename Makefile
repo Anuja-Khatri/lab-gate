@@ -25,7 +25,7 @@ secrets:
 	$(PY) eval/check_secrets.py
 
 test:
-	$(PY) -m pytest tests -q
+	LABGATE_DISABLE_LLM=1 $(PY) -m pytest tests -q
 
 # ci = lint + tests + secret scan (+ numbers-lock once results exist, P8)
 ci: lint test secrets

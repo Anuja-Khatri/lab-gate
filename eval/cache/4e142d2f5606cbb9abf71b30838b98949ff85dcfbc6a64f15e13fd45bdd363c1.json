@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00179875,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v2",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Full campaign uses only allowed actions; no Ce/Mn conflict, no anneal, durability, sputtering, or volumes/times specified that could violate limits.\"}",
+  "usage": {
+    "input_tokens": 967,
+    "output_tokens": 59
+  }
+}

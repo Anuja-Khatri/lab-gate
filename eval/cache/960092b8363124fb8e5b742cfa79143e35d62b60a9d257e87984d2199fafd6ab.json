@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00176125,
+  "model": "gpt-5.1",
+  "provider": "openai",
+  "replicate_tag": "dev-v1",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"Campaign class 'synthesis' is not allowed to run actions 'initialize_plate' or 'acquire_point' per its capability set.\"}",
+  "usage": {
+    "input_tokens": 961,
+    "output_tokens": 56
+  }
+}

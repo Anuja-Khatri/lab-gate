@@ -3,12 +3,12 @@
 Workspace (`$WS`): `/Users/anujakhatri3/lila-gate` (native; `/work/BUILD-SPEC.md` absent).
 
 ## Current position
-- Phase: 7 (Red team) — starting
-- Current task: P7.1 (streams/benign.py full stream — basic version exists, expand to 5000+5000+surprise) then P7.2 static, P7.3 decomposition, P7.4 adaptive (programmatic; LLM attacker deferred)
-- Last completed task: Phase 6 COMPLETE. P6.1 eval/llm.py (cache/meter/budget, offline-tested); P6.2 llm_gate.py (frozen prompt, DEFERRED execution D-020); P6.3 oracle.py + P6.4 out_of_spec.yaml; P6.5 classifier.py (20k, HistGB+TFIDF, R-04/D-021); P6.6 splits (disjoint seed pools). All P6 ticked. make ci green, 65 tests.
-- Next task: P7.1 benign stream (realistic+random+surprise, label false-block/abstain) -> P7.2 static.py (smuggling/unit/comment/bound/capability) -> P7.3 decomposition.py (+P7.3b cross-requester) -> P7.4 adaptive.py (programmatic search attacker vs typed gate + classifier; LLM attacker DEFERRED D-020) -> P7.5 replayable logs
+- Phase: 8 (Preregistration and measurement) — starting. CRITICAL ORDER: write PREREGISTRATION.md + git tag prereg-v1 BEFORE any held-out run (P8.1).
+- Current task: P8.1 (docs/PREREGISTRATION.md + tag prereg-v1), then P8.2 held-out run ONCE, P8.3 metrics.py (+CIs), P8.4 registry.json + NUMBERS_LOCK.
+- Last completed task: Phase 7 COMPLETE (code). P7.1 benign.py; P7.2 static.py; P7.3 decomposition.py + P7.3b cross_requester; P7.4 adaptive.py (programmatic; LLM attacker code present); P7.5 runner.py replayable logs. KEYS NOW LIVE (D-022): gpt-5.1 + claude-opus-5-5 pinned, LLM gate prompt v2 frozen (dev-tuned). All P7 ticked. make ci green, 72 tests. Spend so far $0.17/500.
+- Next task: P8.1 prereg + tag -> P8.2 run held-out ONCE (typed+classifier full; LLM gate on held-out suites+benign sample+variance; LLM attacker reduced grid; all cached) -> P8.3 metrics+CIs -> P8.4 registry.json+NUMBERS_LOCK + numbers-lock CI
 
-## D-020 reminder (LLM arms): both $WS/.env keys empty/placeholder; LLM gate (P6.2) + LLM attacker (P7.4) DEFERRED, code+prompt frozen, disclosed in OWNER_TODO/LIMITATIONS. Classifier + typed gate carry real numbers. Never fabricate.
+## IMPORTANT (D-022): keys live, LLM arms RUN. CI/tests guarded by LABGATE_DISABLE_LLM=1 (never call API). Held-out LLM responses cached under eval/cache/ and committed so make demo reproduces without keys. Meter enforces $500 cap. Dev-tuning already done on DEV split only; held-out is computed once after prereg-v1 tag.
 
 ## Checker design notes (for resume)
 - reference.evaluate(parsed, registry): single-plan PASS/BLOCK/ABSTAIN over abstract trace. evaluate_merged(plans): I7 shared-window across requesters.
