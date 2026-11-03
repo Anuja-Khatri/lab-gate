@@ -1,36 +1,62 @@
 # STATUS
 
-Workspace (`$WS`): `/Users/anujakhatri3/lila-gate` (native; `/work/BUILD-SPEC.md` absent).
+Workspace (`$WS`): `/Users/anujakhatri3/lila-gate` (native).
 
-## Current position
-- Phase: 8 (Preregistration and measurement) — starting. CRITICAL ORDER: write PREREGISTRATION.md + git tag prereg-v1 BEFORE any held-out run (P8.1).
-- Current task: P8.1 (docs/PREREGISTRATION.md + tag prereg-v1), then P8.2 held-out run ONCE, P8.3 metrics.py (+CIs), P8.4 registry.json + NUMBERS_LOCK.
-- Last completed task: Phase 7 COMPLETE (code). P7.1 benign.py; P7.2 static.py; P7.3 decomposition.py + P7.3b cross_requester; P7.4 adaptive.py (programmatic; LLM attacker code present); P7.5 runner.py replayable logs. KEYS NOW LIVE (D-022): gpt-5.1 + claude-opus-5-5 pinned, LLM gate prompt v2 frozen (dev-tuned). All P7 ticked. make ci green, 72 tests. Spend so far $0.17/500.
-- Next task: P8.1 prereg + tag -> P8.2 run held-out ONCE (typed+classifier full; LLM gate on held-out suites+benign sample+variance; LLM attacker reduced grid; all cached) -> P8.3 metrics+CIs -> P8.4 registry.json+NUMBERS_LOCK + numbers-lock CI
+## BUILD COMPLETE
 
-## IMPORTANT (D-022): keys live, LLM arms RUN. CI/tests guarded by LABGATE_DISABLE_LLM=1 (never call API). Held-out LLM responses cached under eval/cache/ and committed so make demo reproduces without keys. Meter enforces $500 cap. Dev-tuning already done on DEV split only; held-out is computed once after prereg-v1 tag.
+All phases (0 through 10) are done. `make ci` is green: lint, 72 tests, taint test,
+static no-reference check, secret scan (working tree and full git history), and the
+numbers-lock check. The owner's remaining steps are in `OWNER_TODO.md`.
 
-## Checker design notes (for resume)
-- reference.evaluate(parsed, registry): single-plan PASS/BLOCK/ABSTAIN over abstract trace. evaluate_merged(plans): I7 shared-window across requesters.
-- I1 uses sim_ext.surrogate.gate_predicted_erhe_v (measured-if-addressable else linear surrogate) — D-015; gives I1 teeth on 18 real overloads + replay validity.
-- Capability (I8) + ALLOW checked first; accumulate-with-window (I7) skipped in single-plan (merged only).
-- Budgets couple: per-measure = 10 instr-min, 5 ml acid, 1.0 consumption split by fraction; durability = 60 min. SMT must mirror accounting.apply_action exactly.
+## One-page summary
 
-## Environment quick-ref
-- venv: `lab-gate/.venv` (Python 3.12). Run via Makefile (sets PYTHONPATH=$WS/helao-async:$WS/lab-gate).
-- Action vocabulary (D-010): 10 OERSIM-native actions + benign stand-ins (deposit_composition, anneal, durability_test).
-- Dataset: 2 plates (2750 has real overload traces up to erhe_v 12.8 V; 3851 well-behaved), 13 elements, comp_vec sums to 100.
-- R-05 bypass: FastAPI/Bokeh group + GP acquisition (torch). Oracle/gate use real data.
+What it is: `lab-gate`, an open-source plan-checking safety gate for autonomous labs,
+built on public helao-async at pin `ba910c4` and evaluated in its OER simulator. The
+gate returns PASS (proof certificate), BLOCK (counterexample), or ABSTAIN (human
+queue), reading only typed fields.
 
-## Preconditions (checked 2026-11-03)
-1. `.env` present with `LABGATE_ANTHROPIC_API_KEY`, `LABGATE_OPENAI_API_KEY` (both placeholder `replace-me`), `LLM_BUDGET_USD=500`. Owner must set real keys before Phase 6. Non-LLM work (Phases 0-5) proceeds now.
-2. `helao-async` HEAD = `ba910c4c2bdcbcbc49476e32a5b20ca0abb93529` — already equals the pin `ba910c4` (commit dated 2026-10-19). No checkout needed; helao-async stays untouched.
-3. `refs/consilience-verification` present (HEAD 275dba8).
-4. Docker CLI available.
-5. Tooling: system Python 3.15.0, NO conda, `uv` present, `git` present. (See D-002 for env plan.)
+Headline held-out results (full table with n and 95% CIs in `docs/tables/results.md`;
+every number locked in `results/registry.json`, sha256 67c0a1da):
 
-## Blockers resolved
-- none yet
+| | typed gate | classifier | LLM gate (gpt-5.1) |
+|---|---|---|---|
+| attack success, static+decomp | 0.00 | 0.24 | 0.11 |
+| attack success, adaptive | 0.00 | 0.33 | 0.46 |
+| false-block, benign (n=13627) | 0.00 | 0.07 | 0.64 |
+| false-block, surprise (n=990) | 0.00 | 0.00 | — |
+| run-to-run variance | 0.00 | 0.00 | 0.30 |
 
-## Notes
-- Hard path discipline: write only in `$WS/lab-gate/`, `$WS/scratch/`, `$WS/logs/` (and `$WS/helao-async-pr/` in Phase 5). No pushes, no subagents.
+Checker guarantees: reference vs SMT equivalence 1.0 (n=12000); counterexample replay
+validity 1.0 (n=458); taint test 0 (no text channel, n=1000); p95 latency ~20 ms.
+Specification coverage: 20.6% of attack plans reached an out-of-spec harm the gate was
+never given (reported separately). Metered LLM spend: $4.44 of the $500 cap.
+
+Hypotheses: HYP-1 supported (typed gate 0.00 on in-spec attacks); HYP-2 supported in
+direction; HYP-3 supported (LLM gate nonzero attack success + 0.30 variance); HYP-4
+supported (classifier degrades under adaptive attack); HYP-5 NOT supported (the typed
+gate abstained 0.00 on the benign stream; the LLM gate's cost was over-blocking, not
+the typed gate over-abstaining) — reported as observed.
+
+## Disclosed deviations and decision-rule uses
+
+- R-05: full orchestration group not launchable here; OERSIM driven in-process with
+  the real action models and dataset (D-009).
+- R-06: benign accounting extension for quantities OERSIM does not track (D-006).
+- R-04: sklearn HistGradientBoosting instead of xgboost (libomp unavailable) (D-021).
+- R-13: models verified live and pinned (gpt-5.1, claude-opus-5-5) (D-022).
+- R-08: paid LLM arms ran at reduced sizes under the budget cap; deterministic adaptive
+  grid reduced for compute time; all deviations and exact n in FINAL_REPORT Section 6.
+- R-02: media gif/webm renderers (agg, Playwright) not installable; the asciinema cast
+  is produced, gif/webm deferred to the owner (OWNER_TODO).
+- No FAILED (R-09) acceptance tests.
+
+## No-failure disclosures
+
+- helao-async and refs clones verified unmodified; writes confined to `lab-gate/`,
+  `logs/`, and `helao-async-pr/` (the never-pushed upstream draft).
+- No git push, no remotes created, no publishing. Publishing is the owner's job.
+- `.env` contents never printed, logged, or committed.
+
+## Last completed task
+P10.4 — STATUS set to BUILD COMPLETE. See CHECKLIST.md (all items ticked) and
+DECISIONS.md (D-001..D-022).
