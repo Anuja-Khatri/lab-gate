@@ -4,9 +4,9 @@ Every acceptance criterion from BUILD-SPEC.md. Tick `[x]` only when its test pas
 Mark `[FAILED, disclosed]` if R-09 applies (recorded in DECISIONS.md and LIMITATIONS.md).
 
 ## Phase 0 — Read and confirm
-- [ ] P0 a: P0_MEMO.md names the exact attach point with file and function.
-- [ ] P0 b: P0_MEMO.md lists every OERSIM action type with parameters.
-- [ ] P0 c: Native-vs-accounting state table complete.
+- [x] P0 a: P0_MEMO.md names the exact attach point with file and function. (orch_dispatch.py:1081-1124 dispatch_experiment/staged_acts; orch_host.py:564 insert_experiment)
+- [x] P0 b: P0_MEMO.md lists every OERSIM action type with parameters. (10 types: 4 CPSIM + 6 GPSIM)
+- [x] P0 c: Native-vs-accounting state table complete.
 
 ## Phase 1 — Environment and repo skeleton
 - [ ] P1 a: `make sim` runs a full OERSIM closed loop twice with the same seed and produces byte-identical trace files.

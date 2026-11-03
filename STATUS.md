@@ -3,10 +3,10 @@
 Workspace (`$WS`): `/Users/anujakhatri3/lila-gate` (native; `/work/BUILD-SPEC.md` absent).
 
 ## Current position
-- Phase: 0 (Read and confirm)
-- Current task: P0.1 (reading helao-async)
-- Last completed task: bootstrap (repo skeleton memory files created)
-- Next task: P0.1 -> P0.2 -> P0.3
+- Phase: 1 (Environment and repo skeleton) — starting
+- Current task: P1.1 (repo layout)
+- Last completed task: Phase 0 COMPLETE (P0.1 read helao+refs, P0.2 docs/P0_MEMO.md written, P0.3 patterns mapped). All 3 P0 acceptance items ticked.
+- Next task: P1.1 repo layout -> P1.2 env (uv) -> P1.3 OERSIM run (expect R-05) -> P1.4 accounting -> P1.5 Makefile
 
 ## Preconditions (checked 2026-11-03)
 1. `.env` present with `LABGATE_ANTHROPIC_API_KEY`, `LABGATE_OPENAI_API_KEY` (both placeholder `replace-me`), `LLM_BUDGET_USD=500`. Owner must set real keys before Phase 6. Non-LLM work (Phases 0-5) proceeds now.
