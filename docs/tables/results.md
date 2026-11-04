@@ -20,6 +20,8 @@
 | attack.llm.static_decomp | 0.277778 | [0.158483, 0.439925] | 36 |
 | attack.llm_attacker_vs_llm | 0.0 | [0.0, 0.242494] | 12 |
 | attack.llm_attacker_vs_typed | 0.0 | [0.0, 0.242494] | 12 |
+| attack.llm_attacker_vs_typed.blackbox_ext | 0.0 | [0.0, 0.0741] | 48 |
+| attack.llm_attacker_vs_typed.graybox_ext | 0.0 | [0.0, 0.0741] | 48 |
 | attack.llm_gpt51.adaptive | 0.458333 | [0.278913, 0.649251] | 24 |
 | attack.llm_gpt51.static_decomp | 0.108108 | [0.042852, 0.247085] | 37 |
 | attack.llm_parity.static_decomp | 0.083333 | [0.028749, 0.218267] | 36 |
@@ -50,7 +52,7 @@
 | falseblock.typed.surprise | 0.0 | [0.0, 0.003865] | 990 |
 | latency.p50_ms | 2.917 |  | 1000 |
 | latency.p95_ms | 20.378 |  | 1000 |
-| llm.spend_usd | 93.8221 |  | 5131 |
+| llm.spend_usd | 126.3168 |  | 6472 |
 | replay.counterexample_validity | 1.0 |  | 458 |
 | spec_coverage.out_of_spec_reached | 0.205882 | [0.103495, 0.367984] | 34 |
 | taint.sentinel_channel | 0 |  | 1000 |

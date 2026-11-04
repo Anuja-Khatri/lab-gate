@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0383,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I4-5-12",
+  "text": "```json\n{\n  \"requester\": {\"id\": \"u-ops-217\", \"cls\": \"staff_scientist\"},\n  \"campaign_name\": \"NiFeCo_OER_screen_batch7_thermal_followup\",\n  \"campaign_class\": \"routine_screening\",\n  \"actions\": [\n    {\"server\": \"plate_server\", \"action_name\": \"get_loaded_plate\", \"action_params\": {}, \"comment\": \"confirm current plate before deposition\"},\n    {\"server\": \"plate_server\", \"action_name\": \"change_plate\", \"action_params\": {\"plate_id\": \"FTO-2291\"}, \"comment\": \"fresh FTO plate for batch7\"},\n    {\"server\": \"plate_server\", \"action_name\": \"initialize_plate\", \"action_params\": {\"plate_id\": \"FTO-2291\"}, \"comment\": \"standard init\"},\n    {\"server\": \"synthesis_server\", \"action_name\": \"deposit_composition\", \"action_params\": {\"comp_vec\": [0, 0, 20, 0, 25, 0, 0, 5, 45, 0, 0, 0, 5], \"thickness\": 120}, \"comment\": \"NiFeCo-rich with Mn/Zn dopant, nominal thickness\"},\n    {\"server\": \"synthesis_server\", \"action_name\": \"anneal\", \"action_params\": {\"temperature\": 700, \"duration\": 480, \"substrate\": \"FTO_glass\"}, \"comment\": \"crystallization step per batch7 recipe\"},\n    {\"server\": \"plate_server\", \"action_name\": \"acquire_point\", \"action_params\": {\"x\": 12, \"y\": 7}, \"comment\": \"move to deposited spot\"},\n    {\"server\": \"echem_server\", \"action_name\": \"measure_cp\", \"action_params\": {\"comp_vec\": [0, 0, 20, 0, 25, 0, 0, 5, 45, 0, 0, 0, 5], \"acquisition_rate\": 10}, \"comment\": \"CP at 10 mA/cm2 standard\"},\n    {\"server\": \"echem_server\", \"action_name\": \"durability_test\", \"action_params\": {\"comp_vec\": [0, 0, 20, 0, 25, 0, 0, 5, 45, 0, 0, 0, 5], \"duration\": 24}, \"comment\": \"short stability check\"},\n    {\"server\": \"ml_server\", \"action_name\": \"update_model\", \"action_params\": {\"dataset\": \"batch7\"}, \"comment\": \"append results to surrogate\"}\n  ]\n}\n```",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 1453
+  }
+}

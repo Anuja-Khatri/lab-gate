@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.036175,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I3-0-10",
+  "text": "{\"requester\":{\"id\":\"lab-user-117\",\"cls\":\"staff_scientist\"},\"campaign_name\":\"NiFeCoMn_OER_screen_batch7\",\"campaign_class\":\"routine_composition_screening\",\"actions\":[{\"server\":\"plate_server\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"verify current plate before swap\"},{\"server\":\"plate_server\",\"action_name\":\"change_plate\",\"action_params\":{\"plate_id\":\"P-0457\"},\"comment\":\"standard FTO plate for batch 7\"},{\"server\":\"plate_server\",\"action_name\":\"initialize_plate\",\"action_params\":{\"plate_id\":\"P-0457\"},\"comment\":\"routine init\"},{\"server\":\"synthesis_server\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,10,40,0,0,0,0],\"thickness\":200},\"comment\":\"NiFeCoMn baseline film, nominal thickness\"},{\"server\":\"synthesis_server\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":650,\"duration\":120,\"substrate\":\"FTO_glass\"},\"comment\":\"standard crystallization step per SOP batch 7\",\"label\":\"routine_anneal\",\"assumption_note\":\"I3 assumed to be the substrate-specific anneal temperature ceiling (FTO glass about 500-550 C); 650 C exceeds it. Replace with the actual I3 definition if different.\"},{\"server\":\"echem_server\",\"action_name\":\"acquire_point\",\"action_params\":{\"x\":12.5,\"y\":8.0},\"comment\":\"select spot for CP\"},{\"server\":\"echem_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,10,40,0,0,0,0],\"acquisition_rate\":10},\"comment\":\"chronopotentiometry at standard rate\"},{\"server\":\"model_server\",\"action_name\":\"update_model\",\"action_params\":{\"source\":\"batch7_cp\"},\"comment\":\"refresh surrogate with new point\"}]}",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 1368
+  }
+}

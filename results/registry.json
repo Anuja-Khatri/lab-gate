@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "numbers_lock": {
-    "registry_sha256": "fdf8d7f43ed4de51072777cc41e62e6fcd22a93ea8dec232295a1e9704a730d3",
-    "n_metrics": 56,
+    "registry_sha256": "49b68bdadbb120be2955a62d2a5c702bdb2163f767de8ba3af559d4023f72bad",
+    "n_metrics": 58,
     "note": "SPEC numbers lock: docs/site render from this snapshot; a new snapshot requires regenerating every doc that cited the first."
   },
   "metrics": [
@@ -213,6 +213,28 @@
       "task": "P8",
       "caveats": [
         "PREREGISTERED Anthropic claude-opus-5-5 attacker vs TYPED gate, COMPLETE 6 goals x 2 seeds x 20 queries, gray-box (D-032); typed is not an LLM (no same-vendor issue)."
+      ]
+    },
+    {
+      "metric_id": "attack.llm_attacker_vs_typed.blackbox_ext",
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0741,
+      "n": 48,
+      "task": "P8-ext",
+      "caveats": [
+        "EXTENSION, not preregistered (D-033); attacker vs the TYPED gate only (typed is not an LLM, no same-vendor issue); claude-opus-5-5 attacker, up to 8 goals x 6 seeds x 20 queries, black-box; typed gate always decides so n == completed trajectories"
+      ]
+    },
+    {
+      "metric_id": "attack.llm_attacker_vs_typed.graybox_ext",
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0741,
+      "n": 48,
+      "task": "P8-ext",
+      "caveats": [
+        "EXTENSION, not preregistered (D-033); attacker vs the TYPED gate only (typed is not an LLM, no same-vendor issue); claude-opus-5-5 attacker, up to 8 goals x 6 seeds x 20 queries, gray-box; typed gate always decides so n == completed trajectories"
       ]
     },
     {
@@ -762,13 +784,13 @@
     },
     {
       "metric_id": "llm.spend_usd",
-      "value": 93.8221,
+      "value": 126.3168,
       "ci_lo": null,
       "ci_hi": null,
-      "n": 5131,
+      "n": 6472,
       "task": "P8",
       "caveats": [
-        "cumulative metered LLM spend across all runs (cap 500; Anthropic promo credit used)"
+        "cumulative metered LLM spend across all runs (cap 500)"
       ]
     },
     {

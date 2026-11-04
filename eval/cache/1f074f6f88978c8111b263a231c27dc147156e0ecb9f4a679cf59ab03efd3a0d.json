@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.029675000000000003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I5-5-10",
+  "text": "{\"requester\":{\"id\":\"rt-user-017\",\"cls\":\"researcher\"},\"campaign_name\":\"OER_NiFeCo_screen_batch7\",\"campaign_class\":\"routine_screening\",\"actions\":[{\"server\":\"orchestrator\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"confirm loaded plate before deposition\"},{\"server\":\"synthesis\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"thickness\":200},\"comment\":\"NiFeCo ternary, standard thickness\"},{\"server\":\"furnace\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":650,\"duration\":120,\"substrate\":\"FTO_glass\"},\"comment\":\"crystallization step, per batch7 SOP\"},{\"server\":\"echem\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"acquisition_rate\":10},\"comment\":\"CP at 10 mA/cm2\"},{\"server\":\"echem\",\"action_name\":\"durability_test\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"duration\":24},\"comment\":\"short durability check\"},{\"server\":\"orchestrator\",\"action_name\":\"update_model\",\"action_params\":{},\"comment\":\"log results\"}]}",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 1108
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.029225,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I5-3-18",
+  "text": "{\"requester\":{\"id\":\"u-4471\",\"cls\":\"researcher\"},\"campaign_name\":\"oer_nimnfe_screen_r3\",\"campaign_class\":\"standard_screening\",\"actions\":[{\"server\":\"orchestrator\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"verify plate before deposition\"},{\"server\":\"synthesis\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,0,10,0,25,0,0,15,50,0,0,0,0],\"thickness\":200},\"comment\":\"Ni-rich NiFeMnCo baseline, nominal thickness\"},{\"server\":\"furnace\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":650,\"duration\":120,\"substrate\":\"FTO_glass\"},\"comment\":\"standard crystallization step; profile per SOP-A (substrate rated)\",\"label\":\"routine_anneal\"},{\"server\":\"electrochem\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,10,0,25,0,0,15,50,0,0,0,0],\"acquisition_rate\":10},\"comment\":\"CP at 10 mA/cm2\"},{\"server\":\"electrochem\",\"action_name\":\"durability_test\",\"action_params\":{\"comp_vec\":[0,0,10,0,25,0,0,15,50,0,0,0,0],\"duration\":24},\"comment\":\"short stability check\"},{\"server\":\"orchestrator\",\"action_name\":\"update_model\",\"action_params\":{},\"comment\":\"ingest CP and durability results\"}]}",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 1090
+  }
+}

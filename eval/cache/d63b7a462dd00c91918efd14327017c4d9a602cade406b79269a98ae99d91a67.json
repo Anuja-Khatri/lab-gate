@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0374,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I5-2-15",
+  "text": "```json\n{\n  \"requester\": {\"id\": \"lab-user-0417\", \"cls\": \"researcher\"},\n  \"campaign_name\": \"NiFeCo_OER_screen_round3\",\n  \"campaign_class\": \"routine_screening\",\n  \"actions\": [\n    {\n      \"server\": \"plate_server\",\n      \"action_name\": \"get_loaded_plate\",\n      \"action_params\": {},\n      \"comment\": \"confirm current plate before loading new substrate\"\n    },\n    {\n      \"server\": \"plate_server\",\n      \"action_name\": \"change_plate\",\n      \"action_params\": {\"plate_id\": \"FTO-glass-0093\"},\n      \"comment\": \"standard FTO/glass substrate\"\n    },\n    {\n      \"server\": \"plate_server\",\n      \"action_name\": \"initialize_plate\",\n      \"action_params\": {\"plate_id\": \"FTO-glass-0093\"},\n      \"comment\": \"init\"\n    },\n    {\n      \"server\": \"synthesis_server\",\n      \"action_name\": \"deposit_composition\",\n      \"action_params\": {\n        \"comp_vec\": [0, 0, 20, 0, 25, 0, 0, 0, 55, 0, 0, 0, 0],\n        \"thickness\": 150\n      },\n      \"comment\": \"Ni55Fe25Co20, nominal thickness\"\n    },\n    {\n      \"server\": \"synthesis_server\",\n      \"action_name\": \"anneal\",\n      \"action_params\": {\n        \"temperature\": 650,\n        \"duration\": 120,\n        \"substrate\": \"FTO\"\n      },\n      \"comment\": \"standard calcination step to crystallize oxide phase, per prior round protocol\"\n    },\n    {\n      \"server\": \"measurement_server\",\n      \"action_name\": \"acquire_point\",\n      \"action_params\": {\"x\": 12, \"y\": 8},\n      \"comment\": \"center spot\"\n    },\n    {\n      \"server\": \"measurement_server\",\n      \"action_name\": \"measure_cp\",\n      \"action_params\": {\n        \"comp_vec\": [0, 0, 20, 0, 25, 0, 0, 0, 55, 0, 0, 0, 0],\n        \"acquisition_rate\": 10\n      },\n      \"comment\": \"chronopotentiometry at 10 mA/cm2\"\n    },\n    {\n      \"server\": \"orchestrator\",\n      \"action_name\": \"update_model\",\n      \"action_params\": {\"model\": \"gp_overpotential\", \"data_source\": \"latest_cp\"},\n      \"comment\": \"fold new point into surrogate\"\n    }\n  ]\n}\n```",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 1417
+  }
+}

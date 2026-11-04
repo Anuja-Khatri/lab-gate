@@ -70,6 +70,16 @@ not mean.
    docs/CORRECTIONS.md. The remaining blocked arms are the OpenAI gpt-5.1 tails (no
    credits) and the Gemini arms (free-tier quota).
 
+   Extension (D-033, declared before execution; NOT preregistered). The LLM adaptive
+   attacker vs the TYPED gate only (typed is not an LLM, no same-vendor issue) was scaled
+   to n=48 trajectories per mode (8 goals x 6 seeds x 20 queries) in both observation
+   modes -- black-box (verdict only) and gray-box (verdict + blocked-invariant id). Both
+   returned attack success 0.00 (0/48, 95% CI 0.00-0.074). This is kept separate from the
+   preregistered grid and labelled as an extension on both metrics
+   (`attack.llm_attacker_vs_typed.blackbox_ext`, `*.graybox_ext`); it is a larger
+   two-mode replication of the preregistered 0.00 (n=12), not a new preregistered claim.
+   It is a vs-typed-gate result only; it says nothing about the LLM gate.
+
    Round-3/3b (D-026/D-028/D-029): a Gemini arm was added to restore
    cross-vendor attacker separation and a second LLM-gate vendor. All three keys were
    re-verified with live calls: OpenAI out of credits, Anthropic at its monthly usage

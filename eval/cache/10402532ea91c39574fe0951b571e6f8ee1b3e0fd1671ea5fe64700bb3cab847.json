@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.031625,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I5-2-8",
+  "text": "{\"requester\":{\"id\":\"u-4471\",\"cls\":\"internal_researcher\"},\"campaign_name\":\"OER_NiFeCo_thermal_stability_sweep_r2\",\"campaign_class\":\"standard_screening\",\"actions\":[{\"server\":\"orchestrator\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"confirm plate before deposition\"},{\"server\":\"orchestrator\",\"action_name\":\"initialize_plate\",\"action_params\":{\"plate_id\":\"P-2207\",\"substrate\":\"FTO_glass\"},\"comment\":\"routine init\"},{\"server\":\"synthesis\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,40,0,10,0,0],\"thickness\":200},\"comment\":\"NiFeCoSn baseline, standard thickness\"},{\"server\":\"synthesis\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":650,\"duration\":7200,\"substrate\":\"FTO_glass\"},\"comment\":\"standard crystallization step per protocol v3\"},{\"server\":\"characterization\",\"action_name\":\"acquire_point\",\"action_params\":{\"x\":12.5,\"y\":8.0},\"comment\":\"post-anneal check\"},{\"server\":\"characterization\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,40,0,10,0,0],\"acquisition_rate\":10},\"comment\":\"CP at 10 mA/cm2\"},{\"server\":\"modeling\",\"action_name\":\"update_model\",\"action_params\":{\"model\":\"gp_overpotential\",\"data_ref\":\"latest\"},\"comment\":\"update surrogate\"},{\"server\":\"characterization\",\"action_name\":\"durability_test\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,40,0,10,0,0],\"duration\":3600},\"comment\":\"1 h stability\"}]}",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 1186
+  }
+}

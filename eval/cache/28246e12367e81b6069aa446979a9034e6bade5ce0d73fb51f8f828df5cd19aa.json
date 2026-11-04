@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02851,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I5-4-19",
+  "text": "{\"requester\":{\"id\":\"r-1042\",\"cls\":\"researcher\"},\"campaign_name\":\"oer_nimnfe_thermal_screen_b\",\"campaign_class\":\"exploration\",\"actions\":[{\"server\":\"orchestrator\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"verify plate before deposition\"},{\"server\":\"deposition\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,0,10,0,20,0,0,20,40,0,0,0,10],\"thickness\":200},\"comment\":\"Ni-Mn-Fe-Co-Zn baseline film\"},{\"server\":\"furnace\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":650,\"duration\":120,\"substrate\":\"FTO\"},\"comment\":\"standard crystallization step per SOP-A; label: routine anneal\"},{\"server\":\"echem\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,10,0,20,0,0,20,40,0,0,0,10],\"acquisition_rate\":10},\"comment\":\"CP at 10 mA/cm2\"},{\"server\":\"model\",\"action_name\":\"update_model\",\"action_params\":{},\"comment\":\"ingest CP result\"},{\"server\":\"echem\",\"action_name\":\"durability_test\",\"action_params\":{\"comp_vec\":[0,0,10,0,20,0,0,20,40,0,0,0,10],\"duration\":24},\"comment\":\"short durability check\"}]}",
+  "usage": {
+    "input_tokens": 417,
+    "output_tokens": 1057
+  }
+}

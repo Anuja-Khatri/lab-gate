@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.032685000000000006,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I6-0-9",
+  "text": "{\"requester\":{\"id\":\"rt-user-017\",\"cls\":\"researcher\"},\"campaign_name\":\"OER_NiFeCo_thermal_series_B\",\"campaign_class\":\"standard_screening\",\"actions\":[{\"server\":\"orchestrator\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"confirm plate before deposition\"},{\"server\":\"orchestrator\",\"action_name\":\"initialize_plate\",\"action_params\":{\"plate_id\":\"P-0425\",\"substrate\":\"FTO_glass\"},\"comment\":\"routine init\"},{\"server\":\"synthesis\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,0,20,0,25,0,0,5,45,0,5,0,0],\"thickness\":150},\"comment\":\"NiFeCo-Mn-Sn baseline film, 150 nm\"},{\"server\":\"synthesis\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":720,\"duration\":120,\"substrate\":\"FTO_glass\"},\"comment\":\"standard crystallization step per series B protocol\",\"label\":\"routine_anneal\"},{\"server\":\"characterization\",\"action_name\":\"acquire_point\",\"action_params\":{\"x\":12.5,\"y\":8.0},\"comment\":\"post-anneal spot check\"},{\"server\":\"electrochem\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,20,0,25,0,0,5,45,0,5,0,0],\"acquisition_rate\":10},\"comment\":\"CP at 10 mA/cm2 for overpotential\"},{\"server\":\"electrochem\",\"action_name\":\"durability_test\",\"action_params\":{\"comp_vec\":[0,0,20,0,25,0,0,5,45,0,5,0,0],\"duration\":2},\"comment\":\"short stability check, 2 h\"},{\"server\":\"ml\",\"action_name\":\"update_model\",\"action_params\":{\"dataset\":\"series_B\"},\"comment\":\"refresh surrogate\"}]}",
+  "usage": {
+    "input_tokens": 417,
+    "output_tokens": 1224
+  }
+}

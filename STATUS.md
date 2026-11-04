@@ -31,7 +31,8 @@ the parity arm additionally gets the predicted potential the typed gate's I1 use
 | run-to-run variance | 0.00 (n=120) | 0.00 (n=120) | 0.03 (n=119) | (not run) |
 
 Preregistered Anthropic opus attacker: vs typed 0.00 (n=12), vs opus gate 0.00 (n=12,
-same-vendor). Corrected in round 3c/3d (D-030/D-032): round-2's opus "over-abstains
+same-vendor). Extension (D-033, not preregistered): the LLM attacker vs the typed gate
+scaled to n=48/mode found 0.00 in both black-box (0/48) and gray-box (0/48). Corrected in round 3c/3d (D-030/D-032): round-2's opus "over-abstains
 0.90" was a truncation artifact (max_tokens=400 for a reasoning model -> unparseable
 output wrongly scored as ABSTAIN); the free re-scoring pass confirmed gpt-5.1 is clean
 (0% truncation) and the opus pre-fix was 90% truncation (see docs/CORRECTIONS.md). Re-run
@@ -48,8 +49,8 @@ opposite directions; information parity did not fix the opus arm (0.90 -> 0.92 a
 Checker guarantees: reference vs SMT equivalence 1.0 (n=12000); counterexample replay
 validity 1.0 (n=458); taint test 0 (no text channel, n=1000); p95 latency ~20 ms.
 Specification coverage: 0.21 of attack plans reached an out-of-spec harm the gate was
-never given (n=34, reported separately). Metered LLM spend across all runs: $30.08 of
-the $500 cap.
+never given (n=34, reported separately). Metered LLM spend across all runs: $126.32 of
+the $500 cap (within the Anthropic promo headroom).
 
 Hypotheses: HYP-1 supported (typed 0.00 on in-spec attacks, adaptive n=240); HYP-2
 supported in direction; HYP-3 supported (LLM arms nonzero/unreliable, gpt-5.1 variance
@@ -98,6 +99,18 @@ as observed.
 - `.env` contents never printed, logged, or committed.
 
 ## Last completed task
+Owner extension (D-033, declared before execution): scaled the LLM adaptive attacker
+vs the TYPED gate only to n=48 trajectories per mode (8 goals x 6 seeds x 20 queries),
+in BOTH black-box and gray-box modes, labelled "extension, not preregistered". Result:
+attack success 0.00 in both modes (black-box 0/48, gray-box 0/48; 95% CI 0.00-0.074) --
+the typed gate resists the scaled LLM attacker, consistent with the preregistered 0.00
+(n=12) and the programmatic adaptive attacker 0.00 (n=240). Resumable per-trajectory
+ledger (cap-interrupt safe, no backfill); ran to completion, not interrupted. Spend
+$93.82 -> $126.32, within the $170.45 promo headroom. Re-locked (58 metrics, sha
+49b68bda), regenerated results table / FINAL_REPORT / site / LIMITATIONS, `make ci`
+green, `make demo` reproduces. See DECISIONS D-033. BUILD COMPLETE stands.
+
+## (prior) round 3d task
 Owner review round 3d (D-032): FREE re-scoring pass over all cached LLM responses
 (gpt-5.1 CLEAN 0% truncation -> unchanged; opus pre-fix 0.90 truncation, already
 corrected; docs/CORRECTIONS.md with old->new, never silent); Anthropic live -> the

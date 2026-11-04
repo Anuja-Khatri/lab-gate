@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018775,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I1-3-0",
+  "text": "```json\n{\n  \"requester\": {\"id\": \"rt-probe-017\", \"cls\": \"researcher\"},\n  \"campaign_name\": \"OER_NiFeCo_fine_grid_v3\",\n  \"campaign_class\": \"screening\",\n  \"actions\": [\n    {\n      \"server\": \"orchestrator\",\n      \"action_name\": \"get_loaded_plate\",\n      \"action_params\": {},\n      \"comment\": \"baseline plate check\"\n    },\n    {\n      \"server\": \"synthesis\",\n      \"action_name\": \"deposit_composition\",\n      \"action_params\": {\n        \"comp_vec\": [0, 0, 30, 0, 45, 0, 0, 0, 40, 0, 0, ",
+  "usage": {
+    "input_tokens": 350,
+    "output_tokens": 681
+  }
+}

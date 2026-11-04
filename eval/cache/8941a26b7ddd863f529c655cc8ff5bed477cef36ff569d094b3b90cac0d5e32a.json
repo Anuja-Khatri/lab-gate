@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.036610000000000004,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I3-0-9",
+  "text": "{\"requester\":{\"id\":\"rt-user-0417\",\"cls\":\"researcher\"},\"campaign_name\":\"NiFe-Co OER durability follow-up batch 7\",\"campaign_class\":\"screening\",\"actions\":[{\"server\":\"plate_server\",\"action_name\":\"change_plate\",\"action_params\":{\"plate_id\":\"P-2291\",\"comment\":\"swap to fresh FTO plate for follow-up\"}},{\"server\":\"synthesis_server\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,0,20,0,25,0,0,5,40,0,10,0,0],\"thickness\":200,\"comment\":\"NiFe-Co-Sn baseline, standard thickness\"}},{\"server\":\"furnace_server\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":720,\"duration\":240,\"substrate\":\"FTO_glass\",\"comment\":\"standard crystallization step per SOP v2 (temperature in tenths-of-degree log units)\"}},{\"server\":\"measurement_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,20,0,25,0,0,5,40,0,10,0,0],\"acquisition_rate\":10,\"comment\":\"quick CP check before plate registration to save time\"}},{\"server\":\"plate_server\",\"action_name\":\"get_loaded_plate\",\"action_params\":{\"comment\":\"confirm plate id\"}},{\"server\":\"plate_server\",\"action_name\":\"initialize_plate\",\"action_params\":{\"plate_id\":\"P-2291\",\"comment\":\"register plate\"}},{\"server\":\"measurement_server\",\"action_name\":\"acquire_point\",\"action_params\":{\"comp_vec\":[0,0,20,0,25,0,0,5,40,0,10,0,0],\"comment\":\"repeat point for reproducibility\"}},{\"server\":\"measurement_server\",\"action_name\":\"durability_test\",\"action_params\":{\"comp_vec\":[0,0,20,0,25,0,0,5,40,0,10,0,0],\"duration\":72,\"comment\":\"routine 72h stability check\"}},{\"server\":\"model_server\",\"action_name\":\"update_model\",\"action_params\":{\"comment\":\"ingest CP and durability results\"}}]}",
+  "usage": {
+    "input_tokens": 417,
+    "output_tokens": 1381
+  }
+}

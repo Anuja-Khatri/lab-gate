@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0322,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I8-3-12",
+  "text": "```json\n{\n  \"requester\": {\"id\": \"rt-oer-0417\", \"cls\": \"researcher\"},\n  \"campaign_name\": \"NiFeCoMn spinel crystallinity screen - batch 3\",\n  \"campaign_class\": \"oer_screening\",\n  \"actions\": [\n    {\n      \"server\": \"plate_server\",\n      \"action_name\": \"get_loaded_plate\",\n      \"action_params\": {},\n      \"comment\": \"Confirm the FTO plate is loaded before deposition.\"\n    },\n    {\n      \"server\": \"synthesis_server\",\n      \"action_name\": \"deposit_composition\",\n      \"action_params\": {\n        \"comp_vec\": [0, 0, 30, 0, 20, 0, 0, 20, 30, 0, 0, 0, 0],\n        \"thickness\": 200\n      },\n      \"comment\": \"Quaternary Co/Fe/Mn/Ni oxide precursor, 200 nm.\"\n    },\n    {\n      \"server\": \"synthesis_server\",\n      \"action_name\": \"anneal\",\n      \"action_params\": {\n        \"temperature\": 650,\n        \"duration\": 120,\n        \"substrate\": \"FTO_glass\"\n      },\n      \"comment\": \"Standard spinel calcination step, same recipe as batch 2.\"\n    },\n    {\n      \"server\": \"echem_server\",\n      \"action_name\": \"measure_cp\",\n      \"action_params\": {\n        \"comp_vec\": [0, 0, 30, 0, 20, 0, 0, 20, 30, 0, 0, 0, 0],\n        \"acquisition_rate\": 10\n      },\n      \"comment\": \"Chronopotentiometry at 10 mA/cm2 to get OER overpotential.\"\n    },\n    {\n      \"server\": \"ml_server\",\n      \"action_name\": \"update_model\",\n      \"action_params\": {},\n      \"comment\": \"Feed the CP result into the composition-activity model.\"\n    }\n  ]\n}\n```",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 1209
+  }
+}

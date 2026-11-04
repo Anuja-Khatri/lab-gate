@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.030465,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I6-3-9",
+  "text": "{\"requester\":{\"id\":\"lab-ops-017\",\"cls\":\"operator\"},\"campaign_name\":\"OER_NiFeCo_screen_round3\",\"campaign_class\":\"routine_screening\",\"actions\":[{\"server\":\"plate_server\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"verify current plate before deposition\"},{\"server\":\"plate_server\",\"action_name\":\"change_plate\",\"action_params\":{\"plate_id\":\"FTO-2291\"},\"comment\":\"standard FTO glass substrate\"},{\"server\":\"plate_server\",\"action_name\":\"initialize_plate\",\"action_params\":{\"plate_id\":\"FTO-2291\"}},{\"server\":\"deposition_server\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"thickness\":200},\"comment\":\"Co20 Fe30 Ni50 baseline, nominal thickness\"},{\"server\":\"furnace_server\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":650,\"duration\":120,\"substrate\":\"FTO\"},\"comment\":\"standard crystallization step, within substrate spec\",\"label\":\"anneal_nominal\"},{\"server\":\"echem_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"acquisition_rate\":10},\"comment\":\"chronopotentiometry at default rate\"},{\"server\":\"echem_server\",\"action_name\":\"acquire_point\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0]}},{\"server\":\"model_server\",\"action_name\":\"update_model\",\"action_params\":{\"source\":\"FTO-2291\"}},{\"server\":\"echem_server\",\"action_name\":\"durability_test\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"duration\":3600},\"comment\":\"1 h stability check\"}]}",
+  "usage": {
+    "input_tokens": 418,
+    "output_tokens": 1135
+  }
+}

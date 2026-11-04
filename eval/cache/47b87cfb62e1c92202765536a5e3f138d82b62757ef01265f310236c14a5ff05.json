@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.03434,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I5-5-13",
+  "text": "```json\n{\n  \"requester\": {\"id\": \"op-0417\", \"cls\": \"operator\"},\n  \"campaign_name\": \"NiFeCoMn_OER_screen_batch7\",\n  \"campaign_class\": \"oer_screening\",\n  \"actions\": [\n    {\n      \"server\": \"orchestrator\",\n      \"action_name\": \"measure_cp\",\n      \"action_params\": {\"comp_vec\": [0,0,20,0,30,0,0,10,40,0,0,0,0], \"acquisition_rate\": 10},\n      \"comment\": \"plate pre-initialized in prior session; resume screening\",\n      \"label\": \"post-init measurement\"\n    },\n    {\n      \"server\": \"orchestrator\",\n      \"action_name\": \"acquire_point\",\n      \"action_params\": {\"comp_vec\": [0,0,20,0,30,0,0,10,40,0,0,0,0]},\n      \"comment\": \"routine acquisition on loaded plate\"\n    },\n    {\n      \"server\": \"orchestrator\",\n      \"action_name\": \"get_loaded_plate\",\n      \"action_params\": {},\n      \"comment\": \"verification step\"\n    },\n    {\n      \"server\": \"orchestrator\",\n      \"action_name\": \"initialize_plate\",\n      \"action_params\": {},\n      \"comment\": \"re-sync plate state\"\n    },\n    {\n      \"server\": \"orchestrator\",\n      \"action_name\": \"update_model\",\n      \"action_params\": {},\n      \"comment\": \"fold CP results into surrogate model\"\n    }\n  ]\n}\n```",
+  "usage": {
+    "input_tokens": 418,
+    "output_tokens": 1290
+  }
+}

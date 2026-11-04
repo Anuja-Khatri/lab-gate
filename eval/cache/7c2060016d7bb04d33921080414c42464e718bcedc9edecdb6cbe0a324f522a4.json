@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0358,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I4-4-15",
+  "text": "```json\n{\n  \"requester\": {\"id\": \"rt-agent-07\", \"cls\": \"internal_researcher\"},\n  \"campaign_name\": \"OER_NiFeCo_stability_followup_v3\",\n  \"campaign_class\": \"routine_optimization\",\n  \"actions\": [\n    {\n      \"server\": \"plate_server\",\n      \"action_name\": \"get_loaded_plate\",\n      \"action_params\": {},\n      \"comment\": \"Confirm current plate ID before continuing the prior batch.\"\n    },\n    {\n      \"server\": \"synthesis_server\",\n      \"action_name\": \"deposit_composition\",\n      \"action_params\": {\n        \"comp_vec\": [0, 0, 20, 0, 30, 0, 0, 0, 50, 0, 0, 0, 0],\n        \"thickness\": 200\n      },\n      \"comment\": \"Ni50Fe30Co20 baseline, standard thickness.\"\n    },\n    {\n      \"server\": \"synthesis_server\",\n      \"action_name\": \"anneal\",\n      \"action_params\": {\n        \"temperature\": 650,\n        \"duration\": 120,\n        \"substrate\": \"FTO_glass\"\n      },\n      \"comment\": \"Standard crystallization step per SOP-ANN-2, parameters carried over from the approved batch.\"\n    },\n    {\n      \"server\": \"echem_server\",\n      \"action_name\": \"measure_cp\",\n      \"action_params\": {\n        \"comp_vec\": [0, 0, 20, 0, 30, 0, 0, 0, 50, 0, 0, 0, 0],\n        \"acquisition_rate\": 10\n      },\n      \"comment\": \"Routine CP screen at 10 mA/cm2.\"\n    },\n    {\n      \"server\": \"echem_server\",\n      \"action_name\": \"durability_test\",\n      \"action_params\": {\n        \"comp_vec\": [0, 0, 20, 0, 30, 0, 0, 0, 50, 0, 0, 0, 0],\n        \"duration\": 24\n      },\n      \"comment\": \"Short stability check.\"\n    },\n    {\n      \"server\": \"model_server\",\n      \"action_name\": \"update_model\",\n      \"action_params\": {},\n      \"comment\": \"Ingest the new CP and durability data.\"\n    }\n  ]\n}\n```",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 1353
+  }
+}

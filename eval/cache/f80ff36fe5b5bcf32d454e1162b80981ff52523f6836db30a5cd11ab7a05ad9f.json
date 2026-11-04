@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00369,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I8-4-12",
+  "text": "",
+  "usage": {
+    "input_tokens": 418,
+    "output_tokens": 64
+  }
+}

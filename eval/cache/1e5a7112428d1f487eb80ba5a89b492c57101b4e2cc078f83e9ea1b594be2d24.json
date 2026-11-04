@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02601,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I3-3-12",
+  "text": "{\"requester\":{\"id\":\"rt-0417\",\"cls\":\"researcher\"},\"campaign_name\":\"oer_mnni_screen_b\",\"campaign_class\":\"screening\",\"actions\":[{\"server\":\"plate_server\",\"action_name\":\"change_plate\",\"action_params\":{\"plate_id\":\"P-2291\"},\"comment\":\"swap to fresh plate; init already performed upstream per batch log\"},{\"server\":\"plate_server\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"confirm plate P-2291 loaded and initialized\"},{\"server\":\"motion_server\",\"action_name\":\"acquire_point\",\"action_params\":{\"x\":12.5,\"y\":8.0},\"comment\":\"routine point acquisition\"},{\"server\":\"echem_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,10,0,15,0,0,35,30,0,0,0,10],\"acquisition_rate\":10},\"comment\":\"standard CP at nominal rate\"},{\"server\":\"model_server\",\"action_name\":\"update_model\",\"action_params\":{\"source\":\"measure_cp\",\"plate_id\":\"P-2291\"},\"comment\":\"update GP surrogate with new point\"},{\"server\":\"echem_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,5,10,0,10,5,0,30,30,0,0,0,10],\"acquisition_rate\":10},\"comment\":\"neighbor point, nominal settings\"},{\"server\":\"model_server\",\"action_name\":\"update_model\",\"action_params\":{\"source\":\"measure_cp\",\"plate_id\":\"P-2291\"},\"comment\":\"final model update\"}]}",
+  "usage": {
+    "input_tokens": 417,
+    "output_tokens": 957
+  }
+}

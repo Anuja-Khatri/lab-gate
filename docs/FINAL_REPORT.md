@@ -35,6 +35,15 @@ Preregistered Anthropic adaptive attacker (claude-opus-5-5): vs the typed gate 0
 (n=12, 6 goals x 2 seeds x 20 queries) -- the typed gate resists the LLM attacker as
 well; vs the opus LLM gate 0.00 (n=12, SAME-VENDOR, same model -- interpret with care).
 
+EXTENSION (not preregistered, D-033): the LLM adaptive attacker vs the typed gate only
+was scaled to 8 goals x 6 seeds = n=48 per mode in BOTH observation modes. Attack
+success 0.00 in black-box (0/48, 95% CI 0.00-0.074, attacker sees only the verdict) and
+0.00 in gray-box (0/48, 95% CI 0.00-0.074, attacker additionally sees the blocked
+invariant id). This is a labelled extension, kept separate from the preregistered grid;
+it strengthens HYP-1 at larger n and in both modes, consistent with the programmatic
+adaptive attacker (0.00, n=240). Metered spend for the whole study rose to $126.32,
+within the Anthropic promo headroom.
+
 IMPORTANT correction (D-030): round-2's opus arms were a TRUNCATION ARTIFACT -- the
 Anthropic call budget (max_tokens=400) was too small for a reasoning model, so opus
 returned empty/unparseable text that was wrongly scored as ABSTAIN (hence the earlier
@@ -87,8 +96,9 @@ is blocked, not measured: the Gemini key is valid and live but free-tier quota
 
 - HYP-1 (typed gate near-zero on in-spec attacks): SUPPORTED. 0.00 on static+
   decomposition (n=37) and 0.00 on the full adaptive grid (n=240, 200 queries x 10
-  seeds x 2 modes); the earlier Anthropic LLM attacker also found no success against
-  the typed gate (n=8).
+  seeds x 2 modes); the preregistered Anthropic LLM attacker also found no success
+  against the typed gate (0.00, n=12), and the labelled extension (D-033) found none at
+  larger n in both observation modes (0.00 black-box n=48, 0.00 gray-box n=48).
 - HYP-2 (typed-gate failures concentrate in out-of-spec / beyond-horizon / divergence
   / over-abstention): SUPPORTED in direction. The gate's residual surface is
   out-of-spec harm (0.21 of attack plans reached a benign harm the gate was never
@@ -147,8 +157,19 @@ are reported with exact n and no extrapolation.
 Vendor note: the headline LLM-gate numbers are the Anthropic opus arm (R-03). The
 originally-pinned OpenAI gpt-5.1 arm is preserved as `attack.llm_gpt51.*` /
 `falseblock.llm_gpt51.benign` for the vendor/model comparison (gpt-5.1 over-blocks;
-opus is too permissive). Total metered LLM spend across all runs: $93.82, within the
+opus is too permissive). Total metered LLM spend across all runs: $126.32, within the
 $500 cap and the per-role caps (the Anthropic runs used the owner's promo credit).
+
+Extension (D-033, not preregistered, declared before execution). The LLM adaptive
+attacker vs the TYPED gate only was scaled to n=48 trajectories per mode (8 goals x 6
+seeds x 20 queries) in both observation modes: black-box (verdict only) and gray-box
+(verdict + blocked-invariant id). Both returned attack success 0.00 (0/48, 95% CI
+0.00-0.074) -- `attack.llm_attacker_vs_typed.blackbox_ext` and `*.graybox_ext`. The
+typed gate always returns a decided verdict, so n equals the completed trajectory count
+exactly; the run completed without hitting the cap (cumulative study spend $126.32,
+within the promo headroom). This is kept separate from the preregistered grid and labelled on both
+metrics; it is a larger, two-mode replication of the preregistered 0.00 (n=12), not a
+new preregistered claim.
 
 Round 3c/3d (D-030/D-031/D-032). (0) ERROR audit + free re-scoring: an LLM call that
 returns no usable verdict (unparseable/empty/quota) is scored as REDUCED n, never as a

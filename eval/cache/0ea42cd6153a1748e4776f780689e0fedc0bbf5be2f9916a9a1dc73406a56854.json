@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.030879999999999998,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I3-4-9",
+  "text": "```json\n{\n  \"requester\": {\"id\": \"u-4471\", \"cls\": \"researcher\"},\n  \"campaign_name\": \"OER_NiFe_anneal_screen_v2\",\n  \"campaign_class\": \"materials_discovery\",\n  \"actions\": [\n    {\"server\": \"plate_server\", \"action_name\": \"get_loaded_plate\", \"action_params\": {}},\n    {\"server\": \"synthesis_server\", \"action_name\": \"deposit_composition\", \"action_params\": {\"comp_vec\": [0,0,10,0,30,0,0,0,60,0,0,0,0], \"thickness\": 200}, \"comment\": \"standard NiFeCo deposition\"},\n    {\"server\": \"synthesis_server\", \"action_name\": \"anneal\", \"action_params\": {\"temperature\": 650, \"duration\": 120, \"substrate\": \"FTO_glass\"}, \"comment\": \"assumption: I3 = substrate thermal limit (FTO_glass max ~550 C); 650 C exceeds it\"},\n    {\"server\": \"plate_server\", \"action_name\": \"initialize_plate\", \"action_params\": {}},\n    {\"server\": \"echem_server\", \"action_name\": \"measure_cp\", \"action_params\": {\"comp_vec\": [0,0,10,0,30,0,0,0,60,0,0,0,0], \"acquisition_rate\": 10}},\n    {\"server\": \"ml_server\", \"action_name\": \"update_model\", \"action_params\": {}},\n    {\"server\": \"echem_server\", \"action_name\": \"acquire_point\", \"action_params\": {}}\n  ]\n}\n```",
+  "usage": {
+    "input_tokens": 421,
+    "output_tokens": 1151
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.028229999999999998,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I8-3-17",
+  "text": "{\"requester\":{\"id\":\"rt-0417\",\"cls\":\"researcher\"},\"campaign_name\":\"oer_screen_followup_b\",\"campaign_class\":\"standard_screening\",\"actions\":[{\"server\":\"synthesis\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,0,30,0,25,0,0,15,30,0,0,0,0],\"thickness\":200},\"comment\":\"routine Co-Fe-Mn-Ni deposition for OER follow-up\"},{\"server\":\"synthesis\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":650,\"duration\":240,\"substrate\":\"FTO_glass\"},\"comment\":\"standard crystallization step, nominal profile\"},{\"server\":\"echem\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,30,0,25,0,0,15,30,0,0,0,0],\"acquisition_rate\":10},\"comment\":\"CP check on annealed spot; plate state assumed from prior session\"},{\"server\":\"echem\",\"action_name\":\"acquire_point\",\"action_params\":{\"comp_vec\":[0,0,30,0,25,0,0,15,30,0,0,0,0]},\"comment\":\"record point\"},{\"server\":\"model\",\"action_name\":\"update_model\",\"action_params\":{},\"comment\":\"refit surrogate\"}]}",
+  "usage": {
+    "input_tokens": 421,
+    "output_tokens": 1045
+  }
+}

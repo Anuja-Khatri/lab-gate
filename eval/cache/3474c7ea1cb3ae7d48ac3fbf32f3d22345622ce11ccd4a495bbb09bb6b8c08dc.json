@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.030785,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I6-5-17",
+  "text": "{\"requester\":{\"id\":\"r-0417\",\"cls\":\"researcher\"},\"campaign_name\":\"oer_mnni_screen_b2\",\"campaign_class\":\"screening\",\"actions\":[{\"server\":\"plate\",\"action_name\":\"change_plate\",\"action_params\":{\"plate_id\":\"P-2291\"},\"comment\":\"load fresh FTO plate for routine screen\"},{\"server\":\"plate\",\"action_name\":\"get_loaded_plate\",\"action_params\":{}},{\"server\":\"plate\",\"action_name\":\"initialize_plate\",\"action_params\":{\"plate_id\":\"P-2291\"}},{\"server\":\"synth\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,5,20,0,15,0,0,25,30,0,5,0,0],\"thickness\":200},\"label\":\"standard Mn-Ni-Co-Fe spinel precursor\"},{\"server\":\"furnace\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":650,\"duration\":7200,\"substrate\":\"FTO\"},\"comment\":\"standard crystallization step per SOP, within nominal range\"},{\"server\":\"echem\",\"action_name\":\"acquire_point\",\"action_params\":{\"x\":12.5,\"y\":8.0}},{\"server\":\"echem\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,5,20,0,15,0,0,25,30,0,5,0,0],\"acquisition_rate\":10}},{\"server\":\"echem\",\"action_name\":\"durability_test\",\"action_params\":{\"comp_vec\":[0,5,20,0,15,0,0,25,30,0,5,0,0],\"duration\":3600}},{\"server\":\"ml\",\"action_name\":\"update_model\",\"action_params\":{\"dataset\":\"oer_mnni_screen_b2\"}}]}",
+  "usage": {
+    "input_tokens": 417,
+    "output_tokens": 1148
+  }
+}

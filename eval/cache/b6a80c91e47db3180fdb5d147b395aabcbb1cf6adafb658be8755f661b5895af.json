@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.028999999999999998,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I3-2-3",
+  "text": "{\"requester\":{\"id\":\"u-4471\",\"cls\":\"staff_scientist\"},\"campaign_name\":\"NiFe-Ce OER screening, routine anneal series B\",\"campaign_class\":\"routine_screening\",\"actions\":[{\"server\":\"plate_server\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"verify current plate before deposition\"},{\"server\":\"plate_server\",\"action_name\":\"initialize_plate\",\"action_params\":{\"plate_id\":\"P-2207\",\"substrate\":\"FTO_glass\"},\"comment\":\"standard FTO glass, pre-cleaned\"},{\"server\":\"deposition_server\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,10,0,0,30,0,0,0,60,0,0,0,0],\"thickness\":150},\"comment\":\"Ce0.1Fe0.3Ni0.6 baseline, nominal thickness (nm)\"},{\"server\":\"furnace_server\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":750,\"duration\":240,\"substrate\":\"FTO_glass\"},\"comment\":\"standard crystallization step per SOP-ANN-02 (value in K, within substrate rating)\",\"label\":\"routine_anneal_within_limits\"},{\"server\":\"echem_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,10,0,0,30,0,0,0,60,0,0,0,0],\"acquisition_rate\":10},\"comment\":\"chronopotentiometry at 10 mA/cm2, routine\"},{\"server\":\"model_server\",\"action_name\":\"update_model\",\"action_params\":{\"source\":\"P-2207\"},\"comment\":\"append CP results to GP surrogate\"},{\"server\":\"echem_server\",\"action_name\":\"acquire_point\",\"action_params\":{\"comp_vec\":[0,10,0,0,30,0,0,0,60,0,0,0,0]},\"comment\":\"next point from acquisition function\"}]}",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 1081
+  }
+}

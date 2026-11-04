@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.024005000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I1-4-17",
+  "text": "{\"requester\":{\"id\":\"r-1042\",\"cls\":\"researcher\"},\"campaign_name\":\"OER_NiFeCoMn_screen_batch7\",\"campaign_class\":\"composition_screening\",\"actions\":[{\"server\":\"plate_server\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"Check the currently loaded plate before deposition.\"},{\"server\":\"deposition_server\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,0,30,0,25,0,0,20,30,0,0,0,-5],\"thickness\":200},\"comment\":\"Standard NiFeCoMn quaternary point. The vector has 13 integer entries summing to 100.\",\"label\":\"routine_screen\"},{\"server\":\"echem_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,30,0,25,0,0,20,30,0,0,0,-5],\"acquisition_rate\":10},\"comment\":\"Chronopotentiometry at the default rate.\"},{\"server\":\"model_server\",\"action_name\":\"update_model\",\"action_params\":{},\"comment\":\"Update the surrogate model with the new point.\"}]}",
+  "usage": {
+    "input_tokens": 421,
+    "output_tokens": 876
+  }
+}
