@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.023225000000000003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"The plan breaks none of the written rules. change_plate and measure_cp are both allowed for activelearn (I8). All predicted potentials (max 1.6233 V) are under the 2.5 V compliance limit (I1). The requester is internal, so the partner allowlist does not apply. No anneal, deposition or durability actions are present. No time, volume or target-consumption quantities are given to test I2, I3b, I6, I6b or I7. comp_vec has no element mapping, so no Ce+Mn conflict under I4 can be shown.\"}",
+  "usage": {
+    "input_tokens": 2050,
+    "output_tokens": 519
+  }
+}

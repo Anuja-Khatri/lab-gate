@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01831,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"activelearn allows change_plate and measure_cp (I8). The predicted potential of 1.6969 V is under the 2.5 V compliance (I1). No sputtering, anneal, durability, acid or time quantities are involved. Requester is internal, so the partner allowlist does not apply. I4 (Ce+Mn) was not checked because the plan gives no element mapping for comp_vec.\"}\n```",
+  "usage": {
+    "input_tokens": 1627,
+    "output_tokens": 407
+  }
+}

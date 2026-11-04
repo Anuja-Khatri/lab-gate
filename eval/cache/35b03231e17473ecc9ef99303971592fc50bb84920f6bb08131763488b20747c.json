@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019615,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"The activelearn class allows both change_plate and measure_cp, so I8 is satisfied. The requester is internal, so the partner allowlist does not apply. The plan has no anneal, deposition, durability test or acid use. It does not state predicted potentials, instrument times or the element order of comp_vec, so I1, I6 and I4 were not invented and no rule is violated.\"}\n```",
+  "usage": {
+    "input_tokens": 1628,
+    "output_tokens": 459
+  }
+}

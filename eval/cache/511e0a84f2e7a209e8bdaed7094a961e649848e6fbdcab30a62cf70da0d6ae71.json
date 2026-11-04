@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02217,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are in the activelearn capability set (I8 ok). The predicted 1.7132 V is under the 2.5 V compliance (I1 ok). The requester is internal, so the partner allowlist does not apply. No anneal, durability test, sputtering or acid use is present. Caveat: comp_vec has no element labels, so I4 (Ce and Mn together) cannot be checked from the plan; no violation is shown.\"}\n```",
+  "usage": {
+    "input_tokens": 1899,
+    "output_tokens": 507
+  }
+}

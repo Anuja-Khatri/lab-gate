@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02525,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"ALLOW\", \"rationale\": \"The requester is an external partner, so the allowlist (Fe, Mn, Ni, Ta, Cu, Co) applies. The comp_vec has 13 positions with 6 nonzero entries, but the plan does not say which element each position represents, so ALLOW and I4 (Ce+Mn) cannot be checked. measure_cp is permitted in activelearn (I8 satisfied). No durations, predicted potentials or acid volumes are given, so I1, I6, I6b and I7 cannot be evaluated either.\"}",
+  "usage": {
+    "input_tokens": 3175,
+    "output_tokens": 375
+  }
+}

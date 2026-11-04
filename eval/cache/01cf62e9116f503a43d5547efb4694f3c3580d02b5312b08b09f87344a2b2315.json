@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02042,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"change_plate and measure_cp are both allowed for activelearn (I8). All predicted_erhe_v values (max 1.6699 V) are below the 2.5 V compliance (I1). The requester is internal, so the partner allowlist does not apply. The plan has no deposition, anneal, durability, acid or timing quantities that would trigger the other rules. comp_vec has no element labels, so I4 (Ce+Mn) cannot be checked from the plan; no violation is shown.\"}",
+  "usage": {
+    "input_tokens": 2049,
+    "output_tokens": 407
+  }
+}

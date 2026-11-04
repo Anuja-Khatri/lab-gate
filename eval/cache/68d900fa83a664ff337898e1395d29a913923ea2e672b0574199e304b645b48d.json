@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019785,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"The full campaign class allows both change_plate and measure_cp. The plan has no deposition, anneal, durability test or acid use, and no time totals are given that could exceed I6 or I7. The requester is internal, so the partner allowlist does not apply. The plan states no predicted potential (I1) and no element labels for comp_vec (I4), so neither rule can be shown to be violated, and nothing was assumed for them.\"}\n```",
+  "usage": {
+    "input_tokens": 1502,
+    "output_tokens": 491
+  }
+}

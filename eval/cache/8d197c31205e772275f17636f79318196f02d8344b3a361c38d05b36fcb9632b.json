@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.016675000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both actions (change_plate, measure_cp) are allowed for activelearn. The plan gives no predicted potential, time, acid, element-name or durability data showing a violation, and the internal requester is not subject to the partner allowlist.\"}\n```",
+  "usage": {
+    "input_tokens": 1505,
+    "output_tokens": 366
+  }
+}

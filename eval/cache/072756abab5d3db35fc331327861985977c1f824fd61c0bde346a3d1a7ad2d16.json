@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.021660000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"change_plate and measure_cp are both listed capabilities for activelearn, so I8 is satisfied. The requester is internal_agent, so the partner allowlist does not apply. No anneal, deposit or durability actions are present. comp_vec has no element mapping, so I4 (Ce+Mn) cannot be checked. The plan also gives no predicted potentials or durations, so I1 and I6/I7 cannot be checked. No rule is shown to be violated.\"}",
+  "usage": {
+    "input_tokens": 1997,
+    "output_tokens": 467
+  }
+}

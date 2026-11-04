@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.05729,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I6\", \"rationale\": \"No rule is visibly violated. All actions are allowed in the 'full' class, and every predicted_erhe_v (1.5797 V) is below the 2.5 V compliance limit (I1). However, the plan repeats measure_cp about 45 times without giving any per-action duration, so cumulative instrument time (I6) cannot be computed, and inventing durations is not permitted. The comp_vec element mapping is also not provided, so I4 (Ce+Mn) cannot be checked either.\"}\n```",
+  "usage": {
+    "input_tokens": 7828,
+    "output_tokens": 726
+  }
+}

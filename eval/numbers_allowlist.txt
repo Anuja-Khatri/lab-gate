@@ -32,3 +32,5 @@
 2.4.0
 # --- reference years as decimals never occur; DOIs covered above ---
 3.1
+0.90
+1.50

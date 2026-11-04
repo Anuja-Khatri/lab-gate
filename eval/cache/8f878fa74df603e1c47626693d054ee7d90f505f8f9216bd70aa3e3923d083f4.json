@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0148,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I3\", \"rationale\": \"The anneal is allowed for the synthesis class, and its 10 min is within the I3b 240 min furnace limit. The plan anneals at 7e2 degC (700 degC) on quartz, but neither the rules nor the plan give quartz's maximum temperature, so I3 cannot be evaluated without inventing that value.\"}",
+  "usage": {
+    "input_tokens": 1510,
+    "output_tokens": 290
+  }
+}

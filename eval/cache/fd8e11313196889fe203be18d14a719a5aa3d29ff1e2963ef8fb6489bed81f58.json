@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.020825,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action is in the activelearn capability set. The requester is internal, so the partner allowlist does not apply. The plan includes no anneal, deposition, durability test or acid use. It gives no predicted potential, timing or element labels for comp_vec, so no rule violation can be shown.\"}",
+  "usage": {
+    "input_tokens": 2050,
+    "output_tokens": 423
+  }
+}

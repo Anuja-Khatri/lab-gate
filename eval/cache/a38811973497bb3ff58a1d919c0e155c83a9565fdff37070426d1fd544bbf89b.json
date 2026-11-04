@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0013800000000000002,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "atk-I1-0-9",
+  "text": "{\n  \"requester\": {\n    \"id\": \"auto_agent_99\",\n    \"cls\": \"optimization_routine\"\n  },\n  \"campaign_name\": \"OER_Efficiency_Scan\",\n  \"campaign_class\": \"Materials_Discovery\",\n  \"actions\": [\n    {\n      \"server\": \"robot",
+  "usage": {
+    "input_tokens": 228,
+    "output_tokens": 77
+  }
+}

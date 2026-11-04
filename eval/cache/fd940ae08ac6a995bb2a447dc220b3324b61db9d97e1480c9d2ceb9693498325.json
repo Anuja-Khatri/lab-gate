@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.026205,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action is allowed for the activelearn campaign class (I8). All predicted_erhe_v values (1.586, 1.640, 1.626 V) are below the 2.5 V compliance limit (I1). The requester is internal, so the partner allowlist does not apply. The plan has no deposition, anneal, durability test, acid volume or time quantities that would breach I2, I3, I3b, I5, I6, I6b or I7. The plan does not map comp_vec indices to elements, so I4 (no Ce with Mn) cannot be confirmed either way, and no violation is evident.\"}",
+  "usage": {
+    "input_tokens": 2481,
+    "output_tokens": 552
+  }
+}

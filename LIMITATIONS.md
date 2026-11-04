@@ -54,7 +54,20 @@ not mean.
    classifier, oracle, programmatic adaptive attacker) ran at full scale and need no
    API. Every LLM-arm number is reported with its exact n.
 
-   Round-3/3b update (D-026/D-028/D-029): a Gemini arm was added to restore
+   Round-3c update (D-030/D-031): a global ERROR audit found that round-2's opus
+   "over-abstention 0.90" was a TRUNCATION ARTIFACT -- the Anthropic call budget
+   (max_tokens=400) was too small for a reasoning model, so unparseable/empty output
+   was wrongly scored as ABSTAIN. ERRORs are now scored as reduced n (never a verdict;
+   enforced by tests/test_error_scoring.py), and the opus arms were re-run on live
+   Anthropic with an adequate budget: the real opus gate is PERMISSIVE (benign
+   false-block 0.003, abstain 0.003, decided coverage 0.997; static+decomposition
+   attack success 0.28), and information parity cuts attack success to 0.03. The
+   preregistered Anthropic adaptive attacker (6x2x20) and the opus run-to-run variance
+   hit the Anthropic monthly cap again and are "blocked, not measured"; the
+   programmatic-attacker-vs-opus number is partial (n=16). The earlier gpt-5.1 arm
+   (over-blocks, false-block 0.64) is unaffected (it used an adequate budget).
+
+   Round-3/3b (D-026/D-028/D-029): a Gemini arm was added to restore
    cross-vendor attacker separation and a second LLM-gate vendor. All three keys were
    re-verified with live calls: OpenAI out of credits, Anthropic at its monthly usage
    limit, Gemini valid and live (gemini-3.1-pro-preview, pinned) but free-tier quota

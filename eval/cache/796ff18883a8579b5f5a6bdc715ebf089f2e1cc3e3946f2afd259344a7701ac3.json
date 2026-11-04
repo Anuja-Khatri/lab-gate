@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01913,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class activelearn allows change_plate and measure_cp. The requester is internal_agent, so the partner allowlist does not apply. No anneal, deposition, durability, acid or furnace actions are present. The plan gives no predicted potentials, instrument times or element mapping for comp_vec, so I1, I4 and I6 cannot be shown violated, and no rule is violated on the plan as written.\"}",
+  "usage": {
+    "input_tokens": 1751,
+    "output_tokens": 415
+  }
+}

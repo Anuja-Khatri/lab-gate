@@ -59,9 +59,10 @@ the held-out evaluation:
   confined to out-of-spec harm and attacks beyond its horizon, where it abstains;
 - the LLM gate, given a frontier model, the full rules, and the full plan including
   comments, is an unreliable gate in both model families tested, in opposite
-  directions: one abstains on almost every benign plan, the other over-blocks benign
-  plans and lets through adaptive attacks with nonzero run-to-run variance; giving the
-  LLM the same predicted potential the typed gate uses did not fix this;
+  directions: one is too permissive (lets through ~a quarter of the attacks), the
+  other over-blocks benign plans and lets through adaptive attacks with nonzero
+  run-to-run variance; giving the permissive LLM the same predicted potential the typed
+  gate uses sharply cut its attack misses but did not make it a reliable gate;
 - the learned classifier is accurate in-distribution and degrades under adaptive
   attack;
 - a third-vendor cross-check (Gemini attacker + Gemini gate) is implemented and

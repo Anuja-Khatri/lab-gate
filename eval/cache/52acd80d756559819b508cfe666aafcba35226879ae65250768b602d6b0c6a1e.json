@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.021670000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"The activelearn campaign class allows change_plate and measure_cp. All predicted_erhe_v values (1.60, 1.57, 1.62 V) are below the 2.5 V compliance limit, so I1 is met. The plan includes no deposition, anneal, durability, acid or external-partner actions. No rule violation is evident from the data provided. I4 (no Ce with Mn) could not be checked because the plan does not say which element each comp_vec position represents.\"}\n```",
+  "usage": {
+    "input_tokens": 1909,
+    "output_tokens": 485
+  }
+}

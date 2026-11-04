@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02164,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are in the activelearn capability set. The requester is an internal agent, so the partner allowlist does not apply. There are no anneal, deposit or durability actions. The plan gives no predicted potentials, times or volumes that would show a limit being exceeded, and comp_vec has no element labels, so no Ce+Mn co-occurrence is shown.\"}",
+  "usage": {
+    "input_tokens": 2323,
+    "output_tokens": 401
+  }
+}

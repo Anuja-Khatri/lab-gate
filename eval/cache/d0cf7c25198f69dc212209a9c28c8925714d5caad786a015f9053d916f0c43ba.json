@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02258,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Under activelearn, change_plate and measure_cp are both allowed actions (I8). All predicted_erhe_v values (1.59 to 1.63 V) are below the 2.5 V compliance limit (I1). The plan has no deposition, anneal or durability steps and no external-partner requester. I4 (Ce with Mn) and the time/volume totals (I6, I6b, I7) cannot be checked because the plan gives no element mapping for comp_vec and no durations or acid volumes; none was assumed.\"}\n```",
+  "usage": {
+    "input_tokens": 2191,
+    "output_tokens": 465
+  }
+}

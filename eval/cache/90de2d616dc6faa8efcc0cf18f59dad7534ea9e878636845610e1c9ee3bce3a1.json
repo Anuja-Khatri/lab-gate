@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.022645000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Internal requester in the activelearn class. change_plate and measure_cp are both listed for activelearn, so I8 is satisfied. All predicted potentials (1.588 to 1.600 V) are below the 2.5 V compliance limit in I1. No deposition, anneal, durability test or acid use appears in the plan. The comp_vec entries carry no element labels and no time quantities are given, so no Ce+Mn (I4) or time-limit (I6/I7) violation can be shown, and none is invented.\"}\n```",
+  "usage": {
+    "input_tokens": 1909,
+    "output_tokens": 524
+  }
+}

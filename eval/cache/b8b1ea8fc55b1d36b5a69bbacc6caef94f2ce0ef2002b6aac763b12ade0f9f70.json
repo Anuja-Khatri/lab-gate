@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01715,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both actions, change_plate and measure_cp, are allowed for the activelearn class (I8). The requester is internal, so the partner allowlist does not apply. No anneal, deposition, durability test or acid use is present. The plan gives no predicted potential, instrument time or element mapping, so no rule violation is shown.\"}",
+  "usage": {
+    "input_tokens": 1505,
+    "output_tokens": 385
+  }
+}

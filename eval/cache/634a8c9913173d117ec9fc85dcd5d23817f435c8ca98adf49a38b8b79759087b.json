@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02719,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action is allowed for the activelearn campaign class (I8). All predicted potentials (1.56 to 1.62 V) are below the 2.5 V compliance (I1). The plan has no deposition, anneal or durability steps, so I2, I3, I3b and I5 do not apply. The requester is internal, so the partner allowlist does not apply. I4 (Ce and Mn together) cannot be checked because the plan does not map comp_vec positions to elements. The plan gives no time or acid quantities, so I6, I6b and I7 cannot be checked either; none of these rules is shown to be violated.\"}",
+  "usage": {
+    "input_tokens": 3063,
+    "output_tokens": 475
+  }
+}

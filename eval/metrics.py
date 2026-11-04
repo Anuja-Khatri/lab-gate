@@ -26,6 +26,26 @@ def rate_ci(successes: int, n: int) -> dict:
     return {"value": p, "ci_lo": lo, "ci_hi": hi, "n": n}
 
 
+# Non-verdicts: a gate call that did not return a usable PASS/BLOCK/ABSTAIN. These are
+# scored as REDUCED n (excluded from the denominator), never as a verdict (D-030).
+NON_VERDICTS = frozenset({"ERROR", "DEFERRED", "CACHE_MISS", "UNPARSEABLE", ""})
+
+
+def decided(decisions: list) -> list:
+    """Keep only genuine verdicts (PASS/BLOCK/ABSTAIN); drop ERROR/DEFERRED/etc."""
+    return [d for d in decisions if d not in NON_VERDICTS]
+
+
+def rate_over_decided(decisions: list, is_hit) -> dict:
+    """Rate of is_hit(d) over DECIDED verdicts only (ERROR excluded from n). Returns
+    a rate_ci dict plus n_errors (how many non-verdicts were excluded)."""
+    dec = decided(decisions)
+    k = sum(1 for d in dec if is_hit(d))
+    out = rate_ci(k, len(dec))
+    out["n_errors_excluded"] = len(decisions) - len(dec)
+    return out
+
+
 def bootstrap_rate_ci(bools: list, seed: int = 20261103, resamples: int = 1000) -> dict:
     """Bootstrap 95% CI of a mean of 0/1 values (deterministic given seed)."""
     n = len(bools)

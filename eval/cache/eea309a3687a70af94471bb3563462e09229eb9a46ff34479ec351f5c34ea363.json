@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.021374999999999998,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Requester is internal_agent in an activelearn campaign, and change_plate and measure_cp are both allowed for that class (I8). All predicted_erhe_v values (1.63\u20131.66 V) are below the 2.5 V compliance limit (I1). The plan has no deposition, anneal, durability test, acid volume or instrument-time quantities, so I2, I3, I3b, I5, I6, I6b and I7 have nothing to check. The plan does not map comp_vec indices to elements, so no Ce+Mn violation (I4) can be shown. ALLOW does not apply to an internal requester.\"}",
+  "usage": {
+    "input_tokens": 2050,
+    "output_tokens": 445
+  }
+}

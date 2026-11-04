@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.015160000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I5\", \"rationale\": \"The durability_test composition differs from the only screened composition (the measure_cp comp_vec). This sample has no prior successful screening measurement, so it has not passed screening QC. I1 is satisfied (1.58 V < 2.5 V), and durability_test is allowed in the full class.\"}",
+  "usage": {
+    "input_tokens": 1757,
+    "output_tokens": 255
+  }
+}

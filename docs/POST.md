@@ -48,13 +48,14 @@ decomposition suites (n=37) and 0.00 under the adaptive attacker at the full gri
 (n=240), and it never false-blocked a benign plan (0.00 of 13627 oracle-safe plans, and
 0.00 on the surprise subset of 990 unusual-but-valid plans). The language-model gate was
 unreliable in both of the model families we could run, in opposite directions. The
-Anthropic model abstained on 0.90 of benign plans, so it barely functioned as a gate at
-all; giving it the exact predicted potential the typed gate uses (an information-parity
-arm) did not help, it abstained on 0.92. The earlier OpenAI model went the other way and
-over-blocked 0.64 of benign plans, let through 0.46 of the adaptive attacks, and changed
-its own verdict on 0.30 of plans when asked the same question five times. The classifier
-was accurate on benign plans (false-block 0.07) but was broken by 0.24 of the static
-attacks and 0.32 of the adaptive ones (n=240). The reference and SMT checkers agreed on
+Anthropic model decided essentially every benign plan but was too permissive on
+attacks, letting through 0.28 of the static and decomposition attacks; giving it the
+exact predicted potential the typed gate uses (an information-parity arm) cut that to
+0.03, so much of its gap was an information deficit it could not otherwise quantify. The
+OpenAI model went the other way and over-blocked 0.64 of benign plans, let through 0.46
+of the adaptive attacks, and changed its own verdict on 0.30 of plans when asked the
+same question five times. The classifier was accurate on benign plans (false-block 0.07)
+but was broken by 0.24 of the static attacks and 0.32 of the adaptive ones (n=240). The reference and SMT checkers agreed on
 all 12000 equivalence plans, every BLOCK counterexample replayed in the simulator, and
 the taint test found no text channel over 1000 plans.
 

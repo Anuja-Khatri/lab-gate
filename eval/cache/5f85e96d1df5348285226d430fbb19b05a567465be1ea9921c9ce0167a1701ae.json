@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019215000000000003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"activelearn allows change_plate and measure_cp, and no stated quantity breaks a written limit. The plan gives no predicted potentials, instrument or furnace times, target consumption or acid volume. Its composition vectors have no element labels, so no Ce+Mn conflict can be identified. The requester is internal, so the partner allowlist does not apply.\"}",
+  "usage": {
+    "input_tokens": 1628,
+    "output_tokens": 443
+  }
+}

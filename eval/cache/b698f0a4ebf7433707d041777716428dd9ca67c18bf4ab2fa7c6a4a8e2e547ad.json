@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.05492,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": null, \"rationale\": \"All 41 actions are allowed for the 'full' class (I8 ok), and every predicted_erhe_v of 1.5797 V is under 2.5 V (I1 ok). Two rules cannot be checked from the plan. I4 needs to know which comp_vec indices are Ce and Mn, and the 9 nonzero elements are not named. I6 needs a duration for each of the 40 repeated measure_cp actions, and none is given. Safety cannot be confirmed without inventing quantities.\"}\n```",
+  "usage": {
+    "input_tokens": 7264,
+    "output_tokens": 744
+  }
+}

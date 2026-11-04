@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02919,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"BLOCK\", \"rule\": \"I6\", \"rationale\": \"Eight durability_test actions of 60 min each use the full 480-min campaign instrument budget. The measure_cp before them must also take some nonzero instrument time, so the total exceeds 480 min. Other checks pass: I1 (1.58 V is below 2.5 V), I5 (a screening measure_cp of the same composition comes first), and I8 (the 'full' class allows all actions used).\"}\n```",
+  "usage": {
+    "input_tokens": 2688,
+    "output_tokens": 630
+  }
+}

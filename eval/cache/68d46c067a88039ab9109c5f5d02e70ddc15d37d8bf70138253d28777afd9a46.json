@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.029745,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"ALLOW\", \"rationale\": \"The requester is external_partner, so ALLOW applies. Each comp_vec has six nonzero components (indices 2, 3, 4, 7, 8, 11), but nothing maps vector indices to element symbols. Without that mapping, partner-allowlist compliance (and I4 Ce/Mn co-presence) cannot be determined. I1 is satisfied (1.6574 V < 2.5 V). measure_cp is allowed in activelearn. No durations are given, so instrument-time rules I6/I7 cannot be evaluated.\"}",
+  "usage": {
+    "input_tokens": 3969,
+    "output_tokens": 396
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.013755,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"ALLOW\", \"rationale\": \"deposit_composition is permitted for the synthesis class, so I8 is satisfied. The external-partner allowlist applies, but the plan gives no element order for comp_vec, so the element at index 1 (100%) cannot be identified. Whether it is on the allowlist, and whether the Ce/Mn rule applies, cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 1446,
+    "output_tokens": 261
+  }
+}

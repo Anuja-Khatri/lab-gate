@@ -22,18 +22,21 @@ the parity arm additionally gets the predicted potential the typed gate's I1 use
 
 | metric | typed | classifier | LLM gate (opus) | LLM parity (opus) |
 |---|---|---|---|---|
-| attack, static+decomp | 0.00 (n=37) | 0.24 (n=37) | 0.11 (n=37) | 0.08 (n=37) |
-| attack, adaptive | 0.00 (n=240) | 0.32 (n=240) | 0.00 (n=36) | (not run) |
-| false-block, benign | 0.00 (n=13627) | 0.07 (n=13627) | 0.00 (n=294) | 0.00 (n=294) |
-| false-block, surprise | 0.00 (n=990) | 0.002 (n=990) | 0.00 (n=297) | 0.00 (n=297) |
-| abstain, benign | 0.00 (n=13627) | 0.00 (n=13627) | 0.90 (n=294) | 0.92 (n=294) |
-| decided coverage, benign | 1.00 | 1.00 | 0.10 | 0.08 |
-| run-to-run variance | 0.00 (n=120) | 0.00 (n=120) | blocked | blocked |
+| attack, static+decomp | 0.00 (n=37) | 0.24 (n=37) | 0.28 (n=36) | 0.03 (n=34) |
+| attack, adaptive | 0.00 (n=240) | 0.32 (n=240) | 0.06 (n=16, partial) | (not run) |
+| false-block, benign | 0.00 (n=13627) | 0.07 (n=13627) | 0.003 (n=294) | 0.003 (n=293) |
+| false-block, surprise | 0.00 (n=990) | 0.002 (n=990) | 0.00 (n=297) | 0.00 (n=294) |
+| abstain, benign | 0.00 (n=13627) | 0.00 (n=13627) | 0.003 (n=294) | 0.00 (n=293) |
+| decided coverage, benign | 1.00 | 1.00 | 0.997 | 1.00 |
+| run-to-run variance | 0.00 (n=120) | 0.00 (n=120) | blocked | (not run) |
 
-The decided-coverage row (1 - abstain) qualifies the false-block row: the opus LLM
-gate's 0.00 false-block sits on a gate that decides only 0.10 of benign plans. Opus
-run-to-run variance is blocked (not measured); the real earlier OpenAI gpt-5.1 variance
-was 0.30 (`variance.llm_gpt51`).
+Corrected in round 3c (D-030): round-2's opus "over-abstains 0.90" was a truncation
+artifact (max_tokens=400 for a reasoning model -> unparseable output wrongly scored as
+ABSTAIN). The ERROR audit caught it; re-run with adequate tokens + reduced-n, the real
+opus gate is PERMISSIVE (decides ~all benign, lets through 0.28 of attacks); parity
+(predicted potential appended) cuts attack success to 0.03. The earlier gpt-5.1 gate
+over-BLOCKED (false-block 0.64). Opus variance is blocked (Anthropic cap); the real
+gpt-5.1 variance 0.30 is kept as `variance.llm_gpt51`.
 
 The opus LLM gate's failure mode is massive over-ABSTENTION (0.90 of benign); the
 earlier OpenAI gpt-5.1 arm over-BLOCKED (0.64) with adaptive attack 0.46 and variance
@@ -62,18 +65,19 @@ as observed.
 - R-08: paid LLM arms metered under per-role caps; see FINAL_REPORT Section 6 for exact n.
 - R-02: media gif/webm renderers (agg, Playwright) not installable; the asciinema cast
   is produced, gif/webm deferred to the owner (OWNER_TODO).
-- Round 3/3b (owner independent review; D-026..D-029): no earlier Gemini instruction
-  was ever received (logged). Added Gemini to eval/llm.py (cached/metered/capped +
-  retry/backoff) with live model verification. Re-verified all three keys with live
-  calls: OpenAI out of credits (429), Anthropic monthly usage limit (400, to
-  2026-12-01), Gemini valid+live (gemini-3.1-pro-preview pinned, R-13) but free-tier
-  quota ~25 req/model -> held-out 429'd after ~55 calls. The 30-call Gemini dev-split
-  tuning completed (agreement 0.633); all Gemini HELD-OUT arms are "blocked, not
-  measured" (quota-polluted partials reset, not kept; R-08, no fabrication), ready for
-  a paid tier. Registry hygiene: removed the opus-variance backfill; kept the real
-  gpt-5.1 variance separately; decided-coverage row (item 5); same-vendor marking
-  (item 6); within-vendor parity only (item 4). No vendor currently has enough
-  quota/credits for full LLM arms, so cross-vendor attacker-vs-gate stays unmeasured.
+- Round 3c (owner independent review; D-030/D-031): ERROR audit (item 0) caught that
+  round-2's opus "over-abstains 0.90" was a TRUNCATION ARTIFACT (max_tokens=400 for a
+  reasoning model); ERRORs are now scored as reduced n, never verdicts
+  (eval/metrics.decided_counts + tests/test_error_scoring.py). Anthropic was live (promo
+  credit): the opus gate arms (plain+parity) re-ran correctly -> permissive gate
+  (attack 0.28; parity 0.03); the preregistered Anthropic attacker + opus variance hit
+  the Anthropic monthly cap again and are "blocked, not measured" (attacker-vs-typed
+  keeps the earlier real reduced n=8). OpenAI still blocked. Gemini live but free-tier;
+  the hard-$1.50-capped smallest arm hit the quota -> stays blocked. No backfill, no
+  fabrication.
+- Round 3/3b (D-026..D-029): added Gemini integration + live model verification +
+  retry/backoff; de-backfilled the opus variance; decided-coverage row (item 5);
+  same-vendor marking (item 6); within-vendor parity only (item 4).
 - Round 2 (owner independent review; D-023/D-024/D-025): re-ran the deterministic
   adaptive attacker at the FULL original spec (200x10x2, n=240); added an
   information-parity LLM arm (D-023); added the surprise-subset LLM number; added the
@@ -92,6 +96,16 @@ as observed.
 - `.env` contents never printed, logged, or committed.
 
 ## Last completed task
+Owner review round 3c (D-030/D-031): global ERROR audit (ERROR=reduced n, never a
+verdict; CI test added) caught and retracted the round-2 opus truncation artifact;
+re-ran the opus gate arms correctly on live Anthropic (permissive gate; parity cuts
+attack 0.28->0.03); preregistered Anthropic attacker + opus variance blocked by the
+monthly cap (exact n, no backfill); OpenAI blocked; Gemini free-tier -> capped arm
+stays blocked. Re-locked registry, regenerated table/FINAL_REPORT/POST/README/site,
+updated LIMITATIONS/deviations/OWNER_TODO, `make ci` green, `make demo` reproduces.
+See DECISIONS.md (D-001..D-031). BUILD COMPLETE stands.
+
+## (prior) round 3b task
 Owner review round 3b (D-026..D-029): verified all three vendor keys live (only
 Gemini usable; OpenAI/Anthropic blocked); added Gemini to eval/llm.py (pinned
 gemini-3.1-pro-preview, retry/backoff); dev-tuned+froze the Gemini prompt; Gemini

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018375000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class activelearn allows both change_plate and measure_cp, so I8 is satisfied. The requester is internal_agent, so the partner allowlist does not apply. The plan gives no elevated potential, anneal, sputter, acid, furnace or durability quantities that would trigger I1, I2, I3, I3b, I5, I6, I6b or I7. The comp_vec has no element labels, so the plan shows no Ce+Mn conflict under I4.\"}\n```",
+  "usage": {
+    "input_tokens": 1505,
+    "output_tokens": 434
+  }
+}

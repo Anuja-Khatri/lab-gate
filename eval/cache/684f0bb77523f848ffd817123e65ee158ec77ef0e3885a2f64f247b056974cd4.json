@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.024,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action is in the activelearn capability set (I8). Both measure_cp predicted potentials (1.5864 V and 1.5868 V) are below the 2.5 V compliance limit (I1). There are no deposits, anneals, durability tests, acid volumes or external-partner elements, so I2, I3, I3b, I5, I6b and ALLOW do not apply. The plan gives no instrument time, so I6 and I7 cannot be checked. The comp_vec entries have no element labels, so no Ce plus Mn co-occurrence can be shown under I4.\"}\n```",
+  "usage": {
+    "input_tokens": 2190,
+    "output_tokens": 522
+  }
+}

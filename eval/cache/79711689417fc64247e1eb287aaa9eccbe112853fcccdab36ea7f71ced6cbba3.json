@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.000116,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "r3c-gemini",
+  "text": "Pong! How can I help you today?",
+  "usage": {
+    "input_tokens": 4,
+    "output_tokens": 9
+  }
+}

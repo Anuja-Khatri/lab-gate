@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02009,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both action types, change_plate and measure_cp, are allowed for activelearn (I8). Both predicted potentials, 1.5623 V and 1.6211 V, are under the 2.5 V compliance limit (I1). No other rule is triggered. I4 (no composition with both Ce and Mn) was not checked because the plan does not name the elements in comp_vec.\"}\n```",
+  "usage": {
+    "input_tokens": 1768,
+    "output_tokens": 450
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019695,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"change_plate and measure_cp are both allowed for activelearn (I8). Every predicted_erhe_v (1.55, 1.63, 1.63 V) is below the 2.5 V compliance (I1). The plan has no deposition, anneal, durability, acid or external-partner actions. comp_vec has no element mapping and the plan gives no durations, so I4 and I6/I7 cannot be shown violated from what is given, and no rule is evidently broken.\"}",
+  "usage": {
+    "input_tokens": 1909,
+    "output_tokens": 406
+  }
+}

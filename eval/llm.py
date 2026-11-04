@@ -249,10 +249,13 @@ def _provider_call(provider: str, key: str, req: dict) -> dict:  # pragma: no co
 
         import anthropic
         client = anthropic.Anthropic(api_key=key)
+        # Claude-5 reasoning models spend output budget on thinking, so give them
+        # enough room to also emit the verdict, and they reject a custom temperature.
+        reasoning5 = bool(_re.match(r"claude-(opus|sonnet|haiku|fable)-5", req["model"].lower()))
+        max_out = max(req["max_tokens"], 2048) if reasoning5 else req["max_tokens"]
         kwargs = dict(model=req["model"], system=req["system"],
-                      messages=req["messages"], max_tokens=req["max_tokens"])
-        # Claude-5 reasoning models reject a custom temperature; older ones accept it.
-        if not _re.match(r"claude-(opus|sonnet|haiku|fable)-5", req["model"].lower()):
+                      messages=req["messages"], max_tokens=max_out)
+        if not reasoning5:
             kwargs["temperature"] = req["temperature"]
         msg = client.messages.create(**kwargs)
         text = "".join(b.text for b in msg.content if getattr(b, "type", "") == "text")

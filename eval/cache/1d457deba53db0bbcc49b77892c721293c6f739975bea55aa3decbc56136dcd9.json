@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018349999999999998,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"change_plate and measure_cp are both allowed for activelearn (I8). The requester is internal, so the partner allowlist does not apply. The plan gives no predicted potential, consumption, time or acid quantities, and no element labels for comp_vec, so no I1, I4, I6 or I7 violation is shown and none is invented.\"}",
+  "usage": {
+    "input_tokens": 1505,
+    "output_tokens": 433
+  }
+}

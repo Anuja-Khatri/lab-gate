@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02222,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"The activelearn class allows change_plate and measure_cp. The requester is internal, so the partner allowlist does not apply. There are no anneal, deposition, durability or acid actions. The plan gives no potential, time or element-label data showing any limit is exceeded, so I did not infer any. I4 (Ce with Mn) could not be checked directly because the comp_vec entries are unlabeled.\"}\n```",
+  "usage": {
+    "input_tokens": 1874,
+    "output_tokens": 514
+  }
+}

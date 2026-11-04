@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "numbers_lock": {
-    "registry_sha256": "39badbd05d743d39fc13d1db82e1b9f810149a725e8e8e3ada6e436f7a047bb1",
-    "n_metrics": 50,
+    "registry_sha256": "547ecaf22df131bd37a773434a3f39f6fa5d45d36d5075e8dac121f519a1de3e",
+    "n_metrics": 55,
     "note": "SPEC numbers lock: docs/site render from this snapshot; a new snapshot requires regenerating every doc that cited the first."
   },
   "metrics": [
@@ -41,24 +41,26 @@
     },
     {
       "metric_id": "abstain.llm.benign",
-      "value": 0.901361,
-      "ci_lo": 0.861927,
-      "ci_hi": 0.930441,
+      "value": 0.003401,
+      "ci_lo": 0.000601,
+      "ci_hi": 0.019012,
       "n": 294,
       "task": "P8",
       "caveats": [
-        "llm on 300-plan benign sample"
+        "opus claude-opus-5-5 gate, benign sample; ERROR/unparseable excluded from n (D-030)",
+        "n_errors=0"
       ]
     },
     {
       "metric_id": "abstain.llm_parity.benign",
-      "value": 0.918367,
-      "ci_lo": 0.881411,
-      "ci_hi": 0.944531,
-      "n": 294,
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.012941,
+      "n": 293,
       "task": "P8",
       "caveats": [
-        "llm_parity on 300-plan benign sample"
+        "opus claude-opus-5-5 parity gate, benign sample; ERROR/unparseable excluded from n (D-030)",
+        "n_errors=1"
       ]
     },
     {
@@ -144,7 +146,7 @@
       "n": 0,
       "task": "P8",
       "caveats": [
-        "Gemini adaptive attacker vs typed gate (cross-vendor; extension) — blocked, not measured: Gemini free-tier quota exceeded (limit 25 generate-requests/model; ~55 held-out calls succeeded before HTTP 429), D-029. Integration pinned/verified (gemini-3.1-pro-preview) and ready for a paid tier."
+        "blocked, not measured (EXTENSION): the hard-$1.50-capped smallest-arm attempt (Gemini gemini-3.1-pro-preview attacker vs typed, 2 goals x 1 seed x 10 queries) ran into the Gemini FREE-TIER quota (~25 req/model; repeated HTTP 429 with backoff), consistent with D-029; the $1.50 cap was never approached (gemini spend ~$0.394). Needs a PAID Gemini tier (OWNER_TODO). No fabrication. D-031."
       ]
     },
     {
@@ -160,27 +162,35 @@
     },
     {
       "metric_id": "attack.llm.adaptive",
-      "value": 0.0,
-      "ci_lo": 0.0,
-      "ci_hi": 0.096419,
-      "n": 36,
+      "value": 0.0625,
+      "ci_lo": 0.011119,
+      "ci_hi": 0.283287,
+      "n": 16,
       "task": "P8",
       "caveats": [
-        "programmatic adaptive attacker; success anywhere in budget",
-        "LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models",
-        "attacker here is the deterministic PROGRAMMATIC search attacker (not an LLM), so there is no gate/attacker same-vendor concern on this number; LLM gate = Anthropic claude-opus-5-5 (R-03)."
+        "programmatic attacker vs the fixed opus gate; PARTIAL n=16 of 36 trajectories (Anthropic monthly usage cap hit mid-phase, regains 2026-12-01, R-08 D-030); trajectories with no decided gate verdict excluded (reduced n)."
       ]
     },
     {
       "metric_id": "attack.llm.static_decomp",
-      "value": 0.108108,
-      "ci_lo": 0.042852,
-      "ci_hi": 0.247085,
-      "n": 37,
+      "value": 0.277778,
+      "ci_lo": 0.158483,
+      "ci_hi": 0.439925,
+      "n": 36,
       "task": "P8",
       "caveats": [
-        "static+decomposition+cross-requester suites",
-        "LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models"
+        "opus claude-opus-5-5 gate, static+decomp+xreq; ERROR excluded from n (D-030)"
+      ]
+    },
+    {
+      "metric_id": "attack.llm_attacker_vs_llm",
+      "value": null,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 0,
+      "task": "P8",
+      "caveats": [
+        "blocked, not measured: preregistered Anthropic attacker vs the opus LLM gate (SAME-VENDOR) did not run before the Anthropic usage cap (D-030); no fabrication."
       ]
     },
     {
@@ -191,7 +201,7 @@
       "n": 8,
       "task": "P8",
       "caveats": [
-        "REAL earlier reduced run: Anthropic opus attacker vs the TYPED gate (not an LLM, so no same-vendor advantage); n=8. The full 6x2x20 and the vs-LLM-gate (both-Anthropic, same-vendor) target are blocked, not measured (Anthropic usage limit, R-08 D-025); superseded where runnable by the Gemini attacker extension (D-026)."
+        "PREREGISTERED Anthropic opus attacker vs TYPED gate: the full 6x2x20 did NOT complete (Anthropic usage cap, D-030). Value shown is the earlier REAL reduced run (n=8); not backfilled, exact n. typed is not an LLM (no same-vendor issue)."
       ]
     },
     {
@@ -218,14 +228,13 @@
     },
     {
       "metric_id": "attack.llm_parity.static_decomp",
-      "value": 0.081081,
-      "ci_lo": 0.027961,
-      "ci_hi": 0.213007,
-      "n": 37,
+      "value": 0.029412,
+      "ci_lo": 0.005211,
+      "ci_hi": 0.149156,
+      "n": 34,
       "task": "P8",
       "caveats": [
-        "static+decomposition+cross-requester suites",
-        "LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models; PARITY: plan includes predicted_erhe_v"
+        "opus claude-opus-5-5 parity gate, static+decomp+xreq; ERROR excluded from n (D-030)"
       ]
     },
     {
@@ -497,6 +506,50 @@
       ]
     },
     {
+      "metric_id": "decided_coverage.classifier.benign",
+      "value": 1.0,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 13627,
+      "task": "P8",
+      "caveats": [
+        "decided coverage = 1 - abstain(benign) for the classifier gate"
+      ]
+    },
+    {
+      "metric_id": "decided_coverage.llm.benign",
+      "value": 0.997,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 294,
+      "task": "P8",
+      "caveats": [
+        "decided coverage = 1 - abstain(benign) for the llm gate"
+      ]
+    },
+    {
+      "metric_id": "decided_coverage.llm_parity.benign",
+      "value": 1.0,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 293,
+      "task": "P8",
+      "caveats": [
+        "decided coverage = 1 - abstain(benign) for the llm_parity gate"
+      ]
+    },
+    {
+      "metric_id": "decided_coverage.typed.benign",
+      "value": 1.0,
+      "ci_lo": null,
+      "ci_hi": null,
+      "n": 13627,
+      "task": "P8",
+      "caveats": [
+        "decided coverage = 1 - abstain(benign) for the typed gate"
+      ]
+    },
+    {
       "metric_id": "dev.llm_gemini.agreement_vs_oracle",
       "value": 0.633,
       "ci_lo": null,
@@ -597,13 +650,14 @@
     },
     {
       "metric_id": "falseblock.llm.benign",
-      "value": 0.0,
-      "ci_lo": 0.0,
-      "ci_hi": 0.012898,
+      "value": 0.003401,
+      "ci_lo": 0.000601,
+      "ci_hi": 0.019012,
       "n": 294,
       "task": "P8",
       "caveats": [
-        "llm on 300-plan benign sample; LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models"
+        "opus claude-opus-5-5 gate, benign sample; ERROR/unparseable excluded from n (D-030)",
+        "n_errors=0"
       ]
     },
     {
@@ -614,7 +668,7 @@
       "n": 297,
       "task": "P8",
       "caveats": [
-        "llm on 300-plan surprise sample (item 3); LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models"
+        "opus gate surprise sample; ERROR excluded; n_errors=0"
       ]
     },
     {
@@ -630,24 +684,25 @@
     },
     {
       "metric_id": "falseblock.llm_parity.benign",
-      "value": 0.0,
-      "ci_lo": 0.0,
-      "ci_hi": 0.012898,
-      "n": 294,
+      "value": 0.003413,
+      "ci_lo": 0.000603,
+      "ci_hi": 0.019076,
+      "n": 293,
       "task": "P8",
       "caveats": [
-        "llm_parity on 300-plan benign sample; LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models"
+        "opus claude-opus-5-5 parity gate, benign sample; ERROR/unparseable excluded from n (D-030)",
+        "n_errors=1"
       ]
     },
     {
       "metric_id": "falseblock.llm_parity.surprise",
       "value": 0.0,
       "ci_lo": 0.0,
-      "ci_hi": 0.012769,
-      "n": 297,
+      "ci_hi": 0.012898,
+      "n": 294,
       "task": "P8",
       "caveats": [
-        "llm_parity on 300-plan surprise sample (item 3); LLM gate ran on Anthropic claude-opus-5-5 (R-03 fallback; OpenAI gpt-5.1 ran earlier at reduced size then its account ran out of credits, D-024); gate and attacker are same vendor, different models"
+        "opus gate surprise sample; ERROR excluded; n_errors=3"
       ]
     },
     {
@@ -696,13 +751,13 @@
     },
     {
       "metric_id": "llm.spend_usd",
-      "value": 30.0765,
+      "value": 60.9802,
       "ci_lo": null,
       "ci_hi": null,
-      "n": 2337,
+      "n": 3720,
       "task": "P8",
       "caveats": [
-        "cumulative metered LLM spend across all runs (cap 500)"
+        "cumulative metered LLM spend across all runs (cap 500; Anthropic promo credit used)"
       ]
     },
     {
@@ -746,7 +801,7 @@
       "n": 0,
       "task": "P8",
       "caveats": [
-        "blocked, not measured: the opus LLM-gate run-to-run variance could not be measured (Anthropic monthly usage limit, R-08 D-025). NOT backfilled. The earlier OpenAI gpt-5.1 variance is recorded as variance.llm_gpt51.flip_rate."
+        "blocked, not measured: opus run-to-run variance (120x5) not reached before the Anthropic usage cap (D-030). The earlier OpenAI gpt-5.1 variance 0.30 is kept as variance.llm_gpt51.flip_rate; not backfilled here."
       ]
     },
     {

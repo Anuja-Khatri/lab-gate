@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.05122,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I6\", \"rationale\": \"All actions (change_plate, measure_cp) are allowed for the 'full' class (I8 ok), and there is no deposition, anneal, durability test, acid use or external-partner requester. However, the plan repeats measure_cp about 45 times without giving per-measurement duration, so cumulative instrument time against the 480-minute limit (I6) cannot be determined. Predicted potential (I1) and the comp_vec element mapping (I4) are also not provided.\"}",
+  "usage": {
+    "input_tokens": 6914,
+    "output_tokens": 666
+  }
+}

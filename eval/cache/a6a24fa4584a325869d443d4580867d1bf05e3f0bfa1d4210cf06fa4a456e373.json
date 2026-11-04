@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.034210000000000004,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are in the activelearn capability set. Every predicted_erhe_v is between about 1.61 and 1.71 V, below the 2.5 V I1 compliance limit. The plan has no deposit, anneal or durability actions, and the requester is internal, so the partner allowlist does not apply. Comp_vec has no element labels, so I4 (Ce/Mn) cannot be checked directly, and no time or volume figures are given for I6/I6b/I7; neither gap shows a violation.\"}",
+  "usage": {
+    "input_tokens": 4517,
+    "output_tokens": 465
+  }
+}

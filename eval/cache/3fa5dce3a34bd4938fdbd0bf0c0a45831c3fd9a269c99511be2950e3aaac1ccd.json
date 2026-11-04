@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018435,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Requester is internal, so the partner allowlist does not apply. Campaign class activelearn allows both change_plate and measure_cp, so I8 is not violated. There are no anneal, deposit, durability or acid actions. The plan gives no predicted potentials, instrument times or element mapping for comp_vec, so none of the other rules can be shown to be violated.\"}",
+  "usage": {
+    "input_tokens": 1997,
+    "output_tokens": 338
+  }
+}

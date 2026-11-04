@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.037154999999999994,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions (change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model) are on the activelearn capability list, so I8 is not violated. The requester is internal_agent, so the partner allowlist does not apply. There are no deposit, anneal, durability or acid actions, so I2, I3, I3b, I5 and I6b do not apply. The plan gives no predicted potentials, instrument times or element labels for comp_vec, so I1, I4, I6 and I7 cannot be shown to be violated. No rule is demonstrably violated.\"}\n```",
+  "usage": {
+    "input_tokens": 3961,
+    "output_tokens": 694
+  }
+}

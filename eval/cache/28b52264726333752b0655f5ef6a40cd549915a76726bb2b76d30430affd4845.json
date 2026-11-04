@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01761,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are on the activelearn capability list. The plan has no anneal, deposition, durability test or acid use, and no external-partner requester, so those rules do not apply. Nothing in the plan shows a violation of the potential, time or Ce+Mn rules. The comp_vec has no element labels and no predicted potential or times are given; these were not invented.\"}",
+  "usage": {
+    "input_tokens": 1777,
+    "output_tokens": 349
+  }
+}

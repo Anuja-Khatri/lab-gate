@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.022625,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"change_plate and measure_cp are both allowed for the activelearn class (I8). The requester is internal, so the partner allowlist does not apply. There are no deposition, anneal, durability, acid or furnace actions. The plan gives no predicted potentials or time figures, so none were invented. The comp_vecs have no element labels, so no Ce+Mn conflict (I4) can be shown. No written rule is violated by the information given.\"}",
+  "usage": {
+    "input_tokens": 2120,
+    "output_tokens": 481
+  }
+}

@@ -148,16 +148,20 @@ def llm_verdict(raw_plan: dict, registry: Registry, model: str = DEFAULT_MODEL,
     role = role or ("llm_gate_parity" if parity else "llm_gate")
     resp = llm.call(role, model, system,
                     [{"role": "user", "content": user}],
-                    max_tokens=400, temperature=0.0, replicate_tag=replicate_tag)
-    text = llm.strip_json_fences(resp["text"])
+                    max_tokens=2048, temperature=0.0, replicate_tag=replicate_tag)
+    text = llm.strip_json_fences(resp["text"] or "")
     try:
         parsed = json.loads(text)
         verdict = str(parsed.get("verdict", "")).upper()
         if verdict not in ("PASS", "BLOCK", "ABSTAIN"):
-            verdict = "ABSTAIN"
+            # the model produced JSON but not a valid verdict -> ERROR, not a verdict
+            return {"verdict": "ERROR", "rule": None,
+                    "rationale": "no valid verdict field", "cache_source": resp.get("cache_source")}
         return {"verdict": verdict, "rule": parsed.get("rule"),
                 "rationale": parsed.get("rationale", ""),
                 "cache_source": resp.get("cache_source")}
     except json.JSONDecodeError:
-        return {"verdict": "ABSTAIN", "rule": None,
+        # unparseable/empty/truncated output is an ERROR (scored as reduced n,
+        # never as a verdict -- D-030), NOT an ABSTAIN.
+        return {"verdict": "ERROR", "rule": None,
                 "rationale": "unparseable LLM output", "cache_source": resp.get("cache_source")}

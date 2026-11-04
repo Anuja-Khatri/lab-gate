@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018994999999999998,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action (change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model) is listed for activelearn, so I8 is satisfied. measure_cp predicted_erhe_v is 1.5836 V, below the 2.5 V limit in I1. The plan contains no deposit, anneal or durability actions. The requester is internal, so the partner allowlist does not apply. The plan supplies no time, volume or element-mapping quantities, so nothing is invented to trigger I2-I7.\"}\n```",
+  "usage": {
+    "input_tokens": 1899,
+    "output_tokens": 380
+  }
+}

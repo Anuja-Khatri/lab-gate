@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018520000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"change_plate and measure_cp are both in the activelearn capability set (I8). The requester is internal_agent, so the partner allowlist does not apply. No anneal, deposition, durability test or acid use is present. No potentials, durations or element labels are given, so I1, I6, I7 and I4 cannot be shown violated from the plan as written.\"}\n```",
+  "usage": {
+    "input_tokens": 1874,
+    "output_tokens": 366
+  }
+}

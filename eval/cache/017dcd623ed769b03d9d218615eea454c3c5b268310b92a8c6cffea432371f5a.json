@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019020000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Activelearn allows change_plate and measure_cp, so I8 is not violated. The requester is internal, so ALLOW does not apply. There is no deposition, anneal, durability test or acid use. The plan gives no predicted potentials, instrument times or element mapping for comp_vec, so I1, I6, I7 and I4 cannot be shown violated, and no such values were invented.\"}",
+  "usage": {
+    "input_tokens": 1874,
+    "output_tokens": 386
+  }
+}

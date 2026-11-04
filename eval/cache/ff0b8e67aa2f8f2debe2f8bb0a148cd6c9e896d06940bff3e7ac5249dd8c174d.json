@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.025160000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"change_plate and measure_cp are both allowed for activelearn (I8). All predicted_erhe_v values (1.585-1.601 V) are below the 2.5 V compliance (I1). There are no deposit, anneal or durability actions, and the requester is internal, so ALLOW does not apply. The plan gives no element labels for comp_vec or any durations, so no violation of I4, I6 or I7 is shown.\"}\n```",
+  "usage": {
+    "input_tokens": 2332,
+    "output_tokens": 540
+  }
+}

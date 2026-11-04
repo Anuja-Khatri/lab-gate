@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.03509,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action (change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model) is allowed for the activelearn class, so I8 is met. The highest predicted_erhe_v is 1.6971 V, below the 2.5 V compliance limit in I1. The requester is internal, so the partner allowlist does not apply. There are no deposit, anneal, durability, acid or timing quantities to check. I4 (Ce with Mn) cannot be checked because the plan does not say which element each comp_vec position is, so it was not assessed.\"}",
+  "usage": {
+    "input_tokens": 4518,
+    "output_tokens": 500
+  }
+}

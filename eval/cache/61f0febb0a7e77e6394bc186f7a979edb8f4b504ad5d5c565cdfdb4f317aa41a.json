@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019674999999999998,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions (change_plate, measure_cp) are in the activelearn capability set. The requester is internal_agent, so the partner allowlist does not apply. The plan has no anneal, deposition, durability test or acid use. It gives no predicted potentials or instrument times, so I1, I6 and I7 cannot be shown violated. The comp_vec element order is not given, so no Ce+Mn co-occurrence (I4) can be established.\"}",
+  "usage": {
+    "input_tokens": 2120,
+    "output_tokens": 363
+  }
+}

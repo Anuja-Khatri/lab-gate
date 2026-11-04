@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02268,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"The requester is an internal_agent, so the partner allowlist does not apply. change_plate and measure_cp are both allowed for the activelearn class (I8 satisfied). The plan has no deposition, anneal or durability actions, so I2, I3, I3b and I5 do not apply. The plan gives no predicted potentials, durations or acid volumes, so I1, I6, I6b and I7 cannot be shown violated, and these values were not invented. The plan also does not map comp_vec indices to elements, so I4 (Ce and Mn together) cannot be shown violated either.\"}",
+  "usage": {
+    "input_tokens": 1751,
+    "output_tokens": 557
+  }
+}

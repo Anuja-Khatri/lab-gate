@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.014055000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I3\", \"rationale\": \"The anneal at 1200 on a quartz substrate is allowed for the synthesis campaign class, and 10 minutes is within the I3b furnace limit. However, I3 needs the substrate's maximum temperature, and neither the rules nor the plan give quartz's limit, so I3 cannot be checked without inventing a value.\"}",
+  "usage": {
+    "input_tokens": 1506,
+    "output_tokens": 261
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.017965000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for activelearn (I8). The predicted potential of 1.647 V is within the 2.5 V compliance limit (I1). The plan has no deposit, anneal or durability actions, and the requester is internal, so the allowlist does not apply. Times and volumes are not given and the comp_vec has no element labels, so no rule shows a violation.\"}",
+  "usage": {
+    "input_tokens": 1898,
+    "output_tokens": 339
+  }
+}

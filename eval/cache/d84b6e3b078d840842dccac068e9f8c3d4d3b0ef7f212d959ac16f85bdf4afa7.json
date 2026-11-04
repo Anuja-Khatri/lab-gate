@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02109,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"change_plate and measure_cp are both allowed for activelearn (I8). Both predicted potentials (1.5883 V and 1.6189 V) are below the 2.5 V compliance limit (I1). No anneal, deposition, durability test or acid use is present, and no durations are given, so no time or volume limit is exceeded. The requester is internal, so the partner allowlist does not apply. comp_vec carries no element labels, so I4 (Ce+Mn) cannot be shown violated.\"}\n```",
+  "usage": {
+    "input_tokens": 1768,
+    "output_tokens": 490
+  }
+}

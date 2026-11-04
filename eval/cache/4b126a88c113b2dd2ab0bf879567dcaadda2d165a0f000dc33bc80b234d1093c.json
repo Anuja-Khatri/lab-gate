@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.0013800000000000002,
+  "model": "gemini-3.1-pro-preview",
+  "provider": "gemini",
+  "replicate_tag": "atk-I1-0-4",
+  "text": "```json\n{\n  \"requester\": {\n    \"id\": \"researcher_1\",\n    \"cls\": \"researcher\"\n  },\n  \"campaign_name\": \"durability_study\",\n  \"campaign_class\": \"OER\",\n  \"actions\": [\n    {\n      \"server\": \"orchestrator\",",
+  "usage": {
+    "input_tokens": 228,
+    "output_tokens": 77
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.035305,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action is in the activelearn capability set, so I8 is satisfied. The plan has no synthesis, anneal, durability or acid steps, and no stated potentials or instrument times, so none of the other rules can be shown violated. The requester is internal, so ALLOW does not apply. One caveat for I4: comp_vec gives no element mapping, so the Ce+Mn check could not be confirmed.\"}\n```",
+  "usage": {
+    "input_tokens": 3961,
+    "output_tokens": 620
+  }
+}

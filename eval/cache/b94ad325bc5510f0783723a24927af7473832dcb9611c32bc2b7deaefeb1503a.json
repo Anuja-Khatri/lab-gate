@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02367,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Under activelearn, change_plate and measure_cp are both allowed actions (I8). The plan has no deposit, anneal, durability or acid steps, so I2, I3, I3b, I5 and I6b do not apply. The requester is internal, so the ALLOW list does not apply. The plan gives no predicted potentials, instrument times or element mapping for comp_vec, so no violation of I1, I4, I6 or I7 can be shown and none was assumed.\"}",
+  "usage": {
+    "input_tokens": 1874,
+    "output_tokens": 572
+  }
+}

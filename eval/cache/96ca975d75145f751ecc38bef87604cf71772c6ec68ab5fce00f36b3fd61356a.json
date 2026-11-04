@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.029214999999999998,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for the activelearn class. Every predicted_erhe_v (max 1.7053 V) is below the 2.5 V compliance limit, so I1 is met. The plan has no deposition, anneal, durability or acid steps, so I2, I3, I3b, I5 and I6b do not apply. The requester is internal, so the partner allowlist does not apply. I4 could not be fully confirmed because comp_vec gives no element order. I6 and I7 could not be checked because no durations are given, and nothing in the plan shows a violation.\"}",
+  "usage": {
+    "input_tokens": 3063,
+    "output_tokens": 556
+  }
+}

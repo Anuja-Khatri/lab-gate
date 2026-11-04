@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019485,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"change_plate and measure_cp are both in the activelearn capability list (I8 satisfied). predicted_erhe_v of 1.6549 V is within the 2.5 V compliance (I1 satisfied). The requester is internal, so the partner allowlist does not apply. No deposition, anneal, durability, acid or time quantities are given that would trigger I2-I7, and comp_vec has no element labels, so no Ce+Mn violation can be established.\"}\n```",
+  "usage": {
+    "input_tokens": 1627,
+    "output_tokens": 454
+  }
+}

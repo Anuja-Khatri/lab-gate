@@ -58,10 +58,19 @@ after we look at the real numbers together.
   reduced grid in FINAL_REPORT Section 6), set keys and run `make eval`; the meter
   enforces the cap. Everything else reproduces offline with `make demo`.
 
-## Round-3 blockers (all three LLM vendors currently unavailable)
-- [ ] OpenAI: account out of credits (HTTP 429). Add credits to rerun the gpt-5.1 arm.
-- [ ] Anthropic: monthly usage limit reached; regains 2026-12-01. The opus run-to-run
-  variance and the full Anthropic attacker are "blocked, not measured" until then.
+## Round-3c blockers / remaining
+- [x] An ERROR audit caught that round-2's opus "over-abstention 0.90" was a truncation
+  artifact (max_tokens too small); fixed, re-run on live Anthropic -> the real opus gate
+  is permissive (attack 0.28; parity 0.03). ERRORs are now scored as reduced n (CI test).
+- [ ] OpenAI: still out of credits (HTTP 429). Add credits to run the gpt-5.1 tails
+  (variance 120x5, adaptive vs the gpt-5.1 gate).
+- [ ] Anthropic: the promo credit ($170.45, expires 2026-11-21) ran the opus gate
+  re-run, but the monthly USAGE cap (regains 2026-12-01) then blocked the preregistered
+  Anthropic adaptive attacker (6x2x20) and the opus run-to-run variance. These are
+  "blocked, not measured" (attacker-vs-typed keeps the earlier real reduced n=8;
+  attacker-vs-opus-gate and opus variance are null). Re-run with `make eval`
+  (`python -m eval.heldout_anthropic`) once the cap resets, ideally before the credit
+  expires 2026-11-21 (if the cap resets by then) or after 2026-12-01.
 - [ ] Gemini: the current `LABGATE_GEMINI_API_KEY` (AQ-format) is VALID and live
   (`gemini-3.1-pro-preview` pinned, verified 2026-11-03), but the account is FREE-TIER
   with a quota of ~25 requests/model, so the held-out arms 429'd after ~55 calls and

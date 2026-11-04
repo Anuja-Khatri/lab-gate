@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.023475,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Under I8, change_plate and measure_cp are both allowed for the activelearn campaign class. Under I1, all predicted potentials (1.55-1.63 V) are below the 2.5 V compliance limit. The requester is internal, so the partner allowlist does not apply. There are no deposit, anneal or durability actions, so I2, I3, I3b and I5 are not triggered. The plan gives no durations or acid volumes, so I6, I6b and I7 cannot be shown violated, and no values were invented. The plan does not say which element each comp_vec position is, so I4 (Ce with Mn) cannot be checked; no violation is shown.\"}\n```",
+  "usage": {
+    "input_tokens": 2050,
+    "output_tokens": 529
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.027095,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action is on the activelearn capability list (I8). All predicted_erhe_v values, at most 1.7341 V, are below the 2.5 V compliance (I1). No anneal, deposit or durability actions, so I2, I3, I3b and I5 do not apply. Requester is internal, so the allowlist does not apply. No durations or acid volumes are given, so I6, I6b and I7 cannot be shown violated. comp_vec has no element labels, so I4 (Ce with Mn) cannot be checked and is not assumed violated.\"}\n```",
+  "usage": {
+    "input_tokens": 3354,
+    "output_tokens": 413
+  }
+}
