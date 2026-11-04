@@ -2,11 +2,27 @@
 
 Workspace (`$WS`): `/Users/anujakhatri3/lila-gate` (native).
 
-## BUILD COMPLETE
+## HANDOFF READY
 
-All phases (0 through 10) are done. `make ci` is green: lint, 72 tests, taint test,
-static no-reference check, secret scan (working tree and full git history), and the
-numbers-lock check. The owner's remaining steps are in `OWNER_TODO.md`.
+All phases (0 through 10) are done and the repo is publication-ready. `make ci` is green:
+lint, 76 tests, taint test, static no-reference check, secret scan (working tree and full
+git history), and the numbers-lock check. Re-verified at handoff from a FRESH CLONE in a
+temp directory with helao-async at pin ba910c4: `make setup && make ci && make sim &&
+make demo` all pass offline (DEMO PASS, no keys). The owner's exact remaining steps
+(human-only: GitHub, OSF, media, arXiv) are copy-paste ready in `docs/OWNER_PACKET.md`;
+`OWNER_TODO.md` has the longer-form notes. BUILD COMPLETE stands.
+
+Handoff one-page: typed gate 0.00 attack (static+decomp n=37; adaptive n=240) and 0.00
+benign false-block (n=13627); it also resists the LLM adaptive attacker (preregistered
+0.00 n=12; extension D-033 0.00 black-box n=48 and 0.00 gray-box n=48). The opus LLM gate
+is permissive (attack 0.28, false-block/abstain 0.003; parity cuts attack to 0.08); the
+gpt-5.1 LLM gate over-blocks (0.64, variance 0.30). Classifier degrades under adaptive
+attack (0.24 -> 0.32). Checker guarantees: equivalence 1.0 (n=12000), replay 1.0 (n=458),
+taint 0 (n=1000). One retraction, fully documented in docs/CORRECTIONS.md (the round-2
+opus "over-abstention 0.90" truncation artifact). Registry: 58 metrics, lock sha
+49b68bda. Metered LLM spend $126.32 of the $500 cap (within the Anthropic promo). arXiv
+PDF at docs/FINAL_REPORT.pdf. No push, no publish, no remotes; prereg-v1 (commit b06ae95)
+is an ancestor of HEAD.
 
 ## One-page summary
 
@@ -99,6 +115,15 @@ as observed.
 - `.env` contents never printed, logged, or committed.
 
 ## Last completed task
+Owner handoff finalization (D-034): repo hygiene confirmed (no venv/sidecar/scratch/pyc
+in tracked tree; demo cache stays tracked); fresh clean-clone reproducibility test passed
+offline (setup/ci/sim/demo); README quickstart fixed with the explicit helao-async
+clone+checkout; wrote docs/OWNER_PACKET.md (reading order, GitHub push, OSF prereg, media,
+arXiv); produced docs/FINAL_REPORT.pdf (pandoc-in-venv, no system install); Section 11
+re-verified and CHECKLIST refreshed; STATUS set to HANDOFF READY. No new experiments, no
+new metrics, no outreach. See DECISIONS D-034.
+
+## (prior) extension task
 Owner extension (D-033, declared before execution): scaled the LLM adaptive attacker
 vs the TYPED gate only to n=48 trajectories per mode (8 goals x 6 seeds x 20 queries),
 in BOTH black-box and gray-box modes, labelled "extension, not preregistered". Result:

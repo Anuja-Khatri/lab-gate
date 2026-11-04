@@ -38,12 +38,22 @@ rival reasoning method.
 ## Quickstart
 
 ```
-# from $WS (parent of this repo), with helao-async cloned alongside at pin ba910c4
+# Work from a parent directory ($WS). lab-gate and helao-async must sit side by side:
+#   $WS/lab-gate   $WS/helao-async
+git clone <this-repo-url> lab-gate
+git clone https://github.com/High-Throughput-Experimentation/helao-async.git
+git -C helao-async checkout ba910c4   # the pin the gate is evaluated against
+
+cd lab-gate
 make setup                      # uv venv (Python 3.12) + deps; PYTHONPATH -> helao-async
 make ci                         # lint + tests + taint + secret scan + numbers lock
 make sim                        # deterministic OERSIM closed loop (byte-identical)
 make demo                       # reproduce headline numbers from cache (no API keys)
 ```
+
+`make demo` needs no keys and no network: it recomputes the headline numbers from the
+committed cache (`eval/cache/`) and checks them against `results/registry.json`.
+Verified from a fresh clone (setup, ci, sim, demo all pass offline).
 
 The LLM arms (LLM gate, LLM attacker) need keys in `$WS/.env`
 (`LABGATE_ANTHROPIC_API_KEY`, `LABGATE_OPENAI_API_KEY`, `LLM_BUDGET_USD`); every call

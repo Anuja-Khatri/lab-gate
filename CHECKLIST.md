@@ -57,15 +57,15 @@ Mark `[FAILED, disclosed]` if R-09 applies (recorded in DECISIONS.md and LIMITAT
 - [x] P9 c: Media exists: media/demo.cast (real asciinema of make demo); gif+webm DEFERRED to owner (R-02, agg/Playwright not installable — OWNER_TODO).
 - [x] P9 d: All docs exist; numbers-lock CI passes on them.
 
-## Phase 10 / Final acceptance (Section 11)
-- [x] F a: `make ci` green (lint, 72 tests, taint, static no-reference, secret scan, numbers-lock).
+## Phase 10 / Final acceptance (Section 11) — re-verified at handoff
+- [x] F a: `make ci` green (lint, 76 tests, taint, static no-reference, secret scan, numbers-lock). Re-verified at handoff, incl. a fresh clone.
 - [x] F b: Reference vs SMT equivalence 1.0 (n=12000); counterexample replay validity 1.0 (n=458).
 - [x] F c: Gate-disabled byte-identity with stock OERSIM. (test_hook.py)
-- [x] F d: Prereg tag precedes held-out runs. (prereg-v1 ancestor of HEAD)
-- [x] F e: All metrics with CIs in the locked registry. (results/registry.json + NUMBERS_LOCK.json)
-- [x] F f: Clean-clone `make demo` reproduces headline numbers from cache without keys. (DEMO PASS)
-- [x] F g: Site, media, README, POST, FINAL_REPORT, HUMAN_CHECKPOINTS, AGREEMENT_PROTOCOL, LIMITATIONS, NOTICE present.
+- [x] F d: Prereg tag precedes held-out runs. (`git merge-base --is-ancestor prereg-v1 HEAD` = YES; commit b06ae95)
+- [x] F e: All metrics with CIs in the locked registry. (results/registry.json 58 metrics + NUMBERS_LOCK.json sha 49b68bda)
+- [x] F f: Clean-clone `make demo` reproduces headline numbers from cache without keys. Re-verified at handoff: fresh clone in a temp dir + helao-async sibling at ba910c4, `make setup && make ci && make sim && make demo` all pass OFFLINE (DEMO PASS).
+- [x] F g: Site, media, README, POST, FINAL_REPORT(.md + .pdf), CORRECTIONS, OWNER_PACKET, HUMAN_CHECKPOINTS, AGREEMENT_PROTOCOL, LIMITATIONS, NOTICE present.
 - [x] F h: No file outside allowed dirs created or modified. (helao-async + refs clean; writes only in lab-gate/, logs/, helao-async-pr/)
-- [x] F i: No push, no publish; secret scan clean on repo. (git history scanned in F i check below)
-- [x] F j: OWNER_TODO.md complete.
+- [x] F i: No push, no publish; no git remotes; secret scan clean on the working tree AND full git history.
+- [x] F j: OWNER_TODO.md and docs/OWNER_PACKET.md complete (copy-paste remaining steps).
 - [x] F k: Every Section 5 content rule holds. (git grep audit: no forbidden claims, no hazardous content, no company-endorsement claims)
