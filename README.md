@@ -85,6 +85,10 @@ The reference and SMT checkers agree on every plan in the equivalence suite, eve
 BLOCK counterexample replays in the simulator, and the taint test shows no text
 channel.
 
+## Preregistration and report
+
+The evaluation protocol was frozen before the held-out runs; the binding timestamp is the git tag prereg-v1. The protocol is registered at OSF: https://osf.io/jxhfe. The full report PDF: https://doi.org/10.5281/zenodo.23954617.
+
 ## Limitations
 
 A simulator is not a lab; the invariants are benign stand-ins that model the structure
