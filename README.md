@@ -9,9 +9,9 @@ plan against written invariants before the plan runs and returns exactly one of:
 
 No decision path reads any free-text field. lab-gate is built on the public
 [`helao-async`](https://github.com/High-Throughput-Experimentation/helao-async)
-framework and evaluated inside its OER electrocatalysis simulator (OERSIM). It is the
-first outside project built on helao-async (verifiable from that repo's contributor
-history); it is not a contribution to, or endorsed by, that project or any company.
+framework and evaluated inside its OER electrocatalysis simulator (OERSIM). It is an
+independent project; it is not a contribution to, or endorsed by, helao-async or any
+company.
 
 ## Why
 
