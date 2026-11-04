@@ -113,10 +113,3 @@ This project was carried out by Claude Code from a specification written with Cl
 with the owner reviewing and confirming the decisions. Everything here is reproducible
 without API keys from cached model responses: watch the demo, read the page, or run it
 yourself.
-
-<!-- OWNER: optional public-statement citations may be added here (each with a link,
-quoted under 15 words, no speculation) — e.g. that agents run experiments in loops
-without manual handoffs, and that reasoning agents excel at composing sub-problems.
-The Latent Space podcast with Lila's CTO and physical-sciences CSO (July 2026) is an
-allowed source under the same rules. Not added automatically because links/quotes must
-be verified by a human before publication. -->
