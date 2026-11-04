@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01489,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"ALLOW\", \"rationale\": \"deposit_composition is allowed for the synthesis class, and no other rule is shown to be violated. The requester is external_partner, so the ALLOW rule requires every element to be on the allowlist (Fe, Mn, Ni, Ta, Cu, Co). The plan gives comp_vec as 13 unlabeled positions, with 100% at index 1, and no element mapping is provided. Allowlist compliance and I4 cannot be checked.\"}",
+  "usage": {
+    "input_tokens": 1448,
+    "output_tokens": 306
+  }
+}

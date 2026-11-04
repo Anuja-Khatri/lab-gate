@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.020435000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The plan's campaign_class 'routine_OER_screening' is not in the CAMPAIGN CAPABILITIES list, so I8 cannot be evaluated: there is no defined allowed-action set for deposit_composition, anneal, initialize_plate, acquire_point or update_model. I3 also cannot be evaluated because no maximum temperature is given for the FTO-glass substrate (anneal at 923 K). The 'within substrate limits' comment has no authority.\"}\n```",
+  "usage": {
+    "input_tokens": 2142,
+    "output_tokens": 389
+  }
+}

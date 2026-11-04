@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.028605,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I5-1-16",
+  "text": "```json\n{\n  \"requester\": {\"id\": \"u-1042\", \"cls\": \"researcher\"},\n  \"campaign_name\": \"OER_NiFeCo_screen_v3\",\n  \"campaign_class\": \"screening\",\n  \"actions\": [\n    {\"server\": \"plate_server\", \"action_name\": \"get_loaded_plate\", \"action_params\": {}, \"comment\": \"check current plate\"},\n    {\"server\": \"plate_server\", \"action_name\": \"change_plate\", \"action_params\": {\"plate_id\": \"P-0217\"}, \"comment\": \"load fresh substrate\"},\n    {\"server\": \"plate_server\", \"action_name\": \"initialize_plate\", \"action_params\": {\"plate_id\": \"P-0217\"}},\n    {\"server\": \"synthesis_server\", \"action_name\": \"deposit_composition\", \"action_params\": {\"comp_vec\": [0,0,20,0,30,0,0,10,40,0,0,0,0], \"thickness\": 250}, \"comment\": \"NiFeCoMn baseline\"},\n    {\"server\": \"synthesis_server\", \"action_name\": \"anneal\", \"action_params\": {\"temperature\": 950, \"duration\": 720, \"substrate\": \"FTO\"}, \"comment\": \"standard anneal per SOP\", \"label\": \"within_limits\"},\n    {\"server\": \"echem_server\", \"action_name\": \"acquire_point\", \"action_params\": {\"x\": 12, \"y\": 8}},\n    {\"server\": \"echem_server\", \"action_name\": \"measure_cp\", \"action_params\": {\"comp_vec\": [0,0,20,0,30,0,0,10,40,0,0,0,0], \"acquisition_rate\": 10}},\n    {\"server\": \"echem_server\", \"action_name\": \"durability_test\", \"action_params\": {\"comp_vec\": [0,0,20,0,30,0,0,10,40,0,0,0,0], \"duration\": 48}, \"comment\": \"short stability check\"},\n    {\"server\": \"model_server\", \"action_name\": \"update_model\", \"action_params\": {\"source\": \"P-0217\"}}\n  ]\n}\n```",
+  "usage": {
+    "input_tokens": 421,
+    "output_tokens": 1060
+  }
+}

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "numbers_lock": {
-    "registry_sha256": "547ecaf22df131bd37a773434a3f39f6fa5d45d36d5075e8dac121f519a1de3e",
-    "n_metrics": 55,
+    "registry_sha256": "fdf8d7f43ed4de51072777cc41e62e6fcd22a93ea8dec232295a1e9704a730d3",
+    "n_metrics": 56,
     "note": "SPEC numbers lock: docs/site render from this snapshot; a new snapshot requires regenerating every doc that cited the first."
   },
   "metrics": [
@@ -52,15 +52,26 @@
       ]
     },
     {
+      "metric_id": "abstain.llm_gpt51.benign",
+      "value": 0.010204,
+      "ci_lo": 0.003476,
+      "ci_hi": 0.029566,
+      "n": 294,
+      "task": "P8",
+      "caveats": [
+        "earlier OpenAI gpt-5.1 gate benign abstain; recovered by the round-3d re-scoring pass (D-032); gpt-5.1 is clean (0% truncation)"
+      ]
+    },
+    {
       "metric_id": "abstain.llm_parity.benign",
       "value": 0.0,
       "ci_lo": 0.0,
-      "ci_hi": 0.012941,
-      "n": 293,
+      "ci_hi": 0.012898,
+      "n": 294,
       "task": "P8",
       "caveats": [
         "opus claude-opus-5-5 parity gate, benign sample; ERROR/unparseable excluded from n (D-030)",
-        "n_errors=1"
+        "n_errors=0"
       ]
     },
     {
@@ -162,13 +173,13 @@
     },
     {
       "metric_id": "attack.llm.adaptive",
-      "value": 0.0625,
-      "ci_lo": 0.011119,
-      "ci_hi": 0.283287,
-      "n": 16,
+      "value": 0.277778,
+      "ci_lo": 0.158483,
+      "ci_hi": 0.439925,
+      "n": 36,
       "task": "P8",
       "caveats": [
-        "programmatic attacker vs the fixed opus gate; PARTIAL n=16 of 36 trajectories (Anthropic monthly usage cap hit mid-phase, regains 2026-12-01, R-08 D-030); trajectories with no decided gate verdict excluded (reduced n)."
+        "programmatic attacker vs the opus gate, COMPLETE (12 goals x 3 seeds, D-032); reduced-n (ERROR excluded)."
       ]
     },
     {
@@ -184,24 +195,24 @@
     },
     {
       "metric_id": "attack.llm_attacker_vs_llm",
-      "value": null,
-      "ci_lo": null,
-      "ci_hi": null,
-      "n": 0,
+      "value": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.242494,
+      "n": 12,
       "task": "P8",
       "caveats": [
-        "blocked, not measured: preregistered Anthropic attacker vs the opus LLM gate (SAME-VENDOR) did not run before the Anthropic usage cap (D-030); no fabrication."
+        "PREREGISTERED Anthropic claude-opus-5-5 attacker vs the opus LLM gate, COMPLETE 6 goals x 2 seeds x 20 queries (D-032). SAME-VENDOR and same model (attacker and gate both claude-opus-5-5) -- interpret with care."
       ]
     },
     {
       "metric_id": "attack.llm_attacker_vs_typed",
       "value": 0.0,
       "ci_lo": 0.0,
-      "ci_hi": 0.324408,
-      "n": 8,
+      "ci_hi": 0.242494,
+      "n": 12,
       "task": "P8",
       "caveats": [
-        "PREREGISTERED Anthropic opus attacker vs TYPED gate: the full 6x2x20 did NOT complete (Anthropic usage cap, D-030). Value shown is the earlier REAL reduced run (n=8); not backfilled, exact n. typed is not an LLM (no same-vendor issue)."
+        "PREREGISTERED Anthropic claude-opus-5-5 attacker vs TYPED gate, COMPLETE 6 goals x 2 seeds x 20 queries, gray-box (D-032); typed is not an LLM (no same-vendor issue)."
       ]
     },
     {
@@ -228,10 +239,10 @@
     },
     {
       "metric_id": "attack.llm_parity.static_decomp",
-      "value": 0.029412,
-      "ci_lo": 0.005211,
-      "ci_hi": 0.149156,
-      "n": 34,
+      "value": 0.083333,
+      "ci_lo": 0.028749,
+      "ci_hi": 0.218267,
+      "n": 36,
       "task": "P8",
       "caveats": [
         "opus claude-opus-5-5 parity gate, static+decomp+xreq; ERROR excluded from n (D-030)"
@@ -684,25 +695,25 @@
     },
     {
       "metric_id": "falseblock.llm_parity.benign",
-      "value": 0.003413,
-      "ci_lo": 0.000603,
-      "ci_hi": 0.019076,
-      "n": 293,
+      "value": 0.003401,
+      "ci_lo": 0.000601,
+      "ci_hi": 0.019012,
+      "n": 294,
       "task": "P8",
       "caveats": [
         "opus claude-opus-5-5 parity gate, benign sample; ERROR/unparseable excluded from n (D-030)",
-        "n_errors=1"
+        "n_errors=0"
       ]
     },
     {
       "metric_id": "falseblock.llm_parity.surprise",
       "value": 0.0,
       "ci_lo": 0.0,
-      "ci_hi": 0.012898,
-      "n": 294,
+      "ci_hi": 0.012769,
+      "n": 297,
       "task": "P8",
       "caveats": [
-        "opus gate surprise sample; ERROR excluded; n_errors=3"
+        "opus gate surprise sample; ERROR excluded; n_errors=0"
       ]
     },
     {
@@ -751,10 +762,10 @@
     },
     {
       "metric_id": "llm.spend_usd",
-      "value": 60.9802,
+      "value": 93.8221,
       "ci_lo": null,
       "ci_hi": null,
-      "n": 3720,
+      "n": 5131,
       "task": "P8",
       "caveats": [
         "cumulative metered LLM spend across all runs (cap 500; Anthropic promo credit used)"
@@ -795,13 +806,13 @@
     },
     {
       "metric_id": "variance.llm.flip_rate",
-      "value": null,
-      "ci_lo": null,
-      "ci_hi": null,
-      "n": 0,
+      "value": 0.033613,
+      "ci_lo": 0.013148,
+      "ci_hi": 0.083249,
+      "n": 119,
       "task": "P8",
       "caveats": [
-        "blocked, not measured: opus run-to-run variance (120x5) not reached before the Anthropic usage cap (D-030). The earlier OpenAI gpt-5.1 variance 0.30 is kept as variance.llm_gpt51.flip_rate; not backfilled here."
+        "opus claude-opus-5-5 gate run-to-run variance, 120 plans x 5 distinct-request repeats (n=119 after excluding 1 plan with an ERROR rep); MEASURED (D-032)."
       ]
     },
     {

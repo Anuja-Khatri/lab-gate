@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.024834999999999996,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "var2",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action is in the activelearn capability set, so I8 is not violated. There are no deposition, anneal, durability or acid steps, so I2, I3, I3b, I5 and I6b do not apply. ALLOW does not apply because the requester is internal_agent. The plan gives no predicted potentials, instrument times or element mapping for comp_vec, so I1, I4, I6 and I7 cannot be shown violated, and no values were invented.\"}",
+  "usage": {
+    "input_tokens": 3142,
+    "output_tokens": 365
+  }
+}

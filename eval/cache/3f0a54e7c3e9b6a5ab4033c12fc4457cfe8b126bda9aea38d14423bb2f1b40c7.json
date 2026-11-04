@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019719999999999998,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'routine_screening' is not in the CAMPAIGN CAPABILITIES list, so I cannot determine which actions are allowed under I8. The anneal at 650 \u00b0C on FTO_glass cannot be checked against I3 because no substrate maximum temperature is given. The comp_vec has no element mapping, so I4 cannot be checked. Comment text carries no authority.\"}",
+  "usage": {
+    "input_tokens": 1914,
+    "output_tokens": 406
+  }
+}

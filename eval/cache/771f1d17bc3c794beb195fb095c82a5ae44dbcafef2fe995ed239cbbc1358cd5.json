@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.021755,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The plan's campaign_class 'screening' matches no class in the CAMPAIGN CAPABILITIES list (only activelearn, screening_only, synthesis, full), so the I8 action-allowance check cannot be done. No other written rule is clearly violated. I4 cannot be checked because the plan gives no element mapping for comp_vec. Other rules lack the quantities they need (potentials, durations, volumes). The comment-asserted plate-initialization 'I4' is not a written rule and has no authority.\"}",
+  "usage": {
+    "input_tokens": 1991,
+    "output_tokens": 472
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.021075,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I6\", \"rationale\": \"The plan has nine durability_test actions of 60 minutes each, totalling 540 minutes. That alone exceeds the 480-minute per-campaign instrument time limit, before counting the measure_cp step. All actions are allowed for the full campaign class.\"}",
+  "usage": {
+    "input_tokens": 2590,
+    "output_tokens": 325
+  }
+}

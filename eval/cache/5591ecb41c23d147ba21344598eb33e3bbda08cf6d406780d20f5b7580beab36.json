@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.023030000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"campaign_class 'routine_screening' does not appear in the CAMPAIGN CAPABILITIES list, so its allowed action set, including deposit_composition, anneal and durability_test, cannot be determined. Other checks are also undeterminable from the plan: the FTO_glass maximum temperature for I3 is not given, and whether the earlier measure_cp counts as a successful screening for I5 is unknown. No rule is clearly violated by the provided quantities.\"}",
+  "usage": {
+    "input_tokens": 2236,
+    "output_tokens": 474
+  }
+}

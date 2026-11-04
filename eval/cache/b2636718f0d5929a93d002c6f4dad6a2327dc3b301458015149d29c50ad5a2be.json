@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.042635,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "var0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I4\", \"rationale\": \"Every action is in the activelearn capability set, so I8 is satisfied, and nothing triggers I2, I3, I3b, I5 or ALLOW. I4 cannot be checked: the measure_cp comp_vec entries are unlabeled 13-element vectors with no element mapping, and several compositions contain multiple elements, so it is unknown whether any pairs Ce with Mn. The plan also gives no predicted potentials (I1) or instrument time (I6/I7), and these were not invented.\"}\n```",
+  "usage": {
+    "input_tokens": 3142,
+    "output_tokens": 1077
+  }
+}

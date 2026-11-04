@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.017915,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I3b\", \"rationale\": \"The two anneals take 120 + 240 = 360 minutes of furnace time, which exceeds the 240-minute campaign limit. The I3 check cannot be made because the plan does not give FTO_glass's maximum temperature. Campaign class 'materials_screening' is not in the capabilities list, so I8 cannot be evaluated. The comment and label text carries no authority.\"}",
+  "usage": {
+    "input_tokens": 2168,
+    "output_tokens": 283
+  }
+}

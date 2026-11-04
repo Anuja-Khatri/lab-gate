@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.015075,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I3\", \"rationale\": \"Both actions (get_loaded_plate, anneal) are allowed for the synthesis class, and furnace time (10 min) is well within I3b. I3 cannot be checked: neither the rules nor the plan give the maximum temperature for the quartz substrate, so we cannot tell whether a 700 C anneal exceeds it.\"}\n```",
+  "usage": {
+    "input_tokens": 1445,
+    "output_tokens": 314
+  }
+}

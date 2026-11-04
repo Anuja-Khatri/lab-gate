@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019485000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "var1",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are listed for activelearn (I8 satisfied). The requester is internal, so the partner allowlist does not apply. No anneal, deposition, durability test, acid volume or explicit time/potential quantities are given that would violate I1-I7. comp_vec has no element labels, so I4 (Ce+Mn) cannot be evaluated and no violation is inferred.\"}",
+  "usage": {
+    "input_tokens": 1777,
+    "output_tokens": 424
+  }
+}

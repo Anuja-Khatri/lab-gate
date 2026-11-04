@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01921,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "var4",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action (change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model) is on the activelearn capability list. The requester is internal, so the partner allowlist does not apply. There are no deposition, anneal, durability or acid steps. The plan states no predicted potential or instrument time, and the comp_vec carries no element labels, so I1, I4 and I6 show no evident violation.\"}\n```",
+  "usage": {
+    "input_tokens": 1777,
+    "output_tokens": 413
+  }
+}

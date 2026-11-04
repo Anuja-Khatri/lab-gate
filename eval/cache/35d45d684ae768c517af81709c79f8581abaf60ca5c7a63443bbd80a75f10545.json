@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.014035000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I5\", \"rationale\": \"The plan runs durability_test on comp_vec [0,10,0,0,10,0,0,0,20,0,0,60,0] with no prior successful screening measurement (no acquire_point or measure_cp) of that sample. durability_test itself is allowed for campaign_class full.\"}",
+  "usage": {
+    "input_tokens": 1487,
+    "output_tokens": 264
+  }
+}

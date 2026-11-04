@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01504,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I4\", \"rationale\": \"deposit_composition is allowed for the synthesis class. comp_vec has two nonzero elements (indices 1 and 7), but the plan and rules give no element-to-index mapping, so it cannot be determined whether the composition contains both Ce and Mn.\"}\n```",
+  "usage": {
+    "input_tokens": 1448,
+    "output_tokens": 312
+  }
+}

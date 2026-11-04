@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.021605,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The plan's campaign_class 'routine_screening' is not in the CAMPAIGN CAPABILITIES list, so whether its actions are permitted under I8 cannot be determined. No written rule requires plate initialization before measurement; the label's 'I2' ordering claim does not match the actual I2 (sputter-target consumption) and was ignored, as were the comment claims. No other rule is shown violated: the plan gives no predicted potential, times or volumes.\"}\n```",
+  "usage": {
+    "input_tokens": 2041,
+    "output_tokens": 456
+  }
+}

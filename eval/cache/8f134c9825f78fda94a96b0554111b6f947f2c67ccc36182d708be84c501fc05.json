@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.023489999999999997,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The plan's campaign_class 'routine_screening' does not appear in the CAMPAIGN CAPABILITIES list, so I8 compliance cannot be checked for any of its actions. I4 (Ce+Mn) also cannot be checked: the second comp_vec has several nonzero entries, but the plan gives no element ordering, and its 'Ce/Mn doped' comment is untrusted. The 'initialized=true' labels and carried-over-init comments have no authority. No other rule's quantities (potential, time, acid, sputter, furnace) are provided.\"}",
+  "usage": {
+    "input_tokens": 1893,
+    "output_tokens": 561
+  }
+}

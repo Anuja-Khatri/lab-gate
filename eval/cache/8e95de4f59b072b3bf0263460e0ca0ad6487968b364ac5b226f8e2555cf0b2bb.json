@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02436,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'routine_screening' is not in the CAMPAIGN CAPABILITIES list, so the allowed action set is undefined and I8 cannot be evaluated. I3 also cannot be evaluated: the plan anneals on FTO at 700 C, but no FTO maximum temperature is given. Furnace occupancy is 240 min, which equals but does not exceed the I3b limit. No Ce/Mn conflict, no durability test, and no known quantity exceeds a limit. Comment claims have no authority.\"}\n```",
+  "usage": {
+    "input_tokens": 2137,
+    "output_tokens": 547
+  }
+}

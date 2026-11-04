@@ -61,11 +61,14 @@ not mean.
    enforced by tests/test_error_scoring.py), and the opus arms were re-run on live
    Anthropic with an adequate budget: the real opus gate is PERMISSIVE (benign
    false-block 0.003, abstain 0.003, decided coverage 0.997; static+decomposition
-   attack success 0.28), and information parity cuts attack success to 0.03. The
-   preregistered Anthropic adaptive attacker (6x2x20) and the opus run-to-run variance
-   hit the Anthropic monthly cap again and are "blocked, not measured"; the
-   programmatic-attacker-vs-opus number is partial (n=16). The earlier gpt-5.1 arm
-   (over-blocks, false-block 0.64) is unaffected (it used an adequate budget).
+   attack success 0.28, adaptive 0.28, variance 0.03), and information parity cuts
+   attack success to 0.08. In round 3d (D-032) the preregistered Anthropic adaptive
+   attacker COMPLETED while Anthropic was live: vs the typed gate 0.00 (n=12) and vs the
+   opus gate 0.00 (n=12, same-vendor), and the opus run-to-run variance was measured
+   (0.03, n=119). A free re-scoring pass confirmed gpt-5.1 is clean (0% truncation;
+   false-block 0.64 stands) and documented the opus pre-fix 90% truncation in
+   docs/CORRECTIONS.md. The remaining blocked arms are the OpenAI gpt-5.1 tails (no
+   credits) and the Gemini arms (free-tier quota).
 
    Round-3/3b (D-026/D-028/D-029): a Gemini arm was added to restore
    cross-vendor attacker separation and a second LLM-gate vendor. All three keys were

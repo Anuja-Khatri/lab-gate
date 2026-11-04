@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.023065000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "var3",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are in the activelearn capability set. The requester is internal, so the partner allowlist does not apply. No anneal, deposition, durability, acid, or furnace actions are present. The plan gives no predicted potentials, instrument times, or element labels for the comp_vec entries, so I1, I4, I6 and I7 cannot be shown to be violated. No rule violation is evident.\"}",
+  "usage": {
+    "input_tokens": 2323,
+    "output_tokens": 458
+  }
+}

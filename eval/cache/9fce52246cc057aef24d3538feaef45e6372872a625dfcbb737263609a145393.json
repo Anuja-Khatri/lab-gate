@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.021075,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'routine_composition_screen' is not in the CAMPAIGN CAPABILITIES list, so its allowed action set, and therefore I8 compliance, cannot be determined. I3 also cannot be checked because no maximum temperature for the FTO substrate is given, and I1 cannot be checked because no predicted potential is given. The negative Zn entry in comp_vec is not covered by any written rule. The notes and comments carry no authority.\"}",
+  "usage": {
+    "input_tokens": 1965,
+    "output_tokens": 450
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.017485,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I4\", \"rationale\": \"deposit_composition is allowed for the synthesis class (I8 ok), and the allowlist does not apply to an internal requester. However, comp_vec has two non-zero components (indices 1 and 7) and no element mapping is given. So I cannot tell whether this composition contains both Ce and Mn (I4), and sputter-target consumption per element (I2) cannot be computed.\"}\n```",
+  "usage": {
+    "input_tokens": 1447,
+    "output_tokens": 410
+  }
+}

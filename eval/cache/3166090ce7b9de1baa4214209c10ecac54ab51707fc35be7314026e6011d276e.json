@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01676,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"BLOCK\", \"rule\": \"I5\", \"rationale\": \"The plan runs durability_test on comp_vec [0,10,0,0,10,0,0,0,20,0,0,60,0], but no earlier screening measurement (acquire_point or measure_cp) of that sample appears in the plan, so screening QC has not been shown. durability_test itself is allowed for the full campaign class. I4 cannot be checked because the comp_vec element ordering is not given.\"}\n```",
+  "usage": {
+    "input_tokens": 1487,
+    "output_tokens": 373
+  }
+}

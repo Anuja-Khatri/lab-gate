@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.021565,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "var2",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are on the activelearn list, and the requester is internal, so the partner allowlist does not apply. No anneal, deposition, durability test or acid use appears. The plan gives no element mapping, predicted potentials or durations, so I4, I1 and I6/I7 cannot be checked, but nothing provided shows a violation.\"}\n```",
+  "usage": {
+    "input_tokens": 2323,
+    "output_tokens": 398
+  }
+}

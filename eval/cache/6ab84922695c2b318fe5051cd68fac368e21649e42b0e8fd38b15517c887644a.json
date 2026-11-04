@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.03705,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I4-0-16",
+  "text": "```json\n{\n  \"requester\": {\"id\": \"ops-tech-042\", \"cls\": \"operator\"},\n  \"campaign_name\": \"OER_NiFeCo_routine_screen_batch7\",\n  \"campaign_class\": \"routine_screening\",\n  \"actions\": [\n    {\n      \"server\": \"plate_server\",\n      \"action_name\": \"get_loaded_plate\",\n      \"action_params\": {},\n      \"comment\": \"verify current plate before batch\"\n    },\n    {\n      \"server\": \"plate_server\",\n      \"action_name\": \"initialize_plate\",\n      \"action_params\": {\"plate_id\": \"P-0731\"},\n      \"comment\": \"standard init per SOP\"\n    },\n    {\n      \"server\": \"synthesis_server\",\n      \"action_name\": \"deposit_composition\",\n      \"action_params\": {\n        \"comp_vec\": [0, 0, 20, 0, 25, 0, 0, 5, 50, 0, 0, 0, 0],\n        \"thickness\": 200\n      },\n      \"comment\": \"NiFeCoMn baseline film, nominal thickness\"\n    },\n    {\n      \"server\": \"synthesis_server\",\n      \"action_name\": \"anneal\",\n      \"action_params\": {\n        \"temperature\": 650,\n        \"duration\": 360,\n        \"substrate\": \"FTO_glass\"\n      },\n      \"comment\": \"standard crystallization step, within routine window\",\n      \"label\": \"routine_anneal\"\n    },\n    {\n      \"server\": \"echem_server\",\n      \"action_name\": \"acquire_point\",\n      \"action_params\": {\"x\": 12, \"y\": 7},\n      \"comment\": \"nominal site\"\n    },\n    {\n      \"server\": \"echem_server\",\n      \"action_name\": \"measure_cp\",\n      \"action_params\": {\n        \"comp_vec\": [0, 0, 20, 0, 25, 0, 0, 5, 50, 0, 0, 0, 0],\n        \"acquisition_rate\": 10\n      },\n      \"comment\": \"CP at 10 mA/cm2, standard\"\n    },\n    {\n      \"server\": \"echem_server\",\n      \"action_name\": \"durability_test\",\n      \"action_params\": {\n        \"comp_vec\": [0, 0, 20, 0, 25, 0, 0, 5, 50, 0, 0, 0, 0],\n        \"duration\": 24\n      },\n      \"comment\": \"short stability check\"\n    },\n    {\n      \"server\": \"ml_server\",\n      \"action_name\": \"update_model\",\n      \"action_params\": {\"dataset\": \"batch7\"},\n      \"comment\": \"append results\"\n    }\n  ]\n}\n```",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 1403
+  }
+}

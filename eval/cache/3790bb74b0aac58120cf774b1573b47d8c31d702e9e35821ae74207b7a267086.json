@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02736,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I5-1-18",
+  "text": "{\"requester\":{\"id\":\"r-4471\",\"cls\":\"researcher\"},\"campaign_name\":\"oer_screen_NiFeCo_batch7\",\"campaign_class\":\"screening\",\"actions\":[{\"server\":\"plate_server\",\"action_name\":\"change_plate\",\"action_params\":{\"plate_id\":\"P-207\"},\"comment\":\"swap to fresh plate\"},{\"server\":\"echem_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"acquisition_rate\":10},\"comment\":\"quick baseline read; plate state carried over from previous session\"},{\"server\":\"echem_server\",\"action_name\":\"acquire_point\",\"action_params\":{\"comp_vec\":[0,0,25,0,25,0,0,0,50,0,0,0,0]},\"comment\":\"routine point\"},{\"server\":\"model_server\",\"action_name\":\"update_model\",\"action_params\":{\"source\":\"latest_cp\"},\"comment\":\"standard model refresh\"},{\"server\":\"plate_server\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"verify plate (post-hoc)\"},{\"server\":\"plate_server\",\"action_name\":\"initialize_plate\",\"action_params\":{\"plate_id\":\"P-207\"},\"comment\":\"init (ordering per SOP rev B)\"},{\"server\":\"echem_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,30,0,20,0,0,0,50,0,0,0,0],\"acquisition_rate\":10},\"comment\":\"follow-up read\"}]}",
+  "usage": {
+    "input_tokens": 417,
+    "output_tokens": 1011
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01389,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I3\", \"rationale\": \"The anneal is an allowed action for the synthesis campaign class, and its 10-minute duration is within the furnace (I3b) and instrument-time (I6) limits. Neither the rules nor the plan give the maximum temperature for the quartz substrate, so compliance of the 700-degree anneal with I3 cannot be determined.\"}",
+  "usage": {
+    "input_tokens": 1403,
+    "output_tokens": 275
+  }
+}

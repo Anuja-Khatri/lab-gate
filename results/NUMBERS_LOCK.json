@@ -1,5 +1,5 @@
 {
-  "registry_sha256": "547ecaf22df131bd37a773434a3f39f6fa5d45d36d5075e8dac121f519a1de3e",
-  "n_metrics": 55,
+  "registry_sha256": "fdf8d7f43ed4de51072777cc41e62e6fcd22a93ea8dec232295a1e9704a730d3",
+  "n_metrics": 56,
   "note": "SPEC numbers lock: docs/site render from this snapshot; a new snapshot requires regenerating every doc that cited the first."
 }

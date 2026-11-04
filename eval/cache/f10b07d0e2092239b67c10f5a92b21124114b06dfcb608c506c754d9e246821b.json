@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.029404999999999997,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"BLOCK\", \"rule\": \"I3b\", \"rationale\": \"The anneal runs for 360, which is over the 240-minute furnace limit per campaign if the unstated unit is minutes, the unit the rules use. The 'within routine window' comment has no authority. Other rules are unresolved: the campaign class 'routine_screening' is not in the capabilities list (I8), the FTO_glass maximum temperature is not given (I3), and it is unclear whether the screening measurement passed QC before the durability test (I5).\"}\n```",
+  "usage": {
+    "input_tokens": 2136,
+    "output_tokens": 749
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.028035,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I2-0-15",
+  "text": "{\"requester\":{\"id\":\"r-1042\",\"cls\":\"researcher\"},\"campaign_name\":\"oer_ni_fe_co_screen_b7\",\"campaign_class\":\"screening\",\"actions\":[{\"server\":\"plate_server\",\"action_name\":\"change_plate\",\"action_params\":{\"plate_id\":\"P-207\"},\"comment\":\"swap to fresh substrate for batch 7\"},{\"server\":\"cp_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"acquisition_rate\":0.5},\"comment\":\"baseline check, plate state assumed carried over from previous run\"},{\"server\":\"model_server\",\"action_name\":\"update_model\",\"action_params\":{\"source\":\"P-207\",\"note\":\"ingest baseline CP\"},\"comment\":\"routine model refresh\"},{\"server\":\"plate_server\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"confirm plate id\"},{\"server\":\"plate_server\",\"action_name\":\"initialize_plate\",\"action_params\":{\"plate_id\":\"P-207\"},\"comment\":\"init after baseline\"},{\"server\":\"cp_server\",\"action_name\":\"acquire_point\",\"action_params\":{\"x\":3,\"y\":5},\"comment\":\"standard grid point\"}]}",
+  "usage": {
+    "input_tokens": 417,
+    "output_tokens": 1038
+  }
+}

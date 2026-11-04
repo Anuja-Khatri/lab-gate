@@ -22,21 +22,23 @@ the parity arm additionally gets the predicted potential the typed gate's I1 use
 
 | metric | typed | classifier | LLM gate (opus) | LLM parity (opus) |
 |---|---|---|---|---|
-| attack, static+decomp | 0.00 (n=37) | 0.24 (n=37) | 0.28 (n=36) | 0.03 (n=34) |
-| attack, adaptive | 0.00 (n=240) | 0.32 (n=240) | 0.06 (n=16, partial) | (not run) |
+| attack, static+decomp | 0.00 (n=37) | 0.24 (n=37) | 0.28 (n=36) | 0.08 (n=36) |
+| attack, adaptive | 0.00 (n=240) | 0.32 (n=240) | 0.28 (n=36) | (not run) |
 | false-block, benign | 0.00 (n=13627) | 0.07 (n=13627) | 0.003 (n=294) | 0.003 (n=293) |
 | false-block, surprise | 0.00 (n=990) | 0.002 (n=990) | 0.00 (n=297) | 0.00 (n=294) |
 | abstain, benign | 0.00 (n=13627) | 0.00 (n=13627) | 0.003 (n=294) | 0.00 (n=293) |
 | decided coverage, benign | 1.00 | 1.00 | 0.997 | 1.00 |
-| run-to-run variance | 0.00 (n=120) | 0.00 (n=120) | blocked | (not run) |
+| run-to-run variance | 0.00 (n=120) | 0.00 (n=120) | 0.03 (n=119) | (not run) |
 
-Corrected in round 3c (D-030): round-2's opus "over-abstains 0.90" was a truncation
-artifact (max_tokens=400 for a reasoning model -> unparseable output wrongly scored as
-ABSTAIN). The ERROR audit caught it; re-run with adequate tokens + reduced-n, the real
-opus gate is PERMISSIVE (decides ~all benign, lets through 0.28 of attacks); parity
-(predicted potential appended) cuts attack success to 0.03. The earlier gpt-5.1 gate
-over-BLOCKED (false-block 0.64). Opus variance is blocked (Anthropic cap); the real
-gpt-5.1 variance 0.30 is kept as `variance.llm_gpt51`.
+Preregistered Anthropic opus attacker: vs typed 0.00 (n=12), vs opus gate 0.00 (n=12,
+same-vendor). Corrected in round 3c/3d (D-030/D-032): round-2's opus "over-abstains
+0.90" was a truncation artifact (max_tokens=400 for a reasoning model -> unparseable
+output wrongly scored as ABSTAIN); the free re-scoring pass confirmed gpt-5.1 is clean
+(0% truncation) and the opus pre-fix was 90% truncation (see docs/CORRECTIONS.md). Re-run
+with adequate tokens + reduced-n, the real opus gate is PERMISSIVE (decides ~all benign,
+lets through 0.28 of attacks, adaptive 0.28, variance 0.03); parity cuts attack success
+to 0.08. The gpt-5.1 gate over-BLOCKED (false-block 0.64, variance 0.30, kept as
+`*.llm_gpt51`).
 
 The opus LLM gate's failure mode is massive over-ABSTENTION (0.90 of benign); the
 earlier OpenAI gpt-5.1 arm over-BLOCKED (0.64) with adaptive attack 0.46 and variance
@@ -96,6 +98,16 @@ as observed.
 - `.env` contents never printed, logged, or committed.
 
 ## Last completed task
+Owner review round 3d (D-032): FREE re-scoring pass over all cached LLM responses
+(gpt-5.1 CLEAN 0% truncation -> unchanged; opus pre-fix 0.90 truncation, already
+corrected; docs/CORRECTIONS.md with old->new, never silent); Anthropic live -> the
+PREREGISTERED arms COMPLETED (adaptive attacker vs typed 0.00/n=12, vs opus gate
+0.00/n=12 same-vendor; programmatic vs opus 0.28/n=36; opus variance 0.03/n=119).
+Re-locked (56 metrics), regenerated table/FINAL_REPORT/POST/README/site, updated
+CORRECTIONS/LIMITATIONS/deviations/OWNER_TODO, `make ci` green (76 tests), `make demo`
+reproduces. Spend $93.82/500 (promo credit). See DECISIONS D-001..D-032. BUILD COMPLETE.
+
+## (prior) round 3c task
 Owner review round 3c (D-030/D-031): global ERROR audit (ERROR=reduced n, never a
 verdict; CI test added) caught and retracted the round-2 opus truncation artifact;
 re-ran the opus gate arms correctly on live Anthropic (permissive gate; parity cuts

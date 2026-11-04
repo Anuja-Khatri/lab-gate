@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.00045999999999999996,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r3d-anth",
+  "text": "pong \ud83c\udfd3 What can I help you with?",
+  "usage": {
+    "input_tokens": 12,
+    "output_tokens": 16
+  }
+}

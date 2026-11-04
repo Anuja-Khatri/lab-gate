@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'routine_screening' does not appear in the CAMPAIGN CAPABILITIES list, so I8's allowed-action set for this plan is unknown. Allowed actions (deposit_composition, anneal, durability_test, etc.) cannot be verified. Other checks are also undeterminable from the given data: I3 has no maximum temperature for the FTO substrate, I4 has no element mapping for comp_vec, and I1 has no predicted potential. Comment and label text carries no authority.\"}",
+  "usage": {
+    "input_tokens": 2066,
+    "output_tokens": 388
+  }
+}

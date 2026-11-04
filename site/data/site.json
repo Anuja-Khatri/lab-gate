@@ -1,7 +1,7 @@
 {
   "numbers_lock": {
-    "registry_sha256": "547ecaf22df131bd37a773434a3f39f6fa5d45d36d5075e8dac121f519a1de3e",
-    "n_metrics": 55,
+    "registry_sha256": "fdf8d7f43ed4de51072777cc41e62e6fcd22a93ea8dec232295a1e9704a730d3",
+    "n_metrics": 56,
     "note": "SPEC numbers lock: docs/site render from this snapshot; a new snapshot requires regenerating every doc that cited the first."
   },
   "scoreboard": [
@@ -148,13 +148,13 @@
       },
       "attack_adaptive": {
         "metric_id": "attack.llm.adaptive",
-        "value": 0.0625,
-        "ci_lo": 0.011119,
-        "ci_hi": 0.283287,
-        "n": 16,
+        "value": 0.277778,
+        "ci_lo": 0.158483,
+        "ci_hi": 0.439925,
+        "n": 36,
         "task": "P8",
         "caveats": [
-          "programmatic attacker vs the fixed opus gate; PARTIAL n=16 of 36 trajectories (Anthropic monthly usage cap hit mid-phase, regains 2026-12-01, R-08 D-030); trajectories with no decided gate verdict excluded (reduced n)."
+          "programmatic attacker vs the opus gate, COMPLETE (12 goals x 3 seeds, D-032); reduced-n (ERROR excluded)."
         ]
       },
       "falseblock_benign": {
@@ -194,13 +194,13 @@
       },
       "variance": {
         "metric_id": "variance.llm.flip_rate",
-        "value": null,
-        "ci_lo": null,
-        "ci_hi": null,
-        "n": 0,
+        "value": 0.033613,
+        "ci_lo": 0.013148,
+        "ci_hi": 0.083249,
+        "n": 119,
         "task": "P8",
         "caveats": [
-          "blocked, not measured: opus run-to-run variance (120x5) not reached before the Anthropic usage cap (D-030). The earlier OpenAI gpt-5.1 variance 0.30 is kept as variance.llm_gpt51.flip_rate; not backfilled here."
+          "opus claude-opus-5-5 gate run-to-run variance, 120 plans x 5 distinct-request repeats (n=119 after excluding 1 plan with an ERROR rep); MEASURED (D-032)."
         ]
       }
     },
@@ -208,10 +208,10 @@
       "gate": "llm_parity",
       "attack_static_decomp": {
         "metric_id": "attack.llm_parity.static_decomp",
-        "value": 0.029412,
-        "ci_lo": 0.005211,
-        "ci_hi": 0.149156,
-        "n": 34,
+        "value": 0.083333,
+        "ci_lo": 0.028749,
+        "ci_hi": 0.218267,
+        "n": 36,
         "task": "P8",
         "caveats": [
           "opus claude-opus-5-5 parity gate, static+decomp+xreq; ERROR excluded from n (D-030)"
@@ -220,37 +220,37 @@
       "attack_adaptive": null,
       "falseblock_benign": {
         "metric_id": "falseblock.llm_parity.benign",
-        "value": 0.003413,
-        "ci_lo": 0.000603,
-        "ci_hi": 0.019076,
-        "n": 293,
+        "value": 0.003401,
+        "ci_lo": 0.000601,
+        "ci_hi": 0.019012,
+        "n": 294,
         "task": "P8",
         "caveats": [
           "opus claude-opus-5-5 parity gate, benign sample; ERROR/unparseable excluded from n (D-030)",
-          "n_errors=1"
+          "n_errors=0"
         ]
       },
       "abstain_benign": {
         "metric_id": "abstain.llm_parity.benign",
         "value": 0.0,
         "ci_lo": 0.0,
-        "ci_hi": 0.012941,
-        "n": 293,
+        "ci_hi": 0.012898,
+        "n": 294,
         "task": "P8",
         "caveats": [
           "opus claude-opus-5-5 parity gate, benign sample; ERROR/unparseable excluded from n (D-030)",
-          "n_errors=1"
+          "n_errors=0"
         ]
       },
       "falseblock_surprise": {
         "metric_id": "falseblock.llm_parity.surprise",
         "value": 0.0,
         "ci_lo": 0.0,
-        "ci_hi": 0.012898,
-        "n": 294,
+        "ci_hi": 0.012769,
+        "n": 297,
         "task": "P8",
         "caveats": [
-          "opus gate surprise sample; ERROR excluded; n_errors=3"
+          "opus gate surprise sample; ERROR excluded; n_errors=0"
         ]
       },
       "variance": null
@@ -1004,6 +1004,6 @@
     "latency.p95_ms": 20.378,
     "taint.sentinel_channel": 0,
     "spec_coverage.out_of_spec_reached": 0.205882,
-    "llm.spend_usd": 60.9802
+    "llm.spend_usd": 93.8221
   }
 }

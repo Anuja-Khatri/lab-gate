@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.012705000000000001,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I3b\", \"rationale\": \"Five anneals of 60 minutes each give 300 minutes of total furnace occupancy, over the 240-minute campaign limit. Anneal is an allowed action for the synthesis class.\"}",
+  "usage": {
+    "input_tokens": 1691,
+    "output_tokens": 170
+  }
+}

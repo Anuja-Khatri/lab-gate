@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01724,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The plan's campaign_class 'routine_screening' is not defined in the CAMPAIGN CAPABILITIES list, so rule I8 (allowed action set) cannot be evaluated. It resembles 'screening_only', but assuming that would be guessing. No other rule is clearly violated with the data given: no predicted potential is provided for I1, the comp_vec element mapping is not given for I4, and time/volume totals are not provided. Comment claims about prior initialization carry no authority.\"}",
+  "usage": {
+    "input_tokens": 1763,
+    "output_tokens": 337
+  }
+}

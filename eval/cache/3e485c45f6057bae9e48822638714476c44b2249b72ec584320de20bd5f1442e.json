@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019105,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'routine_screening' is not defined in the CAMPAIGN CAPABILITIES list, so the allowed action set for I8 cannot be determined. Treating it as 'screening_only' would be an assumption, which the instructions forbid. The comp_vec also has no element mapping, so I4 (Ce+Mn) cannot be checked. No time, volume or potential figures are given that would trigger I1, I6 or I6b. Comment claims about prior initialization carry no authority.\"}",
+  "usage": {
+    "input_tokens": 1911,
+    "output_tokens": 382
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02289,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "var4",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action is in the activelearn capability set (I8). There are no deposit, anneal, durability or acid actions, so I2, I3, I3b, I5 and I6b are not triggered. The requester is internal_agent, so the partner allowlist does not apply. The plan states no potentials, instrument times or comp_vec element mapping, so nothing shows a violation of I1, I4, I6 or I7.\"}",
+  "usage": {
+    "input_tokens": 2323,
+    "output_tokens": 451
+  }
+}

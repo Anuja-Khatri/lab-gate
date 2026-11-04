@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.016715,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I5\", \"rationale\": \"The plan's only action is a durability_test, and campaign class 'full' does allow it. However, the plan contains no prior successful screening measurement (acquire_point or measure_cp) of this sample, so the sample has not passed screening QC as I5 requires.\"}",
+  "usage": {
+    "input_tokens": 1443,
+    "output_tokens": 380
+  }
+}

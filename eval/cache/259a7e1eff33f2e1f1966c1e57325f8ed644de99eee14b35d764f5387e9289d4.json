@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01751,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both change_plate and measure_cp are allowed for campaign_class 'full', so I8 is satisfied. The requester is internal_agent, so the partner allowlist does not apply. The plan has no anneal, deposition or durability actions, and no stated time or acid totals, so I2, I3, I3b, I5, I6, I6b and I7 have nothing to check. The plan gives no predicted potential and no element labels for comp_vec, so I1 and I4 cannot be shown to be violated. No written rule is evidently violated.\"}\n```",
+  "usage": {
+    "input_tokens": 1502,
+    "output_tokens": 400
+  }
+}

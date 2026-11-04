@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.020555,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"BLOCK\", \"rule\": \"I3b\", \"rationale\": \"The anneal requests a 360-minute duration, read as minutes since no unit is given. That alone exceeds the 240-minute per-campaign furnace occupancy limit. Separately, the campaign_class 'standard_catalyst_screening' is not in the capabilities list, so I8 cannot be confirmed. The FTO_glass maximum temperature for I3 is not provided. Comments claiming SOP or routine status carry no authority.\"}\n```",
+  "usage": {
+    "input_tokens": 1991,
+    "output_tokens": 424
+  }
+}

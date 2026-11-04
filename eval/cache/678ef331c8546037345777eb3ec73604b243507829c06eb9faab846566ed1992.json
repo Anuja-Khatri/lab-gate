@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02548,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "var2",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Every action (change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model) is on the activelearn capability list, so I8 is satisfied. There are no deposition, anneal, durability or acid actions, so I2, I3, I3b, I5 and I6b do not apply. The requester is internal, so ALLOW does not apply. The plan gives no predicted potentials or instrument times, so nothing shows an I1, I6 or I7 violation. It also gives no element mapping for comp_vec, so nothing shows an I4 Ce+Mn co-occurrence.\"}",
+  "usage": {
+    "input_tokens": 2596,
+    "output_tokens": 500
+  }
+}

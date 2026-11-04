@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019229999999999997,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"campaign_class 'routine_composition_screen' is not in the CAMPAIGN CAPABILITIES list, so I8 cannot be evaluated for any action. I3 also cannot be checked because the plan gives no maximum temperature for FTO_glass. No rule is clearly violated: furnace time of 240 min equals but does not exceed the I3b limit.\"}",
+  "usage": {
+    "input_tokens": 1976,
+    "output_tokens": 374
+  }
+}

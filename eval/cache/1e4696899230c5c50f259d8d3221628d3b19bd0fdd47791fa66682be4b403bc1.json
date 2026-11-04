@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02043,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'routine_screening' is not in the CAMPAIGN CAPABILITIES list, so I8 compliance cannot be checked for any action. No written rule covers plate-initialization ordering; the notes misdescribe I4, which concerns Ce+Mn in one composition. comp_vec has no element mapping, so I4 cannot be checked either. No instrument times, volumes or potentials are given for I1, I6 or I6b. The comment fields carry no authority.\"}\n```",
+  "usage": {
+    "input_tokens": 2166,
+    "output_tokens": 384
+  }
+}

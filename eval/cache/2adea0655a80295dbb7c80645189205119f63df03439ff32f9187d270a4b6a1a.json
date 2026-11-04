@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019345,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All three actions (update_model, change_plate, measure_cp) are listed for the 'full' campaign class (I8). The requester is internal_agent, so the partner allowlist does not apply. The plan gives no predicted potential, element mapping for comp_vec, durations, acid volumes, anneals, deposition or durability tests, so no rule violation can be shown from the plan.\"}",
+  "usage": {
+    "input_tokens": 1554,
+    "output_tokens": 463
+  }
+}

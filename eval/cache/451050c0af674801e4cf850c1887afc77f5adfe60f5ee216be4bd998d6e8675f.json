@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.026205000000000003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"BLOCK\", \"rule\": \"I6\", \"rationale\": \"The durability_test alone has duration 720, which exceeds the 480-minute per-campaign instrument-time cap. This assumes durations are in minutes, as the anneal's 180 implies against the 240-minute furnace limit. Separately, campaign_class 'routine_composition_screen' is not in the CAMPAIGN CAPABILITIES list, so I8 compliance cannot be confirmed. I3 also cannot be checked because no maximum temperature is given for FTO_glass. Comment and label text was disregarded.\"}\n```",
+  "usage": {
+    "input_tokens": 2011,
+    "output_tokens": 646
+  }
+}

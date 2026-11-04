@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.026484999999999998,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "var1",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class is activelearn. Every action used (change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model) is in its capability set, so I8 is satisfied. There is no deposition, anneal, durability test or acid use. The requester is internal_agent, so the partner allowlist does not apply. The plan gives no element mapping for comp_vec, predicted potentials or durations. With none of those provided, no rule violation is shown.\"}\n```",
+  "usage": {
+    "input_tokens": 3142,
+    "output_tokens": 431
+  }
+}

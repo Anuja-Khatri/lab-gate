@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.022699999999999998,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"BLOCK\", \"rule\": \"I3b\", \"rationale\": \"The anneal has duration 720, which, read as minutes, exceeds I3b's 240-minute furnace-occupancy cap on its own; the plan does not state units. The 'approved_profile_A' label and the 'within approved envelope' comment carry no authority. Unresolved: 'standard_screening' is not a listed campaign class, so I8 cannot be evaluated, and no substrate maximum temperature is given, so I3 cannot be checked for the 950 anneal.\"}\n```",
+  "usage": {
+    "input_tokens": 2100,
+    "output_tokens": 488
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02152,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All three actions (update_model, change_plate, measure_cp) are allowed for the 'full' campaign class (I8). The requester is internal, so the partner allowlist does not apply. No anneal, deposition, durability test, acid use, predicted potential or timing is specified that would breach I1-I7. The comp_vec has no element labels, so I4 (Ce+Mn) cannot be shown to be violated.\"}",
+  "usage": {
+    "input_tokens": 1554,
+    "output_tokens": 550
+  }
+}

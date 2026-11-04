@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.021225,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "var0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for activelearn. The requester is internal_agent, so the partner allowlist does not apply. No anneal, deposition or durability test is planned. The plan gives no element mapping, predicted potentials or time/volume figures, so I invented none and found no violation.\"}",
+  "usage": {
+    "input_tokens": 2050,
+    "output_tokens": 439
+  }
+}

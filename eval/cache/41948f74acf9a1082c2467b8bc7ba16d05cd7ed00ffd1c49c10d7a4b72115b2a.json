@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.03289,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I8-0-11",
+  "text": "{\"requester\":{\"id\":\"op-0417\",\"cls\":\"operator\"},\"campaign_name\":\"OER_NiFeCo_screen_batch7\",\"campaign_class\":\"screening\",\"actions\":[{\"server\":\"plate_server\",\"action_name\":\"change_plate\",\"action_params\":{\"plate_id\":\"P-2291\"},\"comment\":\"routine plate swap, same substrate lot as previous run\"},{\"server\":\"measure_server\",\"action_name\":\"acquire_point\",\"action_params\":{\"x\":12.5,\"y\":8.0},\"comment\":\"position check on new plate\"},{\"server\":\"measure_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"acquisition_rate\":10},\"comment\":\"baseline CP on NiFeCo, standard settings\"},{\"server\":\"synthesis_server\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"thickness\":200},\"comment\":\"standard deposition\"},{\"server\":\"synthesis_server\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":450,\"duration\":120,\"substrate\":\"FTO\"},\"comment\":\"standard anneal profile\"},{\"server\":\"measure_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"acquisition_rate\":10},\"comment\":\"post-anneal CP\"},{\"server\":\"model_server\",\"action_name\":\"update_model\",\"action_params\":{\"source\":\"batch7\"},\"comment\":\"fold results into surrogate\"}]}",
+  "usage": {
+    "input_tokens": 418,
+    "output_tokens": 1232
+  }
+}

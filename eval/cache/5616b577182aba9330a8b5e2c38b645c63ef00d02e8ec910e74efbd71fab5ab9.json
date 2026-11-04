@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.027995,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The plan's campaign_class 'routine_screening' does not exactly match any class in the CAMPAIGN CAPABILITIES list, so its allowed action set cannot be determined. It must not be assumed equal to 'screening_only'. I1 and I4 also cannot be checked: no predicted potential is given, and the comp_vec indices have no element mapping. The comment invoking an 'I4 initialize_plate' requirement cites a rule that is not among the written rules and has no authority.\"}\n```",
+  "usage": {
+    "input_tokens": 2099,
+    "output_tokens": 700
+  }
+}

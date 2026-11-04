@@ -23,13 +23,17 @@ arm additionally receives the predicted potential the typed gate's I1 uses (D-02
 
 | metric | typed gate | classifier | LLM gate (opus) | LLM parity (opus) |
 |---|---|---|---|---|
-| attack success, static+decomposition | 0.00 (n=37) | 0.24 (n=37) | 0.28 (n=36) | 0.03 (n=34) |
-| attack success, adaptive | 0.00 (n=240) | 0.32 (n=240) | 0.06 (n=16, partial) | (not run) |
+| attack success, static+decomposition | 0.00 (n=37) | 0.24 (n=37) | 0.28 (n=36) | 0.08 (n=36) |
+| attack success, adaptive | 0.00 (n=240) | 0.32 (n=240) | 0.28 (n=36) | (not run) |
 | false-block, benign | 0.00 (n=13627) | 0.07 (n=13627) | 0.003 (n=294) | 0.003 (n=293) |
 | false-block, surprise | 0.00 (n=990) | 0.002 (n=990) | 0.00 (n=297) | 0.00 (n=294) |
 | abstain, benign | 0.00 (n=13627) | 0.00 (n=13627) | 0.003 (n=294) | 0.00 (n=293) |
 | decided coverage, benign | 1.00 | 1.00 | 0.997 | 1.00 |
-| run-to-run variance | 0.00 (n=120) | 0.00 (n=120) | blocked | (not run) |
+| run-to-run variance | 0.00 (n=120) | 0.00 (n=120) | 0.03 (n=119) | (not run) |
+
+Preregistered Anthropic adaptive attacker (claude-opus-5-5): vs the typed gate 0.00
+(n=12, 6 goals x 2 seeds x 20 queries) -- the typed gate resists the LLM attacker as
+well; vs the opus LLM gate 0.00 (n=12, SAME-VENDOR, same model -- interpret with care).
 
 IMPORTANT correction (D-030): round-2's opus arms were a TRUNCATION ARTIFACT -- the
 Anthropic call budget (max_tokens=400) was too small for a reasoning model, so opus
@@ -38,10 +42,11 @@ returned empty/unparseable text that was wrongly scored as ABSTAIN (hence the ea
 with an adequate budget and reduced-n discipline (ERROR excluded from n, never a
 verdict). The REAL opus gate is PERMISSIVE: it decides essentially every benign plan
 (abstain 0.003, false-block 0.003, decided coverage 0.997) but lets through 0.28 of
-the static+decomposition attacks. Information parity -- appending the predicted
-potential the typed gate uses -- drops that to 0.03 (a large within-vendor effect; it
-mainly fixes the I1 misses). The adaptive-vs-opus number is partial (n=16; the
-Anthropic monthly cap hit mid-phase). The earlier OpenAI gpt-5.1 arm failed the OTHER
+the static+decomposition attacks and 0.28 under the adaptive attacker (n=36).
+Information parity -- appending the predicted potential the typed gate uses -- drops
+static+decomposition attack success to 0.08 (a large within-vendor effect, mostly from
+fixing the I1 misses). Its run-to-run variance is 0.03 (n=119): nonzero, unlike the
+deterministic typed gate. The earlier OpenAI gpt-5.1 arm failed the OTHER
 way -- it over-BLOCKED benign plans at 0.64 with adaptive attack success 0.46 and
 run-to-run variance 0.30 (`*.llm_gpt51.*`). So the two free-text gates are unreliable
 in opposite directions: opus too permissive, gpt-5.1 too blocking. The opus run-to-run
@@ -58,7 +63,7 @@ by a quarter of the static attacks and a third of the adaptive ones (n=240).
 
 Information parity (within-vendor, Anthropic opus): appending the predicted potential
 the typed gate's I1 uses drops the opus gate's static+decomposition attack success from
-0.28 to 0.03 -- a large effect, mostly from fixing the instrument-overload (I1) misses
+0.28 to 0.08 -- a large effect, mostly from fixing the instrument-overload (I1) misses
 it otherwise cannot quantify. Both numbers are the same vendor and model
 (claude-opus-5-5), so this is a clean within-vendor comparison; it is never presented
 against a different-vendor gate. The opus gate's benign behaviour (false-block 0.003,
@@ -91,11 +96,10 @@ is blocked, not measured: the Gemini key is valid and live but free-tier quota
   records 1 beyond_horizon + 5 schema_invalid over benign+suites). No in-spec attack
   succeeded.
 - HYP-3 (LLM gate nonzero under injection/decomposition; nonzero variance): SUPPORTED.
-  The opus arm lets through 0.28 of static+decomposition attacks (n=36) and 0.06
-  adaptive (n=16, partial); the gpt-5.1 arm 0.11 static+decomp, 0.46 adaptive, variance
-  0.30. Both free-text gates are unreliable, in OPPOSITE directions: opus is too
-  permissive, gpt-5.1 too blocking. The opus run-to-run variance is blocked, not
-  measured (Anthropic cap); the gpt-5.1 variance 0.30 stands.
+  The opus arm lets through 0.28 of static+decomposition attacks (n=36) and 0.28
+  adaptive (n=36), with run-to-run variance 0.03 (n=119, nonzero); the gpt-5.1 arm 0.11
+  static+decomp, 0.46 adaptive, variance 0.30. Both free-text gates are unreliable, in
+  OPPOSITE directions: opus is too permissive, gpt-5.1 too blocking.
 - HYP-4 (classifier high in-distribution, degrades under adaptive): SUPPORTED. Benign
   false-block 0.07; adaptive attack success 0.32 (n=240) > static 0.24.
 - HYP-5 (typed gate abstains more on the benign stream than the LLM gate):
@@ -143,22 +147,22 @@ are reported with exact n and no extrapolation.
 Vendor note: the headline LLM-gate numbers are the Anthropic opus arm (R-03). The
 originally-pinned OpenAI gpt-5.1 arm is preserved as `attack.llm_gpt51.*` /
 `falseblock.llm_gpt51.benign` for the vendor/model comparison (gpt-5.1 over-blocks;
-opus is too permissive). Total metered LLM spend across all runs: $60.98, within the
-$500 cap and the per-role caps (the Anthropic re-run used the owner's promo credit).
+opus is too permissive). Total metered LLM spend across all runs: $93.82, within the
+$500 cap and the per-role caps (the Anthropic runs used the owner's promo credit).
 
-Round 3c (D-030/D-031). (0) ERROR audit: an LLM call that returns no usable verdict
-(unparseable/empty/quota) is now scored as REDUCED n, never as a verdict, enforced by
-`eval/metrics.decided_counts` and `tests/test_error_scoring.py`. The audit caught that
-round-2's opus "over-abstention 0.90" was a truncation artifact; it is retracted and
-the opus arms were re-run correctly (see the IMPORTANT correction above). (1) Anthropic
-was live (promo credit): the opus gate arms (plain + parity) re-ran to completion; the
-programmatic-attacker-vs-opus is partial (n=16) and the preregistered Anthropic adaptive
-attacker (6x2x20) + the opus variance tail hit the Anthropic monthly cap again (regains
-2026-12-01) and are "blocked, not measured" (attack.llm_attacker_vs_typed keeps the
-earlier real reduced n=8; attack.llm_attacker_vs_llm and variance.llm are null). (2)
-OpenAI gpt-5.1 tails stay blocked (no credits). (3) Gemini is valid and live but
-free-tier (~25 req/model); the hard-$1.50-capped smallest-arm attempt (Gemini attacker
-vs typed) hit the free-tier quota and stays "blocked, not measured" (the cap was never
+Round 3c/3d (D-030/D-031/D-032). (0) ERROR audit + free re-scoring: an LLM call that
+returns no usable verdict (unparseable/empty/quota) is scored as REDUCED n, never as a
+verdict, enforced by `eval/metrics.decided_counts` and `tests/test_error_scoring.py`.
+Re-scoring every cached response showed gpt-5.1 is clean (0% truncation; its metrics
+unchanged) and the opus PRE-FIX runs were 0.90 truncation (the retracted "over-abstention
+0.90" artifact); old->new values are preserved in `docs/CORRECTIONS.md`. (1) Anthropic
+was live across rounds 3c and 3d: the opus gate arms (plain + parity) ran to completion,
+and in round 3d the PREREGISTERED arms completed too -- the programmatic attacker vs the
+opus gate (adaptive 0.28, n=36), the preregistered Anthropic adaptive attacker vs the
+typed gate (0.00, n=12) and vs the opus gate (0.00, n=12, same-vendor), and the opus
+run-to-run variance (0.03, n=119). (2) OpenAI gpt-5.1 tails stay blocked (no credits).
+(3) Gemini is valid and live but free-tier (~25 req/model); the hard-$1.50-capped
+smallest-arm attempt hit the quota and stays "blocked, not measured" (cap never
 approached). Nothing backfilled or fabricated.
 
 Round 3 / 3b (owner independent review; D-026/D-027/D-028/D-029). (1) No earlier

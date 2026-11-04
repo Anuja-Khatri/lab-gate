@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.017805,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The plan's campaign_class 'routine_screening' is not in the CAMPAIGN CAPABILITIES list, so I cannot tell whether deposit_composition, anneal, measure_cp or update_model are allowed under I8. I3 cannot be evaluated because no maximum temperature is given for FTO_glass (anneal at 750). I4 cannot be evaluated because comp_vec has no element mapping.\"}",
+  "usage": {
+    "input_tokens": 1921,
+    "output_tokens": 328
+  }
+}

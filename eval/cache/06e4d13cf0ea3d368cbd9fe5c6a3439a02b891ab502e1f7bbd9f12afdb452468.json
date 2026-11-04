@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.009885000000000001,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"BLOCK\", \"rule\": \"I8\", \"rationale\": \"Campaign class screening_only does not include anneal in its allowed actions (change_plate, get_loaded_plate, initialize_plate, acquire_point, measure_cp, update_model, check_condition, get_progress), so the anneal action is outside the class capability set.\"}",
+  "usage": {
+    "input_tokens": 1402,
+    "output_tokens": 115
+  }
+}

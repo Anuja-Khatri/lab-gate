@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.054595000000000005,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Campaign class 'full' allows change_plate and measure_cp, and no stated limit is shown to be exceeded. There is no deposition, anneal, durability test, acid use, or external-partner allowlist issue. acquisition_rate is not a potential, so I1 cannot be triggered by it. The plan gives no element labels for comp_vec (I4), no per-action durations (I6/I7), and no predicted potentials (I1), so these cannot be evaluated and are not inferred.\"}\n```",
+  "usage": {
+    "input_tokens": 6914,
+    "output_tokens": 801
+  }
+}

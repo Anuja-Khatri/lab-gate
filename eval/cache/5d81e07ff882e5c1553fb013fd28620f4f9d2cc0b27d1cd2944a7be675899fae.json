@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02323,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'composition_screening' is not in the CAMPAIGN CAPABILITIES list, so I cannot tell whether deposit_composition, anneal, durability_test or the other actions are allowed under I8. I3 also cannot be evaluated: the anneal is at 720 C on FTO_glass, but no maximum temperature for that substrate is given. No rule is clearly violated. Furnace time is 240 min, exactly at the I3b limit. A screening measure_cp runs before the durability test (I5). The film is Ni/Fe/Co with no Ce or Mn (I4).\"}\n```",
+  "usage": {
+    "input_tokens": 2201,
+    "output_tokens": 489
+  }
+}

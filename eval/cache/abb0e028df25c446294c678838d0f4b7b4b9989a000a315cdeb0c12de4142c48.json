@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01806,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'routine_screening' does not appear in the CAMPAIGN CAPABILITIES list, so its allowed action set is undefined. Whether change_plate, get_loaded_plate, measure_cp, acquire_point and update_model are permitted under I8 cannot be determined, and they should not be assumed disallowed. The comments about prior initialization have no authority. The plan also gives no predicted potentials, durations or element mapping for comp_vec, so the other rules cannot be fully checked either.\"}",
+  "usage": {
+    "input_tokens": 1822,
+    "output_tokens": 358
+  }
+}

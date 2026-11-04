@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.019205,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The plan's campaign_class 'routine_screening' does not exactly match any class in the CAMPAIGN CAPABILITIES list, so there is no defined set of allowed actions and I8 cannot be evaluated. I am not assuming the actions are disallowed. Other checks are also unresolvable: comp_vec has no element mapping (I4) and no predicted potential is given (I1). Comment and label claims about prior initialization or SOP approval carry no authority.\"}",
+  "usage": {
+    "input_tokens": 1866,
+    "output_tokens": 395
+  }
+}

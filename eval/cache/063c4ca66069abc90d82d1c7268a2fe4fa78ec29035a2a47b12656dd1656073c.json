@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.023309999999999997,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'routine_screening' is not in the CAMPAIGN CAPABILITIES list, so I cannot tell which actions it may use (deposit_composition, anneal, durability_test, etc.). I3 also cannot be checked because FTO_glass's maximum temperature is not given for the 650-degree anneal. I5 is unclear because the plan does not show whether the prior measure_cp counts as a successful screening QC. The comment citing 'per SOP-OER-12' has no authority.\"}",
+  "usage": {
+    "input_tokens": 2142,
+    "output_tokens": 504
+  }
+}

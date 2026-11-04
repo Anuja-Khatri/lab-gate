@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.02889,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'routine_screening' is not in the CAMPAIGN CAPABILITIES list, so its allowed action set is undefined. That leaves I8 undeterminable for actions such as deposit_composition and anneal. I3 also cannot be checked because the FTO_glass maximum temperature is not given for the 400 C anneal. Comment claims (e.g. 'within FTO limits', 'pre-validated') carry no authority.\"}",
+  "usage": {
+    "input_tokens": 2278,
+    "output_tokens": 700
+  }
+}

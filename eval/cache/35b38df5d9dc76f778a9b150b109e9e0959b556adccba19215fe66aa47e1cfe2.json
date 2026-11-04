@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.020755000000000003,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The plan's campaign_class 'routine_screening' is not in the CAMPAIGN CAPABILITIES list, so its allowed action set is undefined and I8 compliance cannot be judged. Nothing indicates a violation of the other rules, but the plan gives no predicted potential or instrument time, so I1 and I6 cannot be fully confirmed.\"}\n```",
+  "usage": {
+    "input_tokens": 1886,
+    "output_tokens": 453
+  }
+}

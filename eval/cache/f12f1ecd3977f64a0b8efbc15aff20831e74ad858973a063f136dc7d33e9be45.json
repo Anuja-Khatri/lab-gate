@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01792,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"Both actions, change_plate and measure_cp, are allowed for the 'full' campaign class (I8). The requester is internal, so the partner allowlist does not apply. The plan gives no predicted potential, element labels, durations, anneal, deposition or durability steps, so no rule is shown to be violated.\"}",
+  "usage": {
+    "input_tokens": 1504,
+    "output_tokens": 416
+  }
+}

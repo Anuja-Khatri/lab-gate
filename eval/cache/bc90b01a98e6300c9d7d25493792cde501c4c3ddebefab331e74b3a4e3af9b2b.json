@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.020810000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'routine_screening' is not in the CAMPAIGN CAPABILITIES list, so I8 compliance cannot be determined for any action. I3 also cannot be checked because no maximum temperature is given for FTO_glass. Furnace occupancy is 240 min, which meets but does not exceed the I3b limit. The durability test follows a measure_cp on the same composition, but whether that screening succeeded is not stated.\"}",
+  "usage": {
+    "input_tokens": 2062,
+    "output_tokens": 420
+  }
+}

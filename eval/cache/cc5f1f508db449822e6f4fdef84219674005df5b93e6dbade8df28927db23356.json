@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.025305,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'materials_screening' is not in the CAMPAIGN CAPABILITIES list, so I8 cannot be evaluated. Other checks are also undeterminable without inventing quantities: the FTO maximum temperature for the 720 C anneal (I3), the units of the durability_test duration (I6), and whether the prior measure_cp counts as successful screening QC (I5).\"}",
+  "usage": {
+    "input_tokens": 2246,
+    "output_tokens": 563
+  }
+}

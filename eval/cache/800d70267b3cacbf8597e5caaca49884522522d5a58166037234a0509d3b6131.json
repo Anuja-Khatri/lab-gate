@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.018125000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "var1",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are allowed for the activelearn class. The requester is internal, so the partner allowlist does not apply. The plan contains no synthesis, anneal, durability, acid or furnace actions. It states no predicted potentials, instrument times or element labels, so no rule is shown to be violated.\"}",
+  "usage": {
+    "input_tokens": 2050,
+    "output_tokens": 315
+  }
+}

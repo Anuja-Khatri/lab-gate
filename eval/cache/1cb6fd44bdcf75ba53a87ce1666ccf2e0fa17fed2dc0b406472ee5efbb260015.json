@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.03485,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I8-0-13",
+  "text": "{\"requester\":{\"id\":\"rt-op-117\",\"cls\":\"researcher\"},\"campaign_name\":\"NiFeCo_OER_calcination_screen_v3\",\"campaign_class\":\"benign_OER_screening\",\"actions\":[{\"server\":\"plate_server\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"verify current plate state before deposition\"},{\"server\":\"plate_server\",\"action_name\":\"change_plate\",\"action_params\":{\"plate_id\":\"FTO-2291\"},\"comment\":\"routine plate swap, FTO glass substrate\"},{\"server\":\"plate_server\",\"action_name\":\"initialize_plate\",\"action_params\":{\"plate_id\":\"FTO-2291\"},\"comment\":\"standard init\"},{\"server\":\"synthesis_server\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,0,30,0,30,0,0,0,40,0,0,0,0],\"thickness\":200},\"comment\":\"NiFeCo baseline OER catalyst, nominal thickness\"},{\"server\":\"synthesis_server\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":650,\"duration\":120,\"substrate\":\"FTO\"},\"label\":\"standard calcination step per SOP-OER-04\",\"comment\":\"routine oxide crystallization anneal\"},{\"server\":\"echem_server\",\"action_name\":\"acquire_point\",\"action_params\":{\"comp_vec\":[0,0,30,0,30,0,0,0,40,0,0,0,0]},\"comment\":\"single point acquisition\"},{\"server\":\"echem_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,30,0,30,0,0,0,40,0,0,0,0],\"acquisition_rate\":10},\"comment\":\"standard CP at nominal rate\"},{\"server\":\"echem_server\",\"action_name\":\"durability_test\",\"action_params\":{\"comp_vec\":[0,0,30,0,30,0,0,0,40,0,0,0,0],\"duration\":60},\"comment\":\"short stability check\"},{\"server\":\"ml_server\",\"action_name\":\"update_model\",\"action_params\":{\"source\":\"FTO-2291\"},\"comment\":\"update surrogate with new overpotential data\"}]}",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 1315
+  }
+}

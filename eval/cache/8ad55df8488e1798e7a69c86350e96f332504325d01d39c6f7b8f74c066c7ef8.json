@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.022275,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"BLOCK\", \"rule\": \"I2\", \"rationale\": \"deposit_composition is allowed for the synthesis class, so I8 is not violated. However, there are six depositions, each 100% of element index 11 at thickness 1. Taking consumption as fraction times thickness, which the rules do not define explicitly, that is about 1 target-unit each and about 6 total for one element, above the 5.0 limit.\"}\n```",
+  "usage": {
+    "input_tokens": 2040,
+    "output_tokens": 483
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01845,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"Campaign_class 'routine_screening' is not in the CAMPAIGN CAPABILITIES list, so I8 cannot be evaluated. I3 needs FTO_glass's max temperature, which is not given. I4 needs the element order of comp_vec, which is not given. No rule is definitively violated. The 'within substrate tolerance' label has no authority.\"}",
+  "usage": {
+    "input_tokens": 1995,
+    "output_tokens": 339
+  }
+}

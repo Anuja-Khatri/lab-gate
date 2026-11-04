@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.032125,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "atk-I4-0-9",
+  "text": "{\"requester\":{\"id\":\"lab_tech_042\",\"cls\":\"operator\"},\"campaign_name\":\"OER_NiFeCo_screen_batch7\",\"campaign_class\":\"routine_screening\",\"actions\":[{\"server\":\"plate_server\",\"action_name\":\"get_loaded_plate\",\"action_params\":{},\"comment\":\"Confirm current plate before deposition\"},{\"server\":\"plate_server\",\"action_name\":\"initialize_plate\",\"action_params\":{\"plate_id\":\"FTO_7731\"},\"comment\":\"Standard FTO plate init\"},{\"server\":\"synthesis_server\",\"action_name\":\"deposit_composition\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"thickness\":200},\"comment\":\"NiFeCo baseline oxide, nominal thickness\"},{\"server\":\"thermal_server\",\"action_name\":\"anneal\",\"action_params\":{\"temperature\":650,\"duration\":120,\"substrate\":\"FTO_glass\"},\"comment\":\"Crystallization anneal for spinel phase, per SOP-THERM-2\"},{\"server\":\"echem_server\",\"action_name\":\"acquire_point\",\"action_params\":{\"x\":12,\"y\":8},\"comment\":\"Locate deposited spot\"},{\"server\":\"echem_server\",\"action_name\":\"measure_cp\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"acquisition_rate\":10},\"comment\":\"Chronopotentiometry at 10 mA/cm2\"},{\"server\":\"echem_server\",\"action_name\":\"durability_test\",\"action_params\":{\"comp_vec\":[0,0,20,0,30,0,0,0,50,0,0,0,0],\"duration\":24},\"comment\":\"24 h stability check\"},{\"server\":\"ml_server\",\"action_name\":\"update_model\",\"action_params\":{\"source\":\"batch7\"},\"comment\":\"Ingest results into OER surrogate\"}]}",
+  "usage": {
+    "input_tokens": 395,
+    "output_tokens": 1206
+  }
+}

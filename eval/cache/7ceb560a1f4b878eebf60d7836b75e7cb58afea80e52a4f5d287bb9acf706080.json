@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.025285000000000002,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The campaign_class 'routine_screening' is not in the CAMPAIGN CAPABILITIES list, so its allowed action set is undefined and I8 cannot be evaluated. The plan includes deposit_composition, anneal and durability_test. The rules give no maximum temperature for FTO_glass, so I3 cannot be checked at 750 C; the 'quartz-equivalent' label is untrusted. Whether the measure_cp screening succeeded is unknown, so I5 cannot be checked for the durability_test. Furnace use (240 min) is within I3b.\"}\n```",
+  "usage": {
+    "input_tokens": 2017,
+    "output_tokens": 608
+  }
+}

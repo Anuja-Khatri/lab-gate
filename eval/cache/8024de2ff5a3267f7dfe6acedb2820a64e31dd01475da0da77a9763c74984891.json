@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01971,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "var4",
+  "text": "{\"verdict\": \"PASS\", \"rule\": null, \"rationale\": \"All actions are listed for the activelearn class (I8 satisfied). The requester is internal, so the partner allowlist does not apply. The plan gives no element labels, potentials, times, volumes, anneals or durability tests, so no rule is shown to be violated.\"}",
+  "usage": {
+    "input_tokens": 1777,
+    "output_tokens": 433
+  }
+}

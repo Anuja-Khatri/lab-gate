@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.01953,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"BLOCK\", \"rule\": \"I2\", \"rationale\": \"All actions are allowed for the synthesis class. The plan has six depositions of the same single element (index 11, 100% fraction) at thickness 1. Assuming consumption equals fraction times thickness, each uses 1.0 target-unit, totalling 6.0, which exceeds the 5.0 per-element limit.\"}\n```",
+  "usage": {
+    "input_tokens": 2081,
+    "output_tokens": 365
+  }
+}

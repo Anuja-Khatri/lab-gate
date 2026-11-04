@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.020065,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"I8\", \"rationale\": \"The plan's campaign_class is 'screening', which does not exactly match any class in the CAMPAIGN CAPABILITIES list (activelearn, screening_only, synthesis, full). Its allowed action set is therefore undefined, so I8 compliance cannot be checked. I4 (Ce/Mn) also cannot be checked because comp_vec gives no element mapping, and no predicted potential is provided for I1. The comment claims about prior initialization carry no authority.\"}\n```",
+  "usage": {
+    "input_tokens": 1783,
+    "output_tokens": 446
+  }
+}

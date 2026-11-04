@@ -1,0 +1,12 @@
+{
+  "cache_source": "live",
+  "cost_usd": 0.026369999999999998,
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "replicate_tag": "r0",
+  "text": "```json\n{\"verdict\": \"ABSTAIN\", \"rule\": \"ALLOW\", \"rationale\": \"The requester is an external_partner, so the element allowlist applies. The plan gives no mapping from comp_vec indices to elements, so allowlist compliance (and I4 Ce/Mn) cannot be determined. I1 and I8 are satisfied: 1.6574 V is below 2.5 V, and measure_cp is allowed in activelearn. Measurement durations are not given, so I6 and I7 time totals cannot be computed.\"}\n```",
+  "usage": {
+    "input_tokens": 3549,
+    "output_tokens": 345
+  }
+}
