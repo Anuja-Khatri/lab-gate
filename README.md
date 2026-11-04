@@ -26,13 +26,13 @@ rival reasoning method.
 
 ## Three ways to judge it
 
-1. **Watch** — `make demo` reproduces the headline numbers from cached model
+1. **Watch**: `make demo` reproduces the headline numbers from cached model
    responses, without API keys (also packaged as a Docker image under `docker/`). A
    recorded cast is in `media/`.
-2. **Read** — this README, `docs/FINAL_REPORT.md`, `docs/POST.md`, and the static
+2. **Read**: this README, `docs/FINAL_REPORT.md`, `docs/POST.md`, and the static
    results page in `site/` (every number renders from `results/registry.json` under a
    numbers lock).
-3. **Reproduce** — `make ci` (lint, tests, taint test, static no-reference check,
+3. **Reproduce**: `make ci` (lint, tests, taint test, static no-reference check,
    secret scan, numbers-lock check), `make sim`, `make equivalence`, `make eval`.
 
 ## Quickstart
@@ -56,7 +56,8 @@ committed cache (`eval/cache/`) and checks them against `results/registry.json`.
 Verified from a fresh clone (setup, ci, sim, demo all pass offline).
 
 The LLM arms (LLM gate, LLM attacker) need keys in `$WS/.env`
-(`LABGATE_ANTHROPIC_API_KEY`, `LABGATE_OPENAI_API_KEY`, `LLM_BUDGET_USD`); every call
+(`LABGATE_ANTHROPIC_API_KEY`, `LABGATE_OPENAI_API_KEY`, `LABGATE_GEMINI_API_KEY`,
+`LLM_BUDGET_USD`); every call
 is cached, metered, and budget-capped. `make demo` needs no keys.
 
 ## Results summary
@@ -112,7 +113,7 @@ is logged in `DECISIONS.md`.
 - Shah, Kamath, Li & Shah. Bayesian inference of temporal task specifications from
   demonstrations. NeurIPS 2018.
 - Guevarra et al. Orchestrating nimble experiments across interconnected labs
-  (HELAO). (verify venue/year before citing in a submission.)
+  (HELAO).
 - helao-async repository:
   https://github.com/High-Throughput-Experimentation/helao-async
 

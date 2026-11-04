@@ -46,19 +46,26 @@ CIs is in `docs/tables/results.md`.
 The typed gate let through no in-specification attack: 0.00 on the static and
 decomposition suites (n=37) and 0.00 under the adaptive attacker at the full grid
 (n=240), and it never false-blocked a benign plan (0.00 of 13627 oracle-safe plans, and
-0.00 on the surprise subset of 990 unusual-but-valid plans). The language-model gate was
-unreliable in both of the model families we could run, in opposite directions. The
-Anthropic model decided essentially every benign plan but was too permissive on
-attacks, letting through 0.28 of the static and decomposition attacks (and 0.28 under
-the adaptive attacker), with run-to-run variance 0.03; giving it the exact predicted
-potential the typed gate uses (an information-parity arm) cut its attack success to
-0.08, so much of its gap was an information deficit it could not otherwise quantify. The
-OpenAI model went the other way and over-blocked 0.64 of benign plans, let through 0.46
-of the adaptive attacks, and changed its own verdict on 0.30 of plans when asked the
-same question five times. The classifier was accurate on benign plans (false-block 0.07)
-but was broken by 0.24 of the static attacks and 0.32 of the adaptive ones (n=240). The reference and SMT checkers agreed on
-all 12000 equivalence plans, every BLOCK counterexample replayed in the simulator, and
-the taint test found no text channel over 1000 plans.
+0.00 on the surprise subset of 990 unusual-but-valid plans). An LLM adaptive attacker, a
+frontier model generating the attacks rather than the programmatic one, also found no
+way past the typed gate: 0 of 12 in the preregistered run, and 0 of 48 in black-box mode
+and 0 of 48 in gray-box mode in a declared extension (95% CI 0.00 to 0.074 per mode),
+labeled "extension, not preregistered." The language-model gate was unreliable in both
+of the model families we could run, in opposite directions. The Anthropic model decided
+essentially every one of 294 benign plans (false-block and abstain each 0.003, n=294)
+but was too permissive on attacks, letting through 0.28 of the static and decomposition
+attacks (n=36) and 0.28 under the adaptive attacker (n=36), with run-to-run variance 0.03
+(n=119); giving it the exact predicted potential the typed gate uses (an
+information-parity arm) cut its attack success to 0.08 (n=36), so much of its gap was an
+information deficit it could not otherwise quantify. The OpenAI numbers come from the
+earlier reduced grid: that model went the other way and over-blocked 0.64 of 294 benign
+plans (n=294), let through 0.46 of the adaptive attacks (n=24), and changed its own
+verdict on 0.30 of 60 plans (n=60) when asked the same question five times (five distinct
+repeats). The classifier was accurate on benign plans (false-block 0.07 of 13627 plans,
+n=13627) but was broken by 0.24 of the static attacks (n=37) and 0.32 of the adaptive
+ones (n=240). The reference and SMT checkers agreed on all 12000 equivalence plans, every
+BLOCK counterexample replayed in the simulator, and the taint test found no text channel
+over 1000 plans.
 
 A third-vendor cross-check (a Gemini adaptive attacker and a Gemini language-model gate,
 to restore gate-and-attacker vendor separation) is implemented and verified live, but

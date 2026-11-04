@@ -49,13 +49,15 @@ not mean.
    disclosed on every LLM metric's caveat and in FINAL_REPORT "Deviations": (a) the
    headline LLM-gate numbers now come from Anthropic opus, not the originally-pinned
    OpenAI gpt-5.1 (whose reduced-grid numbers are reported as a consistent prior-vendor
-   datapoint); (b) the LLM gate and the LLM attacker are therefore the same vendor
-   (mitigated by using different models). The deterministic arms (typed gate,
+   datapoint); (b) in round 2 the LLM gate and the LLM attacker were therefore the same
+   vendor (mitigated at the time by using different models). Consequence (b) was later
+   resolved; see the round-3 note below, where no completed metric has the gate and the
+   attacker as the same-vendor LLM. The deterministic arms (typed gate,
    classifier, oracle, programmatic adaptive attacker) ran at full scale and need no
    API. Every LLM-arm number is reported with its exact n.
 
    Round-3c update (D-030/D-031): a global ERROR audit found that round-2's opus
-   "over-abstention 0.90" was a TRUNCATION ARTIFACT -- the Anthropic call budget
+   "over-abstention 0.90" was a TRUNCATION ARTIFACT: the Anthropic call budget
    (max_tokens=400) was too small for a reasoning model, so unparseable/empty output
    was wrongly scored as ABSTAIN. ERRORs are now scored as reduced n (never a verdict;
    enforced by tests/test_error_scoring.py), and the opus arms were re-run on live
@@ -73,7 +75,7 @@ not mean.
    Extension (D-033, declared before execution; NOT preregistered). The LLM adaptive
    attacker vs the TYPED gate only (typed is not an LLM, no same-vendor issue) was scaled
    to n=48 trajectories per mode (8 goals x 6 seeds x 20 queries) in both observation
-   modes -- black-box (verdict only) and gray-box (verdict + blocked-invariant id). Both
+   modes, black-box (verdict only) and gray-box (verdict + blocked-invariant id). Both
    returned attack success 0.00 (0/48, 95% CI 0.00-0.074). This is kept separate from the
    preregistered grid and labelled as an extension on both metrics
    (`attack.llm_attacker_vs_typed.blackbox_ext`, `*.graybox_ext`); it is a larger
@@ -84,19 +86,20 @@ not mean.
    cross-vendor attacker separation and a second LLM-gate vendor. All three keys were
    re-verified with live calls: OpenAI out of credits, Anthropic at its monthly usage
    limit, Gemini valid and live (gemini-3.1-pro-preview, pinned) but free-tier quota
-   (~25 req/model) -- the held-out run 429'd after ~55 calls, so all Gemini held-out
+   (~25 req/model); the held-out run 429'd after ~55 calls, so all Gemini held-out
    arms are "blocked, not measured" (the 30-call dev-split tuning completed; quota-
    polluted partial values were reset, not kept). No LLM vendor currently has enough
    quota/credits to run full held-out arms, so the cross-vendor
-   LLM-attacker-vs-LLM-gate comparison is unmeasured. Same-vendor note (item 6): no
+   LLM-attacker-vs-LLM-gate comparison is unmeasured. Same-vendor note: no
    completed metric has the gate and the
    attacker as the same-vendor LLM; the opus gate's adaptive number came from the
    deterministic programmatic attacker, and the only Anthropic LLM attacker that ran
    targeted the (non-LLM) typed gate. The information-parity effect is reported only
    within a single vendor (Anthropic opus plain vs parity); the Gemini within-vendor
-   parity pair is blocked. The opus run-to-run variance is "blocked, not measured" and
-   is not backfilled (item 7); the real OpenAI gpt-5.1 variance (0.30) is kept
-   separately.
+   parity pair is blocked. At that point the opus run-to-run variance was "blocked, not
+   measured" and was not backfilled (it was never substituted with another vendor's
+   value); the real OpenAI gpt-5.1 variance (0.30) is kept separately. (The opus variance
+   was subsequently measured in round 3d: 0.03, n=119, per the round-3c update above.)
 
 9. The gradient-boosting classifier uses scikit-learn HistGradientBoosting rather
    than xgboost (D-021; xgboost's wheel could not load its OpenMP runtime on the

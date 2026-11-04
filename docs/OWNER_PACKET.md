@@ -37,7 +37,7 @@ Suggested repo **name**: `lab-gate`
 
 Suggested **description** (contains the discoverability terms):
 
-> A plan-checking safety gate for autonomous labs, built on helao-async and evaluated in its OERSIM simulator. Returns PASS (proof certificate), BLOCK (counterexample), or ABSTAIN — reading only typed fields, never free text.
+> A plan-checking safety gate for autonomous labs, built on helao-async and evaluated in its OERSIM simulator. Returns PASS (proof certificate), BLOCK (counterexample), or ABSTAIN, reading only typed fields, never free text.
 
 Suggested **topics**: `helao-async`, `oersim`, `autonomous-labs`, `self-driving-lab`,
 `ai-safety`, `formal-methods`, `smt`, `z3`, `ltl`, `plan-checking`, `safety-gate`.
