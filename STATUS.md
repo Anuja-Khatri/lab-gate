@@ -57,10 +57,13 @@ lets through 0.28 of attacks, adaptive 0.28, variance 0.03); parity cuts attack 
 to 0.08. The gpt-5.1 gate over-BLOCKED (false-block 0.64, variance 0.30, kept as
 `*.llm_gpt51`).
 
-The opus LLM gate's failure mode is massive over-ABSTENTION (0.90 of benign); the
-earlier OpenAI gpt-5.1 arm over-BLOCKED (0.64) with adaptive attack 0.46 and variance
-0.30 (preserved as `*.llm_gpt51.*`). Both free-text arms are unreliable gates, in
-opposite directions; information parity did not fix the opus arm (0.90 -> 0.92 abstain).
+After the ERROR-scoring fix (round 3c/3d), the opus LLM gate's failure mode is
+PERMISSIVENESS, not over-abstention: it decides nearly all benign plans and lets through
+0.28 of attacks (adaptive 0.28, variance 0.03), which information parity cuts to 0.08. The
+earlier "0.90 over-abstention" figure was a max_tokens truncation artifact and is retracted
+(see docs/CORRECTIONS.md). The OpenAI gpt-5.1 arm, by contrast, over-BLOCKED (false-block
+0.64) with adaptive attack 0.46 and variance 0.30 (preserved as `*.llm_gpt51.*`). Both
+free-text arms are unreliable gates, in opposite directions.
 
 Checker guarantees: reference vs SMT equivalence 1.0 (n=12000); counterexample replay
 validity 1.0 (n=458); taint test 0 (no text channel, n=1000); p95 latency ~20 ms.
@@ -71,7 +74,9 @@ the $500 cap (within the Anthropic promo headroom).
 Hypotheses: HYP-1 supported (typed 0.00 on in-spec attacks, adaptive n=240); HYP-2
 supported in direction; HYP-3 supported (LLM arms nonzero/unreliable, gpt-5.1 variance
 0.30); HYP-4 supported (classifier degrades under adaptive, 0.24 -> 0.32); HYP-5 NOT
-supported and strongly opposite for opus (LLM abstains 0.90 >> typed 0.00) — reported
+supported for the LLM gates in either direction: after the truncation fix the opus gate is
+permissive (lets through 0.28 of attacks vs typed 0.00) and the gpt-5.1 gate over-blocks
+(false-block 0.64 vs typed 0.00) — reported
 as observed.
 
 ## Disclosed deviations and decision-rule uses
