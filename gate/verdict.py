@@ -137,7 +137,8 @@ def decide(raw_plan: dict, horizon_k: Optional[int] = None) -> Verdict:
     """Top-level decision (P4.3): typed boundary, then reference + SMT checkers.
 
     - ABSTAIN if the boundary cannot type the plan, or either checker abstains
-      (unknown class/substrate, beyond horizon, solver timeout).
+      (unknown class/substrate, beyond horizon, solver timeout), or either checker
+      raises (reason 'checker_error'; the gate never crashes on plan content).
     - BLOCK if a violation is found; the counterexample is the violating step
       sequence and the certificate is the BLOCK trace.
     - PASS only if the SMT proves no violation reachable within the horizon AND the
@@ -157,8 +158,13 @@ def decide(raw_plan: dict, horizon_k: Optional[int] = None) -> Verdict:
     if not parsed.ok:
         return bverdict  # ABSTAIN with boundary reason
 
-    ref = evaluate(parsed, registry, horizon_k=k)
-    smt = encode_and_check(parsed, registry, horizon_k=k)
+    try:
+        ref = evaluate(parsed, registry, horizon_k=k)
+        smt = encode_and_check(parsed, registry, horizon_k=k)
+    except Exception as exc:  # fail closed: a checker error is never a PASS or a crash
+        return Verdict(Decision.ABSTAIN, "checker_error", ph, reg_hash,
+                       quarantined_text=parsed.quarantined_text,
+                       detail=f"{type(exc).__name__}: {str(exc)[:200]}")
 
     # agreement on the decision and (for BLOCK) the invariant
     same = (ref.decision == smt.decision and ref.invariant_id == smt.invariant_id)
