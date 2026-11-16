@@ -8,7 +8,8 @@
           and site/ for result-like numbers that are NOT derivable from the
           registry. Fails if any is found.
 
-The scan targets result-like tokens (decimals and percentages). Structural
+The scan targets result-like tokens (decimals and percentages); URLs and DOIs are
+identifiers, not results, and are removed before the scan. Structural
 constants (limits, budgets, counts, years, plate ids, reference years) are
 allowlisted in eval/numbers_allowlist.txt. Every headline rate/CI in the docs is
 rendered from the registry, so it is derivable by construction.
@@ -34,6 +35,15 @@ SCAN_FILES = ["docs/POST.md", "docs/FINAL_REPORT.md", "README.md"]
 SCAN_GLOBS: list = []
 
 _NUM = re.compile(r"\d+\.\d+|\d+%")
+# Identifiers are not results: URLs, "doi:" references and bare DOIs
+# ("10.5281/zenodo.23954617") are removed before the scan, so a DOI prefix such as
+# 10.5281 is never mistaken for a result-like decimal.
+_IDENTIFIER = re.compile(r"https?://\S+|\bdoi:\s*\S+|\b10\.\d{4,9}/\S+", re.IGNORECASE)
+
+
+def result_tokens(line: str) -> list:
+    """Result-like number tokens in a line of prose, ignoring URLs and DOIs."""
+    return _NUM.findall(_IDENTIFIER.sub(" ", line))
 
 
 def _metrics() -> list:
@@ -135,7 +145,7 @@ def check() -> int:
         if not f.exists():
             continue
         for i, line in enumerate(f.read_text().splitlines(), 1):
-            for tok in _NUM.findall(line):
+            for tok in result_tokens(line):
                 if tok not in allowed:
                     offenders.append((f.relative_to(REPO).as_posix(), i, tok))
     if offenders:
