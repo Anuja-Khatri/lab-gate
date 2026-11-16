@@ -11,7 +11,7 @@ export HELAO_DATASET ?= $(HELAO)/helao/deploy/test/demos/data/oer13_cps.pzstd
 
 SEED ?= 20261103
 
-.PHONY: setup test ci sim eval demo site media clean lint secrets equivalence prereg heldout
+.PHONY: setup test ci sim eval demo site media clean lint secrets equivalence prereg heldout probe
 
 setup:
 	uv venv --python 3.12 $(VENV)
@@ -50,6 +50,11 @@ equivalence:
 # paid LLM arms run at the preregistered reduced sizes, cached + metered (R-08).
 eval:
 	$(PY) -m eval.heldout
+
+# probe: post-registration malformed-number probe suite (offline, deterministic).
+# Writes results/probe_malformed.json; fails if the typed gate passes or crashes.
+probe:
+	$(PY) -m eval.probe_malformed
 
 # demo: the reproducible headline-number demo from cache (P9). Stub until P9.
 demo:

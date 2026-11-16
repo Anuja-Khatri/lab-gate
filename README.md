@@ -33,14 +33,15 @@ rival reasoning method.
    results page in `site/` (every number renders from `results/registry.json` under a
    numbers lock).
 3. **Reproduce**: `make ci` (lint, tests, taint test, static no-reference check,
-   secret scan, numbers-lock check), `make sim`, `make equivalence`, `make eval`.
+   secret scan, numbers-lock check), `make sim`, `make equivalence`, `make eval`,
+   `make probe` (malformed-number probes; see `docs/CORRECTIONS.md`).
 
 ## Quickstart
 
 ```
 # Work from a parent directory ($WS). lab-gate and helao-async must sit side by side:
 #   $WS/lab-gate   $WS/helao-async
-git clone <this-repo-url> lab-gate
+git clone https://github.com/Anuja-Khatri/lab-gate.git lab-gate
 git clone https://github.com/High-Throughput-Experimentation/helao-async.git
 git -C helao-async checkout ba910c4   # the pin the gate is evaluated against
 
