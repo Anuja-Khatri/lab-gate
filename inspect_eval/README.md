@@ -220,7 +220,10 @@ More in [`LIMITATIONS.md`](../LIMITATIONS.md) and
   helao-async beside the repository; the oracle runs every plan in the simulator).
   Deterministic; `LABGATE_INSPECT_REBUILD=1` runs a test that the rebuild is
   byte-identical.
-- `logs/`: the reference Inspect logs of the runs in the Results table.
+- `logs/`: the reference Inspect logs of the runs in the Results table (listed in
+  `logs/README.md`; the two model logs there are replays of cached responses).
+
+`uv sync` writes a `uv.lock` file into the clone; it is not tracked.
 
 ## Cite
 
