@@ -32,3 +32,8 @@
 3.1
 0.90
 1.50
+# --- README quickstart example output (furnace minutes accumulating over 60-minute anneals) ---
+60.0
+120.0
+180.0
+300.0

@@ -31,6 +31,13 @@ OER CP dataset (oer13_cps) replayed by the OERSIM chronopotentiometry simulator
 originates from measurements associated with doi:10.1039/C8MH01641K. The dataset
 file lives inside helao-async and is not copied into this repository.
 
+The lab-gate package on PyPI does not contain helao-async code or the dataset.
+The command `lab-gate fetch-data` downloads the dataset file, at the user's
+request, directly from the helao-async repository at the pinned commit and checks
+its SHA-256 before use. The package does ship one derived file,
+sim_ext/surrogate.json: a 13-weight linear model fitted by lab-gate to dataset
+compositions (see sim_ext/surrogate.py).
+
 -------------------------------------------------------------------------------
 Patterns reused (mechanism only, no domain content) from the owner's public
 repository consilience-verification
