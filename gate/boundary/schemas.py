@@ -45,7 +45,10 @@ class RequesterClass(StrEnum):
 
 
 class _Strict(BaseModel):
-    model_config = ConfigDict(extra="forbid", use_enum_values=True)
+    # allow_inf_nan=False: a NaN or infinite float in ANY numeric field is refused at
+    # the boundary (fail closed), not passed to the checker where comparisons with
+    # NaN are always False and would read as "no violation".
+    model_config = ConfigDict(extra="forbid", use_enum_values=True, allow_inf_nan=False)
 
 
 def _validate_comp_vec(v: Any) -> list[int]:
