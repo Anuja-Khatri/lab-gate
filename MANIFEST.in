@@ -1,0 +1,5 @@
+# Extra files in the source distribution (the wheel is defined by pyproject.toml).
+include README.md CHANGELOG.md LICENSE NOTICE LIMITATIONS.md
+include docs/RULES.md docs/RELEASE.md
+recursive-include examples *.json *.yaml
+prune tests

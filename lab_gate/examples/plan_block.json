@@ -1,0 +1,18 @@
+{
+  "requester": {"id": "agent-1", "cls": "internal_agent"},
+  "campaign_name": "anneal-series",
+  "campaign_class": "synthesis",
+  "sequence_comment": "Each anneal is fine on its own; together they overrun the furnace budget.",
+  "actions": [
+    {"server": "LABGATE", "action_name": "anneal",
+     "action_params": {"temperature": "350 degC", "duration": "1 hour", "substrate": "quartz"}},
+    {"server": "LABGATE", "action_name": "anneal",
+     "action_params": {"temperature": "400 degC", "duration": "1 hour", "substrate": "quartz"}},
+    {"server": "LABGATE", "action_name": "anneal",
+     "action_params": {"temperature": "450 degC", "duration": "1 hour", "substrate": "quartz"}},
+    {"server": "LABGATE", "action_name": "anneal",
+     "action_params": {"temperature": "500 degC", "duration": "1 hour", "substrate": "quartz"}},
+    {"server": "LABGATE", "action_name": "anneal",
+     "action_params": {"temperature": "550 degC", "duration": "1 hour", "substrate": "quartz"}}
+  ]
+}

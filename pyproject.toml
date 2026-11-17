@@ -1,31 +1,56 @@
 [project]
 name = "lab-gate"
-version = "0.1.0"
-description = "An open-source, plan-checking safety gate for autonomous labs, built on public helao-async and evaluated inside its OER simulator."
+version = "1.0.0"
+description = "Check an autonomous-lab experiment plan against written rules before it runs: PASS with a proof certificate, BLOCK with a counterexample, or ABSTAIN to a human."
 readme = "README.md"
 requires-python = ">=3.12"
-license = { file = "LICENSE" }
+license = "MIT"
+license-files = ["LICENSE", "NOTICE"]
 authors = [{ name = "Anuja Khatri" }]
+keywords = ["autonomous lab", "self-driving lab", "safety", "verification", "plan checking", "smt", "z3", "helao"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Chemistry",
+]
 
-# Deterministic core (Phases 1-5, 8-9). LLM arms (Phase 6-7) add anthropic/openai;
-# the classifier arm adds xgboost. See config/ and METHODS.md.
+# Runtime dependencies of the gate core only (boundary, rule registry, reference +
+# SMT checkers, the CLI and Python API). helao-async is NOT a runtime dependency;
+# rules about a measurement's potential read helao-async's OER dataset file, which
+# `lab-gate fetch-data` downloads (see README "What it needs").
 dependencies = [
   "pydantic>=2",
   "pint",
   "pyyaml",
   "numpy",
-  "pandas",
-  "scikit-learn",
-  "matplotlib",
   "pyzstd",
   "z3-solver",
-  "python-dotenv",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "hypothesis", "ruff"]
+# The research/evaluation code (eval/, run from a source checkout via the Makefile
+# with helao-async beside the repo) needs these on top of the core.
+eval = ["pandas", "scikit-learn", "matplotlib", "python-dotenv"]
+dev = ["pytest", "hypothesis", "ruff", "build", "twine"]
 llm = ["anthropic", "openai"]
 classifier = ["xgboost"]
+
+[project.scripts]
+lab-gate = "lab_gate.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Anuja-Khatri/lab-gate"
+Source = "https://github.com/Anuja-Khatri/lab-gate"
+Issues = "https://github.com/Anuja-Khatri/lab-gate/issues"
+Changelog = "https://github.com/Anuja-Khatri/lab-gate/blob/main/CHANGELOG.md"
+Preregistration = "https://osf.io/jxhfe"
+Report = "https://doi.org/10.5281/zenodo.23954617"
 
 [tool.ruff]
 line-length = 100
@@ -42,14 +67,16 @@ addopts = "-q"
 filterwarnings = ["ignore::DeprecationWarning"]
 
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
-# Discover every subpackage (gate.boundary, gate.checker, gate.registry, ...), not
-# only the three top-level names, and ship the YAML files the code loads at runtime
-# (the invariant registry, red-team goals, out-of-spec predicates).
+# The wheel ships the gate core: the public API + CLI (lab_gate), the gate
+# (gate.*), and the simulator-side accounting and potential model it uses (sim_ext).
+# The evaluation harness (eval/), tests and results stay in the source repository.
 [tool.setuptools.packages.find]
-include = ["gate", "gate.*", "sim_ext", "sim_ext.*", "eval", "eval.*"]
+include = ["lab_gate", "lab_gate.*", "gate", "gate.*", "sim_ext", "sim_ext.*"]
 
 [tool.setuptools.package-data]
-"*" = ["*.yaml"]
+"gate.registry" = ["*.yaml"]
+"lab_gate.examples" = ["*.json"]
+"sim_ext" = ["surrogate.json"]

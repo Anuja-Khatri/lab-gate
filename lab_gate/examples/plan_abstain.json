@@ -1,0 +1,10 @@
+{
+  "requester": {"id": "agent-1", "cls": "internal_agent"},
+  "campaign_name": "anneal-series",
+  "campaign_class": "synthesis",
+  "sequence_comment": "The rules give no temperature limit for graphite, so the gate cannot decide.",
+  "actions": [
+    {"server": "LABGATE", "action_name": "anneal",
+     "action_params": {"temperature": "400 degC", "duration": "30 min", "substrate": "graphite"}}
+  ]
+}

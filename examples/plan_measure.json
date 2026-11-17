@@ -1,0 +1,12 @@
+{
+  "requester": {"id": "agent-1", "cls": "internal_agent"},
+  "campaign_name": "screen-3851",
+  "campaign_class": "screening_only",
+  "actions": [
+    {"server": "CPSIM", "action_name": "change_plate", "action_params": {"plate_id": 3851}},
+    {"server": "CPSIM", "action_name": "measure_cp",
+     "action_params": {"comp_vec": [0, 0, 0, 0, 20, 0, 0, 0, 40, 0, 0, 40, 0]}},
+    {"server": "CPSIM", "action_name": "measure_cp",
+     "action_params": {"comp_vec": [0, 0, 0, 10, 20, 0, 0, 30, 40, 0, 0, 0, 0]}}
+  ]
+}

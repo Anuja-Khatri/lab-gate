@@ -11,7 +11,7 @@ export HELAO_DATASET ?= $(HELAO)/helao/deploy/test/demos/data/oer13_cps.pzstd
 
 SEED ?= 20261103
 
-.PHONY: setup test ci sim eval demo site media clean lint secrets equivalence prereg heldout probe
+.PHONY: setup test ci sim eval demo site media clean lint secrets equivalence prereg heldout probe release-check
 
 setup:
 	uv venv --python 3.12 $(VENV)
@@ -19,7 +19,7 @@ setup:
 	@echo "setup done. PYTHONPATH=$(PYTHONPATH)"
 
 lint:
-	$(PY) -m ruff check gate sim_ext eval tests
+	$(PY) -m ruff check gate sim_ext eval tests lab_gate
 
 secrets:
 	$(PY) eval/check_secrets.py
@@ -69,6 +69,11 @@ site:
 
 media:
 	@echo "media: see docs/OWNER_TODO.md (Phase 9)"
+
+# release-check: build sdist + wheel, twine check, install the wheel in a brand-new
+# venv and run the README quickstart there. Uploads nothing. See docs/RELEASE.md.
+release-check:
+	bash scripts/check_release.sh
 
 clean:
 	rm -f results/sim_trace.json results/sim_trace_rerun.json
