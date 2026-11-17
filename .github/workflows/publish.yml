@@ -2,16 +2,13 @@
 #
 # This workflow NEVER runs on its own: not on push, not on pull requests, not on a
 # schedule. It runs only when
-#   - a version tag (v*) is pushed (uploads to PyPI), or
-#   - a GitHub Release is published (build check only; the tag push already uploaded), or
+#   - a GitHub Release is published (uploads to PyPI), or
 #   - someone clicks "Run workflow" in the Actions tab (choose testpypi or pypi).
 # Setup steps (pypi.org pending publisher + the "pypi" environment) are in
 # docs/RELEASE.md.
 name: publish
 
 on:
-  push:
-    tags: ["v*"]
   release:
     types: [published]
   workflow_dispatch:
@@ -34,7 +31,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Release tag must match the package version
-        if: github.event_name == 'release' || github.event_name == 'push'
+        if: github.event_name == 'release'
         run: |
           version=$(python -c "import tomllib; print(tomllib.load(open('pyproject.toml','rb'))['project']['version'])")
           tag="${GITHUB_REF_NAME#v}"
@@ -50,7 +47,7 @@ jobs:
 
   publish-pypi:
     needs: build
-    if: github.event_name == 'push' || inputs.target == 'pypi'
+    if: github.event_name == 'release' || inputs.target == 'pypi'
     runs-on: ubuntu-latest
     environment:
       name: pypi
