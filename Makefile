@@ -11,7 +11,7 @@ export HELAO_DATASET ?= $(HELAO)/helao/deploy/test/demos/data/oer13_cps.pzstd
 
 SEED ?= 20261103
 
-.PHONY: setup test ci sim eval demo site media clean lint secrets equivalence prereg heldout probe release-check
+.PHONY: setup test ci sim eval demo site media clean lint secrets equivalence prereg heldout probe release-check inspect-eval
 
 setup:
 	uv venv --python 3.12 $(VENV)
@@ -19,7 +19,7 @@ setup:
 	@echo "setup done. PYTHONPATH=$(PYTHONPATH)"
 
 lint:
-	$(PY) -m ruff check gate sim_ext eval tests lab_gate
+	$(PY) -m ruff check gate sim_ext eval tests lab_gate inspect_eval
 
 secrets:
 	$(PY) eval/check_secrets.py
@@ -55,6 +55,12 @@ eval:
 # Writes results/probe_malformed.json; fails if the typed gate passes or crashes.
 probe:
 	$(PY) -m eval.probe_malformed
+
+# inspect-eval: the open evaluation (inspect_eval/README.md) with lab-gate as the gate,
+# on the headline sets. Offline, no API key. Logs go to inspect_eval/logs/local/.
+inspect-eval:
+	$(VENV)/bin/inspect eval inspect_eval/lab_gate_eval/lab_gate_eval.py@lab_gate_plan_gate \
+		--model none --log-dir inspect_eval/logs/local
 
 # demo: the reproducible headline-number demo from cache (P9). Stub until P9.
 demo:

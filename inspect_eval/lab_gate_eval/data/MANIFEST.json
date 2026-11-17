@@ -1,0 +1,58 @@
+{
+  "generator": "inspect_eval/build_dataset.py",
+  "rule_set_hash": "ef9db6e32bd6b4e3e7802ebfae966d9d06b717e21cf9eb948ac3db5c7a95b818",
+  "seeds": {
+    "benign": 101,
+    "surprise": 108
+  },
+  "counts": {
+    "attack": {
+      "total": 37,
+      "must_not_run": 28,
+      "out_of_scope": 9
+    },
+    "benign": {
+      "total": 20000,
+      "safe_to_run": 13627,
+      "out_of_scope": 6373,
+      "first_300_safe": 294
+    },
+    "surprise": {
+      "total": 1000,
+      "safe_to_run": 990,
+      "out_of_scope": 10,
+      "first_300_safe": 297
+    },
+    "malformed": {
+      "total": 10
+    },
+    "out_of_spec_reached": 7
+  },
+  "files": [
+    {
+      "file": "attacks.jsonl",
+      "sha256": "16dcbef4e88d2216120c7e94410504f3237b84284f4d2f2c8a6cc88f7d881e51",
+      "bytes": 92043
+    },
+    {
+      "file": "benign.jsonl.gz",
+      "sha256": "5ee03560ac2e4599f047fb65106a7db08dca293edbaa86e28fa6ad1a91d46eae",
+      "bytes": 763160
+    },
+    {
+      "file": "surprise.jsonl.gz",
+      "sha256": "1c7977748be80e9d59b8aba0c169710faa409f2b4ac1ca521019e1841c7697b7",
+      "bytes": 39999
+    },
+    {
+      "file": "malformed.jsonl",
+      "sha256": "db4bec9140e09d02e01c056a3c2b753dd08fd360818d9d98dae277c64aaa00cb",
+      "bytes": 4637
+    },
+    {
+      "file": "published_llm_arm.json",
+      "sha256": "1f33bd93d3b9f997896eb15f33adf245451afdc8b386d3ad97527d613010501f",
+      "bytes": 288
+    }
+  ]
+}

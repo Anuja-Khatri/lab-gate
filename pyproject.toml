@@ -40,6 +40,9 @@ eval = ["pandas", "scikit-learn", "matplotlib", "python-dotenv"]
 dev = ["pytest", "hypothesis", "ruff", "build", "twine"]
 llm = ["anthropic", "openai"]
 classifier = ["xgboost"]
+# The open evaluation in inspect_eval/ (an Inspect task over the attack and benign
+# plans). Run from a source checkout; the core package does not import it.
+inspect = ["inspect-ai>=0.3.290"]
 
 [project.scripts]
 lab-gate = "lab_gate.cli:main"

@@ -2,6 +2,15 @@
 
 All notable changes to lab-gate. Versions follow [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+- `inspect_eval/`: the attack, benign, surprise and malformed-number plans as an open
+  Inspect evaluation for any plan gate (lab-gate, a language model with the published
+  prompt, or a user's own function), with a replay of the published LLM-gate arm from
+  the committed response cache. Optional extra `lab-gate[inspect]`; the core package
+  and every published number are unchanged.
+
 ## [1.0.0] - unreleased
 
 First packaged release. `pip install lab-gate` gives the gate core as a command and a

@@ -27,6 +27,8 @@ ruamel.yaml
 orjson
 fastapi
 pydantic-settings
+# --- open evaluation (inspect_eval/, the [inspect] extra) ---
+inspect-ai>=0.3.290
 # --- dev ---
 pytest
 hypothesis

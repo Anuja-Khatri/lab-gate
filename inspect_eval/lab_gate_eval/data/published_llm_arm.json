@@ -1,0 +1,8 @@
+{
+  "note": "request settings of the published LLM-gate arm (eval/heldout_anthropic.py); the replay model uses them to find the cached responses in eval/cache",
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "max_tokens": 2048,
+  "temperature": 0.0,
+  "replicate_tag": "r0"
+}

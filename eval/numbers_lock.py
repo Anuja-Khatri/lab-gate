@@ -31,7 +31,8 @@ ALLOWLIST = REPO / "eval" / "numbers_allowlist.txt"
 # Hand-authored docs are token-scanned strictly. Generated files (docs/tables/
 # results.md, site/index.html, site/data/*.json) are registry projections by
 # construction; results.md is additionally byte-verified against a fresh render.
-SCAN_FILES = ["docs/POST.md", "docs/FINAL_REPORT.md", "README.md"]
+SCAN_FILES = ["docs/POST.md", "docs/FINAL_REPORT.md", "README.md", "inspect_eval/README.md",
+              "docs/OPEN_EVAL_WRITEUP.md", "docs/INSPECT_EVALS_SUBMISSION.md"]
 SCAN_GLOBS: list = []
 
 _NUM = re.compile(r"\d+\.\d+|\d+%")

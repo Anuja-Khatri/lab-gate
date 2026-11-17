@@ -37,3 +37,5 @@
 120.0
 180.0
 300.0
+# malformed-number probe input string "1.2.3 degC" (a test input, not a result)
+1.2
