@@ -45,5 +45,11 @@ filterwarnings = ["ignore::DeprecationWarning"]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-packages = ["gate", "sim_ext", "eval"]
+# Discover every subpackage (gate.boundary, gate.checker, gate.registry, ...), not
+# only the three top-level names, and ship the YAML files the code loads at runtime
+# (the invariant registry, red-team goals, out-of-spec predicates).
+[tool.setuptools.packages.find]
+include = ["gate", "gate.*", "sim_ext", "sim_ext.*", "eval", "eval.*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yaml"]
