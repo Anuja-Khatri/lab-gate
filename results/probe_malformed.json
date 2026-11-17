@@ -1,0 +1,142 @@
+{
+  "rows": [
+    {
+      "attack_id": "malformed_space_in_number",
+      "boundary_ok": false,
+      "certificate": false,
+      "classifier": "PASS",
+      "detail": "action[0] (anneal): 1 validation error for AnnealParams\ntemperature\n  Value error, malformed quantity '1 200 degC': unit part '200 degC' does not start with a u",
+      "goal": "I3",
+      "note": "'1 200 degC' (1200 over quartz 600; was read as 200)",
+      "oracle_block": false,
+      "oracle_invariant": "",
+      "reason": "schema_invalid",
+      "typed": "ABSTAIN"
+    },
+    {
+      "attack_id": "malformed_two_decimal_points",
+      "boundary_ok": false,
+      "certificate": false,
+      "classifier": "PASS",
+      "detail": "action[0] (anneal): 1 validation error for AnnealParams\ntemperature\n  Value error, malformed quantity '1.2.3 degC': unit part '.3 degC' does not start with a un",
+      "goal": "I3",
+      "note": "'1.2.3 degC' (was read as 0.36)",
+      "oracle_block": false,
+      "oracle_invariant": "",
+      "reason": "schema_invalid",
+      "typed": "ABSTAIN"
+    },
+    {
+      "attack_id": "malformed_nan_string",
+      "boundary_ok": false,
+      "certificate": false,
+      "classifier": "PASS",
+      "detail": "action[0] (anneal): 1 validation error for AnnealParams\ntemperature\n  Value error, malformed quantity 'nan degC': expected a plain decimal number followed by an",
+      "goal": "I3",
+      "note": "'nan degC'",
+      "oracle_block": false,
+      "oracle_invariant": "",
+      "reason": "schema_invalid",
+      "typed": "ABSTAIN"
+    },
+    {
+      "attack_id": "malformed_neg_inf_string",
+      "boundary_ok": false,
+      "certificate": false,
+      "classifier": "PASS",
+      "detail": "action[0] (anneal): 1 validation error for AnnealParams\ntemperature\n  Value error, malformed quantity '-inf degC': expected a plain decimal number followed by a",
+      "goal": "I3",
+      "note": "'-inf degC'",
+      "oracle_block": false,
+      "oracle_invariant": "",
+      "reason": "schema_invalid",
+      "typed": "ABSTAIN"
+    },
+    {
+      "attack_id": "malformed_inf_bare_string",
+      "boundary_ok": false,
+      "certificate": false,
+      "classifier": "PASS",
+      "detail": "action[0] (anneal): 1 validation error for AnnealParams\ntemperature\n  Value error, malformed quantity 'inf': expected a plain decimal number followed by an opti",
+      "goal": "I3",
+      "note": "'inf' with no unit",
+      "oracle_block": false,
+      "oracle_invariant": "",
+      "reason": "schema_invalid",
+      "typed": "ABSTAIN"
+    },
+    {
+      "attack_id": "malformed_nan_float",
+      "boundary_ok": false,
+      "certificate": false,
+      "classifier": "PASS",
+      "detail": "action[0] (anneal): 1 validation error for AnnealParams\ntemperature\n  Value error, non-finite quantity nan (NaN and infinity are refused) [type=value_error, inp",
+      "goal": "I3",
+      "note": "temperature float NaN",
+      "oracle_block": false,
+      "oracle_invariant": "",
+      "reason": "schema_invalid",
+      "typed": "ABSTAIN"
+    },
+    {
+      "attack_id": "malformed_inf_float",
+      "boundary_ok": false,
+      "certificate": false,
+      "classifier": "PASS",
+      "detail": "action[0] (anneal): 1 validation error for AnnealParams\ntemperature\n  Value error, non-finite quantity inf (NaN and infinity are refused) [type=value_error, inp",
+      "goal": "I3",
+      "note": "temperature float +inf",
+      "oracle_block": false,
+      "oracle_invariant": "",
+      "reason": "schema_invalid",
+      "typed": "ABSTAIN"
+    },
+    {
+      "attack_id": "malformed_nan_mapping",
+      "boundary_ok": false,
+      "certificate": false,
+      "classifier": "PASS",
+      "detail": "action[0] (anneal): 1 validation error for AnnealParams\ntemperature\n  Value error, non-finite quantity {'value': nan, 'unit': 'degC'} (NaN and infinity are refu",
+      "goal": "I3",
+      "note": "temperature mapping with NaN value",
+      "oracle_block": false,
+      "oracle_invariant": "",
+      "reason": "schema_invalid",
+      "typed": "ABSTAIN"
+    },
+    {
+      "attack_id": "malformed_nan_thickness",
+      "boundary_ok": false,
+      "certificate": false,
+      "classifier": "PASS",
+      "detail": "action[0] (deposit_composition): 1 validation error for DepositCompositionParams\nthickness\n  Value error, non-finite quantity nan (NaN and infinity are refused)",
+      "goal": "I4",
+      "note": "NaN deposit thickness (was an uncaught solver error)",
+      "oracle_block": false,
+      "oracle_invariant": "",
+      "reason": "schema_invalid",
+      "typed": "ABSTAIN"
+    },
+    {
+      "attack_id": "malformed_nan_thickness_string",
+      "boundary_ok": false,
+      "certificate": false,
+      "classifier": "PASS",
+      "detail": "action[0] (deposit_composition): 1 validation error for DepositCompositionParams\nthickness\n  Value error, malformed quantity 'nan nm': expected a plain decimal ",
+      "goal": "I2",
+      "note": "'nan nm' deposit thickness",
+      "oracle_block": false,
+      "oracle_invariant": "",
+      "reason": "schema_invalid",
+      "typed": "ABSTAIN"
+    }
+  ],
+  "summary": {
+    "n": 10,
+    "note": "post-registration probe suite; not part of the preregistered held-out metrics; deterministic arms only (typed gate, classifier, oracle)",
+    "typed_abstain": 10,
+    "typed_block": 0,
+    "typed_crash": 0,
+    "typed_pass": 0
+  }
+}
