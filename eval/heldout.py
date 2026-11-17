@@ -306,9 +306,15 @@ def run(reg: Registry, fast: bool = False) -> dict:
     reg.upsert(metric_id="latency.p95_ms", value=perf["p95_ms"], n=perf["n"], task="P4", caveats=["full decide path"])
     reg.upsert(metric_id="taint.sentinel_channel", value=0, n=1000, task="P2",
                caveats=["0 = no text channel; taint test on 1000 plans"])
-    meter = json.loads((LOGDIR / "cost_meter.json").read_text())
-    reg.upsert(metric_id="llm.spend_usd", value=round(meter["total_usd"], 4), n=meter["calls"],
-               task="P8", caveats=["cumulative metered LLM spend (cap 500)"])
+    meter_path = LOGDIR / "cost_meter.json"
+    if meter_path.exists():
+        meter = json.loads(meter_path.read_text())
+        reg.upsert(metric_id="llm.spend_usd", value=round(meter["total_usd"], 4), n=meter["calls"],
+                   task="P8", caveats=["cumulative metered LLM spend (cap 500)"])
+    else:
+        # offline re-run with no keys: no spend was metered here, so the registered
+        # cumulative spend is left as recorded rather than overwritten or crashing.
+        meter = {"total_usd": 0.0, "calls": 0}
     reg.save()
 
     with open(LOGDIR / "heldout_records.jsonl", "w") as fh:
