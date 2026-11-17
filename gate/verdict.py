@@ -145,12 +145,20 @@ def decide(raw_plan: dict, horizon_k: Optional[int] = None) -> Verdict:
       reference agrees. If reference and SMT disagree, ABSTAIN with reason
       'reference_smt_disagree' (a bug; the equivalence suite P4.5 fails on it).
     """
+    registry, reg_hash, cfg_k = _load_config()
+    k = horizon_k if horizon_k is not None else cfg_k
+    return decide_with_registry(raw_plan, registry, reg_hash, k)
+
+
+def decide_with_registry(raw_plan: dict, registry, reg_hash: str, k: int) -> Verdict:
+    """The body of ``decide`` against an explicit registry, its hash and horizon.
+
+    ``decide`` calls this with the default registry; the public ``lab_gate.check``
+    calls it with a user-loaded rule set. Same logic, same verdicts.
+    """
     from gate.checker.certificates import block_certificate, pass_certificate
     from gate.checker.reference import evaluate
     from gate.checker.smt import encode_and_check
-
-    registry, reg_hash, cfg_k = _load_config()
-    k = horizon_k if horizon_k is not None else cfg_k
 
     parsed, bverdict = boundary_decision(raw_plan)
     ph = bverdict.plan_hash

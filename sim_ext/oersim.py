@@ -38,7 +38,33 @@ from sim_ext.accounting import AccountingState, apply_action
 
 REPO_ROOT = Path(__file__).resolve().parent.parent          # $WS/lab-gate
 WS = REPO_ROOT.parent                                        # $WS
-DEFAULT_DATASET = WS / "helao-async/helao/deploy/test/demos/data/oer13_cps.pzstd"
+# The OER dataset ships inside helao-async and is NOT redistributed with lab-gate.
+# Where it is looked for, in order: $HELAO_DATASET (read at each use); the
+# side-by-side checkout $WS/helao-async (the repo layout the Makefile uses); the
+# per-user cache that `lab-gate fetch-data` downloads into. Same file (sha256 below).
+DATASET_RELPATH = "helao/deploy/test/demos/data/oer13_cps.pzstd"
+DATASET_PIN = "ba910c4c2bdcbcbc49476e32a5b20ca0abb93529"
+DATASET_SHA256 = "b9e23249ec4367e1a729223a584f74cd08bb98a4f738cbe6fb091c345044cbf0"
+DATASET_URL = ("https://raw.githubusercontent.com/High-Throughput-Experimentation/"
+               f"helao-async/{DATASET_PIN}/{DATASET_RELPATH}")
+WS_DATASET = WS / "helao-async" / DATASET_RELPATH
+
+
+def user_cache_dataset() -> Path:
+    """Where `lab-gate fetch-data` stores the dataset (per user, outside the repo)."""
+    base = os.environ.get("XDG_CACHE_HOME") or str(Path.home() / ".cache")
+    return Path(base) / "lab-gate" / "oer13_cps.pzstd"
+
+
+def _default_dataset() -> Path:
+    if WS_DATASET.exists():
+        return WS_DATASET
+    # The per-user cache, whether or not it exists yet: when the file is missing
+    # everywhere, the error then names the place `lab-gate fetch-data` writes to.
+    return user_cache_dataset()
+
+
+DEFAULT_DATASET = _default_dataset()
 
 
 def _calc_eta(cp_dict) -> float:

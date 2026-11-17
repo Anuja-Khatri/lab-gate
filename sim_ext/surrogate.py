@@ -28,6 +28,10 @@ from sim_ext.accounting import ELEMENTS
 from sim_ext.oersim import DEFAULT_DATASET, mean_erhe_v
 
 CACHE = Path(__file__).resolve().parent.parent / "results" / "surrogate.json"
+# Byte-identical copy of results/surrogate.json shipped inside the package, so an
+# installed lab-gate uses the same fitted model without the repo's results/ folder
+# (tests/test_packaging.py asserts the two files are identical).
+BUNDLED_CACHE = Path(__file__).resolve().parent / "surrogate.json"
 DEV_FRACTION = 0.8   # share of compositions used to fit (rest are held out)
 
 
@@ -75,10 +79,12 @@ _MODEL: Optional[dict] = None
 def _load_model() -> dict:
     global _MODEL
     if _MODEL is None:
-        if not CACHE.exists():
-            _MODEL = fit_surrogate()
-        else:
+        if CACHE.exists():
             _MODEL = json.loads(CACHE.read_text())
+        elif BUNDLED_CACHE.exists():
+            _MODEL = json.loads(BUNDLED_CACHE.read_text())
+        else:
+            _MODEL = fit_surrogate()
     return _MODEL
 
 
